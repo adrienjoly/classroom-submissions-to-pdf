@@ -1,24 +1,15 @@
 {
-  "name": "snoozer",
+  "name": "classroom-submissions-to-pdf",
   "version": "0.1.0",
+  "author": "Adrien Joly <adrien.joly@gmail.com>",
+  "repository": "remote add origin https://github.com/cours-javascript-eemi-2016-2017/classroom-submissions-to-pdf.git",
   "scripts": {
-    "start": "source .env; node server.js",
-    "start-http": "source .env; node server-http.js",
-    "start-docs": "cd docs && python -m SimpleHTTPServer 3000",
-    "client": "node tests/client.js",
-    "test": "node tests/test-gcal.js"
+    "start": "source .env; node server-http.js",
+    "test": "node tests/test.js"
   },
   "dependencies": {
     "async": "^1.5.2",
-    "express": "^4.14.0",
     "google-auth-library": "^0.9.8",
-    "google-protobuf": "^3.0.0",
-    "googleapis": "^14.0.0",
-    "grpc": "^1.0.0",
-    "lodash": "^4.6.1",
-    "minimist": "^1.2.0",
-    "moment": "^2.15.1",
-    "snoozeable-element": "^1.0.0",
-    "uuid": "^2.0.3"
+    "googleapis": "^14.0.0"
   }
 }
