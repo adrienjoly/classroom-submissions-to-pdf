@@ -2,10 +2,10 @@
   "name": "classroom-submissions-to-pdf",
   "version": "0.1.0",
   "author": "Adrien Joly <adrien.joly@gmail.com>",
-  "repository": "remote add origin https://github.com/cours-javascript-eemi-2016-2017/classroom-submissions-to-pdf.git",
+  "repository": "https://github.com/cours-javascript-eemi-2016-2017/classroom-submissions-to-pdf.git",
   "scripts": {
     "start": "source .env; node server-http.js",
-    "test": "node tests/test.js"
+    "test": "source .env; node tests/test.js"
   },
   "dependencies": {
     "async": "^1.5.2",
