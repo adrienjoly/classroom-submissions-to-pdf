@@ -1,5 +1,26 @@
 var outputFile = '_test-pdf_output.pdf'
-var html = '<html><style>body{color:red;}</style><body>blah blah blah</body></html>'
+
+var students = [
+  { name: 'a' },
+  { name: 'b' },
+]
+
+function renderHtml(students) {
+  function renderStudentHtml(student) {
+    return '<p>' + student.name + '</p>'
+  }
+  return [].concat([
+    '<!DOCTYPE html>',
+    '<html>',
+    '<style>',
+    'body{color:red;}',
+    '</style>',
+    '<body>',
+  ], students.map(renderStudentHtml), [
+    '</body>',
+    '</html>',
+  ]).join('\n')
+}
 
 function genPdfFileFromHtml(filePath, html, callback) {
   require('phantom').create()
@@ -18,6 +39,10 @@ function genPdfFileFromHtml(filePath, html, callback) {
     })
     .catch(callback)
 }
+
+var html = renderHtml(students)
+
+console.log(html)
 
 genPdfFileFromHtml(outputFile, html, function(err) {
   console.log(err || 'Page Rendered to ' + outputFile)
