@@ -3,8 +3,8 @@ var pdfRenderer = require('../lib/pdf-renderer')
 var outputFile = '_test-pdf_output.pdf'
 
 var students = [
-  { name: 'a' },
-  { name: 'b' },
+  { name: 'a', source: [], html: 'html a', css: 'css a', js: '  js a\n\ttab' },
+  { name: 'b', source: [], html: 'html b', css: 'css b', js: 'js b' },
 ]
 
 var html = pdfRenderer.renderHtml(students)
