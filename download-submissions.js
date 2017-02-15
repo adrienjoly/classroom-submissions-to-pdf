@@ -1,18 +1,23 @@
+var fs = require('fs')
 var readline = require('readline');
 var gcla = require('./lib/google-classroom')
-var pdfRenderer = require('./lib/pdf-renderer')
+
+// outputs
+var filename = [
+  './submissions.json',
+  './submissions-turned-in.json',
+]
 
 // inputs (classroom assignment)
 var courseId = '3001621381';
 var assignmentId = '4287252912';
 
-// output (PDF-rendered student submissions)
-var outputFile = 'student-submissions.pdf'
-
-var extractSubmissions = require('./lib/submission-converter').extractSubmissions
-
-/*
 var submissionIsTurnedIn = (s) => s.state === 'TURNED_IN';
+
+const saveJSON = (file, json) => {
+  fs.writeFileSync(file, JSON.stringify(json, null, 2))
+  console.log('Saved JSON to', file)
+}
 
 function whenLogged(err, sesId) {
   if (err) {
@@ -20,7 +25,9 @@ function whenLogged(err, sesId) {
   } else {
     gcla.listSubmissions(courseId, assignmentId, function(err, subs) {
       console.log('submissions from classroom =>', err || subs.studentSubmissions.length)
-      extractSubmissions(subs.studentSubmissions.filter(submissionIsTurnedIn))
+      saveJSON(filename[0], subs);
+      const turnedIn = subs.studentSubmissions.filter(submissionIsTurnedIn)
+      saveJSON(filename[1], turnedIn);
     })
   }
 }
@@ -39,6 +46,3 @@ function auth(callback) {
 }
 
 auth(whenLogged);
-*/
-
-extractSubmissions([ require('./samples/turned-in-student-submission.json') ])
