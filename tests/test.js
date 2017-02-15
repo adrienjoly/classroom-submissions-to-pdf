@@ -1,5 +1,7 @@
 var converter = require('../lib/submission-converter')
 
+const outputFile = '_test-pdf_output.pdf'
+
 const sampleSubmissions = [ require('../samples/turned-in-student-submission.json') ]
 
 converter.extractSubmissions(sampleSubmissions, function(err, studentSubmissions) {
@@ -15,6 +17,10 @@ converter.extractSubmissions(sampleSubmissions, function(err, studentSubmissions
     })
     */
     var html = converter.toHTML(studentSubmissions);
-    console.log('\n=> HTML:', html)
+    //console.log('\n=> HTML:', html)
+
+    converter.toPDF(outputFile, studentSubmissions, function(err) {
+      console.log(err || 'Page Rendered to ' + outputFile)
+    })
   }
 })
