@@ -5,7 +5,8 @@
   "repository": "https://github.com/cours-javascript-eemi-2016-2017/classroom-submissions-to-pdf.git",
   "scripts": {
     "start": "source .env; node main.js",
-    "test": "source .env; node tests/test-pdf.js; node tests/test-apis.js; node tests/test-classroom-api.js"
+    "test": "source .env; node tests/test.js",
+    "tests": "source .env; node tests/test-pdf.js; node tests/test-apis.js; node tests/test-classroom-api.js"
   },
   "dependencies": {
     "async": "^1.5.2",
