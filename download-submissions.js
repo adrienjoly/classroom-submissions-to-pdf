@@ -1,18 +1,14 @@
 var fs = require('fs')
-var readline = require('readline');
 var gcla = require('./lib/google-classroom')
+var googleClient = require('./lib/google-api-client')
 
 // outputs
-var filename = [
-  './submissions.json',
-  './submissions-turned-in.json',
-]
+var filename = './submissions.json'
 
 // inputs (classroom assignment)
-var courseId = '3001621381';
-var assignmentId = '4287252912';
-
-var submissionIsTurnedIn = (s) => s.state === 'TURNED_IN';
+//var [ courseId, assignmentId ] = [ '3001621381', '4287252912' ] // classe 1
+//var [ courseId, assignmentId ] = [ '3001624136', '4287272941' ] // classe 3
+var [ courseId, assignmentId ] = [ '3001638443', '4287252910' ] // classe 2
 
 const saveJSON = (file, json) => {
   fs.writeFileSync(file, JSON.stringify(json, null, 2))
@@ -25,24 +21,11 @@ function whenLogged(err, sesId) {
   } else {
     gcla.listSubmissions(courseId, assignmentId, function(err, subs) {
       console.log('submissions from classroom =>', err || subs.studentSubmissions.length)
-      saveJSON(filename[0], subs);
-      const turnedIn = subs.studentSubmissions.filter(submissionIsTurnedIn)
-      saveJSON(filename[1], turnedIn);
+      saveJSON(filename, subs.studentSubmissions);
+      //saveJSON(filename, subs.studentSubmissions.filter((s) => s.state === 'TURNED_IN'));
     })
   }
 }
 
-function auth(callback) {
-  var authUrl = gcla.generateAuthUrl();
-  console.log('Authorize this app by visiting this url: ', authUrl);
-  var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  rl.question('Enter the code from that page here: ', function(code) {
-    rl.close();
-    gcla.getSessionFromCode(code, callback);
-  });
-}
-
-auth(whenLogged);
+// auth using user_token.json or oauth
+googleClient.auth(whenLogged)
