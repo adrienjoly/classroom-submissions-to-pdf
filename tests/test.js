@@ -1,5 +1,6 @@
 var async = require('async')
 var converter = require('../lib/submission-converter')
+var students = require('../lib/student-profiles')
 
 const outputFile = '_test-pdf_output.pdf'
 
@@ -7,7 +8,7 @@ const outputFile = '_test-pdf_output.pdf'
 const sampleSubmissions = require('../submissions-classe-3.json')
 
 async.mapSeries(sampleSubmissions, function(subm, callback) {
-  console.log('\nsubmission', subm.userId)
+  console.log('\nstudent:', students.getStudentById(subm.userId).name.fullName)
   converter.extractSubmission(subm, function(err, subm) {
     if (err) {
       console.log('=>', err)
