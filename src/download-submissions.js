@@ -3,11 +3,7 @@ var gcla = require('../lib/google-classroom')
 var googleClient = require('../lib/google-api-client')
 
 // inputs (classroom assignment)
-const groups = {
-  1: { courseId: 3001621381, assignmentId: 4287252912, },
-  2: { courseId: 3001638443, assignmentId: 4287252910, },
-  3: { courseId: 3001624136, assignmentId: 4287272941, },
-}
+const groups = require('../groups.json')
 
 const saveJSON = (file, o) => require('fs').writeFileSync(file, JSON.stringify(o, null, 2))
 
