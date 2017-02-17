@@ -1,0 +1,322 @@
+[
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwI89e9yggQ7a-q_A8",
+    "userId": "107477289419153585422",
+    "creationTime": "2017-01-31T11:57:38.985Z",
+    "updateTime": "2017-01-31T11:57:38.983Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwMzY4MzU3MVpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwI6OP-yggQ7a-q_A8",
+    "userId": "110503983348176565158",
+    "creationTime": "2017-01-31T11:57:38.900Z",
+    "updateTime": "2017-01-31T11:57:38.898Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNDc1MDA1Nlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIsLXOywgQ7a-q_A8",
+    "userId": "106180904736643783286",
+    "creationTime": "2017-01-31T11:57:38.732Z",
+    "updateTime": "2017-01-31T11:57:38.730Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjA1NDgzMlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwI85vcywgQ7a-q_A8",
+    "userId": "101787338833938307621",
+    "creationTime": "2017-01-31T11:57:40.746Z",
+    "updateTime": "2017-01-31T11:57:40.745Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjI4MDk0N1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwI1dndywgQ7a-q_A8",
+    "userId": "108537857415545477339",
+    "creationTime": "2017-01-31T11:57:40.003Z",
+    "updateTime": "2017-01-31T11:57:40.002Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMwNTIzN1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIoJneywgQ7a-q_A8",
+    "userId": "112281272114786432836",
+    "creationTime": "2017-01-31T11:57:39.216Z",
+    "updateTime": "2017-02-16T22:25:50.391Z",
+    "state": "TURNED_IN",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMxMzM3Nlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/JeanneV/pen/dNLgba",
+            "title": "A Pen by  Jeanne",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/JeanneV/pen/dNLgba&a=AIYkKU_i5NqRx07WWcP3DZdaIVFvSo1pIg"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIu_veywgQ7a-q_A8",
+    "userId": "117576151158786046837",
+    "creationTime": "2017-01-31T11:57:39.293Z",
+    "updateTime": "2017-01-31T11:57:39.291Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMyNTk0N1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIuY7fywgQ7a-q_A8",
+    "userId": "102010675502767179627",
+    "creationTime": "2017-01-31T11:57:38.645Z",
+    "updateTime": "2017-02-12T12:00:14.761Z",
+    "state": "TURNED_IN",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMyODM3N1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://jessyhachet.bsthbg.fr/",
+            "title": "Bienvenue sur UltraFlix | Classeur des meilleures s�ries",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jessyhachet.bsthbg.fr/&a=AIYkKU_8KB73sZRcOPF5Fi90RY7pTFk_vg"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwI78bfywgQ7a-q_A8",
+    "userId": "108296987848356040668",
+    "creationTime": "2017-01-31T11:57:41.978Z",
+    "updateTime": "2017-01-31T11:57:41.976Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMzNTU5OVpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIns_hywgQ7a-q_A8",
+    "userId": "113909539356196281852",
+    "creationTime": "2017-01-31T11:57:41.526Z",
+    "updateTime": "2017-01-31T11:57:41.525Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM2OTQzOFpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIgY7iywgQ7a-q_A8",
+    "userId": "112719197127636831937",
+    "creationTime": "2017-01-31T11:57:40.326Z",
+    "updateTime": "2017-01-31T11:57:40.325Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM3NzQ3M1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIusLiywgQ7a-q_A8",
+    "userId": "105669289189926745848",
+    "creationTime": "2017-01-31T11:57:40.559Z",
+    "updateTime": "2017-01-31T11:57:40.557Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM4NDE4Nlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIpdzjywgQ7a-q_A8",
+    "userId": "109298205465213755751",
+    "creationTime": "2017-01-31T11:57:41.299Z",
+    "updateTime": "2017-01-31T11:57:41.298Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwMzg3N1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIjd_jywgQ7a-q_A8",
+    "userId": "116165333928554373922",
+    "creationTime": "2017-01-31T11:57:41.198Z",
+    "updateTime": "2017-01-31T11:57:41.196Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwNDIzN1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwI7uPjywgQ7a-q_A8",
+    "userId": "114408121396184932572",
+    "creationTime": "2017-01-31T11:57:39.857Z",
+    "updateTime": "2017-01-31T11:57:39.856Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwNDg0Nlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIyOLmywgQ7a-q_A8",
+    "userId": "107652103502670549727",
+    "creationTime": "2017-01-31T11:57:39.602Z",
+    "updateTime": "2017-01-31T11:57:39.601Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQ1MzgzMlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIzqT_zQgQ7a-q_A8",
+    "userId": "114109946239238848472",
+    "creationTime": "2017-01-31T11:57:39.797Z",
+    "updateTime": "2017-01-31T11:57:39.795Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMTA0OTgwNlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIzNL_zQgQ7a-q_A8",
+    "userId": "102313166894740477450",
+    "creationTime": "2017-01-31T11:57:40.738Z",
+    "updateTime": "2017-01-31T11:57:40.737Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMTA1NTY5Mlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwI0Iu_zggQ7a-q_A8",
+    "userId": "113103264829571653000",
+    "creationTime": "2017-01-31T11:57:40.269Z",
+    "updateTime": "2017-01-31T11:57:40.267Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMjA5NTE4NFpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIgoTN1AgQ7a-q_A8",
+    "userId": "112793317213724843677",
+    "creationTime": "2017-01-31T11:57:40.963Z",
+    "updateTime": "2017-01-31T11:57:40.961Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMyNDkwNjQ5OFpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwInujP1AgQ7a-q_A8",
+    "userId": "116429873633355841301",
+    "creationTime": "2017-01-31T11:57:39.529Z",
+    "updateTime": "2017-01-31T11:57:39.527Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMyNDk1MjA5NFpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIvbXg2AgQ7a-q_A8",
+    "userId": "113176638625803008551",
+    "creationTime": "2017-01-31T11:57:39.374Z",
+    "updateTime": "2017-01-31T11:57:39.373Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMzMzYxMjczM1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIwN_e3AgQ7a-q_A8",
+    "userId": "105099553100923382847",
+    "creationTime": "2017-01-31T11:57:40.962Z",
+    "updateTime": "2017-01-31T11:57:40.961Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM0MTk3Mzk1Mlpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIgsXV3ggQ7a-q_A8",
+    "userId": "118232406805048865000",
+    "creationTime": "2017-01-31T11:57:41.459Z",
+    "updateTime": "2017-01-31T11:57:41.458Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM0NjAxNzQxMFpa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  },
+  {
+    "courseId": "3001624136",
+    "courseWorkId": "4287272941",
+    "id": "CgwIrZfD4wgQ7a-q_A8",
+    "userId": "100526324821579489480",
+    "creationTime": "2017-01-31T11:57:40.483Z",
+    "updateTime": "2017-01-31T11:57:40.482Z",
+    "state": "CREATED",
+    "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM1NjIwMjQxM1pa",
+    "courseWorkType": "ASSIGNMENT",
+    "assignmentSubmission": {}
+  }
+]
