@@ -1,0 +1,171 @@
+
+> classroom-submissions-to-pdf@0.1.0 test /Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/classroom-submissions-to-pdf
+> source .env; node tests/test.js
+
+
+student: Noëlie ROUX, attachments: 1
+=> [ 'codepen:noelierx:VPOZov -> source, js, css, html' ]
+
+student: Alexandre LOUF, attachments: 1
+=> [ 'codepen:anon:QdRLag -> source, js, css, html' ]
+
+student: Julien LACHAUX, attachments: 0 => skipping
+
+student: Lucille VAN LAER, attachments: 0 => skipping
+
+student: Pauline FERAUT, attachments: 0 => skipping
+
+student: Benoît BOUREAU, attachments: 1
+=> [ 'codepen:anon:xgeEEX -> source, js, css, html' ]
+
+student: Gaspard LEGRAIN, attachments: 0 => skipping
+
+student: Johanne BORDEAUX, attachments: 0 => skipping
+
+student: Fares KESSI, attachments: 0 => skipping
+
+student: Valentin GUILBAUD, attachments: 1
+=> []
+
+   WARNING: not all student's attachments were fetched
+
+student: Victor DE LATAILLADE, attachments: 0 => skipping
+
+student: Charles RODRIGUEZ, attachments: 0 => skipping
+
+student: Jacques HOVINE, attachments: 2
+=> [ 'codepen:SpaCeDuDe:ygEdWr -> source, js, css, html',
+  'codepen:SpaCeDuDe:rjgNOR -> source, js, css, html' ]
+
+   WARNING: student has more than 1 fetched attachment!
+
+student: Amaury THOUVENOT, attachments: 0 => skipping
+
+student: Erwan ALLAIN, attachments: 0 => skipping
+
+student: Garance FABRE, attachments: 0 => skipping
+
+student: Pierry LIM, attachments: 1
+=> [ 'jsfiddle:pixrrl:jkav8oe3 -> source, js, css, html' ]
+
+student: Loïc PARISSE, attachments: 0 => skipping
+
+student: Loa DIAZ, attachments: 1
+=> [ 'codepen:Loadz:dNawxb -> source, js, css, html' ]
+
+student: Maëlle BELLAZAR, attachments: 1
+=> [ 'codepen:MaelleBellazar:EZMovQ -> source, js, css, html' ]
+
+student: Eliott HADIDA, attachments: 0 => skipping
+
+student: Tristan MACHIN, attachments: 0 => skipping
+
+student: Avi DAHAN, attachments: 0 => skipping
+
+student: Jonathan LEDER, attachments: 0 => skipping
+
+student: Léo MARTIN, attachments: 0 => skipping
+
+student: Kim NORA, attachments: 0 => skipping
+
+student: Inès POUAMON, attachments: 1
+=> [ 'codepen:inespmn:mRajxv -> source, js, css, html' ]
+
+student: Elsa HADDAD, attachments: 0 => skipping
+
+student: Marc-Antoine POISIER, attachments: 0 => skipping
+
+student: Paul ESMENARD, attachments: 0 => skipping
+
+student: haroon HASSAN, attachments: 0 => skipping
+
+student: Guillaume CEYSSAC, attachments: 0 => skipping
+
+student: Nathan DUMAINE, attachments: 0 => skipping
+
+student: Paul-Erwan FERRY, attachments: 0 => skipping
+
+student: David REGNAULT, attachments: 0 => skipping
+
+student: Pauline BITTANTE, attachments: 0 => skipping
+
+student: Romain LOGNON, attachments: 0 => skipping
+
+student: Yannis CHAUMARD-SEVEAN, attachments: 0 => skipping
+
+student: Valentine PIOL, attachments: 0 => skipping
+
+student: Thomas BONNET, attachments: 0 => skipping
+
+student: Martin CALLONNEC, attachments: 0 => skipping
+
+student: Lucas LACHENY, attachments: 0 => skipping
+
+student: Guillaume DE SAINT SERNIN, attachments: 0 => skipping
+
+student: Raphaela AGUS-AZOUBEL, attachments: 0 => skipping
+
+student: Rudy BITAN, attachments: 0 => skipping
+
+student: Yanis EL BOUCHTAOUI, attachments: 0 => skipping
+
+student: Mike MEIMOUN, attachments: 0 => skipping
+
+student: Alexandre Blanc, attachments: 0 => skipping
+
+student: Edouard DUCHESNE DE LAMOTTE, attachments: 0 => skipping
+
+student: Kamil IZARET, attachments: 0 => skipping
+
+student: Victor LE GAC, attachments: 0 => skipping
+
+student: Théo GEAY, attachments: 0 => skipping
+
+student: Louis GOSSE, attachments: 0 => skipping
+
+student: Jeanne VINAY, attachments: 1
+=> [ 'codepen:JeanneV:dNLgba -> source, js, css, html' ]
+
+student: Aubin KERAVEL, attachments: 0 => skipping
+
+student: Jessy HACHET, attachments: 1
+=> [ 'unsupported url: http://jessyhachet.bsthbg.fr/' ]
+
+student: Madison HAYAT, attachments: 0 => skipping
+
+student: Victoria ANTALIS, attachments: 0 => skipping
+
+student: Charles KIEFER, attachments: 0 => skipping
+
+student: Lara KOUNOWSKI, attachments: 0 => skipping
+
+student: Louis MALRIEU, attachments: 0 => skipping
+
+student: Benjamin KISSOUS, attachments: 0 => skipping
+
+student: Bastien BIGOT, attachments: 0 => skipping
+
+student: Raphaël PARETS, attachments: 0 => skipping
+
+student: Ilana BLOCH, attachments: 0 => skipping
+
+student: Thibault CHAMBRILLON, attachments: 0 => skipping
+
+student: Timothée ONG, attachments: 0 => skipping
+
+student: Pierre SALESSE, attachments: 0 => skipping
+
+student: Quentin CHAMPENOIS, attachments: 0 => skipping
+
+student: Florian COMPIEGNE, attachments: 0 => skipping
+
+student: Mickael CHEKROUN, attachments: 0 => skipping
+
+student: Alex TARTOUR, attachments: 0 => skipping
+
+student: Guillaume MARTIN, attachments: 0 => skipping
+
+=> 73 students
+   11 have submitted a copy
+
+rendered to submissions-all.pdf
