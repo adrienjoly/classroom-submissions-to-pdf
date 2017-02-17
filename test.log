@@ -34,10 +34,9 @@ student: Victor DE LATAILLADE, attachments: 0 => skipping
 student: Charles RODRIGUEZ, attachments: 0 => skipping
 
 student: Jacques HOVINE, attachments: 2
-=> [ 'codepen:SpaCeDuDe:ygEdWr -> source, js, css, html',
-  'codepen:SpaCeDuDe:rjgNOR -> source, js, css, html' ]
+=> [ 'codepen:SpaCeDuDe:rjgNOR -> source, js, css, html' ]
 
-   WARNING: student has more than 1 fetched attachment!
+   WARNING: not all student's attachments were fetched
 
 student: Amaury THOUVENOT, attachments: 0 => skipping
 
