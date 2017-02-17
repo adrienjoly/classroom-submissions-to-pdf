@@ -17,12 +17,12 @@ const saveJSON = (file, json) => {
 
 function whenLogged(err, sesId) {
   if (err) {
-    console.error('Error: ', err);
+    console.error('Error: ', err)
   } else {
     gcla.listSubmissions(courseId, assignmentId, function(err, subs) {
       console.log('submissions from classroom =>', err || subs.studentSubmissions.length)
-      saveJSON(filename, subs.studentSubmissions);
-      //saveJSON(filename, subs.studentSubmissions.filter((s) => s.state === 'TURNED_IN'));
+      saveJSON(filename, subs.studentSubmissions)
+      //saveJSON(filename, subs.studentSubmissions.filter((s) => s.state === 'TURNED_IN'))
     })
   }
 }
