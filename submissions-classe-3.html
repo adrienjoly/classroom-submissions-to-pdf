@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body { font-size: 10px; }
+      section { border-top: 2px solid blue; page-break-after: always; }
+      pre { background-color: #eee; }
+      xmp { white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+<section>
+  <p>Student: 112281272114786432836 (codepen:JeanneV:dNLgba)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Les multiples
+        </title>
+        <link rel="stylesheet" href="listejs.css">
+    </head>
+    <body>
+↦   ↦   ↦   
+↦   ↦   ↦   <div>Les multiples</div>
+↦   ↦   ↦   
+↦   ↦   ↦   <ul class="nav">
+↦   ↦   ↦   ↦   <li><input type="button" id="all" value="Nombres">
+↦   ↦   ↦   ↦   <li><input type="button" id="mul2" value="Multiples de 2">
+↦   ↦   ↦   ↦   <li><input type="button" id="mul3" value="Multiples de 3">
+↦   ↦   ↦   ↦   <li><input type="button" id="mul4" value="Multiples de 4">↦   ↦   
+↦   ↦   ↦   </ul>
+↦   ↦   ↦   
+
+↦   ↦   ↦   
+↦   ↦   ↦   <table class="tableau">
+↦   ↦   ↦   <tr>
+↦   ↦   ↦   ↦   <td class="all hidden"> 1 </td>
+↦   ↦   ↦   ↦   <td class="all mul2 hidden"> 2 </td>
+↦   ↦   ↦   ↦   <td class="all mul3 hidden"> 3 </td>
+↦   ↦   ↦   ↦   <td class="all mul2 mul4 hidden"> 4 </td>
+↦   ↦   ↦   ↦   <td class="all hidden"> 5 </td>
+↦   ↦   ↦   ↦   <td class="all mul2 mul3 hidden"> 6 </td>
+↦   ↦   ↦   ↦   <td class="all hidden"> 7 </td>
+↦   ↦   ↦   ↦   <td class="all mul2 mul4 hidden"> 8 </td>
+↦   ↦   ↦   ↦   <td class="all mul3 hidden"> 9 </td>
+↦   ↦   ↦   ↦   </tr>
+↦   ↦   ↦   </table>
+↦   ↦   ↦   
+↦   ↦   ↦   
+         
+     <script src="listejs.js"></script>
+    </body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var boutonAll = document.getElementById('all'); 
+var boutonMul2 = document.getElementById('mul2'); 
+var boutonMul3 = document.getElementById('mul3');
+var boutonMul4 = document.getElementById('mul4');
+var tout = document.getElementsByClassName('all');
+var multi2 = document.getElementsByClassName('mul2');
+var multi3 = document.getElementsByClassName('mul3');
+var multi4 = document.getElementsByClassName('mul4');
+
+var afficher = function(a) {
+  for (var i=0; i<a.length; i++) {
+    a[i].classList.remove('hidden');
+  }
+};
+
+var cacher = function(a) {
+  for (var i=0; i<a.length; i++) {
+    a[i].classList.add('hidden');
+  }
+};
+
+boutonAll.onclick = function(){
+↦   afficher(tout);
+}
+
+
+boutonMul2.onclick = function(){
+  cacher(tout);
+  afficher(multi2);
+}
+
+boutonMul3.onclick = function(){
+  cacher(tout);
+  afficher(multi3);
+}
+
+boutonMul4.onclick = function(){
+  cacher(tout);
+  afficher(multi4);
+}</xmp></code></pre>
+  <pre><code><xmp>ul{
+↦   background-color: black; 
+↦   color:white;
+↦   list-style-type: none;
+↦   
+↦   text-align: center; 
+}
+
+li{
+↦   display: inline-block; 
+↦   padding: 2em; 
+}
+
+.hidden{
+    display:none;
+}
+
+.tableau{
+↦   margin:auto;
+↦   text-align:center;
+}
+
+td{
+↦   font-family: verdana; 
+↦   font-size: 2em; 
+↦   padding: 2em;
+}
+
+div{
+↦   text-align: center; 
+↦   font-family: verdana; 
+↦   font-size: 3em; 
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 102010675502767179627 ()</p>
+  <pre><code><xmp>unsupported url: http://jessyhachet.bsthbg.fr/</xmp></code></pre>
+  <pre><code><xmp></xmp></code></pre>
+  <pre><code><xmp></xmp></code></pre>
+</section>
+  </body>
+</html>
