@@ -1,0 +1,290 @@
+{
+  "students": [
+    {
+      "courseId": "3001638443",
+      "userId": "114436420144224697398",
+      "profile": {
+        "id": "114436420144224697398",
+        "name": {
+          "givenName": "Marc-Antoine",
+          "familyName": "POISIER",
+          "fullName": "Marc-Antoine POISIER"
+        },
+        "emailAddress": "marc-antoine.poisier@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "110577522341247316518",
+      "profile": {
+        "id": "110577522341247316518",
+        "name": {
+          "givenName": "Mike",
+          "familyName": "MEIMOUN",
+          "fullName": "Mike MEIMOUN"
+        },
+        "emailAddress": "mike.meimoun@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "113830218979025225964",
+      "profile": {
+        "id": "113830218979025225964",
+        "name": {
+          "givenName": "Guillaume",
+          "familyName": "DE SAINT SERNIN",
+          "fullName": "Guillaume DE SAINT SERNIN"
+        },
+        "emailAddress": "guillaume.desaintsernin@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "112207424605643686358",
+      "profile": {
+        "id": "112207424605643686358",
+        "name": {
+          "givenName": "Thomas",
+          "familyName": "BONNET",
+          "fullName": "Thomas BONNET"
+        },
+        "emailAddress": "thomas.bonnet@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "105005097564840876975",
+      "profile": {
+        "id": "105005097564840876975",
+        "name": {
+          "givenName": "Nathan",
+          "familyName": "DUMAINE",
+          "fullName": "Nathan DUMAINE"
+        },
+        "emailAddress": "nathan.dumaine@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "108155646187443573287",
+      "profile": {
+        "id": "108155646187443573287",
+        "name": {
+          "givenName": "Romain",
+          "familyName": "LOGNON",
+          "fullName": "Romain LOGNON"
+        },
+        "emailAddress": "romain.lognon@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "112679448788785463225",
+      "profile": {
+        "id": "112679448788785463225",
+        "name": {
+          "givenName": "Guillaume",
+          "familyName": "CEYSSAC",
+          "fullName": "Guillaume CEYSSAC"
+        },
+        "emailAddress": "guillaume.ceyssac@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "103008450972577145005",
+      "profile": {
+        "id": "103008450972577145005",
+        "name": {
+          "givenName": "Rudy",
+          "familyName": "BITAN",
+          "fullName": "Rudy BITAN"
+        },
+        "emailAddress": "rudy.bitan@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "107614857740657485924",
+      "profile": {
+        "id": "107614857740657485924",
+        "name": {
+          "givenName": "Yannis",
+          "familyName": "CHAUMARD-SEVEAN",
+          "fullName": "Yannis CHAUMARD-SEVEAN"
+        },
+        "emailAddress": "yannis.chaumard-sevean@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "104619351768692396442",
+      "profile": {
+        "id": "104619351768692396442",
+        "name": {
+          "givenName": "Martin",
+          "familyName": "CALLONNEC",
+          "fullName": "Martin CALLONNEC"
+        },
+        "emailAddress": "martin.callonnec@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "101709901815932283235",
+      "profile": {
+        "id": "101709901815932283235",
+        "name": {
+          "givenName": "Paul",
+          "familyName": "ESMENARD",
+          "fullName": "Paul ESMENARD"
+        },
+        "emailAddress": "paul.esmenard@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "105336490945396134624",
+      "profile": {
+        "id": "105336490945396134624",
+        "name": {
+          "givenName": "Raphaela",
+          "familyName": "AGUS-AZOUBEL",
+          "fullName": "Raphaela AGUS-AZOUBEL"
+        },
+        "emailAddress": "raphaela.agus-azoubel@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "114828137552143483518",
+      "profile": {
+        "id": "114828137552143483518",
+        "name": {
+          "givenName": "Paul-Erwan",
+          "familyName": "FERRY",
+          "fullName": "Paul-Erwan FERRY"
+        },
+        "emailAddress": "paul-erwan.ferry@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "101394269716091521347",
+      "profile": {
+        "id": "101394269716091521347",
+        "name": {
+          "givenName": "Elsa",
+          "familyName": "HADDAD",
+          "fullName": "Elsa HADDAD"
+        },
+        "emailAddress": "elsa.haddad@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "105977069709569854539",
+      "profile": {
+        "id": "105977069709569854539",
+        "name": {
+          "givenName": "Yanis",
+          "familyName": "EL BOUCHTAOUI",
+          "fullName": "Yanis EL BOUCHTAOUI"
+        },
+        "emailAddress": "yanis.elbouchtaoui@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "117755246149238226250",
+      "profile": {
+        "id": "117755246149238226250",
+        "name": {
+          "givenName": "David",
+          "familyName": "REGNAULT",
+          "fullName": "David REGNAULT"
+        },
+        "emailAddress": "david.regnault@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "100010787573355604224",
+      "profile": {
+        "id": "100010787573355604224",
+        "name": {
+          "givenName": "Pauline",
+          "familyName": "BITTANTE",
+          "fullName": "Pauline BITTANTE"
+        },
+        "emailAddress": "pauline.bittante@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "110487536965862998916",
+      "profile": {
+        "id": "110487536965862998916",
+        "name": {
+          "givenName": "haroon",
+          "familyName": "HASSAN",
+          "fullName": "haroon HASSAN"
+        },
+        "emailAddress": "haroon.hassan@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "106657475933540987931",
+      "profile": {
+        "id": "106657475933540987931",
+        "name": {
+          "givenName": "Inès",
+          "familyName": "POUAMON",
+          "fullName": "Inès POUAMON"
+        },
+        "emailAddress": "ines.pouamon@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "100055098899108735971",
+      "profile": {
+        "id": "100055098899108735971",
+        "name": {
+          "givenName": "Alexandre",
+          "familyName": "Blanc",
+          "fullName": "Alexandre Blanc"
+        },
+        "emailAddress": "alexandre.blanc@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "116655606952938744905",
+      "profile": {
+        "id": "116655606952938744905",
+        "name": {
+          "givenName": "Valentine",
+          "familyName": "PIOL",
+          "fullName": "Valentine PIOL"
+        },
+        "emailAddress": "valentine.piol@eemi.com"
+      }
+    },
+    {
+      "courseId": "3001638443",
+      "userId": "114441804527282195733",
+      "profile": {
+        "id": "114441804527282195733",
+        "name": {
+          "givenName": "Lucas",
+          "familyName": "LACHENY",
+          "fullName": "Lucas LACHENY"
+        },
+        "emailAddress": "lucas.lacheny@eemi.com"
+      }
+    }
+  ]
+}
