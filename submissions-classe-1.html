@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body { font-size: 10px; }
+      section { border-top: 2px solid blue; page-break-after: always; }
+      pre { background-color: #eee; }
+      xmp { white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+<section>
+  <p>Student: 101358311974203602161 (codepen:noelierx:VPOZov)</p>
+  <pre><code><xmp><h2>Liste des champions de League of Legends</h2>
+La liste a été raccourcie volontairement pour avoir un nombre minimal de ligne de codes.<br /><br />
+<select name="champ" id="champ">
+↦   <option value="All">Tous les champions</option>
+↦   <option value="Cat1">Assassins</option>
+↦   <option value="Cat2">Combattants</option>
+↦   <option value="Cat3">Mages</option>
+  <option value="Cat4">Supports</option>
+</select>  
+<hr />
+<section class="champ-list">
+<article class="champ-item" data-category="Cat2"><img src="http://i.imgur.com/848ntSL.png"><h3>Aatrox</h3></article>
+<article class="champ-item" data-category="Cat3 Cat4"><img src="http://i.imgur.com/Lzt5ows.png"><h3>Anivia</h3></article>
+<article class="champ-item" data-category="Cat3"><img src="http://i.imgur.com/DDrwtw1.png"><h3>Bard</h3></article>
+<article class="champ-item" data-category="Cat1 Cat3"><img src="http://i.imgur.com/OQYOLXU.png"><h3>Evelynn</h3></article>
+<article class="champ-item" data-category="Cat1 Cat2"><img src="http://i.imgur.com/4oRFXpd.png"><h3>Lee Sin</h3></article>
+<article class="champ-item" data-category="Cat1 Cat2"><img src="http://i.imgur.com/Ts5Zmpd.png"><h3>Nidalee</h3></article>
+</section>
+<script src="http://bit.ly/2kwtwAE"></script></xmp></code></pre>
+  <pre><code><xmp>$('select#champ').change(function() {
+↦   var filter = $(this).val()
+↦   filterList(filter);
+});
+function filterList(value) {
+↦   var list = $(".champ-list .champ-item");
+↦   $(list).fadeOut("fast");
+↦   if (value == "All") {
+↦   ↦   $(".champ-list").find("article").each(function (i) {
+↦   ↦   ↦   $(this).delay(200).slideDown("fast");
+↦   ↦   });
+↦   } else {
+↦   ↦   $(".champ-list").find("article[data-category*=" + value + "]").each(function (i) {
+↦   ↦   ↦   $(this).delay(200).slideDown("fast");
+↦   ↦   });
+↦   }
+}</xmp></code></pre>
+  <pre><code><xmp>body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:10px;}
+.champ-item {display:inline-block; vertical-align:top; width:120px;}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 108721198866205828934 (codepen:anon:QdRLag)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+↦   <title>Page de produits</title>
+↦   <meta charset="utf-8">
+↦   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+↦   <h1>Bienvenue sur notre boutique en ligne</h1>
+↦   <nav>
+↦   ↦   <div>
+↦   ↦   ↦   <div>
+↦   ↦   ↦   ↦   <p id="viandes">Viandes</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div>
+↦   ↦   ↦   ↦   <p id="poissons">Poissons</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div>
+↦   ↦   ↦   ↦   <p id="fruits">Fruits</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div>
+↦   ↦   ↦   ↦   <p id="legumes">Légumes</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div>
+↦   ↦   ↦   ↦   <p id="all">Voir tout les produits</p>
+↦   ↦   ↦   </div>
+↦   ↦   </div>
+
+↦   </nav>
+↦   <div class="content">
+
+↦   ↦   <article class="viande">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="https://files.meilleurduchef.com/mdc/photo/recette/steak-tartare/steak-tartare-640.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Steak Tartare</h2>
+↦   ↦   ↦   ↦   <p>Achetez notre steak tarte de qualité française et redécouvrez le plaisir de la consommation de viande cru !</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>40€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="viande">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="http://img.cac.pmdstatic.net/fit/http.3A.2F.2Fwww.2Ecuisineactuelle.2Efr.2Fvar.2Fcui.2Fstorage.2Fimages.2Frecettes-de-cuisine.2Frecettes-pour-tous.2Ffamiliale.2Fcote-de-baeuf-salers-marinee-au-corbieres.2F1043607-2-fre-FR.2Fcote-de-baeuf-salers-marinee-au-corbieres.2Ejpg/345x258/crop-from/center/cote-de-boeuf-salers-marinee-au-corbieres.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Cote de boeuf</h2>
+↦   ↦   ↦   ↦   <p>Subtilement relevé par une point de gros sel, redecouvrez le plaisir d'une bonne pièce de viande.</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>45€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="viande">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="http://www.boeufleclair.com/img/cms/img%20produit/hampe-de-boeuf-boucherie-en-ligne.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Steak dans la hampe</h2>
+↦   ↦   ↦   ↦   <p>Cette pièce tendre et fondante est la preuve que consommer de bons produits est accessible à tous.</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>30€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="poisson">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="https://eatzer.com/wp-content/uploads/2016/09/awesome-sushi-720x513.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Sushi</h2>
+↦   ↦   ↦   ↦   <p>Redecouvrez les origines ancestrales des sushis à travers ce plat issus du commerce équitable.</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>35€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="poisson legume">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="http://demandware.edgesuite.net/aahv_prd/on/demandware.static/-/Sites-catalog-picard/default/dw4825d366/recettes/plats/R0176.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Cabillaud aux champignons</h2>
+↦   ↦   ↦   ↦   <p>Sur son lit de champignon, laissez vous aller dans les variations de gouts proposé par ce plat</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>25€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="poisson">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="http://recettes.al-manakh.com/processed/700x450/canapes-au-saumon-fume-et-mascarpone-recette-halal.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Saumon fumé</h2>
+↦   ↦   ↦   ↦   <p>Rien de tel que ces amuses gueules en entré pour réveiller vos papilles et anticiper le plat principal.</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>20€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="legume">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="https://www.atelierdeschefs.com/media/recette-e13601-bibimbap-coreen.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Le bibimpap Coréen*</h2>
+↦   ↦   ↦   ↦   <p>Plat traditionnel coréen, à base de tofu il saura vous régaler</br> *spécial végétarien</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>15€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="legume">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="http://media.topito.com/wp-content/uploads/2015/10/5582940335_bf3db9e964_z.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Sandwich vegan</h2>
+↦   ↦   ↦   ↦   <p>Rien de mieux qu'un retour aux sourcex avec ce sandwich à l'ancienne sur une base de pain traditionnel.</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>20€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="legume fruit">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="http://media.topito.com/wp-content/uploads/2015/10/2659476940_50304d43a3_z.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Bananes rotis</h2>
+↦   ↦   ↦   ↦   <p>Mélange entre sucré et salé, ce plat sera à même de satisfaire les plus curieux !</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>25€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="fruit">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="http://recettescuisinevideo.com/recettes+cuisine+desserts/recettes+dessert+fruits/recettes-fruits-frais-dessert.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Vérine de fruits</h2>
+↦   ↦   ↦   ↦   <p>D'une telle douceur se plat se placera parfaitement à la fin d'un repas.</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>20€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+↦   ↦   <article class="fruit">
+↦   ↦   ↦   <div class="imageproduit">
+↦   ↦   ↦   ↦   <img src="https://barbaraesic.files.wordpress.com/2012/03/recetteslide_6.jpg">
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="maincontent">
+↦   ↦   ↦   ↦   <h2>Salade de fruits</h2>
+↦   ↦   ↦   ↦   <p>Plat traditionnel et léger, c'est une assurance pour un dessert réussi.</p>
+↦   ↦   ↦   </div><!--
+↦   ↦   ↦   --><div class="prix">
+↦   ↦   ↦   ↦   <p>25€</p>
+↦   ↦   ↦   </div>
+↦   ↦   </article>
+
+↦   </div>
+
+↦   <script type="text/javascript" src="script.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var viandes = document.getElementsByClassName('viande');
+var poissons = document.getElementsByClassName('poisson');
+var legumes = document.getElementsByClassName('legume');
+var fruits = document.getElementsByClassName('fruit');
+
+document.getElementById('viandes').onclick = function () {
+↦   for (var i = 0; i<poissons.length; i++) {
+↦   ↦   poissons[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<legumes.length; j++) {
+↦   ↦   legumes[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<fruits.length; k++) {
+↦   ↦   fruits[k].classList.add('hidden');
+↦   }
+↦   for (var l = 0; l<viandes.length; l++) {
+↦   ↦   viandes[l].classList.remove('hidden');
+↦   }
+}
+
+document.getElementById('poissons').onclick = function () {
+↦   for (var i = 0; i<viandes.length; i++) {
+↦   ↦   viandes[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<legumes.length; j++) {
+↦   ↦   legumes[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<fruits.length; k++) {
+↦   ↦   fruits[k].classList.add('hidden');
+↦   }
+↦   for (var l = 0; l<poissons.length; l++) {
+↦   ↦   poissons[l].classList.remove('hidden');
+↦   }
+}
+
+document.getElementById('fruits').onclick = function () {
+↦   for (var i = 0; i<poissons.length; i++) {
+↦   ↦   poissons[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<legumes.length; j++) {
+↦   ↦   legumes[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<viandes.length; k++) {
+↦   ↦   viandes[k].classList.add('hidden');
+↦   }
+↦   for (var l = 0; l<fruits.length; l++) {
+↦   ↦   fruits[l].classList.remove('hidden');
+↦   }
+}
+
+document.getElementById('legumes').onclick = function () {
+↦   for (var i = 0; i<poissons.length; i++) {
+↦   ↦   poissons[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<viandes.length; j++) {
+↦   ↦   viandes[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<fruits.length; k++) {
+↦   ↦   fruits[k].classList.add('hidden');
+↦   }
+↦   for (var l = 0; l<legumes.length; l++) {
+↦   ↦   legumes[l].classList.remove('hidden');
+↦   }
+}
+
+document.getElementById('all').onclick = function () {
+↦   for (var l = 0; l<legumes.length; l++) {
+↦   ↦   legumes[l].classList.remove('hidden');
+↦   }
+↦   for (var l = 0; l<fruits.length; l++) {
+↦   ↦   fruits[l].classList.remove('hidden');
+↦   }
+↦   for (var l = 0; l<viandes.length; l++) {
+↦   ↦   viandes[l].classList.remove('hidden');
+↦   }
+↦   for (var l = 0; l<poissons.length; l++) {
+↦   ↦   poissons[l].classList.remove('hidden');
+↦   }
+}</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+↦   font-family: Roboto;
+↦   margin: 0;
+↦   background-color: #ecf0f1;
+}
+
+h1 {
+↦   text-align: center;
+↦   width: 100%;
+↦   background-color: #27ae60;
+↦   margin: 0;
+↦   padding: 10px 0px;
+↦   color: white;
+
+}
+
+nav {
+↦   width: 100%;
+↦   background-color: #27ae60;
+↦   text-align: center;
+↦   color: white;
+}
+
+nav > div {
+↦   width: 80%;
+↦   margin: auto;
+↦   border-top: 1px solid white;
+↦   padding: 0;
+↦   margin: auto;
+}
+
+nav > div div {
+↦   padding: 0;
+↦   margin: 0;
+↦   display: inline-block;
+↦   width: 20%;
+}
+
+nav div p {
+↦   width: 100%;
+↦   padding: 20px 0px;
+↦   margin: 0;
+↦   text-align: center;
+}
+
+nav > div div:hover {
+↦   background-color: #e67e22;
+↦   cursor: pointer;
+}
+
+.content {
+↦   width: 80%;
+↦   background-color: white;
+↦   margin: auto;
+}
+
+article {
+↦   vertical-align: top;
+↦   width: 100%;
+↦   padding: 20px 0px;
+↦   border-bottom: 1px solid black;
+}
+
+article div {
+↦   display: inline-block;
+↦   vertical-align: middle;
+}
+
+article .imageproduit img {
+↦   width: 100%;
+↦   border-radius: 5px;
+}
+
+.imageproduit {
+↦   width: 15%;
+↦   padding-left: 20px;
+}
+
+h2 {
+↦   margin: 0;
+}
+
+.maincontent {
+↦   padding-left: 20px;
+↦   width :calc(70% - 40px);
+}
+
+.prix {
+↦   font-size: 1.3em;
+↦   width: 15%;
+↦   text-align: center;
+}
+
+.hidden {
+↦   display: none;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 112650082341843561427 (codepen:anon:xgeEEX)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+
+↦   <meta charset="utf-8">
+↦   
+↦   <title>Tableaux par Artistes</title>
+↦   
+↦   <link rel="stylesheet" type="text/css" href="index.css">
+↦   
+</head>
+
+<body>
+
+↦   <header>
+↦   ↦   <a rel="nofollow" rel="noreferrer"href="index.html"><h1>Tableaux par Artistes</h1></a>
+↦   </header>
+
+↦   <nav>
+↦   ↦   <ul>
+↦   ↦   ↦   <li id="filtre_tous">Tous</li><!--
+↦   ↦    --><li id="filtre_picasso">Picasso</li><!--
+↦   ↦    --><li id="filtre_renoir">Renoir</li><!--
+↦   ↦    --><li id="filtre_monet">Monet</li>
+↦   ↦   </ul>
+↦   </nav>
+
+↦   <div class="main">
+↦   
+↦   
+↦   
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   
+↦   ↦   ↦   <article class="Picasso">
+↦   ↦   ↦   ↦   <h2>Guernica</h2>
+↦   ↦   ↦   ↦   <img src="http://dp.mariottini.free.fr/weekend/madrid/photo/guernica.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Renoir">
+↦   ↦    ↦   ↦   <h2>Le Dejeuner des Canotiers</h2>
+↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/260px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Monet">
+↦   ↦    ↦   ↦   <h2>Parlements de Londres</h2>
+↦   ↦    ↦   ↦   <img src="http://articles.chantiers-philo.fr//wp-content/galleries/parlements/Londres,%20le%20Parlement,%20effet%20de%20soleil%20dans%20le%20brouillard,%20Claude%20Monet%201900-1901.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Picasso">
+↦   ↦    ↦   ↦   <h2>Les Demoiselles d'Avignon</h2>
+↦   ↦    ↦   ↦   <img src="http://www.clioetcalliope.com/oeuvres/peinture/picasso/avignon.jpg"/>
+↦   ↦   ↦   </article>
+↦   ↦   ↦   
+↦   ↦   ↦   
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   
+↦   ↦   
+↦   ↦   ↦   <article class="Renoir">
+↦   ↦    ↦   ↦   <h2>Bal Du Moulin de la Galette</h2>
+↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d'Orsay_RF_2739_(derivative_work_-_AutoContrast_edit_in_LCH_space).jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Picasso">
+↦   ↦    ↦   ↦   <h2>Le Vieux Guitariste Aveugle</h2>
+↦   ↦    ↦   ↦   <img src="http://imgc.allpostersimages.com/images/P-473-488-90/9/908/B95X000Z/affiches/pablo-picasso-le-vieux-guitariste-aveugle-vers-1903.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Monet">
+↦   ↦    ↦   ↦   <h2>Impression, Soleil Levant</h2>
+↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Claude_Monet,_Impression,_soleil_levant.jpg/260px-Claude_Monet,_Impression,_soleil_levant.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Monet">
+↦   ↦    ↦   ↦   <h2>La Promenade</h2>
+↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Monet_Umbrella.JPG/260px-Monet_Umbrella.JPG"/>
+↦   ↦   ↦   </article><!-- -->
+↦   ↦   ↦   
+↦   ↦   ↦   
+↦   ↦   ↦   
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   <!------------------------------------------------------- -->
+↦   ↦   
+↦   ↦   
+↦   ↦   
+↦   ↦       <article class="Renoir">
+↦   ↦    ↦   ↦   <h2>Les Deux Soeurs</h2>
+↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Renoir,_Pierre-Auguste_-_The_Two_Sisters,_On_the_Terrace.jpg/260px-Renoir,_Pierre-Auguste_-_The_Two_Sisters,_On_the_Terrace.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Monet">
+↦   ↦    ↦   ↦   <h2>Les Coquelicots</h2>
+↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Claude_Monet_037.jpg/260px-Claude_Monet_037.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Renoir">
+↦   ↦    ↦   ↦   <h2>Les Baigneuses</h2>
+↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Les_Baigneuses-Courbet.jpg/260px-Les_Baigneuses-Courbet.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦   ↦   
+↦   ↦    --><article class="Picasso">
+↦   ↦    ↦   ↦   <h2>La Femme Qui Pleure</h2>
+↦   ↦    ↦   ↦   <img src="http://static.intellego.fr/uploads/1/1/110279/media/31937-Femme-qui-pleure-ultimo-periodo-pablo-picasso.jpg"/>
+↦   ↦   ↦   </article><!-- -->
+↦   ↦   ↦   
+↦   </div>
+
+
+↦   <script src="index.js"></script>
+↦   
+↦   
+↦   </body>
+↦   
+</html></xmp></code></pre>
+  <pre><code><xmp>/* ------------------------------------------- */
+
+// TYPES
+var TablPicasso = document.getElementsByClassName('Picasso');
+var TablRenoir = document.getElementsByClassName('Renoir');
+var TablMonet = document.getElementsByClassName('Monet');
+
+//BOUTONS
+
+var tousClic = document.getElementById('filtre_tous');
+var FiltrePicasso = document.getElementById('filtre_picasso');
+var FiltreRenoir = document.getElementById('filtre_renoir');
+var FiltreMonet = document.getElementById('filtre_monet');
+
+
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+
+// TOUS
+document.getElementById('filtre_tous').onclick = function (){
+
+
+ ↦   for(var i = 0; i < TablRenoir.length; i++){
+↦   ↦   TablRenoir[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < TablMonet.length; i++){
+↦   ↦   TablMonet[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < TablPicasso.length; i++){
+↦   ↦   TablPicasso[i].classList.remove('hidden'); 
+↦   }
+
+↦   tousClic.classList.add('clic');
+↦   FiltrePicasso.classList.remove('clic');
+↦   FiltreRenoir.classList.remove('clic');
+↦   FiltreMonet.classList.remove('clic');
+}
+
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+
+//Picasso
+document.getElementById('filtre_picasso').onclick = function (){
+
+ ↦   for(var i = 0; i < TablRenoir.length; i++){
+↦   ↦   TablRenoir[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < TablMonet.length; i++){
+↦   ↦   TablMonet[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < TablPicasso.length; i++){
+↦   ↦   TablPicasso[i].classList.remove('hidden'); 
+↦   }
+
+↦   FiltrePicasso.classList.add('clic');
+↦   FiltreRenoir.classList.remove('clic');
+↦   FiltreMonet.classList.remove('clic');
+↦   tousClic.classList.remove('clic');
+}
+
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+
+//Renoir
+document.getElementById('filtre_renoir').onclick = function (){
+
+↦   for(var i = 0; i < TablRenoir.length; i++){
+↦   ↦   TablRenoir[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < TablMonet.length; i++){
+↦   ↦   TablMonet[i].classList.add('hidden'); 
+↦   }
+
+
+↦   for(var i = 0; i < TablPicasso.length; i++){
+↦   ↦   TablPicasso[i].classList.add('hidden'); 
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   FiltrePicasso.classList.remove('clic');
+↦   FiltreRenoir.classList.add('clic');
+↦   FiltreMonet.classList.remove('clic');
+
+}
+
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+
+// Monet
+document.getElementById('filtre_monet').onclick = function (){
+
+↦   for(var i = 0; i < TablMonet.length; i++){
+↦   ↦   TablMonet[i].classList.remove('hidden'); 
+↦   }
+
+
+↦   for(var i = 0; i < TablPicasso.length; i++){
+↦   ↦   TablPicasso[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < TablRenoir.length; i++){
+↦   ↦   TablRenoir[i].classList.add('hidden'); 
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   FiltrePicasso.classList.remove('clic');
+↦   FiltreRenoir.classList.remove('clic');
+↦   FiltreMonet.classList.add('clic');
+
+
+}
+
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+a{
+↦   text-decoration: ↦   ↦   ↦   none;
+↦   color:↦   ↦   ↦   ↦   ↦   ↦   #333;
+}
+
+/* ------------------------------------------------------- */
+/* --- Cacher les tableaux en fonction de la catégorie --- */
+/* ------------------------------------------------------- */
+
+.hidden{
+↦   display:↦   ↦   ↦   ↦   ↦   none;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------- */
+/* ------- Fond "blanc" sur la catégorie choisis  -------- */
+/* ------------------------------------------------------- */
+
+.clic{
+↦   background-color:↦   ↦   ↦   #eee;
+↦   border-radius:↦   ↦   ↦   ↦   20px;
+↦   color:↦   ↦   ↦   ↦   ↦   ↦   #333;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+
+
+body{
+↦   margin:↦   ↦   ↦   ↦   ↦   ↦   0;
+↦   width:↦   ↦   ↦   ↦   ↦   ↦   100%;
+↦   background-color:↦   ↦   ↦   #eee;
+↦   transition:↦   ↦   ↦   ↦   ↦   color 250ms;
+↦   font-family: ↦   ↦   ↦   ↦   'Montserrat', sans-serif;
+
+}
+
+header{
+↦   padding:↦   ↦   ↦   ↦   ↦   10px;
+↦   margin:↦   ↦   ↦   ↦   ↦   ↦   auto;
+↦   width:↦   ↦   ↦   ↦   ↦   ↦   calc(100% - 20px);
+↦   text-align:↦   ↦   ↦   ↦   ↦   center;
+↦   border-bottom:↦   ↦   ↦   ↦   solid 2px white;
+}
+
+
+
+/* ------------------------------------------------------- */
+/* --------------------- LISTE MENU ---------------------- */
+/* ------------------------------------------------------- */
+
+nav{
+↦   width:↦   ↦   ↦   ↦   ↦   ↦   calc(100% - 20px);
+↦   background-color:↦   ↦   ↦   #333;
+↦   margin:↦   ↦   ↦   ↦   ↦   ↦   0;
+↦   padding:↦   ↦   ↦   ↦   ↦   10px;
+↦   border-bottom:↦   ↦   ↦   ↦   solid 2px white;
+}
+
+nav ul{
+↦   margin:↦   ↦   ↦   ↦   ↦   ↦   0;
+↦   padding:↦   ↦   ↦   ↦   ↦   0;
+}
+
+nav li{
+↦   display:↦   ↦   ↦   ↦   ↦   inline-block;
+↦   list-style-type:↦   ↦   ↦   none;
+↦   width:↦   ↦   ↦   ↦   ↦   ↦   calc(25% - 40px);
+↦   text-align:↦   ↦   ↦   ↦   ↦   center;
+↦   font-size:↦   ↦   ↦   ↦   ↦   1.5em;
+↦   text-transform: ↦   ↦   ↦   uppercase;
+↦   padding:↦   ↦   ↦   ↦   ↦   10px;
+↦   margin:↦   ↦   ↦   ↦   ↦   ↦   10px;
+↦   color:↦   ↦   ↦   ↦   ↦   ↦   white;
+}
+
+
+nav li:hover{
+↦   cursor:↦   ↦   ↦   ↦   ↦   ↦   pointer;
+↦   background-color:↦   ↦   ↦   #eee;
+↦   border-radius:↦   ↦   ↦   ↦   20px;
+↦   color:↦   ↦   ↦   ↦   ↦   ↦   #333;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+.main{
+↦   margin:↦   ↦   ↦   ↦   ↦   ↦   auto;
+
+}
+
+
+
+/* ------------------------------------------------------- */
+/* ------------------- Article (images) ------------------ */
+/* ------------------------------------------------------- */
+
+article{
+↦   display:↦   ↦   ↦   ↦   ↦   inline-block;
+↦   width:↦   ↦   ↦   ↦   ↦   ↦   calc(24.8% - 40px);
+↦   margin:↦   ↦   ↦   ↦   ↦   ↦   10px;
+↦   padding:↦   ↦   ↦   ↦   ↦   10px;
+↦   vertical-align: ↦   ↦   ↦   top;
+↦   text-align:↦   ↦   ↦   ↦   ↦   center;
+↦   background-color:↦   ↦   ↦   rgba(255,255,255,0.6);
+↦   border-radius: ↦   ↦   ↦   ↦   10px;
+
+}
+
+article:hover{
+↦   border:↦   ↦   ↦   ↦   ↦   ↦   solid black 3px;
+↦   background-color:↦   ↦   ↦   #333;
+↦   color:↦   ↦   ↦   ↦   ↦   ↦   #eee;
+}
+
+article > img{
+↦   width:↦   ↦   ↦   ↦   ↦   ↦   calc(100% - 20px);
+↦   padding:↦   ↦   ↦   ↦   ↦   10px;
+↦   height: ↦   ↦   ↦   ↦   ↦   225px;
+↦   border-radius: ↦   ↦   ↦   ↦   20px;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 117481420651899349023 (codepen:SpaCeDuDe:ygEdWr)</p>
+  <pre><code><xmp><body>
+  <header>
+    <h1>Mes jeux préférés !</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li id="filtre_tous">Tous</li><!--
+--><li id="filtre_aventure">Aventure</li><!--
+--><li id="filtre_course">Course</li><!--
+--><li id="filtre_plateforme">Plateforme</li><!--
+--><li id="filtre_baston">Baston</li><!--
+--><li id="filtre_rpg">RPG</li><!--
+--><li id="filtre_portable">Console portable</li><!--
+--><li id="filtre_salon">Console de salon</li>
+    </ul>
+  </nav>
+
+  <div class="main">
+    <!-- DEBUT LIGNE 1 -->
+    <article class="plateforme portable">
+      <h2>Super Mario</h2>
+      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/supermario.jpg"/>
+      <p>Un jeu légendaire qui n'est plus à présenter.</p>
+    </article><!--
+--><article class="aventure portable">
+    <h2>Pokémon</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/pokemon.jpg"/>
+    <p>Attrapez les tous !</p>
+    </article><!--
+--><article class="aventure salon portable">
+    <h2>The Legend of Zelda</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/windwaker.jpg"/>
+    <p>Et pourquoi pas "The Legend of Link" ?!</p>
+    </article><!--
+--><article class="baston salon">
+    <h2>Street Fighter</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/street.jpg"/>
+    <p>You win ! Perfect !</p>
+    </article>
+    <!-- DEBUT LIGNE 2 -->
+    <article class="baston salon">
+      <h2>Super Smash Bros</h2>
+      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/ssbm.jpg"/>
+      <p>Show me your moves !</p>
+    </article><!--
+--><article class="plateforme portable">
+    <h2>Donkey Kong Country</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/dk.jpg"/>
+    <p>De mon temps, les jeux avaient un vrai gameplay !</p>
+    </article><!--
+--><article class="aventure plateforme salon">
+    <h2>Tomb Raider</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/tomb.jpg"/>
+    <p>Qui ne connait pas le nom de Lara Croft ?</p>
+    </article><!--
+--><article class="course salon">
+    <h2>Mario Kart</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/mariokart.jpg"/>
+    <p>Maudites carapaces bleues !</p>
+    </article><!-- -->
+    <!-- DEBUT LIGNE 3 -->
+    <article class="rpg portable">
+      <h2>Final Fantasy</h2>
+      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/final.jpg"/>
+      <p>Enorme durée de vie</p>
+    </article><!--
+--><article class="rpg plateforme portable">
+    <h2>Castlevania</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/castle.jpg"/>
+    <p>Pour renvoyer Dracula en Enfer !</p>
+    </article><!--
+--><article class="aventure plateforme portable">
+    <h2>Metroid</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/metroid.jpg"/>
+    <p>Dans l'espace, personne ne vous entendra crier.</p>
+    </article><!--
+--><article class="plateforme salon portable">
+    <h2>Super Meat Boy</h2>
+    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/super.png"/>
+    <p>Die and Retry :D</p>
+    </article><!-- -->
+  </div>
+
+
+  <script src="filtrage.js"></script>
+</body></xmp></code></pre>
+  <pre><code><xmp>
+// TYPES
+var jeuAventure = document.getElementsByClassName('aventure'); // => TABLEAU D'ELEMENTS
+var jeuBaston = document.getElementsByClassName('baston');
+var jeuRPG = document.getElementsByClassName('rpg');
+var jeuPlateforme = document.getElementsByClassName('plateforme');
+var jeuCourse = document.getElementsByClassName('course');
+
+// PLATEFORME
+var jeuSalon = document.getElementsByClassName('salon');
+var jeuPortable = document.getElementsByClassName('portable');
+
+//BOUTONS
+var tousClic = document.getElementById('filtre_tous');
+var aventureClic = document.getElementById('filtre_aventure');
+var courseClic = document.getElementById('filtre_course');
+var plateformeClic = document.getElementById('filtre_plateforme');
+var bastonClic = document.getElementById('filtre_baston');
+var rpgClic = document.getElementById('filtre_rpg');
+var portableClic = document.getElementById('filtre_portable');
+var salonClic = document.getElementById('filtre_salon');
+
+
+/* ----------------------------------------------------------------------------- */
+
+
+// TOUS
+document.getElementById('filtre_tous').onclick = function (){
+
+↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   ↦   jeuRPG[i].classList.remove('hidden'); 
+↦   }
+
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   ↦   jeuCourse[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.remove('hidden');
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.remove('hidden');
+↦   }
+
+↦   tousClic.classList.add('clic');
+↦   aventureClic.classList.remove('clic');
+↦   courseClic.classList.remove('clic');
+↦   plateformeClic.classList.remove('clic');
+↦   bastonClic.classList.remove('clic');
+↦   rpgClic.classList.remove('clic');
+↦   portableClic.classList.remove('clic');
+↦   salonClic.classList.remove('clic');
+}
+
+//AVENTURE
+document.getElementById('filtre_aventure').onclick = function (){
+
+ ↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   ↦   jeuRPG[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   ↦   jeuCourse[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.remove('hidden'); 
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   aventureClic.classList.add('clic');
+↦   courseClic.classList.remove('clic');
+↦   plateformeClic.classList.remove('clic');
+↦   bastonClic.classList.remove('clic');
+↦   rpgClic.classList.remove('clic');
+↦   portableClic.classList.remove('clic');
+↦   salonClic.classList.remove('clic');
+
+}
+
+//PLATEFORME
+document.getElementById('filtre_plateforme').onclick = function (){
+
+↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   ↦   jeuRPG[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   ↦   jeuCourse[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){ /*Toujours le remove à la fin */
+↦   ↦   jeuPlateforme[i].classList.remove('hidden'); 
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   aventureClic.classList.remove('clic');
+↦   courseClic.classList.remove('clic');
+↦   plateformeClic.classList.add('clic');
+↦   bastonClic.classList.remove('clic');
+↦   rpgClic.classList.remove('clic');
+↦   portableClic.classList.remove('clic');
+↦   salonClic.classList.remove('clic');
+
+}
+
+// BASTON
+document.getElementById('filtre_baston').onclick = function (){
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   ↦   jeuRPG[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   ↦   jeuCourse[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.remove('hidden'); 
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   aventureClic.classList.remove('clic');
+↦   courseClic.classList.remove('clic');
+↦   plateformeClic.classList.remove('clic');
+↦   bastonClic.classList.add('clic');
+↦   rpgClic.classList.remove('clic');
+↦   portableClic.classList.remove('clic');
+↦   salonClic.classList.remove('clic');
+
+}
+
+// COURSE
+document.getElementById('filtre_course').onclick = function (){
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   ↦   jeuRPG[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   ↦   jeuCourse[i].classList.remove('hidden'); 
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   aventureClic.classList.remove('clic');
+↦   courseClic.classList.add('clic');
+↦   plateformeClic.classList.remove('clic');
+↦   bastonClic.classList.remove('clic');
+↦   rpgClic.classList.remove('clic');
+↦   portableClic.classList.remove('clic');
+↦   salonClic.classList.remove('clic');
+
+}
+
+// RPG
+document.getElementById('filtre_rpg').onclick = function (){
+
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   jeuCourse[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   jeuRPG[i].classList.remove('hidden'); 
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   aventureClic.classList.remove('clic');
+↦   courseClic.classList.remove('clic');
+↦   plateformeClic.classList.remove('clic');
+↦   bastonClic.classList.remove('clic');
+↦   rpgClic.classList.add('clic');
+↦   portableClic.classList.remove('clic');
+↦   salonClic.classList.remove('clic');
+
+}
+
+// PORTABLE
+document.getElementById('filtre_portable').onclick = function (){
+
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   ↦   jeuCourse[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   ↦   jeuRPG[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.remove('hidden')
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   aventureClic.classList.remove('clic');
+↦   courseClic.classList.remove('clic');
+↦   plateformeClic.classList.remove('clic');
+↦   bastonClic.classList.remove('clic');
+↦   rpgClic.classList.remove('clic');
+↦   portableClic.classList.add('clic');
+↦   salonClic.classList.remove('clic');
+
+}
+
+// SALON
+document.getElementById('filtre_salon').onclick = function (){
+
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuBaston.length; i++){
+↦   ↦   jeuBaston[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuCourse.length; i++){
+↦   ↦   jeuCourse[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuRPG.length; i++){
+↦   ↦   jeuRPG[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden');
+↦   }
+
+↦   for(var i = 0; i < jeuSalon.length; i++){
+↦   ↦   jeuSalon[i].classList.remove('hidden');
+↦   }
+
+↦   tousClic.classList.remove('clic');
+↦   aventureClic.classList.remove('clic');
+↦   courseClic.classList.remove('clic');
+↦   plateformeClic.classList.remove('clic');
+↦   bastonClic.classList.remove('clic');
+↦   rpgClic.classList.remove('clic');
+↦   portableClic.classList.remove('clic');
+↦   salonClic.classList.add('clic');
+
+}</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+
+/* Pour masquer des éléments */
+.hidden{
+↦   display:none;
+}
+
+/* Pour garder un fond sur les onglets après le clic */
+.clic{
+↦   background-color:rgba(255,255,255,0.8);
+↦   border-radius:20px;
+↦   color:black;
+}
+
+body{
+↦   margin:0;
+↦   width:100%;
+↦   background-color:#3498db;
+↦   transition:color 250ms;
+↦   font-family:"Capriola";
+
+}
+
+header{
+↦   padding:10px;
+↦   margin:auto;
+↦   width:calc(100% - 20px);
+↦   text-align:center;
+↦   color:white;
+↦   border-bottom:solid 2px white;
+}
+
+nav{
+↦   width:calc(100% - 20px);
+↦   background-color:#e74c3c;
+↦   margin:0;
+↦   padding:10px;
+↦   border-bottom:solid 2px white;
+}
+
+nav ul{
+↦   margin:0;
+↦   padding:0;
+}
+
+nav li{
+↦   display:inline-block;
+↦   list-style-type:none;
+↦   width:calc(25% - 40px);
+↦   text-align:center;
+↦   font-size:1.5em;
+↦   text-transform: uppercase;
+↦   padding:10px;
+↦   margin:10px;
+↦   /*background-color:rgba(255,255,255,0.8);
+↦   border-radius:20px;*/
+↦   color:white;
+}
+
+nav li:hover{
+↦   cursor:pointer;
+↦   background-color:rgba(255,255,255,0.8);
+↦   border-radius:20px;
+↦   color:black;
+}
+
+
+.main{
+↦   margin:auto;
+
+}
+
+article{
+↦   display:inline-block;
+↦   width:calc(24.8% - 40px);
+↦   margin:10px;
+↦   padding:10px;
+↦   vertical-align: top;
+↦   text-align:center;
+↦   background-color:rgba(255,255,255,0.6);
+↦   border-radius: 10px;
+
+}
+
+article > img{
+↦   width:calc(100% - 20px);
+↦   padding:10px;
+↦   height: 185px;
+↦   border-radius: 20px;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 117481420651899349023 (codepen:SpaCeDuDe:rjgNOR)</p>
+  <pre><code><xmp><body>
+↦   ↦   <header>
+↦   ↦   ↦   <h1>Mes jeux préférés !</h1>
+↦   ↦   </header>
+
+↦   ↦   <nav>
+↦   ↦   ↦   <ul>
+↦   ↦   ↦   ↦   <li id="filtre_tous">TOUS</li><!--
+↦   ↦   ↦    --><li id="filtre_aventure">Aventure</li><!--
+↦   ↦   ↦    --><li id="filtre_plateforme">Plateforme</li><!--
+↦   ↦   ↦    --><li id="filtre_portable">Console portable</li>
+↦   ↦   ↦   </ul>
+↦   ↦   </nav>
+
+↦   ↦   <div class="main">
+↦   ↦   ↦   <article class="plateforme portable">
+↦   ↦   ↦   ↦   <h2>Super Mario</h2>
+↦   ↦   ↦   ↦   <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/supermario.jpg">
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="aventure portable">
+↦   ↦    ↦   ↦   <h2>Pokémon</h2>
+↦   ↦    ↦   ↦   <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/pokemon.jpg"/>
+↦   ↦    ↦   </article><!--
+↦   ↦    --><article class="aventure">
+↦   ↦    ↦   ↦   <h2>The Legend of Zelda</h2>
+   ↦   ↦   ↦   ↦   <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/windwaker.jpg"/>
+   ↦   ↦   ↦   </article><!--
+   ↦   ↦    --><article>
+   ↦   ↦    ↦      <h2>Donkey Kong Country</h2>
+  ↦   ↦   ↦      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/dk.jpg"/>
+  ↦   ↦   ↦   </article><!--
+  ↦   ↦    --><article class="aventure plateforme">
+↦   ↦   ↦      <h2>Tomb Raider</h2>
+↦   ↦   ↦      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/tomb.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="aventure portable">
+↦   ↦          <h2>Final Fantasy</h2>
+↦   ↦          <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/final.jpg"/>
+↦   ↦       </article><!--
+↦   ↦    --><article class="plateforme portable">
+↦   ↦   ↦       <h2>Castlevania</h2>
+↦   ↦   ↦       <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/castle.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="plateforme portable">
+↦   ↦   ↦       <h2>Metroid</h2>
+↦   ↦   ↦       <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/metroid.jpg"/>
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="plateforme">
+↦   ↦   ↦       <h2>Super Meat Boy</h2>
+↦   ↦   ↦       <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/super.png"/>
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="portable">
+↦   ↦   ↦       <h2>Mario Kart</h2>
+↦   ↦   ↦       <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/mariokart.jpg"/>
+↦   ↦   ↦   </article>
+↦   ↦   </div>
+</body></xmp></code></pre>
+  <pre><code><xmp>// TYPES
+var jeuAventure = document.getElementsByClassName('aventure'); // => TABLEAU D'ELEMENTS
+var jeuPlateforme = document.getElementsByClassName('plateforme');
+var jeuPortable = document.getElementsByClassName('portable');
+
+//BOUTONS
+var tousClic = document.getElementById('filtre_tous');
+var aventureClic = document.getElementById('filtre_aventure');
+var plateformeClic = document.getElementById('filtre_plateforme');
+var portableClic = document.getElementById('filtre_portable');
+
+// TOUS
+document.getElementById('filtre_tous').onclick = function (){
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.remove('hidden');
+↦   }
+}
+
+//AVENTURE
+document.getElementById('filtre_aventure').onclick = function (){
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.remove('hidden'); 
+↦   }
+}
+
+//PLATEFORME
+document.getElementById('filtre_plateforme').onclick = function (){
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.add('hidden')
+↦   }
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){ /*Toujours le remove à la fin */
+↦   ↦   jeuPlateforme[i].classList.remove('hidden'); 
+↦   }
+}
+// PORTABLE
+document.getElementById('filtre_portable').onclick = function (){
+
+↦   for(var i = 0; i < jeuPlateforme.length; i++){
+↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuAventure.length; i++){
+↦   ↦   jeuAventure[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < jeuPortable.length; i++){
+↦   ↦   jeuPortable[i].classList.remove('hidden')
+↦   }
+}</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+
+/* Pour masquer des éléments */
+.hidden{
+↦   display:none;
+}
+
+body{
+↦   margin:0;
+↦   width:100%;
+↦   background-color:#3498db;
+↦   transition:color 250ms;
+↦   font-family:"Capriola";
+
+}
+
+header{
+↦   padding:10px;
+↦   margin:auto;
+↦   width:calc(100% - 20px);
+↦   text-align:center;
+↦   color:white;
+↦   border-bottom:solid 2px white;
+}
+
+nav{
+↦   width:calc(100% - 20px);
+↦   background-color:#e74c3c;
+↦   margin:0;
+↦   padding:10px;
+↦   border-bottom:solid 2px white;
+}
+
+nav ul{
+↦   margin:0;
+↦   padding:0;
+}
+
+nav li{
+↦   display:inline-block;
+↦   list-style-type:none;
+↦   width:calc(25% - 40px);
+↦   text-align:center;
+↦   font-size:1.5em;
+↦   text-transform: uppercase;
+↦   padding:10px;
+↦   margin:10px;
+↦   /*background-color:rgba(255,255,255,0.8);
+↦   border-radius:20px;*/
+↦   color:white;
+}
+
+nav li:hover{
+↦   cursor:pointer;
+↦   background-color:rgba(255,255,255,0.8);
+↦   border-radius:20px;
+↦   color:black;
+}
+
+
+.main{
+↦   margin:auto;
+
+}
+
+article{
+↦   display:inline-block;
+↦   width:calc(24.8% - 40px);
+↦   margin:10px;
+↦   padding:10px;
+↦   vertical-align: top;
+↦   text-align:center;
+↦   background-color:rgba(255,255,255,0.6);
+↦   border-radius: 10px;
+
+}
+
+article > img{
+↦   width:calc(100% - 20px);
+↦   padding:10px;
+↦   height: 185px;
+↦   border-radius: 20px;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 116921323770734561563 (jsfiddle:pixrrl:jkav8oe3)</p>
+  <pre><code><xmp><body id="body" class="theme">
+<header>
+<nav class="theme">
+↦   <ul>
+↦   <li>Filtre selon la cat&#xE9;gorie&#xA0;!</li><!--
+↦   --><li id="ViewAll">Tout afficher</li><!--
+↦   --><li id="Accessoire">Accessoires</li><!--
+↦   --><li id="Connecte">Appareils connect&#xE9;s</li><!--
+↦   --><li id="Smartphone">Smartphone</li><!--
+↦   --><li id="Telephone">T&#xE9;l&#xE9;phones</li>
+</ul>
+</nav>
+<div id="bloc1">
+<div id="haut" class="theme">
+<h1 class="theme">Filtrage par cat&#xE9;gorie</h1>
+</div>
+<div id="bas">
+↦   <article class="Accessoire Connecte All">
+↦   ↦   <div>Airpods (&#xE9;couteur sans fil)</div><!--
+↦   ↦   --><div><img src="https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/M/ME/MMEF2/MMEF2_AV1?wid=1000&amp;hei=1000&amp;fmt=jpeg&amp;qlt=95&amp;op_sharpen=0&amp;resMode=bicub&amp;op_usm=0.5,0.5,0,0&amp;iccEmbed=0&amp;layer=comp&amp;.v=1473201135463" alt="Airpods"></div>
+↦   </article>
+↦   <article class="Accessoire Connecte All">
+↦   ↦   <div>Apple Watch</div><!--
+↦   ↦   --><div><img src="http://i0.kym-cdn.com/entries/icons/original/000/018/285/h_51561794.jpg" alt="AppleWatch"></div>
+↦   </article>
+↦   <article class="Connecte All">
+↦   ↦   <div>Appareil photo num&#xE9;rique</div><!--
+↦   ↦   --><div><img src="https://images-na.ssl-images-amazon.com/images/I/61VAxnYMWIL._SL1200_.jpg" alt="photo"></div>
+↦   </article>
+↦   <article class="Accessoire All">
+↦   ↦   <div>Cable de chargement</div><!--
+↦   ↦   --><div><img src="http://images.techhive.com/images/article/2015/04/monoprice-usbc-usba-130091-100577828-orig.jpg" alt="USBc"></div>
+↦   </article>
+↦   <article class="Accessoire Connecte All">
+↦   ↦   <div>Casque sans fil</div><!--
+↦   ↦   --><div><img src="https://images-na.ssl-images-amazon.com/images/I/91jPqnErQ%2BL._SL1500_.jpg" alt="Casque"></div>
+↦   </article>
+↦   <article class="Accessoire All">
+↦   ↦   <div>Coque de t&#xE9;l&#xE9;phone</div><!--
+↦   ↦   --><div><img src="http://g2o.esy.es/wp-content/uploads/2016/04/coque-telephone-geek-chic.jpg" alt="coque"></div>
+↦   </article>
+↦   <article class="Connecte All">
+↦   ↦   <div>Freebox V6</div><!--
+↦   ↦   --><div><img src="http://www.canalgeek.fr/wp-content/uploads/2013/02/freebox-revolution.png" alt="FreeboxV6"></div>
+↦   </article>
+↦   <article class="Connecte Smartphone Telephone All">
+↦   ↦   <div>iPhone 7</div><!--
+↦   ↦   --><div><img src="http://img.bfmtv.com/c/1256/708/23d/f793a85b252cd4931a484f2d26a5d.jpg" alt="iphone7"></div>
+↦   </article>
+↦   <article class="Connecte Telephone All">
+↦   ↦   <div>Nokia 3310</div><!--
+↦   ↦   --><div><img src="http://tech.firstpost.com/wp-content/uploads/2015/06/Nokia-3310.jpg" alt="Nokia-3310"></div>
+↦   </article>
+↦   <article class="Connecte All">
+↦   ↦   <div>Ordinateur portable</div><!--
+↦   ↦   --><div><img src="http://media.ldlc.com/ld/products/00/03/61/60/LD0003616028_2_0003616605_0003617166_0003617426_0003805707_0003808238.jpg" alt="PC"></div>
+↦   </article>
+</div>
+</div>
+</header>
+</body></xmp></code></pre>
+  <pre><code><xmp>/* Le travail est aussi visionnable sur le nouveau serveur de l&apos;EEMI
+en suivant ce lien: http://plim.eemi.tech/Javascript/Filtrage/ */
+// D&#xE9;finition des variables
+var accessoire1 = document.getElementsByClassName(&apos;Accessoire&apos;);
+var connecte2 = document.getElementsByClassName(&apos;Connecte&apos;);
+var smartphone3 = document.getElementsByClassName(&apos;Smartphone&apos;);
+var telephone4 = document.getElementsByClassName(&apos;Telephone&apos;);
+var tout5 = document.getElementsByClassName(&apos;All&apos;);
+var theme = document.getElementsByClassName(&apos;theme&apos;);
+var bloc = document.getElementById(&apos;bloc1&apos;);
+
+// D&#xE9;finition des fonctions
+function tousLesProduits() {
+  // Supression de la class hidden &#xE0; tous les produits
+  for (var i = 0; i &lt; tout5.length; i++) {
+    tout5[i].classList.remove(&apos;hidden&apos;);
+  }
+  // Change le titre h1
+  document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class="theme">Tous les produits</h1>&apos;;
+  // Si l&apos;&#xE9;cran a une largeur maximale de 1280px, le titre h1 passera en couleur blanche
+  if (screen.width <= 1="" 1280="" )="" {="" theme[3].style.color="white" ;="" }="" passage="" de="" l'opacité="" du="" bloc="" contenant="" les="" articles="" à="" pour="" une="" transition="" css="" bloc.style.opacity="1" function="" lesaccessoires()="" ajout="" la="" class="" hidden tous="" produits="" concernés="" for="" (var="" i="0;" <="" connecte2.length;="" i++)="" connecte2[i].classlist.add('hidden');="" smartphone3.length;="" smartphone3[i].classlist.add('hidden');="" telephone4.length;="" telephone4[i].classlist.add('hidden');="" accessoire1.length;="" accessoire1[i].classlist.remove('hidden');="" document.getelementbyid('haut').innerhtml="&lt;h1 class=&quot;theme&quot;&gt;Tous les accessoires&lt;/h1&gt;" if="" (screen.width="" tousconnectes()="" accessoire1[i].classlist.add('hidden');="" connecte2[i].classlist.remove('hidden');="" lesmartphone()="" smartphone3[i].classlist.remove('hidden');="" lestelephones()="" telephone4[i].classlist.remove('hidden');="" document.getelementbyid('viewall').onclick="function" ()="" *="" ajoute="" des="" bordures="" en="" haut="" et="" bas="" d'un="" li="" qu'on="" puisse="" savoir="" quel="" est="" le="" dernier="" bouton="" appuyé="" document.getelementbyid('viewall').classlist.add('categoriechoisie');="" document.getelementbyid('accessoire').classlist.remove('categoriechoisie');="" document.getelementbyid('telephone').classlist.remove('categoriechoisie');="" document.getelementbyid('connecte').classlist.remove('categoriechoisie');="" document.getelementbyid('smartphone').classlist.remove('categoriechoisie');="" theme[0].style.backgroundcolor="rgb(132, 232, 255)" theme[1].style.backgroundcolor="rgba(0,180,220,1)" div="" titre="" h1="" change="" couleur="" fond,="" ce="" sera="" un="" affichage="" mobile="" theme[2].style.backgroundcolor="rgba(0,180,220,1)" opacité="" avec="" 0.8="" seconde="" lancement="" fonction="" retard="" settimeout(touslesproduits,="" 800);="" document.getelementbyid('accessoire').onclick="function" document.getelementbyid('accessoire').classlist.add('categoriechoisie');="" document.getelementbyid('viewall').classlist.remove('categoriechoisie');="" settimeout(lesaccessoires,="" document.getelementbyid('connecte').onclick="function" document.getelementbyid('connecte').classlist.add('categoriechoisie');="" settimeout(tousconnectes,="" document.getelementbyid('smartphone').onclick="function" document.getelementbyid('smartphone').classlist.add('categoriechoisie');="" settimeout(lesmartphone,="" document.getelementbyid('telephone').onclick="function" document.getelementbyid('telephone').classlist.add('categoriechoisie');="" settimeout(lestelephones,="" dans="" cas="" où="" l'utilisateur="" ferait="" zoom="" assez="" important="" puis="" dézoom="" revenir="" normale="" sur="" navigateur,="" verra="" son="" fond="" enlevé="" police="" repassera="" noire=""> 1280 ) {
+  theme[2].style.backgroundColor = null;
+  theme[3].style.color = &apos;black&apos;;
+}</=></xmp></code></pre>
+  <pre><code><xmp>@import url(&apos;https://fonts.googleapis.com/css?family=Montserrat&apos;);
+
+*{
+↦   font-family: &apos;Montserrat&apos;, sans-serif;
+↦   color: black;
+↦   text-decoration: none;
+}
+.hidden {
+↦   display: none;
+}
+
+.categorieChoisie {
+↦   border-top: 5px solid white;
+↦   border-bottom: 5px solid white;
+}
+
+body {
+↦   margin: 0;
+↦   background-color: rgb(132, 232, 255);
+↦   transition-property: background-color;
+↦   transition-duration: 1.5s;
+↦   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+nav {
+↦   top:0px;
+↦   position: fixed;
+↦   width: 25%;
+↦   height: 100%;
+↦   text-align: center;
+↦   background-color: rgba(0,180,220,1);
+↦   transition-property: background-color;
+↦   transition-duration: 1.5s;
+↦   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+nav ul {
+↦   padding: 0;
+↦   margin: 0;
+↦   padding-top: 10px; 
+}
+
+nav ul li {
+↦   text-transform: uppercase;
+↦   color: white;
+↦   padding: 20px;
+↦   display: block;
+↦   font-size: 24px;
+↦   user-select : none;
+}
+
+nav ul li:first-child {
+↦   font-size: 36px;
+}
+
+nav ul li:nth-child(n+2):hover {
+↦   background-color: rgba(240,240,240,0.75);
+↦   cursor: pointer;
+↦   border-left: 20px solid white;
+↦   border-right: 20px solid white;
+↦   transition-property: border-left, border-right;
+↦   transition-duration: 0.2s;
+↦   transition-timing-function: linear;
+}
+
+h1 {
+↦   text-align: center;
+↦   padding: 20px;
+↦   color: rgb(38,38,38);
+↦   font-size: 24px;
+↦   user-select : none;
+}
+
+h1:hover {
+↦   cursor: default;
+}
+
+div#bloc1 {
+↦   max-width: 60%;
+↦   margin: auto;
+↦   margin-left: 33%; 
+↦   margin-top: 2%;
+↦   margin-bottom: 2%;
+↦   padding-bottom: 1.5%;
+↦   background-color: rgba(255, 255, 255, 0.55);
+↦   border-radius: 5px;
+↦   opacity: 1.0;
+↦   transition-property: opacity;
+↦   transition-duration: 0.8s;
+↦   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+div#haut {
+↦   text-align: center;
+↦   text-transform: uppercase;
+}
+
+div#bas {
+↦   text-align: center;
+↦   margin-top: 10px;
+↦   font-size: 26px;
+}
+
+article {
+↦   display: inline-block;
+↦   width: 45%;
+↦   margin: 10px;
+}
+
+
+article div {
+↦   width: 50%;
+↦   height: 150px;
+↦   vertical-align: text-top;
+↦   background-color: rgba(255,255,255,1);
+↦   border-radius: 5px 0 0 5px;
+}
+
+article div:nth-child(2) {
+↦   border-radius: 0 5px 5px 0;
+}
+
+article div:nth-child(2) img{
+↦   margin-right: 5px;
+↦   width: 150px;
+↦   height: 150px;
+↦   border-radius: 5px;
+}
+
+@media only screen and (min-width: 1281px)
+{
+↦   article div {
+↦   display: inline-block;
+↦   }
+
+↦   article div:nth-child(2) img{
+↦   ↦   float: right;
+↦   }
+}
+
+/* Pour permettre un affichage un peu plus optimis&#xE9; pour
+tablette/mobile, il reste cependant quelques
+probl&#xE8;mes d&apos;affichages sur certains appareils:
+
+iPhone/iPad: Probl&#xE8;me d&apos;affichage de contenus en zoomant */
+@media only screen and (max-width: 1280px)
+{
+↦   .categorieChoisie {
+↦   border-top: 2.5px solid white;
+↦   border-bottom: 2.5px solid white;
+↦   }
+
+↦   nav {
+↦   ↦   width: 35%;
+↦   }
+
+↦   nav ul li {
+↦   ↦   font-size: 100%;
+↦   ↦   padding: 10px;
+↦   }
+
+↦   nav ul li:first-child {
+↦   ↦   font-size: 120%;
+↦   }
+
+↦   nav ul li:nth-child(n+2):hover {
+↦   border-left: 5px solid white;
+↦   border-right: 5px solid white;
+↦   }
+
+↦   div#bloc1 {
+↦   ↦   max-width: 62%;
+↦   ↦   margin-left: 36.6%;
+↦   ↦   padding-left: 0px;
+    ↦   padding-right: 0px;
+↦   }
+
+↦   div#haut {
+    border-radius: 5px 5px 0 0;
+↦   background-color: rgba(255,255,255,1);
+↦   transition-property: background-color;
+↦   transition-duration: 1.5s;
+↦   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+↦   }
+
+↦   h1 {
+↦   padding: 10px;
+↦   font-size: 100%;
+}
+
+↦   article {
+↦   width: 90%;
+    border-radius: 5px;
+    background-color: white;
+↦   }
+
+↦   article div {
+↦   width: 100%;
+↦   margin: 0;
+↦   }
+
+↦   article div:first-child {
+↦   height: 60px;
+↦   padding-top: 10px;
+↦   border-radius: 5px 5px 0 0;
+↦   }
+
+↦   article div:nth-child(2) {
+↦   ↦   border-radius: 0 0 5px 5px;
+↦   ↦   height: 120px;
+↦   }
+
+↦   article div:nth-child(2) img{
+↦   margin-right: 0px;
+↦   width: 100px;
+↦   height: 100px;
+↦   }
+
+}
+
+@media only screen and (max-width: 580px)
+{
+↦   nav ul li {
+↦   ↦   font-size: 70%;
+↦   }
+
+
+↦   nav ul li:first-child {
+↦   ↦   font-size: 90%;
+↦   }
+
+↦   article div {
+↦   font-size: 50%;
+↦   }
+
+↦   article div:first-child {
+↦   height: 40px;
+↦   }
+
+↦   article div:nth-child(2) {
+↦   ↦   border-radius: 0 0 5px 5px;
+↦   ↦   height: 70px;
+↦   }
+
+↦   article div:nth-child(2) img{
+↦   width: 65px;
+↦   height: 65px;
+↦   }
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 109138767835241261213 (codepen:Loadz:dNawxb)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+↦   <title> TP : Filtrage par catégories </title>
+↦   <meta charset="utf-8"/>
+↦   <link rel="stylesheet" type="text/css" href="TP.css"/>
+</head>
+<body>
+
+<h1> Régalez-vous ! </h1>
+<h2> Des petits plats spécialement concoctés pour vous </h2>
+
+<div class="bouton">
+↦   <button id="omelette_bouton"> Omelette  </button>
+↦   <button id="spaghettis_bouton"> Spaghettis </button>
+↦   <button id="quiche_bouton"> Quiche  </button>
+↦   <button id="all_bouton"> Tous les ingrédients  </button>
+</div>
+
+<div class="liste">
+↦   <article class="spaghettis"> Basilic </article>
+↦   <article class="quiche"> Chèvre </article>
+↦   <article class="omelette"> Ciboulette </article>
+↦   <article class="omelette spaghettis quiche"> Crème </article>
+↦   <article class="omelette"> Gruyère </article>
+↦   <article class="quiche"> Herbe de provence </article>
+↦   <article class="omelette"> Jambon blanc </article>
+↦   <article class="spaghettis"> Jambon de parme </article>
+↦   <article class="quiche omelette"> Lait </article>
+↦   <article class="quiche"> Moutarde </article>
+↦   <article class="omelette"> Noix de muscade</article>
+↦   <article class="omelette quiche"> Oeuf </article>↦   
+↦   <article class="spaghettis"> Parmesan </article>
+↦   <article class="quiche"> Pâte brisée </article>
+↦   <article class="spaghettis"> Pignons de pain </article>
+↦   <article class="omelette spaghettis quiche"> Poivre </article>
+↦   <article class="spaghettis"> Rockette </article>
+↦   <article class="omelette spaghettis quiche"> Sel </article>↦   
+↦   <article class="spaghettis"> Toasts aillés </article>
+↦   <article class="omelette spaghettis quiche"> Tomate </article>↦   
+</div>
+<script src="TP.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var omelette ↦   = document.getElementsByClassName('omelette');
+var spaghettis ↦   = document.getElementsByClassName('spaghettis');
+var quiche ↦   ↦   = document.getElementsByClassName('quiche');
+
+document.getElementById('all_bouton').onclick = function() {
+
+ 
+ for (var i=0; i<spaghettis.length; i++) {
+    spaghettis[i].classList.add('show');
+  }
+ for (var i=0; i<omelette.length; i++) {
+    omelette[i].classList.add('show');
+  }
+  for (var i=0; i<quiche.length; i++) {
+    quiche[i].classList.add('show');
+  }
+};
+
+document.getElementById('omelette_bouton').onclick = function() {
+
+ for (var i=0; i<quiche.length; i++) {
+    quiche[i].classList.remove('show');
+  }
+ for (var i=0; i<spaghettis.length; i++) {
+    spaghettis[i].classList.remove('show');
+  }
+ for (var i=0; i<omelette.length; i++) {
+    omelette[i].classList.add('show');
+  }
+};
+
+
+document.getElementById('spaghettis_bouton').onclick = function() {
+
+ for (var i=0; i<quiche.length; i++) {
+    quiche[i].classList.remove('show');
+  }
+ for (var i=0; i<omelette.length; i++) {
+    omelette[i].classList.remove('show');
+  }
+ for (var i=0; i<spaghettis.length; i++) {
+    spaghettis[i].classList.add('show');
+  }
+};
+
+
+document.getElementById('quiche_bouton').onclick = function() {
+
+ 
+ for (var i=0; i<spaghettis.length; i++) {
+    spaghettis[i].classList.remove('show');
+  }
+ for (var i=0; i<omelette.length; i++) {
+    omelette[i].classList.remove('show');
+  }
+  for (var i=0; i<quiche.length; i++) {
+    quiche[i].classList.add('show');
+  }
+};</xmp></code></pre>
+  <pre><code><xmp>.omelette, .quiche, .spaghettis{
+↦   display: none;
+}
+
+.show {
+↦   display: block;
+}
+
+body {
+↦   display: inline-block;
+↦   margin: auto;
+↦   font-family: helvetica;
+↦   width: 100%;
+↦   text-align: center;
+↦   padding: 30px;
+}
+
+h1 {
+↦   text-align: center;
+↦   color: #e87e04;
+↦   font-size: 2em;
+}
+
+h2 {
+↦   text-align: center;
+↦   color: #fec10e;
+↦   font-size: 0.9em;
+}
+
+button {
+↦   background-color: white;
+↦   border-radius: 8px;
+↦   border: 2px solid #e87e04;
+↦   padding: 10px 15px;
+↦   text-align: center;
+↦   font-size: 16px;
+↦   margin: 30px 30px;
+}
+
+button:hover {
+↦   background-color: #e87e04;
+↦   color: white;
+}
+
+article{
+↦   margin: 8px;
+}
+
+div.liste{
+↦   margin-top: 70px;
+↦   margin-left: auto;
+↦   margin-right: auto;
+↦   text-align: left;
+↦   width: 695px;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: 102659365253444301419 (codepen:MaelleBellazar:EZMovQ)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+↦   <head>
+↦   ↦   <meta charset="utf-8">
+↦   ↦   <link rel="stylesheet" type="text/css" href="index.css">
+↦   ↦   <title>Maelle Bellazar</title>
+↦   </head>
+↦   <body>
+↦   ↦   <section id="categories">
+↦   ↦   ↦   <h2>Categories</h2>
+↦   ↦   ↦   <div onclick="display(this)" id="all">All</div>
+↦   ↦   ↦   <div onclick="display(this)" id="fruit">Fruits</div>
+↦   ↦   ↦   <div onclick="display(this)" id="vegetable">Vegetables</div>
+↦   ↦   ↦   <div onclick="display(this)" id="nuts">Nuts</div>
+↦   ↦   ↦   <div onclick="display(this)" id="dessert">Desserts & Cakes</div>
+↦   ↦   </section>
+↦   ↦   <section id="products">
+↦   ↦   ↦   <h2>Products</h2>
+↦   ↦   ↦   <article class="fruit dessert">Product 1</article>
+↦   ↦   ↦   <article class="vegetable nuts">Product 2</article>
+↦   ↦   ↦   <article class="vegetable">Product 3</article>
+↦   ↦   ↦   <article class="Vegetable dessert">Product 4</article>
+↦   ↦   ↦   <article class="fruit">Product 5</article>
+↦   ↦   ↦   <article class="nuts">Product 6</article>
+↦   ↦   ↦   <article class="nuts dessert">Product 7</article>
+↦   ↦   ↦   <article class="fruit">Product 8</article>
+↦   ↦   ↦   <article class="dessert">Product 9</article>
+↦   ↦   ↦   <article class="nuts">Product 10</article>
+↦   ↦   </section>
+↦   ↦   <script type="text/javascript" src="index.js"></script>
+↦   </body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var products = document.querySelectorAll("#products > article");
+
+function display(element)
+{
+↦   if (element.id == "all")
+↦   {
+↦   ↦   for (var i = 0; i < products.length; i++)
+↦   ↦   {
+↦   ↦   ↦   products[i].style.display = "block";
+↦   ↦   }
+↦   }
+↦   else
+↦   {
+↦   ↦   for (var i = 0; i < products.length; i++)
+↦   ↦   {
+↦   ↦   ↦   if (products[i].classList.contains(element.id))
+↦   ↦   ↦   ↦   products[i].style.display = "block";
+↦   ↦   ↦   else
+↦   ↦   ↦   ↦   products[i].style.display = "none";
+↦   ↦   }↦   ↦   
+↦   }
+
+
+}</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+section { max-width: 400px; border-radius: 5px; background-color: #eee; box-shadow: 0px 0px 4px #333; font-family: "Roboto";}
+↦   section > h2 { padding: 10px; border-bottom: 1px solid #ddd; font-size: 20px; font-weight: 500;}
+#categories { margin-bottom: 10px;}
+↦   #categories > div { margin: 5px 10px; padding: 5px 10px; border: 1px solid #ddd; background-color: #f5f5f5; cursor: pointer;}
+↦   #categories > div:nth-child(2) { background-color: #def;}
+#products {}
+↦   #products > article { padding: 10px;}
+</xmp></code></pre>
+</section>
+  </body>
+</html>
