@@ -5,11 +5,21 @@
     "id": "CgwIjteyyggQsJOp_A8",
     "userId": "101358311974203602161",
     "creationTime": "2017-01-31T11:57:41.541Z",
-    "updateTime": "2017-01-31T11:57:41.540Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-17T10:13:17.954Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwMzUwMzI0Nlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/noelierx/pen/VPOZov",
+            "title": "TP JS - Liste des Champions",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/noelierx/pen/VPOZov&a=AIYkKU9si9a4I6b_7h4nk4ygGe8AofdVlw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001621381",
@@ -17,11 +27,21 @@
     "id": "CgwI4Iu9yggQsJOp_A8",
     "userId": "108721198866205828934",
     "creationTime": "2017-01-31T11:57:41.632Z",
-    "updateTime": "2017-01-31T11:57:41.631Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-17T10:11:39.306Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwMzY3MzgyNFpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/anon/pen/QdRLag",
+            "title": "Create a New Pen",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/QdRLag&a=AIYkKU_-UJk7NCCf3qBr5Natc76O4V_crw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001621381",
@@ -75,7 +95,7 @@
           "link": {
             "url": "http://codepen.io/anon/pen/xgeEEX",
             "title": "Create a New Pen",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/xgeEEX&a=AIYkKU9QYs6XxSXsFlASNthid9hKm_zhtw"
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/xgeEEX&a=AIYkKU9OaaGW9pygHluzRWNoBJDprGpWvA"
           }
         }
       ]
@@ -170,7 +190,7 @@
     "id": "CgwIlPjkzAgQsJOp_A8",
     "userId": "117481420651899349023",
     "creationTime": "2017-01-31T11:57:43.062Z",
-    "updateTime": "2017-02-06T11:32:51.718Z",
+    "updateTime": "2017-02-17T09:59:31.946Z",
     "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODUyMDk4MFpa",
     "courseWorkType": "ASSIGNMENT",
@@ -178,16 +198,16 @@
       "attachments": [
         {
           "link": {
-            "url": "http://jhovine.eemi.tech/Javascript/TP_Filtrage/",
-            "title": "Filtrage",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jhovine.eemi.tech/Javascript/TP_Filtrage/&a=AIYkKU8X_o6aUDmHa2snIV6gvasnhexymw"
+            "url": "http://codepen.io/SpaCeDuDe/pen/ygEdWr",
+            "title": "TP_Filtrage",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/SpaCeDuDe/pen/ygEdWr&a=AIYkKU9_bLB_-ja1pmcYpVKuGc_ioC4pcQ"
           }
         },
         {
           "link": {
-            "url": "http://codepen.io/SpaCeDuDe/pen/ygEdWr",
-            "title": "TP_Filtrage",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/SpaCeDuDe/pen/ygEdWr&a=AIYkKU-3kL0mUOj7yX0mL83FLTfaJl77hA"
+            "url": "http://codepen.io/SpaCeDuDe/pen/rjgNOR",
+            "title": "TP_Filtrage_v2",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/SpaCeDuDe/pen/rjgNOR&a=AIYkKU8UYyzw_894JwcfxLUwt0C8aiOTlA"
           }
         }
       ]
@@ -245,7 +265,7 @@
           "link": {
             "url": "https://jsfiddle.net/pixrrl/jkav8oe3/",
             "title": "Filtrage JS - JSFiddle",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/pixrrl/jkav8oe3/&a=AIYkKU9r790AqiK-Q-1x-sfQZtFcCS63qQ"
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/pixrrl/jkav8oe3/&a=AIYkKU_SDiNVHWKeEC4C3hFiC1ALBTzZOA"
           }
         }
       ]
@@ -279,7 +299,7 @@
           "link": {
             "url": "http://codepen.io/Loadz/pen/dNawxb",
             "title": "A Pen by  Loa",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Loadz/pen/dNawxb&a=AIYkKU9701z2ewQivqEQrR5sbQ1NfSPt9w"
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Loadz/pen/dNawxb&a=AIYkKU9bQeW7CSdnfdct66rrwq18lccYag"
           }
         }
       ]
@@ -301,7 +321,7 @@
           "link": {
             "url": "http://codepen.io/MaelleBellazar/pen/EZMovQ",
             "title": "A Pen by  maellebellazar",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/MaelleBellazar/pen/EZMovQ&a=AIYkKU8kCRmUglGIQ4BY7qMBT2Wl_LxVyg"
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/MaelleBellazar/pen/EZMovQ&a=AIYkKU9TCxG0GLaq4LJuZ88kHr1f5Lhn6A"
           }
         }
       ]
