@@ -1,25 +1,28 @@
 var fs = require('fs')
+var async = require('async')
 var converter = require('../lib/submission-converter')
 
-// output (PDF-rendered student submissions)
-var outputFile = './submissions-classe-1.pdf' // TODO: for each group
-var htmlOutputFile = './submissions-classe-1.html' // TODO: for each group
+// inputs
+const groups = require('../groups.json')
 
-// input
-const inputFile = '../submissions-classe-1.json' // TODO: for each group
+function convertSubmissions(classe, callback) {
+  console.log('\nconverting submissions of classe', classe, '...')
+  const filename = 'submissions-classe-' + classe
+  const submissions = require('../' + filename + '.json')
+  converter.extractSubmissions(submissions, function(err, studentSubmissions) {
+    if (err) {
+      console.log('=>', err)
+      callback(err)
+    } else {
+      var html = converter.toHTML(studentSubmissions)
+      fs.writeFileSync(filename + '.html', html)
+      console.log('\ngenerating PDF file...')
+      converter.toPDF(filename + '.pdf', studentSubmissions, function(err, res) {
+        console.log(err || '=> rendered to ' + filename + '.pdf')
+        callback(err, res)
+      })
+    }
+  })
+}
 
-const turnedIn = require(inputFile)
-
-converter.extractSubmissions(turnedIn, function(err, studentSubmissions) {
-  if (err) {
-    console.log('=>', err)
-  } else {
-    var html = converter.toHTML(studentSubmissions)
-    fs.writeFileSync(htmlOutputFile, html)
-    converter.toPDF(outputFile, studentSubmissions, function(err) {
-      console.log(err || 'Page Rendered to ' + outputFile)
-    })
-  }
-})
-
-// TODO: also support generic links (from any source)
+async.mapSeries(Object.keys(groups), convertSubmissions, () => console.log('\ndone.'))
