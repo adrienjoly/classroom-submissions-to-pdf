@@ -297,7 +297,7 @@ adoBouton.onclick = function(){
   <li>
     <a id="all">Voir tout</a>
     <a id="list1">fruits</a>
-    <a id="list2">l&#xE9;gumes</a>
+    <a id="list2">légumes</a>
     <a id="list3">soda</a>
   </li>
 </ul>
@@ -353,27 +353,27 @@ adoBouton.onclick = function(){
         <h3>3</h3>
       </div>
     </article>
-</div></section></xmp></code></pre>
+</xmp></code></pre>
   <pre><code><xmp>(function() {
-  var allButton = document.getElementById(&apos;all&apos;);
-  var list1Button = document.getElementById(&apos;list1&apos;);
-  var list2Button = document.getElementById(&apos;list2&apos;);
-  var list3Button = document.getElementById(&apos;list3&apos;);
+  var allButton = document.getElementById('all');
+  var list1Button = document.getElementById('list1');
+  var list2Button = document.getElementById('list2');
+  var list3Button = document.getElementById('list3');
 
   var showItems = function(items) {
-    for (var i = 0; i &lt; items.length; i++) {
-      items[i].style.display = &quot;inline-block&quot;;
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = "inline-block";
     }
   };
   var hideItems = function(items) {
-    for (var i = 0; i &lt; items.length; i++) {
-      items[i].style.display = &quot;none&quot;;
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = "none";
     }
   };
 
-  list1Items = document.getElementsByClassName(&apos;list1&apos;);
-  list2Items = document.getElementsByClassName(&apos;list2&apos;);
-  list3Items = document.getElementsByClassName(&apos;list3&apos;);
+  list1Items = document.getElementsByClassName('list1');
+  list2Items = document.getElementsByClassName('list2');
+  list3Items = document.getElementsByClassName('list3');
 
   allButton.onclick = function() {
     showItems(list1Items);
