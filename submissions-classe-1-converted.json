@@ -1,0 +1,744 @@
+[
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIjteyyggQsJOp_A8",
+      "userId": "101358311974203602161",
+      "creationTime": "2017-01-31T11:57:41.541Z",
+      "updateTime": "2017-02-17T10:13:17.954Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwMzUwMzI0Nlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/noelierx/pen/VPOZov",
+              "title": "TP JS - Liste des Champions",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/noelierx/pen/VPOZov&a=AIYkKU_FK48wnTMAu2zupufQfBUTDI9P8Q"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "noelierx",
+          "VPOZov"
+        ],
+        "js": "$('select#champ').change(function() {\n\tvar filter = $(this).val()\n\tfilterList(filter);\n});\nfunction filterList(value) {\n\tvar list = $(\".champ-list .champ-item\");\n\t$(list).fadeOut(\"fast\");\n\tif (value == \"All\") {\n\t\t$(\".champ-list\").find(\"article\").each(function (i) {\n\t\t\t$(this).delay(200).slideDown(\"fast\");\n\t\t});\n\t} else {\n\t\t$(\".champ-list\").find(\"article[data-category*=\" + value + \"]\").each(function (i) {\n\t\t\t$(this).delay(200).slideDown(\"fast\");\n\t\t});\n\t}\n}",
+        "css": "body {font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size:10px;}\n.champ-item {display:inline-block; vertical-align:top; width:120px;}",
+        "html": "<h2>Liste des champions de League of Legends</h2>\nLa liste a été raccourcie volontairement pour avoir un nombre minimal de ligne de codes.<br /><br />\n<select name=\"champ\" id=\"champ\">\n\t<option value=\"All\">Tous les champions</option>\n\t<option value=\"Cat1\">Assassins</option>\n\t<option value=\"Cat2\">Combattants</option>\n\t<option value=\"Cat3\">Mages</option>\n  <option value=\"Cat4\">Supports</option>\n</select>  \n<hr />\n<section class=\"champ-list\">\n<article class=\"champ-item\" data-category=\"Cat2\"><img src=\"http://i.imgur.com/848ntSL.png\"><h3>Aatrox</h3></article>\n<article class=\"champ-item\" data-category=\"Cat3 Cat4\"><img src=\"http://i.imgur.com/Lzt5ows.png\"><h3>Anivia</h3></article>\n<article class=\"champ-item\" data-category=\"Cat3\"><img src=\"http://i.imgur.com/DDrwtw1.png\"><h3>Bard</h3></article>\n<article class=\"champ-item\" data-category=\"Cat1 Cat3\"><img src=\"http://i.imgur.com/OQYOLXU.png\"><h3>Evelynn</h3></article>\n<article class=\"champ-item\" data-category=\"Cat1 Cat2\"><img src=\"http://i.imgur.com/4oRFXpd.png\"><h3>Lee Sin</h3></article>\n<article class=\"champ-item\" data-category=\"Cat1 Cat2\"><img src=\"http://i.imgur.com/Ts5Zmpd.png\"><h3>Nidalee</h3></article>\n</section>\n<script src=\"http://bit.ly/2kwtwAE\"></script>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI4Iu9yggQsJOp_A8",
+      "userId": "108721198866205828934",
+      "creationTime": "2017-01-31T11:57:41.632Z",
+      "updateTime": "2017-02-17T10:11:39.306Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwMzY3MzgyNFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/anon/pen/QdRLag",
+              "title": "Create a New Pen",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/QdRLag&a=AIYkKU_VWeWIRIwnzF0m38Tm0fof0VEjlw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "anon",
+          "QdRLag"
+        ],
+        "js": "var viandes = document.getElementsByClassName('viande');\nvar poissons = document.getElementsByClassName('poisson');\nvar legumes = document.getElementsByClassName('legume');\nvar fruits = document.getElementsByClassName('fruit');\n\ndocument.getElementById('viandes').onclick = function () {\n\tfor (var i = 0; i<poissons.length; i++) {\n\t\tpoissons[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<legumes.length; j++) {\n\t\tlegumes[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<fruits.length; k++) {\n\t\tfruits[k].classList.add('hidden');\n\t}\n\tfor (var l = 0; l<viandes.length; l++) {\n\t\tviandes[l].classList.remove('hidden');\n\t}\n}\n\ndocument.getElementById('poissons').onclick = function () {\n\tfor (var i = 0; i<viandes.length; i++) {\n\t\tviandes[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<legumes.length; j++) {\n\t\tlegumes[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<fruits.length; k++) {\n\t\tfruits[k].classList.add('hidden');\n\t}\n\tfor (var l = 0; l<poissons.length; l++) {\n\t\tpoissons[l].classList.remove('hidden');\n\t}\n}\n\ndocument.getElementById('fruits').onclick = function () {\n\tfor (var i = 0; i<poissons.length; i++) {\n\t\tpoissons[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<legumes.length; j++) {\n\t\tlegumes[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<viandes.length; k++) {\n\t\tviandes[k].classList.add('hidden');\n\t}\n\tfor (var l = 0; l<fruits.length; l++) {\n\t\tfruits[l].classList.remove('hidden');\n\t}\n}\n\ndocument.getElementById('legumes').onclick = function () {\n\tfor (var i = 0; i<poissons.length; i++) {\n\t\tpoissons[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<viandes.length; j++) {\n\t\tviandes[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<fruits.length; k++) {\n\t\tfruits[k].classList.add('hidden');\n\t}\n\tfor (var l = 0; l<legumes.length; l++) {\n\t\tlegumes[l].classList.remove('hidden');\n\t}\n}\n\ndocument.getElementById('all').onclick = function () {\n\tfor (var l = 0; l<legumes.length; l++) {\n\t\tlegumes[l].classList.remove('hidden');\n\t}\n\tfor (var l = 0; l<fruits.length; l++) {\n\t\tfruits[l].classList.remove('hidden');\n\t}\n\tfor (var l = 0; l<viandes.length; l++) {\n\t\tviandes[l].classList.remove('hidden');\n\t}\n\tfor (var l = 0; l<poissons.length; l++) {\n\t\tpoissons[l].classList.remove('hidden');\n\t}\n}",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Roboto');\n\nbody {\n\tfont-family: Roboto;\n\tmargin: 0;\n\tbackground-color: #ecf0f1;\n}\n\nh1 {\n\ttext-align: center;\n\twidth: 100%;\n\tbackground-color: #27ae60;\n\tmargin: 0;\n\tpadding: 10px 0px;\n\tcolor: white;\n\n}\n\nnav {\n\twidth: 100%;\n\tbackground-color: #27ae60;\n\ttext-align: center;\n\tcolor: white;\n}\n\nnav > div {\n\twidth: 80%;\n\tmargin: auto;\n\tborder-top: 1px solid white;\n\tpadding: 0;\n\tmargin: auto;\n}\n\nnav > div div {\n\tpadding: 0;\n\tmargin: 0;\n\tdisplay: inline-block;\n\twidth: 20%;\n}\n\nnav div p {\n\twidth: 100%;\n\tpadding: 20px 0px;\n\tmargin: 0;\n\ttext-align: center;\n}\n\nnav > div div:hover {\n\tbackground-color: #e67e22;\n\tcursor: pointer;\n}\n\n.content {\n\twidth: 80%;\n\tbackground-color: white;\n\tmargin: auto;\n}\n\narticle {\n\tvertical-align: top;\n\twidth: 100%;\n\tpadding: 20px 0px;\n\tborder-bottom: 1px solid black;\n}\n\narticle div {\n\tdisplay: inline-block;\n\tvertical-align: middle;\n}\n\narticle .imageproduit img {\n\twidth: 100%;\n\tborder-radius: 5px;\n}\n\n.imageproduit {\n\twidth: 15%;\n\tpadding-left: 20px;\n}\n\nh2 {\n\tmargin: 0;\n}\n\n.maincontent {\n\tpadding-left: 20px;\n\twidth :calc(70% - 40px);\n}\n\n.prix {\n\tfont-size: 1.3em;\n\twidth: 15%;\n\ttext-align: center;\n}\n\n.hidden {\n\tdisplay: none;\n}",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>Page de produits</title>\n\t<meta charset=\"utf-8\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n</head>\n<body>\n\t<h1>Bienvenue sur notre boutique en ligne</h1>\n\t<nav>\n\t\t<div>\n\t\t\t<div>\n\t\t\t\t<p id=\"viandes\">Viandes</p>\n\t\t\t</div><!--\n\t\t\t--><div>\n\t\t\t\t<p id=\"poissons\">Poissons</p>\n\t\t\t</div><!--\n\t\t\t--><div>\n\t\t\t\t<p id=\"fruits\">Fruits</p>\n\t\t\t</div><!--\n\t\t\t--><div>\n\t\t\t\t<p id=\"legumes\">Légumes</p>\n\t\t\t</div><!--\n\t\t\t--><div>\n\t\t\t\t<p id=\"all\">Voir tout les produits</p>\n\t\t\t</div>\n\t\t</div>\n\n\t</nav>\n\t<div class=\"content\">\n\n\t\t<article class=\"viande\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"https://files.meilleurduchef.com/mdc/photo/recette/steak-tartare/steak-tartare-640.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Steak Tartare</h2>\n\t\t\t\t<p>Achetez notre steak tarte de qualité française et redécouvrez le plaisir de la consommation de viande cru !</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>40€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"viande\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"http://img.cac.pmdstatic.net/fit/http.3A.2F.2Fwww.2Ecuisineactuelle.2Efr.2Fvar.2Fcui.2Fstorage.2Fimages.2Frecettes-de-cuisine.2Frecettes-pour-tous.2Ffamiliale.2Fcote-de-baeuf-salers-marinee-au-corbieres.2F1043607-2-fre-FR.2Fcote-de-baeuf-salers-marinee-au-corbieres.2Ejpg/345x258/crop-from/center/cote-de-boeuf-salers-marinee-au-corbieres.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Cote de boeuf</h2>\n\t\t\t\t<p>Subtilement relevé par une point de gros sel, redecouvrez le plaisir d'une bonne pièce de viande.</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>45€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"viande\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"http://www.boeufleclair.com/img/cms/img%20produit/hampe-de-boeuf-boucherie-en-ligne.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Steak dans la hampe</h2>\n\t\t\t\t<p>Cette pièce tendre et fondante est la preuve que consommer de bons produits est accessible à tous.</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>30€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"poisson\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"https://eatzer.com/wp-content/uploads/2016/09/awesome-sushi-720x513.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Sushi</h2>\n\t\t\t\t<p>Redecouvrez les origines ancestrales des sushis à travers ce plat issus du commerce équitable.</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>35€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"poisson legume\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"http://demandware.edgesuite.net/aahv_prd/on/demandware.static/-/Sites-catalog-picard/default/dw4825d366/recettes/plats/R0176.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Cabillaud aux champignons</h2>\n\t\t\t\t<p>Sur son lit de champignon, laissez vous aller dans les variations de gouts proposé par ce plat</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>25€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"poisson\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"http://recettes.al-manakh.com/processed/700x450/canapes-au-saumon-fume-et-mascarpone-recette-halal.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Saumon fumé</h2>\n\t\t\t\t<p>Rien de tel que ces amuses gueules en entré pour réveiller vos papilles et anticiper le plat principal.</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>20€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"legume\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"https://www.atelierdeschefs.com/media/recette-e13601-bibimbap-coreen.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Le bibimpap Coréen*</h2>\n\t\t\t\t<p>Plat traditionnel coréen, à base de tofu il saura vous régaler</br> *spécial végétarien</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>15€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"legume\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"http://media.topito.com/wp-content/uploads/2015/10/5582940335_bf3db9e964_z.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Sandwich vegan</h2>\n\t\t\t\t<p>Rien de mieux qu'un retour aux sourcex avec ce sandwich à l'ancienne sur une base de pain traditionnel.</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>20€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"legume fruit\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"http://media.topito.com/wp-content/uploads/2015/10/2659476940_50304d43a3_z.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Bananes rotis</h2>\n\t\t\t\t<p>Mélange entre sucré et salé, ce plat sera à même de satisfaire les plus curieux !</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>25€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"fruit\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"http://recettescuisinevideo.com/recettes+cuisine+desserts/recettes+dessert+fruits/recettes-fruits-frais-dessert.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Vérine de fruits</h2>\n\t\t\t\t<p>D'une telle douceur se plat se placera parfaitement à la fin d'un repas.</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>20€</p>\n\t\t\t</div>\n\t\t</article>\n\t\t<article class=\"fruit\">\n\t\t\t<div class=\"imageproduit\">\n\t\t\t\t<img src=\"https://barbaraesic.files.wordpress.com/2012/03/recetteslide_6.jpg\">\n\t\t\t</div><!--\n\t\t\t--><div class=\"maincontent\">\n\t\t\t\t<h2>Salade de fruits</h2>\n\t\t\t\t<p>Plat traditionnel et léger, c'est une assurance pour un dessert réussi.</p>\n\t\t\t</div><!--\n\t\t\t--><div class=\"prix\">\n\t\t\t\t<p>25€</p>\n\t\t\t</div>\n\t\t</article>\n\n\t</div>\n\n\t<script type=\"text/javascript\" src=\"script.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIkba_yggQsJOp_A8",
+      "userId": "102110961416486951760",
+      "creationTime": "2017-01-31T11:57:44.399Z",
+      "updateTime": "2017-02-17T11:24:06.481Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwMzcxMjAxN1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/anon/pen/VPOYqE",
+              "title": "Create a New Pen",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/VPOYqE&a=AIYkKU8uy_3yJ0sxtyJ7VHJTb6FyMKJ4AA"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "anon",
+          "VPOYqE"
+        ],
+        "js": "var menu = document.querySelectorAll('.menu li');\nvar product = document.querySelectorAll('.product');\nfor (var i = 0; i < menu.length; i++) {\n    menu[i].onclick = function afficher(e) {\n        var menuID = this.id;\n        var selection = this;\n        for (var i = 0; i < product.length; i++) {\n            if (product[i].classList.contains(menuID)) {\n                product[i].classList.remove('hidden');\n            }else {\n                product[i].classList.add('hidden');\n            }}\n        for (var i = 0; i < menu.length; i++) {\n            menu[i].classList.remove('active');\n        }\n        selection.classList.add('active');\n    }}",
+        "css": ".hidden {\n    display: none !important;\n}\n.active {\n    border: 5px solid #0e8813 !important;\n}\n.menu {\n    list-style-type: none;\n}\n.menu li {\n    display: inline-block;\n    width: 70px;\n    height: 20px;\n    margin: 0 10px;\n    color: #454545;\n    border: 5px solid #a0a52a;\n    text-align: center;\n}\n.product {\n    background-color: #858585;\n    display: inline-block;\n    margin: 10px;\n    width: 150px;\n    height: 50px;\n    text-align: center;\n    color: aquamarine;\n}",
+        "html": "<body>\n  <ul class=\"menu\">\n    <li id=\"product\" class=\"active\">Tout voir</li>\n    <li id=\"asus\">Asus</li>\n    <li id=\"msi\">Msi</li>\n    <li id=\"hp\">Hp</li>\n    <li id=\"dell\">Dell</li>\n  </ul>\n  <div>\n    <div class=\"product asus\"><p class=\"productTitle\">G55VW</p></div>\n    <div class=\"product asus\"><p class=\"productTitle\">G75VW</p></div>\n    <div class=\"product asus msi\"><p class=\"productTitle\">Super Calculator</p></div>\n    <div class=\"product Msi dell\"><p class=\"productTitle\">Pc entrée de gamme</p></div>\n    <div class=\"product Msi\"><p class=\"productTitle\">Pc millieu de gamme</p></div>\n    <div class=\"product Msi asus\"><p class=\"productTitle\">Pc haut de gamme</p></div>\n    <div class=\"product dell hp\"><p class=\"productTitle\">Pc mulimedia</p></div>\n    <div class=\"product dell msi asus\"><p class=\"productTitle\">Pc gaming</p></div>\n    <div class=\"product dell\"><p class=\"productTitle\">Pc pro</p></div>\n    <div class=\"product hp\"><p class=\"productTitle\">Pavillon</p></div>\n  </div>  \n  <script type=\"text/javascript\" src=\"script.js\"></script>\n</body>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI2Ir_yggQsJOp_A8",
+      "userId": "113002706771975144991",
+      "creationTime": "2017-01-31T11:57:41.706Z",
+      "updateTime": "2017-02-17T15:43:12.988Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwNDc1NTAzMlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/lucillevl/o5skom1u/#&togetherjs=ry8PSiqpIk",
+              "title": "Edit fiddle - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/lucillevl/o5skom1u/%23%26togetherjs%3Dry8PSiqpIk&a=AIYkKU_YSu7JOKX0_TGXa_9joVeF7XRn2w"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "lucillevl",
+          "o5skom1u"
+        ],
+        "js": "var tab = document.getElementsByClassName(&apos;jean&apos;);\n\nvar tabDeux = document.getElementsByClassName(&apos;hiver&apos;);\n\nvar tabTrois = document.getElementsByClassName(&apos;cuir&apos;);\n\nvar tabQuatre = document.getElementsByClassName(&apos;gris&apos;);\n\ndocument.getElementById(&apos;view-all&apos;).onclick = function() {\n  for (var i=0; i<tabdeux.length; i++)=\"\" {=\"\" tabdeux[i].classlist.remove('hidden');=\"\" }=\"\" for=\"\" (var=\"\" i=\"0;\" i<tabtrois.length;=\"\" tabtrois[i].classlist.remove('hidden');=\"\" i<tabquatre.length;=\"\" tabquatre[i].classlist.remove('hidden');=\"\" i<tab.length;=\"\" tab[i].classlist.remove('hidden');=\"\" };=\"\" document.getelementbyid('jean').onclick=\"function()\" i<tabdeux.length;=\"\" tabdeux[i].classlist.add('hidden');=\"\" tabtrois[i].classlist.add('hidden');=\"\" tabquatre[i].classlist.add('hidden');=\"\" document.getelementbyid('hiver').onclick=\"function()\" tab[i].classlist.add('hidden');=\"\" document.getelementbyid('cuir').onclick=\"function()\" document.getelementbyid('gris').onclick=\"function()\" };<=\"\" textarea=\"\">\n    <a href=\"#\" class=\"windowLabel\" data-panel=\"js\">\n      <span class=\"label\">JavaScript</span><i class=\"bts bt-gear\"></i>\n    </a>\n  </tabdeux.length;>",
+        "css": "@import url(&apos;https://fonts.googleapis.com/css?family=Roboto|Varela+Round&apos;);\nbody{\n  font-family: &apos;Roboto&apos;;\n}\n.hidden {\n  display:none;\n}\nimg {\n  width: 12%;\n  height: 70px;\n}\nli {\n  list-style-type: none;\n}\n\n.navi{\nbackground-color: white;\ntext-align: center;\npadding: 0;\nmargin: 0;\n}\n.nav {\t\ndisplay: inline-block;\ntext-align: center;\npadding : 30px;\n}\n.nav:hover {\n  background-color: lightgrey;\n  cursor: pointer;\n}\n\n",
+        "html": "<ul class=\"navi\">\n<li class=\"nav\" id=\"view-all\">View all</li>\n<li class=\"nav\" id=\"jean\">Jean</li>\n<li class=\"nav\" id=\"hiver\">Hiver</li>\n<li class=\"nav\" id=\"cuir\">Cuir</li>\n<li class=\"nav\" id=\"gris\">Gris</li>\n</ul>\n<ul>\n<div><li><article class=\"jean hidden\">Jupe en jean<br><img src=\"http://media.meltyfashion.fr/article-3201522-ajust_930-f1461075377/topshop-jupe-en-jean-a-taille-haute-grande.jpg\" alt=\"jupe en jean\"></article></li></div>\n<div><li><article class=\"cuir hidden\">Jupe en cuir<br><img src=\"http://www.streetshooting.fr/wp-content/uploads/2013/09/jupe-en-cuir-fermeture-eclair-femme-zara-noir-2.jpg\" alt=\"jupe en cuir\"></article></li></div>\n<div><li><article class=\"jean hiver hidden\">Veste en jean<br><img src=\"http://www.stylistic.fr/wp-content/uploads/2015/11/veste-jean-fourr&#xE9;e-tendance.jpg\" alt=\"veste en jean\"></article></li></div>\n<div><li><article class=\"cuir hidden\">Veste en cuir<br><img src=\"https://s-media-cache-ak0.pinimg.com/originals/1f/6d/22/1f6d2223a7437385e66ea708b8631372.jpg\" alt=\"veste en cuir\"></article></li></div>\n<div><li><article class=\"hiver gris hidden\">Pull col roul&#xE9; gris<br><img src=\"http://demandware.edgesuite.net/sits_pod25/dw/image/v2/AAYN_PRD/on/demandware.static/-/Sites-pimkie-master-catalog/default/dw19453f81/images/431165_830J08_portrait_HD_2.JPG?sw=760&amp;sh=938\" alt=\"pull col roul&#xE9; gris\"></article></li></div>\n<div><li><article class=\"gris hidden\">Pantalon ray&#xE9; gris et blanc<br><img src=\"http://static.zara.net/photos///2016/I/0/1/p/7923/709/802/2/w/1024/7923709802_2_3_1.jpg?ts=1472729523257\" alt=\"pantalon gris blanc ray&#xE9;\"></article></li></div>\n<div><li><article class=\"gris hidden\">Chemise grise<br><img src=\"http://static.zara.net/photos///2017/V/0/1/p/7200/022/803/2/w/560/7200022803_2_1_1.jpg?ts=1487066266675\" alt=\"chemise grise\"></article></li></div>\n<div><li><article class=\"jean gris hidden\">Jean gris<br><img src=\"https://s-media-cache-ak0.pinimg.com/736x/5b/0e/da/5b0eda821adaaf880ceddc3ce41f9aa3.jpg\" alt=\"jean gris\"></article></li></div>\n<div><li><article class=\"hiver hidden\">Manteau d&apos;hiver<br><img src=\"https://s-media-cache-ak0.pinimg.com/564x/5f/7b/18/5f7b186a30b3c64af0c9da6b88f28fd8.jpg\" alt=\"manteau d&apos;hiver\"></article></li></div>\n<div><li><article class=\"jean hidden\">Chemise en jean<br><img src=\"https://s-media-cache-ak0.pinimg.com/564x/ef/43/b0/ef43b0aaf21adaddb4399005844ffe2e.jpg\" alt=\"chemise en jean\"></article></li></div>\n</ul>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIsvqgywgQsJOp_A8",
+      "userId": "114301043616862498688",
+      "creationTime": "2017-01-31T11:57:43.875Z",
+      "updateTime": "2017-02-19T22:48:44.039Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwNTMxMDAwMlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://codepen.io/pferaut/pen/MJdzWX",
+              "title": "TP_Filtrage",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/pferaut/pen/MJdzWX&a=AIYkKU9KVID61PodfQ2tiYqLSbrIN0tggg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "pferaut",
+          "MJdzWX"
+        ],
+        "js": "var tab1 = document.getElementsByClassName('mode_femme');\nvar tab2 =\ndocument.getElementsByClassName('sacs');\nvar tab3 =\ndocument.getElementsByClassName('chaussures');\n\ndocument.getElementById('mode_femme').onclick = function() {\n  for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.add('hidden');\n  }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.add('hidden');\n    }for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.remove('hidden');\n  }\n};\n\ndocument.getElementById('sacs').onclick = function() {\n  for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.add('hidden');\n  }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.add('hidden');\n   }for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.remove('hidden');\n  }\n};\n  \ndocument.getElementById('chaussures').onclick = function() {\n  for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.add('hidden');\n  }for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.add('hidden');\n    }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.remove('hidden');\n  }\n};\n\ndocument.getElementById('tout').onclick = function() { for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.remove('hidden');\n  }for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.remove('hidden');\n  }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.remove('hidden');\n  }\n}",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Crimson+Text');\n\n.hidden{\n\tdisplay:none;\n}\n\nbody{\n\tmargin:0;\n\twidth:100%;\n  font-family: 'Crimson Text';\n}\n\nheader{\n\tmargin:auto;\n\ttext-align:center;\n\tcolor:black;\n\tborder-bottom: solid 2px black;\n}\n\nli {\nlist-style-type: none;\ndisplay: inline-block;\nbackground-color: grey;\ntext-align: center;\npadding: 20px 60px;\n}\n\nul {\nbackground-color: #333;\npadding: 0;\nmargin: 0;\ntext-align: center;\npadding-top: 50px;\npadding-bottom: 50px;\ncolor: white; \n}\n\n#div1, #div2, #div3 {\ntext-align: center;\n}\n\narticle{\n\tdisplay:inline-block;\n\tmargin:10px;\n\tpadding:10px;\n\tvertical-align: top;\n\tbackground-color:rgba(0,0,0,0.2);\n\tborder-radius: 10px;\n  width: 40%;\n  height: 40%;\n  \n}\n\nimg {\n  width: 40%;\n  height: 40%;\n  border-radius:10px;\n}\n\n#basket {\n  width: 36%;\n}\n\nnav li:hover{\n\tcursor:pointer;\n\tbackground-color:rgba(255,255,255,0.8);\n\tcolor:black;\n}",
+        "html": "<body>\n  \n  <header>\n\t\t\t<h1>IKKS Mode</h1>\n\t\t</header>\n\n\t\t<nav>\n\t\t\t<ul>\n\t\t\t\t<li id=\"tout\">TOUT</li><!--\n\t\t\t --><li id=\"mode_femme\">MODE FEMME</li><!--\n\t\t\t --><li id=\"sacs\">SACS</li><!--\n--><li id=\"chaussures\">CHAUSSURES</li>\n\t\t\t</ul>\n  </nav>\n  <div id=\"tout\"> \n    <div id=\"div1\">\n\t\t\t<article class=\"mode_femme\">\n\t\t\t\t<h2>Manteau, Veste</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/manteau.jpg\">\n\t\t\t</article><!--\n\t\t --><article class=\"mode_femme\">\n\t\t\t\t<h2>Robe, Jupe</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/robe.jpg\">\n\t\t\t</article><!--\n\n\t\t\t--><article class=\"mode_femme\">\n\t\t\t\t<h2>Top</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/top.jpg\">\n\t\t\t</article><!--\n\n\t\t\t--><article class=\"mode_femme\">\n\t\t\t\t<h2>Pull</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/pull.jpg\">\n\t\t\t</article><!--\n--><article class=\"mode_femme\">\n\t\t\t\t<h2>Pantalon, Jean</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/pantalon.jpg\">\n\t\t\t</article><!--\n\t\t--></div>\n  \n    \n\t\t<div id=\"div2\">\n\t\t\t<article class=\"sacs\">\n\t\t\t\t<h2>Sac à main</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/sac_a_main.jpg\">\n\t\t\t</article><!--\n\t\t --><article class=\"sacs\">\n\t\t\t\t<h2>Cabas</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/cabas.jpg\">\n\t\t\t</article><!--\n\n\t\t\t--><article class=\"sacs\">\n\t\t\t\t<h2>Sacs Bandoulière</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/bandouliere.jpg\">\n\t\t\t</article><!--\n\n\t\t\t--><article class=\"sacs\">\n\t\t\t\t<h2>Pochettes et Sacs de soirée</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/pochette.jpg\">\n\t\t\t</article><!--\n\t\t--></div>\n    \n  \n  \n\t\t<div id=\"div3\">\n\t\t\t<article class=\"chaussures\">\n\t\t\t\t<h2>Botte</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/botte.jpg\">\n\t\t\t</article><!--\n\t\t --><article class=\"chaussures\">\n\t\t\t\t<h2>Bottine</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/bottine.jpg\">\n\t\t\t</article><!--\n\n\t\t\t--><article class=\"chaussures\">\n\t\t\t\t<h2>Escarpin</h2>\n\t\t\t\t<img src=\"http://pferaut.eemi.tech/TP_filtrage/images/escarpin.jpg\">\n\t\t\t</article><!--\n\n\t\t\t--><article class=\"chaussures\">\n\t\t\t\t<h2>Basket</h2>\n\t\t\t\t<img id=\"basket\" src=\"http://pferaut.eemi.tech/TP_filtrage/images/basket.jpg\">\n\t\t\t</article>\n    </div>\n  </div>\n\t</div>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIre6hywgQsJOp_A8",
+      "userId": "112650082341843561427",
+      "creationTime": "2017-01-31T11:57:42.834Z",
+      "updateTime": "2017-02-16T10:47:12.968Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwNTMyNDg0NVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/anon/pen/xgeEEX",
+              "title": "Create a New Pen",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/xgeEEX&a=AIYkKU-N6vaaKTKBZqf3-Wn_Owo3EkY7FA"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "anon",
+          "xgeEEX"
+        ],
+        "js": "/* ------------------------------------------ */\nvar TablPicasso = document.getElementsByClassName('Picasso');\nvar TablRenoir = document.getElementsByClassName('Renoir');\nvar TablMonet = document.getElementsByClassName('Monet');\nvar tousClic = document.getElementById('filtre_tous');\nvar FiltrePicasso = document.getElementById('filtre_picasso');\nvar FiltreRenoir = document.getElementById('filtre_renoir');\nvar FiltreMonet = document.getElementById('filtre_monet');\n/* ------------------- TOUS ------------------- */\ndocument.getElementById('filtre_tous').onclick = function (){\n \tfor(var i = 0; i < TablRenoir.length; i++){\n\t\tTablRenoir[i].classList.remove('hidden'); \n\t}\n\tfor(var i = 0; i < TablMonet.length; i++){\n\t\tTablMonet[i].classList.remove('hidden'); \n\t}\n\tfor(var i = 0; i < TablPicasso.length; i++){\n\t\tTablPicasso[i].classList.remove('hidden'); \n\t}\n\ttousClic.classList.add('clic');\n\tFiltrePicasso.classList.remove('clic');\n\tFiltreRenoir.classList.remove('clic');\n\tFiltreMonet.classList.remove('clic');\n}\n/* ------------------ Picasso ----------------- */\ndocument.getElementById('filtre_picasso').onclick = function (){\n \tfor(var i = 0; i < TablRenoir.length; i++){\n\t\tTablRenoir[i].classList.add('hidden'); \n\t}\n\tfor(var i = 0; i < TablMonet.length; i++){\n\t\tTablMonet[i].classList.add('hidden'); \n\t}\n\tfor(var i = 0; i < TablPicasso.length; i++){\n\t\tTablPicasso[i].classList.remove('hidden'); \n\t}\n\tFiltrePicasso.classList.add('clic');\n\tFiltreRenoir.classList.remove('clic');\n\tFiltreMonet.classList.remove('clic');\n\ttousClic.classList.remove('clic');\n}\n/* ------------------- Renoir ------------------ */\ndocument.getElementById('filtre_renoir').onclick = function (){\n\tfor(var i = 0; i < TablRenoir.length; i++){\n\t\tTablRenoir[i].classList.remove('hidden'); \n\t}\n\tfor(var i = 0; i < TablMonet.length; i++){\n\t\tTablMonet[i].classList.add('hidden'); \n\t}\n\tfor(var i = 0; i < TablPicasso.length; i++){\n\t\tTablPicasso[i].classList.add('hidden'); \n\t}\n\ttousClic.classList.remove('clic');\n\tFiltrePicasso.classList.remove('clic');\n\tFiltreRenoir.classList.add('clic');\n\tFiltreMonet.classList.remove('clic');\n}\n/* ------------------- Monet ------------------- */\ndocument.getElementById('filtre_monet').onclick = function (){\n\n\tfor(var i = 0; i < TablMonet.length; i++){\n\t\tTablMonet[i].classList.remove('hidden'); \n\t}\n\tfor(var i = 0; i < TablPicasso.length; i++){\n\t\tTablPicasso[i].classList.add('hidden'); \n\t}\n\tfor(var i = 0; i < TablRenoir.length; i++){\n\t\tTablRenoir[i].classList.add('hidden'); \n\t}\n\ttousClic.classList.remove('clic');\n\tFiltrePicasso.classList.remove('clic');\n\tFiltreRenoir.classList.remove('clic');\n\tFiltreMonet.classList.add('clic');\n}",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Montserrat');\n\na{\n\ttext-decoration: \t\t\tnone;\n\tcolor:\t\t\t\t\t\t#333;\n}\n\n/* ------------------------------------------------------- */\n/* --- Cacher les tableaux en fonction de la catégorie --- */\n/* ------------------------------------------------------- */\n\n.hidden{\n\tdisplay:\t\t\t\t\tnone;\n}\n\n/* ------------------------------------------------------- */\n/* ------------------------------------------------------- */\n/* ------------------------------------------------------- */\n\n\n\n/* ------------------------------------------------------- */\n/* ------- Fond \"blanc\" sur la catégorie choisis  -------- */\n/* ------------------------------------------------------- */\n\n.clic{\n\tbackground-color:\t\t\t#eee;\n\tborder-radius:\t\t\t\t20px;\n\tcolor:\t\t\t\t\t\t#333;\n}\n\n/* ------------------------------------------------------- */\n/* ------------------------------------------------------- */\n/* ------------------------------------------------------- */\n\n\n\nbody{\n\tmargin:\t\t\t\t\t\t0;\n\twidth:\t\t\t\t\t\t100%;\n\tbackground-color:\t\t\t#eee;\n\ttransition:\t\t\t\t\tcolor 250ms;\n\tfont-family: \t\t\t\t'Montserrat', sans-serif;\n\n}\n\n\n\n/* ------------------------------------------------------- */\n/* --------------------- LISTE MENU ---------------------- */\n/* ------------------------------------------------------- */\n\nnav{\n\twidth:\t\t\t\t\t\tcalc(100% - 20px);\n\tbackground-color:\t\t\t#333;\n\tmargin:\t\t\t\t\t\t0;\n\tpadding:\t\t\t\t\t10px;\n\tborder-bottom:\t\t\t\tsolid 2px white;\n}\n\nnav ul{\n\tmargin:\t\t\t\t\t\t0;\n\tpadding:\t\t\t\t\t0;\n}\n\nnav li{\n\tdisplay:\t\t\t\t\tinline-block;\n\tlist-style-type:\t\t\tnone;\n\twidth:\t\t\t\t\t\tcalc(25% - 40px);\n\ttext-align:\t\t\t\t\tcenter;\n\tfont-size:\t\t\t\t\t1.5em;\n\ttext-transform: \t\t\tuppercase;\n\tpadding:\t\t\t\t\t10px;\n\tmargin:\t\t\t\t\t\t10px;\n\tcolor:\t\t\t\t\t\twhite;\n}\n\n\nnav li:hover{\n\tcursor:\t\t\t\t\t\tpointer;\n\tbackground-color:\t\t\t#eee;\n\tborder-radius:\t\t\t\t20px;\n\tcolor:\t\t\t\t\t\t#333;\n}\n\n/* ------------------------------------------------------- */\n/* ------------------- Article (images) ------------------ */\n/* ------------------------------------------------------- */\n\narticle{\n\tdisplay:\t\t\t\t\tinline-block;\n\twidth:\t\t\t\t\t\tcalc(24.8% - 40px);\n\tmargin:\t\t\t\t\t\t10px;\n\tpadding:\t\t\t\t\t10px;\n\tvertical-align: \t\t\ttop;\n\ttext-align:\t\t\t\t\tcenter;\n\tbackground-color:\t\t\trgba(255,255,255,0.6);\n\tborder-radius: \t\t\t\t10px;\n\n}\n\narticle:hover{\n\tbackground-color:\t\t\t#333;\n\tcolor:\t\t\t\t\t\t#eee;\n}\n\narticle > img{\n\twidth:\t\t\t\t\t\tcalc(100% - 20px);\n\tpadding:\t\t\t\t\t10px;\n\theight: \t\t\t\t\t225px;\n\tborder-radius: \t\t\t\t20px;\n}\n\n/* ------------------------------------------------------- */\n/* ------------------------------------------------------- */\n/* ------------------------------------------------------- */\n* {\n\tpadding: \t\t\t\t0;\n\tmargin: \t\t\t\t0;\n}\n\na {\n\ttext-decoration: \t\tnone;\n}\n\nli {\n\tlist-style-type: \t\tnone;\n}\n\n/*-----------------------------------------*/\n\nheader { \n\twidth: \t\t\t\t\t100%; \n\theight: \t\t\t\t50px; \n\tmargin: \t\t\t\tauto;\n\tborder-bottom: \t\t\t1px solid black; /*COULEUR BORDURE HEADER*/\n\ttop: \t\t\t\t\t0;\n}\n#brand, .res {\n\tdisplay: \t\t\t\tinline;\n}\n\n#brand {\n\ttext-align: \t\t\tcenter;\n}\n\n#brand h1{\n\tpadding-top:\t\t\t6px;\n}\n/*-----------------------------------------*/\n\nnav {\n\twidth: \t\t\t\t\t100%;\n\ttext-align: \t\t\tcenter; \n}\n\nnav a, #recherche{ \n\tdisplay:\t\t\t\tblock; \n\tpadding: \t\t\t\t15px 0;\n\tborder-bottom: \t\t\t1px solid black;\t/*COULEUR BORDURE menu*/\n\tcolor: \t\t\t\t\t#F0EADC;\t/*COULEUR TEXTE menu*/\n}\n\nnav a:hover {\n\tbackground: \t\t\t#dddddd;\n\tcolor: \t\t\t\t\tblack;\n}\n\nnav li:last-child a {\n\tborder-bottom: \t\t\tnone;\n}\n\n/*-----------------------------------------*/\n\n\n.menu {\n\theight:\t\t\t\t\tauto;\n\tposition: \t\t\t\tabsolute;\n\tbackground: \t\t\t#333;\n\tleft: \t\t\t\t\t-110%;\n\ttransition: \t\t\tall .2s ease-in-out;\n\tz-index:\t\t\t\t3;\n}\n\n\n.menu-icon {\n\tpadding-top: \t\t\t10px;\n\tcursor: \t\t\t\tpointer;\n\tfloat: \t\t\t\t\tleft;\n\tmargin-top: \t\t\t-10px;\n\tmargin-left: \t\t\t20px;\n\tborder-radius: \t\t\t5px;\n\tcolor: \t\t\t\t\tblack;\n\tfont-size: \t\t\t\t2em;\n\t\n}\n\n.main{\n\ttransition: \t\t\tall .2s ease-in-out;\n\ttop:\t\t\t\t\t0px;\n}\n\n#menuToggle {\n\tdisplay: \t\t\t\tnone;\n}\n\n.menu-icon:hover {\n\ttransition: \t\t\tall .2s ease-in-out;\n\tcolor:\t\t\t\t\twhite;\n}\n\n#menuToggle:checked ~ .menu {\n\tposition: \t\t\t\tabsolute;\n\tleft: \t\t\t\t\t0;\n\tz-index:\t\t\t\t2;\n}\t\n\n#menuToggle:checked ~ .page {\n\tposition: \t\t\t\tabsolute;\n\tleft: \t\t\t\t\t0;\n\tz-index:\t\t\t\t3;\n}\t\n\n#menuToggle:checked ~ .main {\n\tposition: \t\t\t\tabsolute;\n\ttop: \t\t\t\t\t150px;\n}\n\n/*-----------------------------------------*/\n\n#barrerecherche{\n\tpadding-top:\t\t\t5px;\n\tpadding-bottom:\t\t\t5px;\n\tpadding-left:\t\t\t10px;\n\tpadding-right:\t\t\t10px;\n}\n\n/*-----------------------------------------*/\n\nheader{\nbackground-color: \t\t\tgrey;\n}\n\n/*--------------------------------------------------*/\n\n#brand img{\n\twidth:\t\t\t\t\t2%;\n}",
+        "html": "<html>\n<head>\n\t<meta charset=\"utf-8\">\n\t<title>Tableaux par Artistes</title>\t\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"index.css\">\t\n</head>\n<body>\n<input type=\"checkbox\" id=\"menuToggle\">\n<label for=\"menuToggle\" class=\"menu-icon\">&#9776;</label>\n<header>\n\t<div id=\"brand\">\n\t\t<h1>Tableaux par Artistes</h1>\n\t</div>\n</header>\n<div id=\"page\"></div>\n<nav class=\"menu\">\t\n\t<ul>\n\t\t\t<li id=\"filtre_tous\">&#9830;&nbsp; Tous</li><!--\t\t\n        --><li id=\"filtre_picasso\">&#9830;&nbsp; Picasso</li><!--\t\t\n        --><li id=\"filtre_renoir\">&#9830;&nbsp; Renoir</li><!--\t\t\n        --><li id=\"filtre_monet\">&#9830;&nbsp; Monet</li>\n    </ul>\t\n</nav>\n\t<div class=\"main\">\t\n\t\t<article class=\"Picasso\">\n\t\t\t\t<h2>Guernica</h2>\n\t\t\t\t<img src=\"http://dp.mariottini.free.fr/weekend/madrid/photo/guernica.jpg\"/>\n\t\t\t</article><!--\t\t\t\n\t\t --><article class=\"Renoir\">\n\t\t \t\t<h2>Le Dejeuner des Canotiers</h2>\n\t\t \t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/260px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg\"/>\n\t\t\t</article><!--\t\t\t\n\t\t --><article class=\"Monet\">\n\t\t \t\t<h2>Parlements de Londres</h2>\n\t\t \t\t<img src=\"http://articles.chantiers-philo.fr//wp-content/galleries/parlements/Londres,%20le%20Parlement,%20effet%20de%20soleil%20dans%20le%20brouillard,%20Claude%20Monet%201900-1901.jpg\"/>\n\t\t\t</article><!--\t\t\t\n\t\t --><article class=\"Picasso\">\n\t\t \t\t<h2>Les Demoiselles d'Avignon</h2>\n\t\t \t\t<img src=\"http://www.clioetcalliope.com/oeuvres/peinture/picasso/avignon.jpg\"/>\n\t\t\t</article>\n\t\t\t<article class=\"Renoir\">\n\t\t \t\t<h2>Bal Du Moulin de la Galette</h2>\n\t\t \t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/4/40/Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d'Orsay_RF_2739_(derivative_work_-_AutoContrast_edit_in_LCH_space).jpg\"/>\n\t\t\t</article><!--\t\t\t\n\t\t --><article class=\"Picasso\">\n\t\t \t\t<h2>Le Vieux Guitariste Aveugle</h2>\n\t\t \t\t<img src=\"http://imgc.allpostersimages.com/images/P-473-488-90/9/908/B95X000Z/affiches/pablo-picasso-le-vieux-guitariste-aveugle-vers-1903.jpg\"/>\n\t\t\t</article><!--\t\t\t\n\t\t --><article class=\"Monet\">\n\t\t \t\t<h2>Impression, Soleil Levant</h2>\n\t\t \t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Claude_Monet,_Impression,_soleil_levant.jpg/260px-Claude_Monet,_Impression,_soleil_levant.jpg\"/>\n\t\t\t</article><!--\t\t\t\n\t\t --><article class=\"Monet\">\n\t\t \t\t<h2>La Promenade</h2>\n\t\t \t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Monet_Umbrella.JPG/260px-Monet_Umbrella.JPG\"/>\n\t\t\t</article><!-- -->\n\t\t\t<article class=\"Renoir\">\n\t\t \t\t<h2>Les Deux Soeurs</h2>\n\t\t \t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Renoir,_Pierre-Auguste_-_The_Two_Sisters,_On_the_Terrace.jpg/260px-Renoir,_Pierre-Auguste_-_The_Two_Sisters,_On_the_Terrace.jpg\"/>\n\t\t\t</article><!--\t\t\n\t\t --><article class=\"Monet\">\n\t\t \t\t<h2>Les Coquelicots</h2>\n\t\t \t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Claude_Monet_037.jpg/260px-Claude_Monet_037.jpg\"/>\n\t\t\t</article><!--\t\n\t\t --><article class=\"Renoir\">\n\t\t \t\t<h2>Les Baigneuses</h2>\n\t\t \t\t<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Les_Baigneuses-Courbet.jpg/260px-Les_Baigneuses-Courbet.jpg\"/>\n\t\t\t</article><!--\t\n\t\t --><article class=\"Picasso\">\n\t\t \t\t<h2>La Femme Qui Pleure</h2>\n\t\t \t\t<img src=\"http://static.intellego.fr/uploads/1/1/110279/media/31937-Femme-qui-pleure-ultimo-periodo-pablo-picasso.jpg\"/>\n\t\t\t</article><!-- -->\t\n\t</div>\n\t<script src=\"index.js\"></script>\n\t</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIgNDczAgQsJOp_A8",
+      "userId": "113360458714289851157",
+      "creationTime": "2017-01-31T11:57:42.213Z",
+      "updateTime": "2017-02-19T22:42:44.554Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODM4NDc2OFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIqPjfzAgQsJOp_A8",
+      "userId": "110373469661840604809",
+      "creationTime": "2017-01-31T11:57:41.899Z",
+      "updateTime": "2017-02-19T21:24:42.714Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODQzOTA4MFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/johannebordeaux/pen/pRXRdZ",
+              "title": "Filtrage de produits",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/johannebordeaux/pen/pRXRdZ&a=AIYkKU80zUU-bkfHjLlJO0sSad00rpwufw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "johannebordeaux",
+          "pRXRdZ"
+        ],
+        "js": "var tab1 = document.getElementsByClassName('shop');\nvar tab2 =\ndocument.getElementsByClassName('categorie');\nvar tab3 =\ndocument.getElementsByClassName('cityguide');\n\ndocument.getElementById('accueil').onclick = function() { for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.remove('hidden');\n  }for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.remove('hidden');\n  }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.remove('hidden');\n  }\n}\n\ndocument.getElementById('shop').onclick = function() {\n  for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.add('hidden');\n  }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.add('hidden');\n    }for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.remove('hidden');\n  }\n};\n\ndocument.getElementById('categorie').onclick = function() {\n  for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.add('hidden');\n  }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.add('hidden');\n   }for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.remove('hidden');\n  }\n};\n  \ndocument.getElementById('cityguide').onclick = function() {\n  for (var i=0; i<tab1.length; i++) {\n    tab1[i].classList.add('hidden');\n  }for (var i=0; i<tab2.length; i++) {\n    tab2[i].classList.add('hidden');\n    }for (var i=0; i<tab3.length; i++) {\n    tab3[i].classList.remove('hidden');\n  }\n}",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Dosis');\n@import url('https://fonts.googleapis.com/css?family=Oswald');\n\nh1{\n\ttext-align: center;\n\tfont-size: 54px;\n\tfont-family: \"Dosis\", sans-serif;\n\tfont-style: italic;\n}\n\nli {\n\tlist-style-type: none;\n\tdisplay: inline-block;\n\ttext-align: center;\n\tpadding: 20px 60px;\n\tpadding-bottom: 10px;\n}\n\nul {\n\tbackground-image: url(\"http://www.marcmaison.fr/maisonpedia/noirmarquina/_01_pedia.jpg\");\n\tpadding: 0;\n\tmargin: 0;\n\ttext-align: center;\n\tpadding-top: 50px;\n\tpadding-bottom: 50px;\n\tcolor: white;\n\tfont-size:1em; \n\ttext-transform: uppercase;\n}\n\nbody{\n\ttext-align: center;\n\tposition: center;\n\n}\n\n.hidden{\n\tdisplay:none;\n}\n\nnav li:hover{\n\tcursor:pointer;\n\tbackground-color:rgba(255,255,255,0.8);\n\tcolor:black;\n}\n\n#contenuphoto #contenuphoto2 #contenuphoto3 {\n    margin:0 auto;\n    position: center;\n    width:100%;\n    height:auto; \n}\n\n.photo1 {\n    background:url(\"http://euimages.urbanoutfitters.com/is/image/UrbanOutfittersEU/5129462116000_040_b?$xlarge$&defaultImage=\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n\n    \n}\n\n.photo2 {\n    background:url(\"http://euimages.urbanoutfitters.com/is/image/UrbanOutfittersEU/5139092940011_001_b?$xlarge$&defaultImage=\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n    \n}\n.photo3 {\n    background:url(\"http://euimages.urbanoutfitters.com/is/image/UrbanOutfittersEU/5119251630011_004_b?$xlarge$&defaultImage=\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n    \n}\n.photo4 {\n    background:url(\"http://lp2.hm.com/hmprod?set=source[/environment/2017/8HZ_0400_007R.jpg],width[3970],height[4642],y[-1],type[FASHION_FRONT]&hmver=0&call=url[file:/product/main]\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo5 {\n    background:url(\"https://mosaic01.ztat.net/vgs/media/pdp-gallery/LE/22/1N/01/JK/13/LE221N01J-K13@14.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo6 {\n    background:url(\"http://cdn.brandymelvilleusa.com/media/catalog/product/cache/1/image/547x820/9df78eab33525d08d6e5fb8d27136e95/m/w/mw798va-933s0010000_f21.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo7 {\n    background:url(\"http://cdn.brandymelvilleusa.com/media/catalog/product/cache/1/image/547x820/9df78eab33525d08d6e5fb8d27136e95/m/d/md195-343s0720000_full.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n   \n}\n.photo8 {\n    background:url(\"http://cdn.brandymelvilleusa.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/m/n/mn256-f19s1670000_f2_1.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo9 {\n    background:url(\"http://maxpixel.freegreatpicture.com/static/photo/1x/Fashion-Leather-Jacket-Leather-Jacket-Pink-Style-1663286.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n\n    \n}\n\n.photo10 {\n    background:url(\"http://maxpixel.freegreatpicture.com/static/photo/1x/Makeup-Brush-1669951.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n    \n}\n.photo11 {\n    background:url(\"http://maxpixel.freegreatpicture.com/static/photo/1x/Computer-Screen-Imac-Apple-Laptop-Macbook-606763.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n    \n}\n.photo12 {\n    background:url(\"https://c1.staticflickr.com/9/8269/15204309883_f6e00423e6_b.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo13 {\n    background:url(\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPsC17FK1cA-flV47yk0Ol2NKAqaPURKcv1DPY1ioICMAuDcG\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo14 {\n    background:url(\"http://maxpixel.freegreatpicture.com/static/photo/1x/Computer-Keyboard-Hands-Apple-Mouse-1839391.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo15 {\n    background:url(\"https://images.pexels.com/photos/4831/hands-coffee-smartphone-technology.jpg?h=350&auto=compress&cs=tinysrgb\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n   \n}\n.photo16 {\n    background:url(\"https://images.pexels.com/photos/6330/smartphone-notebook-technology-calendar.jpg?h=350&auto=compress&cs=tinysrgb\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo17 {\n    background:url(\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsKiqSj9VTvB-RSMJstjCsd045FLD1Eclye2Sd283LxQRjODxK\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n\n    \n}\n\n.photo18 {\n    background:url(\"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQQ9jMF4tp-7JprJG7PvG0ymMz4wmwlsbGYLIDa_3_jYz5AX_PIfA\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n    \n}\n.photo19 {\n    background:url(\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Moscou_1033b.jpg/1280px-Moscou_1033b.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n    \n}\n.photo20 {\n    background:url(\"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQPGRmcL08GPYaJTArFcTVtkZREMgyc9SIjxwlC6kbwHigIhBe8\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo21 {\n    background:url(\"https://mosaic01.ztat.net/vgs/media/pdp-gallery/LE/22/1N/01/JK/13/LE221N01J-K13@14.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo22 {\n    background:url(\"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTLr44AAtHH3a_sVn3rCfnt5X9z9cJe_QSeW2HjCPHTTXUNaqf0\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo23 {\n    background:url(\"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjVc07meKgXcBcSRGdJEDo7zQuSpXqaPJ1cJOXHpLg9P4j1yWr\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo24 {\n    background:url(\"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXkGPhcw4-mIw1IWSUIzOpOARH0uah_Fa7MF-H9cRkWAQrqiLOkw\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n.photo25 {\n    background:url(\"https://upload.wikimedia.org/wikipedia/commons/1/12/Prague_-_night.jpg\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    position: relative;\n    \n}\n\n\t\t\n.photo_item {\n    position: relative;\n    overflow: hidden;\n    display: block;\n\t\twidth: 20%;\n\t\theight:250px;\n\t\tmargin: 0 35px; \n\t\tfloat: left;\n\tpadding-top: 90px;\n\tmargin-top: 20px;\n}\n\n.photo_item .photo_item_hover {\n    position: absolute;\n    top: 0px;\n    left: 0px;\n    height: 100%;\n    width: 80%;\n    background-color: rgba(0, 0, 0, .8);\n    -webkit-transform: translate(-100%);\n    transform: translate(-100%);\n    opacity: 0;\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n\n.photo_item .photo_item_hover .item_info {\n    text-align: center;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    width: 100%;\n    font-weight: bold;\n}\n\n.photo_item .photo_item_hover .item_info span {\n    display: block;\n    color: white;\n    font-size: 18px;\n    -webkit-transform: translateX(-100px);\n    transform: translateX(-100px);\n    -webkit-transition: all .2s ease-in-out .2s;\n    transition: all .2s ease-in-out .2s;\n    opacity: 0;\n}\n\n\n.photo_item:hover .photo_item_hover {\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n}\n\n\n.phto_item:hover .item_info{\n    opacity: 1;\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n}\n\ndiv .item_info{\n    color: white;\n}\n\n.phrase{\n\tfont-size:1em; \n    text-align: center;\n\tfont-size: 54px;\n\tfont-family: \"Oswald\", sans-serif;\n}\n\n",
+        "html": "<body>\n<h1>Johanne Bordeaux</h1>\n\n<nav>\n    <ul>\n      <li id=\"accueil\">home</li><!--\n       --><li id=\"shop\">Whislist</li><!--\n       --><li id=\"categorie\">Categories</li><!--\n       --><li id=\"cityguide\">City Guide</li><!--\n       -->\n    </ul>\n</nav>\n\n<div id=\"accueil\">\n<div id=\"contenuphoto\">\n  <article class=\"shop\">\n  <div class=\"phrase\">WHISLIST</div>\n    <div class=\"photo_item photo1\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            Urban Outfitters\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"shop\">\n    <div class=\"photo_item photo2\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            Urban Outfitters\n       </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"shop\">\n    <div class=\"photo_item photo3\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            Urban Outfitters\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"shop\">\n    <div class=\"photo_item photo4\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            H&M\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"shop\">\n    <div class=\"photo_item photo5\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          Brandy Melville\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"shop\"><div class=\"photo_item photo6\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          Brandy Melville\n        </div>\n      </div>\n    </div>\n    </div>\n    </article><!--\n    --><article class=\"shop\">\n    <div class=\"photo_item photo7\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          Brandy Melville\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"shop\">\n    <div class=\"photo_item photo8\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            Brandy Melville\n        </div>\n      </div>\n    </div>\n    </article><!--\n  --></div>\n\n<!--DEUXIEME CONTENU-->\n  <br />\n  <br />\n  <div id=\"contenuphoto2\">\n  <article class=\"categorie\">\n    <div class=\"phrase\">CATEGORIES</div>\n    <div class=\"photo_item photo9\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            LES LOOKS MODE\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"categorie\">\n    <div class=\"photo_item photo10\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            BEAUTY TIPS\n       </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"categorie\">\n    <div class=\"photo_item photo11\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            LIFESTYLE\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"categorie\">\n    <div class=\"photo_item photo12\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            FOOD\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"categorie\">\n    <div class=\"photo_item photo13\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          MES ADRESSES\n        </div>\n      </div>\n    </div>\n    </article><!--\n   --><article class=\"categorie\">\n    <div class=\"photo_item photo14\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          SHOP MY STYLE\n        </div>\n      </div>\n    </div>\n    </article><!--\n   --><article class=\"categorie\">\n    <div class=\"photo_item photo15\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          CONTACT\n        </div>\n      </div>\n    </div>\n    </article><!--\n   --><article class=\"categorie\">\n    <div class=\"photo_item photo16\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          A PROPOS\n        </div>\n      </div>\n    </div>\n    </article><!--\n   --></div>\n\n<!--TROISIEME CONTENU-->\n\n  <div id=\"contenuphoto3\">\n  <article class=\"cityguide\">\n    <div class=\"phrase\">CITY GUIDE</div>\n    <div class=\"photo_item photo17\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            PARIS\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"cityguide\">\n    <div class=\"photo_item photo18\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            SAINT PETERSBOURG\n       </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"cityguide\">\n    <div class=\"photo_item photo19\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            MOSCOW\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"cityguide\">\n    <div class=\"photo_item photo20\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            MADRID\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"cityguide\">\n    <div class=\"photo_item photo22\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          PALMA DE MAJORQUE\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"cityguide\"><div class=\"photo_item photo23\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          BARCELONE\n        </div>\n      </div>\n    </div>\n    </div>\n    </article><!--\n    --><article class=\"cityguide\">\n    <div class=\"photo_item photo24\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n          DUBLIN\n        </div>\n      </div>\n    </div>\n    </article><!--\n    --><article class=\"cityguide\">\n    <div class=\"photo_item photo25\">\n      <div class=\"photo_item_hover\">\n        <div class=\"item_info\">\n            PRAGUE\n        </div>\n      </div>\n    </div>\n    </article><!--\n  --></div>\n</div>\n</div>\n</body>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIm9LizAgQsJOp_A8",
+      "userId": "116055107986692203753",
+      "creationTime": "2017-01-31T11:57:43.555Z",
+      "updateTime": "2017-01-31T11:57:43.554Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODQ4MzM1NVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI4rLjzAgQsJOp_A8",
+      "userId": "106909003268071855794",
+      "creationTime": "2017-01-31T11:57:42.539Z",
+      "updateTime": "2017-02-18T21:34:00.606Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODQ5NTcxNFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI7pzkzAgQsJOp_A8",
+      "userId": "109218239922416040794",
+      "creationTime": "2017-01-31T11:57:43.225Z",
+      "updateTime": "2017-01-31T11:57:43.224Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODUwOTI5NFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIoMPkzAgQsJOp_A8",
+      "userId": "113169719364480526397",
+      "creationTime": "2017-01-31T11:57:43.298Z",
+      "updateTime": "2017-01-31T11:57:43.296Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODUxNDIwOFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIlPjkzAgQsJOp_A8",
+      "userId": "117481420651899349023",
+      "creationTime": "2017-01-31T11:57:43.062Z",
+      "updateTime": "2017-02-17T09:59:31.946Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODUyMDk4MFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/SpaCeDuDe/pen/ygEdWr",
+              "title": "TP_Filtrage",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/SpaCeDuDe/pen/ygEdWr&a=AIYkKU_akqP7b-Sxqb7RgrEWzhXnk2z-qw"
+            }
+          },
+          {
+            "link": {
+              "url": "http://codepen.io/SpaCeDuDe/pen/rjgNOR",
+              "title": "TP_Filtrage_v2",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/SpaCeDuDe/pen/rjgNOR&a=AIYkKU9lis76Hy1sFj6CaF2aT0jYcJoMPg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "SpaCeDuDe",
+          "rjgNOR"
+        ],
+        "js": "// TYPES\nvar jeuAventure = document.getElementsByClassName('aventure'); // => TABLEAU D'ELEMENTS\nvar jeuPlateforme = document.getElementsByClassName('plateforme');\nvar jeuPortable = document.getElementsByClassName('portable');\n\n// TOUS\ndocument.getElementById('filtre_tous').onclick = function (){\n\n\tfor(var i = 0; i < jeuPlateforme.length; i++){\n\t\tjeuPlateforme[i].classList.remove('hidden'); \n\t}\n\n\tfor(var i = 0; i < jeuAventure.length; i++){\n\t\tjeuAventure[i].classList.remove('hidden'); \n\t}\n\n\tfor(var i = 0; i < jeuPortable.length; i++){\n\t\tjeuPortable[i].classList.remove('hidden');\n\t}\n}\n\n//AVENTURE\ndocument.getElementById('filtre_aventure').onclick = function (){\n\n\tfor(var i = 0; i < jeuPlateforme.length; i++){\n\t\tjeuPlateforme[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < jeuPortable.length; i++){\n\t\tjeuPortable[i].classList.add('hidden')\n\t}\n\n\tfor(var i = 0; i < jeuAventure.length; i++){\n\t\tjeuAventure[i].classList.remove('hidden'); \n\t}\n}\n\n//PLATEFORME\ndocument.getElementById('filtre_plateforme').onclick = function (){\n\n\tfor(var i = 0; i < jeuAventure.length; i++){\n\t\tjeuAventure[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < jeuPortable.length; i++){\n\t\tjeuPortable[i].classList.add('hidden')\n\t}\n\n\tfor(var i = 0; i < jeuPlateforme.length; i++){ /*Toujours le remove à la fin */\n\t\tjeuPlateforme[i].classList.remove('hidden'); \n\t}\n}\n// PORTABLE\ndocument.getElementById('filtre_portable').onclick = function (){\n\n\tfor(var i = 0; i < jeuPlateforme.length; i++){\n\t\tjeuPlateforme[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < jeuAventure.length; i++){\n\t\tjeuAventure[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < jeuPortable.length; i++){\n\t\tjeuPortable[i].classList.remove('hidden')\n\t}\n}",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Capriola');\n\n\n/* Pour masquer des éléments */\n.hidden{\n\tdisplay:none;\n}\n\nbody{\n\tmargin:0;\n\twidth:100%;\n\tbackground-color:#3498db;\n\ttransition:color 250ms;\n\tfont-family:\"Capriola\";\n\n}\n\nheader{\n\tpadding:10px;\n\tmargin:auto;\n\twidth:calc(100% - 20px);\n\ttext-align:center;\n\tcolor:white;\n\tborder-bottom:solid 2px white;\n}\n\nnav{\n\twidth:calc(100% - 20px);\n\tbackground-color:#e74c3c;\n\tmargin:0;\n\tpadding:10px;\n\tborder-bottom:solid 2px white;\n}\n\nnav ul{\n\tmargin:0;\n\tpadding:0;\n}\n\nnav li{\n\tdisplay:inline-block;\n\tlist-style-type:none;\n\twidth:calc(25% - 40px);\n\ttext-align:center;\n\tfont-size:1.5em;\n\ttext-transform: uppercase;\n\tpadding:10px;\n\tmargin:10px;\n\t/*background-color:rgba(255,255,255,0.8);\n\tborder-radius:20px;*/\n\tcolor:white;\n}\n\nnav li:hover{\n\tcursor:pointer;\n\tbackground-color:rgba(255,255,255,0.8);\n\tborder-radius:20px;\n\tcolor:black;\n}\n\n\n.main{\n\tmargin:auto;\n\n}\n\narticle{\n\tdisplay:inline-block;\n\twidth:calc(24.8% - 40px);\n\tmargin:10px;\n\tpadding:10px;\n\tvertical-align: top;\n\ttext-align:center;\n\tbackground-color:rgba(255,255,255,0.6);\n\tborder-radius: 10px;\n\n}\n\narticle > img{\n\twidth:calc(100% - 20px);\n\tpadding:10px;\n\theight: 185px;\n\tborder-radius: 20px;\n}",
+        "html": "<body>\n\t\t<header>\n\t\t\t<h1>Mes jeux préférés !</h1>\n\t\t</header>\n\n\t\t<nav>\n\t\t\t<ul>\n\t\t\t\t<li id=\"filtre_tous\">TOUS</li><!--\n\t\t\t --><li id=\"filtre_aventure\">Aventure</li><!--\n\t\t\t --><li id=\"filtre_plateforme\">Plateforme</li><!--\n\t\t\t --><li id=\"filtre_portable\">Console portable</li>\n\t\t\t</ul>\n\t\t</nav>\n\n\t\t<div class=\"main\">\n\t\t\t<article class=\"plateforme portable\">\n\t\t\t\t<h2>Super Mario</h2>\n\t\t\t\t<img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/supermario.jpg\">\n\t\t\t</article><!--\n\t\t --><article class=\"aventure portable\">\n\t\t \t\t<h2>Pokémon</h2>\n\t\t \t\t<img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/pokemon.jpg\"/>\n\t\t \t</article><!--\n\t\t --><article class=\"aventure\">\n\t\t \t\t<h2>The Legend of Zelda</h2>\n   \t\t\t\t<img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/windwaker.jpg\"/>\n   \t\t\t</article><!--\n   \t\t --><article>\n   \t\t \t   <h2>Donkey Kong Country</h2>\n  \t\t\t   <img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/dk.jpg\"/>\n  \t\t\t</article><!--\n  \t\t --><article class=\"aventure plateforme\">\n\t\t\t   <h2>Tomb Raider</h2>\n\t\t\t   <img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/tomb.jpg\"/>\n\t\t\t</article><!--\n\t\t --><article class=\"aventure portable\">\n\t\t       <h2>Final Fantasy</h2>\n\t\t       <img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/final.jpg\"/>\n\t\t    </article><!--\n\t\t --><article class=\"plateforme portable\">\n\t\t\t    <h2>Castlevania</h2>\n\t\t\t    <img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/castle.jpg\"/>\n\t\t\t</article><!--\n\t\t --><article class=\"plateforme portable\">\n\t\t\t    <h2>Metroid</h2>\n\t\t\t    <img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/metroid.jpg\"/>\n\t\t\t</article><!--\n\t\t --><article class=\"plateforme\">\n\t\t\t    <h2>Super Meat Boy</h2>\n\t\t\t    <img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/super.png\"/>\n\t\t\t</article><!--\n\t\t --><article class=\"portable\">\n\t\t\t    <h2>Mario Kart</h2>\n\t\t\t    <img src=\"http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/mariokart.jpg\"/>\n\t\t\t</article>\n\t\t</div>\n</body>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI3qflzAgQsJOp_A8",
+      "userId": "105646058105221244142",
+      "creationTime": "2017-01-31T11:57:42.298Z",
+      "updateTime": "2017-01-31T11:57:42.297Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODUyNzA3MFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIgbzmzAgQsJOp_A8",
+      "userId": "114320478494601004031",
+      "creationTime": "2017-01-31T11:57:44.004Z",
+      "updateTime": "2017-02-19T14:56:03.957Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODU0NjA0OVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/erwan_allain/pen/xgoZoP",
+              "title": "JS_TravailVacances",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/erwan_allain/pen/xgoZoP&a=AIYkKU-JEIWvlBNjPxjV2_7v0-nadcATWw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "erwan_allain",
+          "xgoZoP"
+        ],
+        "js": "var championMid = document.getElementsByClassName('mid');\nvar championTop = document.getElementsByClassName('top');\nvar championBot = document.getElementsByClassName('bot');\nvar championJungle = document.getElementsByClassName('jungle');\n\ndocument.getElementById('champtous').onclick = function (){\n\n\tfor(var i = 0; i < championMid.length; i++){\n\t\tchampionMid[i].classList.remove('hidden'); \n\t}\n\n\tfor(var i = 0; i < championTop.length; i++){\n\t\tchampionTop[i].classList.remove('hidden'); \n\t}\n\n\tfor(var i = 0; i < championBot.length; i++){\n\t\tchampionBot[i].classList.remove('hidden'); \n\t}\n\n\tfor(var i = 0; i < championJungle.length; i++){\n\t\tchampionJungle[i].classList.remove('hidden'); \n\t}\n}\n\ndocument.getElementById('champmid').onclick = function (){\n\n\tfor(var i = 0; i < championTop.length; i++){\n\t\tchampionTop[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championBot.length; i++){\n\t\tchampionBot[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championJungle.length; i++){\n\t\tchampionJungle[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championMid.length; i++){\n\t\tchampionMid[i].classList.remove('hidden'); \n\t}\n}\n\ndocument.getElementById('champtop').onclick = function (){\n\n\tfor(var i = 0; i < championBot.length; i++){\n\t\tchampionBot[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championJungle.length; i++){\n\t\tchampionJungle[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championMid.length; i++){\n\t\tchampionMid[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championTop.length; i++){\n\t\tchampionTop[i].classList.remove('hidden'); \n\t}\n}\n\ndocument.getElementById('champbot').onclick = function (){\n\n\tfor(var i = 0; i < championTop.length; i++){\n\t\tchampionTop[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championJungle.length; i++){\n\t\tchampionJungle[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championMid.length; i++){\n\t\tchampionMid[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championBot.length; i++){\n\t\tchampionBot[i].classList.remove('hidden'); \n\t}\n}\n\ndocument.getElementById('champjungle').onclick = function (){\n\n\tfor(var i = 0; i < championMid.length; i++){\n\t\tchampionMid[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championTop.length; i++){\n\t\tchampionTop[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championBot.length; i++){\n\t\tchampionBot[i].classList.add('hidden'); \n\t}\n\n\tfor(var i = 0; i < championJungle.length; i++){\n\t\tchampionJungle[i].classList.remove('hidden'); \n\t}\n}",
+        "css": "body{\n\tfont-family:\"Arial\", sans-serif;\n\tmargin:0;\n\twidth:100%;\n}\n\n.hidden{\n\tdisplay:none;\n}\n\nnav{\n\ttext-align:center;\n}\n\nbutton{\n\tborder:none;\n\twidth:15%;\n\tmargin:5px;\n\theight: 50px;\n\ttext-transform:uppercase;\n}\n\nbutton:hover{\n\tbackground-color:rgb(46, 204, 113);\n\tcursor:pointer;\n}\n\nimg{\n\theight: 75px;\n\tborder-radius:100px;\n}\n\n#col1, #col2, #col3, #col4{\n\tdisplay:inline-block;\n\twidth:25%;\n\ttext-align:center;\n}",
+        "html": "<html>\n\t\t<title>Mes champions</title>\n\t<body>\n\t\t<nav>\n\t\t\t<button type=\"button\" id=\"champtous\">Tous</button><!--\n\t\t --><button type=\"button\" id=\"champmid\">Mid</button><!--\n\t\t --><button type=\"button\" id=\"champbot\">Bot</button><!--\n\t\t --><button type=\"button\" id=\"champtop\">Top</button><!--\n\t\t --><button type=\"button\" id=\"champjungle\">Jungle</button>\n\t\t</nav>\n\n\t\t<div>\n\t\t\t<div id=\"col1\">\n\t\t\t\t<div class=\"mid\">\n\t\t\t\t\t<p>Lux</p>\n\t\t\t\t\t<img src =\"http://vignette1.wikia.nocookie.net/leagueoflegends/images/5/52/LuxPortrait.png/revision/latest?cb=20121005030826&path-prefix=fr\"/>\n\t\t\t\t</div><!--\n\t\t\t --><div class=\"mid\">\n\t\t\t \t\t<p>LeBlanc</p>\n\t\t\t \t\t<img src=\"http://www.mobafire.com/images/champion/icon/leblanc.png\"/>\n\t\t\t \t</div><!--\n\t\t\t --><div class=\"mid bot\">\n\t\t\t \t\t<p>Annie</p>\n\t\t\t \t\t<img src=\"http://blackworldforum.com/images/avatar/Annie.jpg\"/>\n\t\t\t \t</div>\n\t\t\t</div><!--\n\t\t --><div id=\"col2\">\n\t\t \t\t<div class=\"bot\">\n\t\t\t\t\t<p>Ezreal</p>\n\t\t\t\t\t<img src =\"http://api.arcana-gaming.com/Content/arcana/lol/Ezreal_square_0.png\"/>\n\t\t\t\t</div><!--\n\t\t\t --><div class=\"bot\">\n\t\t\t \t\t<p>Draven</p>\n\t\t\t \t\t<img src=\"https://pbs.twimg.com/profile_images/579278092574662656/U71LP7BW.png\"/>\n\t\t\t \t</div><!--\n\t\t\t --><div class=\"bot\">\n\t\t\t \t\t<p>Sona</p>\n\t\t\t \t\t<img src=\"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Sona.png\"/>\n\t\t\t \t</div>\n\t\t\t</div><!--\n\t\t --><div id=\"col3\">\n\t\t \t\t<div class=\"top jungle\">\n\t\t\t\t\t<p>Jax</p>\n\t\t\t\t\t<img src =\"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Jax.png\"/>\n\t\t\t\t</div><!--\n\t\t\t --><div class=\"top jungle\">\n\t\t\t \t\t<p>Poppy</p>\n\t\t\t \t\t<img src=\"http://vignette2.wikia.nocookie.net/leagueoflegends/images/7/7c/PoppyPortrait.png/revision/latest?cb=20151125124912&path-prefix=fr\"/>\n\t\t\t \t</div><!--\n\t\t\t --><div class=\"top\">\n\t\t\t \t\t<p>Shen</p>\n\t\t\t \t\t<img src=\"http://vignette4.wikia.nocookie.net/leagueoflegends/images/f/f7/ShenPortrait.png/revision/latest?cb=20141013201442&path-prefix=fr\"/>\n\t\t\t \t</div>\n\t\t\t</div><!--\n\t\t --><div id=\"col4\">\n\t\t \t\t<div class=\"jungle mid\">\n\t\t\t\t\t<p>Diana</p>\n\t\t\t\t\t<img src =\"http://vignette3.wikia.nocookie.net/leagueoflegends/images/f/f5/DianaPortrait.png/revision/latest?cb=20120728030158&path-prefix=fr\"/>\n\t\t\t\t</div><!--\n\t\t\t --><div class=\"jungle\">\n\t\t\t \t\t<p>Fiddlestick</p>\n\t\t\t \t\t<img src=\"http://cdn.fansided.com/wp-content/blogs.dir/359/files/2016/04/Fiddlesticks_Square-1.jpg\"/>\n\t\t\t \t</div><!--\n\t\t\t --><div class=\"jungle\">\n\t\t\t \t\t<p>Elise</p>\n\t\t\t \t\t<img src=\"http://vignette4.wikia.nocookie.net/leagueoflegends/images/1/1a/ElisePortrait.png/revision/latest?cb=20121023032747&path-prefix=fr\"/>\n\t\t\t \t</div>\n\t\t\t</div><!--\n\t\t -->\n\t\t</div>\t\t\n\t</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIjeDmzAgQsJOp_A8",
+      "userId": "101664821977450786720",
+      "creationTime": "2017-01-31T11:57:42.123Z",
+      "updateTime": "2017-02-19T18:19:26.518Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODU1MDY2OVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/Garancef1/pen/ZLdpeY",
+              "title": "A Pen by  Garance",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Garancef1/pen/ZLdpeY&a=AIYkKU9izpUxvaRh0YTVvFd4sBhWMpsWvA"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "Garancef1",
+          "ZLdpeY"
+        ],
+        "js": "(function () {\n  var allButton = document.getElementById('all'); \n  var list1Button = document.getElementById('list1'); \n  var list2Button = document.getElementById('list2');\n  var list3Button = document.getElementById('list3');\n          \n  var showItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"inline-block\";\n    }\n  };\n  var hideItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"none\";\n    }\n  };\n\n  list1Items = document.getElementsByClassName('list1');\n  list2Items = document.getElementsByClassName('list2');\n  list3Items = document.getElementsByClassName('list3');\n            \n  allButton.onclick = function() {\n    showItems(list1Items);\n    showItems(list2Items);\n    showItems(list3Items);\n  };\n  list1Button.onclick = function() {\n    showItems(list1Items);\n    hideItems(list2Items);\n    hideItems(list3Items);\n    };\n  list2Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list3Items);\n    showItems(list2Items);\n    };\n  list3Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list2Items);\n    showItems(list3Items);\n    };\n  })();",
+        "css": ".hidden {\n    display: none;\n}\n\n.show {\n    display: block;\n}\n\ndiv{\n    padding-top: 100px;\n}\n\nhtml,body {\n    font-family: 'Inconsolata', monospace;\n    color: #F1A9A0;\n    text-align: center;\n}\n\nnav {\n    background-color: #F1A9A0;\n    position: fixed;\n    width: 100%;\n}\n\np {\n    margin: 2% 0;\n    font-size: 1em;\n}\n\nul {\n\tposition: absolute;\n    list-style-type: none;\n    margin: 0 10%;\n    padding: 0;\n\twidth: 80%;\n\tz-index: 99;\n\n}\n\nh2 {\n  \n    font-size: 3em;\n    padding: 5% 0;\n    margin: 0;\n}\n\nh3 {\n  \n    font-size: 1,5em;\n     margin: 0;\n}\n\na {\n\n    font-size: 2em;\n    text-decoration: none;\n    padding: 0 5%;\n   \n}\n\na:hover {\n    font-weight: bold;\n    color: #2c3e50; \n    cursor: pointer;\n\n}\n\nli {\n    background-color: white;\n    margin: 0;\n    padding: 0.5%;\n}\n\nsection {\n    margin: 2% 10%;\n    background-color: white;\n}\n\n\narticle{\n    display: inline-block;\n\n}\n\n.item {\n\n    margin: 5%;\n}\n\n#all { font-size: 3em; }",
+        "html": "<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"liste.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Inconsolata\" rel=\"stylesheet\">\n\n\n</head>\n\n\n<body> \n\n<nav>\n\n    <ul>\n\n        <li>\n\n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Voir tout</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">Pomme</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">Pates</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">Plats cuisinés</a>  \n\n        </li>\n\n    </ul>\n\n</nav>\n<section>\n    <div class=\"main\">\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Pink Lady</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Lasagnes</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Soupes Chinoises</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>Coquilettes</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Golden</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>Fusilli</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Gratins</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>Spagetti</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Granny Smith</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Hachis parmentier</h3>\n            </div>\n        </article>\n</section>\n<script type=\"text/javascript\" src=\"scriptliste.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI04vnzAgQsJOp_A8",
+      "userId": "116921323770734561563",
+      "creationTime": "2017-01-31T11:57:42.601Z",
+      "updateTime": "2017-02-12T20:07:12.699Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODU1NjI0M1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/pixrrl/jkav8oe3/",
+              "title": "Filtrage JS - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/pixrrl/jkav8oe3/&a=AIYkKU_g6LWvfggpMbbL8gluF7fzDHuD-w"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "pixrrl",
+          "jkav8oe3"
+        ],
+        "js": "var tout5 = document.getElementsByClassName(&apos;All&apos;);\ndocument.getElementById(&apos;ViewAll&apos;).onclick = function () {\n  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {\n    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);\n  }\n  document.getElementById(&apos;ViewAll&apos;).classList.add(&apos;categorieChoisie&apos;);\n  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgb(132, 232, 255)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(0,180,220,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(0,180,220,1)&apos;;\n  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;\n  setTimeout(function () {\n    for (var i = 0; i &lt; tout5.length; i++) {\n      tout5[i].classList.remove(&apos;hidden&apos;);\n    }\n    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class=\"theme\">Tous les produits</h1>&apos;;\n    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;\n  }, 800);\n}\ndocument.getElementById(&apos;Accessoire&apos;).onclick = function () {\n  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {\n    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);\n  }\n  document.getElementById(&apos;Accessoire&apos;).classList.add(&apos;categorieChoisie&apos;);\n  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(160,25,85,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(80,15,45,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(80,15,45,1)&apos;;\n  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;\n  setTimeout(function () {\n    for (var i = 0; i &lt; tout5.length; i++) {\n      tout5[i].classList.add(&apos;hidden&apos;);\n    }\n    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Accessoire&apos;).length; i++) {\n      document.getElementsByClassName(&apos;Accessoire&apos;)[i].classList.remove(&apos;hidden&apos;);\n    }\n    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class=\"theme\">Tous les accessoires</h1>&apos;;\n    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;\n  }, 800);\n}\ndocument.getElementById(&apos;Connecte&apos;).onclick = function () {\n  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {\n    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);\n  }\n  document.getElementById(&apos;Connecte&apos;).classList.add(&apos;categorieChoisie&apos;);\n  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(255,205,125,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(255,155,0,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(255,155,0,1)&apos;;\n  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;\n  setTimeout(function () {\n    for (var i = 0; i &lt; tout5.length; i++) {\n      tout5[i].classList.add(&apos;hidden&apos;);\n    }\n    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Connecte&apos;).length; i++) {\n      document.getElementsByClassName(&apos;Connecte&apos;)[i].classList.remove(&apos;hidden&apos;);\n    }\n    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class=\"theme\">Tous les appareils connect&#xE9;s</h1>&apos;;\n    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;\n  }, 800);\n}\ndocument.getElementById(&apos;Smartphone&apos;).onclick = function () {\n  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {\n    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);\n  }\n  document.getElementById(&apos;Smartphone&apos;).classList.add(&apos;categorieChoisie&apos;);\n  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(186,236,80,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(90,190,15,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(90,190,15,1)&apos;;\n  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;\n  setTimeout(function () {\n    for (var i = 0; i &lt; tout5.length; i++) {\n      tout5[i].classList.add(&apos;hidden&apos;);\n    }\n    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Smartphone&apos;).length; i++) {\n      document.getElementsByClassName(&apos;Smartphone&apos;)[i].classList.remove(&apos;hidden&apos;);\n    }\n    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class=\"theme\">Le smartphone</h1>&apos;;\n    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;\n  }, 800);\n}\ndocument.getElementById(&apos;Telephone&apos;).onclick = function () {\n  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {\n    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);\n  }\n  document.getElementById(&apos;Telephone&apos;).classList.add(&apos;categorieChoisie&apos;);\n  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(135,250,230,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(5,205,165,1)&apos;;\n  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(5,205,165,1)&apos;;\n  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;\n  setTimeout(function () {\n    for (var i = 0; i &lt; tout5.length; i++) {\n      tout5[i].classList.add(&apos;hidden&apos;);\n    }\n    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Telephone&apos;).length; i++) {\n      document.getElementsByClassName(&apos;Telephone&apos;)[i].classList.remove(&apos;hidden&apos;);\n    }\n    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class=\"theme\">Tous les t&#xE9;l&#xE9;phones</h1>&apos;;\n    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;\n  }, 800);\n}",
+        "css": "@import url(&apos;https://fonts.googleapis.com/css?family=Montserrat&apos;);\n\n*{\n\tfont-family: &apos;Montserrat&apos;, sans-serif;\n\tcolor: black;\n\ttext-decoration: none;\n}\n.hidden {\n\tdisplay: none;\n}\n\n.categorieChoisie {\n\tborder-top: 5px solid white;\n\tborder-bottom: 5px solid white;\n}\n\nbody {\n\tmargin: 0;\n\tbackground-color: rgb(132, 232, 255);\n\ttransition-property: background-color;\n\ttransition-duration: 1.5s;\n\ttransition-timing-function: cubic-bezier(0, 0, 0.2, 1);\n}\n\nnav {\n\ttop:0px;\n\tposition: fixed;\n\twidth: 25%;\n\theight: 100%;\n\ttext-align: center;\n\tbackground-color: rgba(0,180,220,1);\n\ttransition-property: background-color;\n\ttransition-duration: 1.5s;\n\ttransition-timing-function: cubic-bezier(0, 0, 0.2, 1);\n}\n\nnav ul {\n\tpadding: 0;\n\tmargin: 0;\n\tpadding-top: 10px; \n}\n\nnav ul li {\n\ttext-transform: uppercase;\n\tcolor: white;\n\tpadding: 20px;\n\tdisplay: block;\n\tfont-size: 24px;\n\tuser-select : none;\n}\n\nnav ul li:first-child {\n\tfont-size: 36px;\n}\n\nnav ul li:nth-child(n+2):hover {\n\tbackground-color: rgba(240,240,240,0.75);\n\tcursor: pointer;\n\tborder-left: 20px solid white;\n\tborder-right: 20px solid white;\n\ttransition-property: border-left, border-right;\n\ttransition-duration: 0.2s;\n\ttransition-timing-function: linear;\n}\n\nh1 {\n\ttext-align: center;\n\tpadding: 20px;\n\tcolor: white;\n\tfont-size: 24px;\n\tuser-select : none;\n}\n\nh1:hover {\n\tcursor: default;\n}\n\ndiv#bloc1 {\n\tmax-width: 60%;\n\tmargin: auto;\n\tmargin-left: 33%; \n\tmargin-top: 2%;\n\tmargin-bottom: 2%;\n\tpadding-bottom: 1.5%;\n\tbackground-color: rgba(255, 255, 255, 0.55);\n\tborder-radius: 5px;\n\topacity: 1.0;\n\ttransition-property: opacity;\n\ttransition-duration: 0.8s;\n\ttransition-timing-function: cubic-bezier(0, 0, 0.2, 1);\n}\n\ndiv#haut {\n\ttext-align: center;\n\ttext-transform: uppercase;\n  border-radius: 5px 5px 0 0;\n\tbackground-color: rgba(0,180,220,1);\n\ttransition-property: background-color;\n\ttransition-duration: 1.5s;\n\ttransition-timing-function: cubic-bezier(0, 0, 0.2, 1);\n}\n\ndiv#bas {\n\ttext-align: center;\n\tmargin-top: 10px;\n\tfont-size: 26px;\n}\n\narticle {\n\tdisplay: inline-block;\n\twidth: 45%;\n\tmargin: 10px;\n}\n\n\narticle div {\n\twidth: 50%;\n\theight: 150px;\n\tvertical-align: text-top;\n\tbackground-color: rgba(255,255,255,1);\n\tborder-radius: 5px 0 0 5px;\n}\n\narticle div:nth-child(2) {\n\tborder-radius: 0 5px 5px 0;\n}\n\narticle div:nth-child(2) img{\n\tmargin-right: 5px;\n\twidth: 150px;\n\theight: 150px;\n\tborder-radius: 5px;\n}\n\n@media only screen and (min-width: 1281px)\n{\n\tarticle div {\n\tdisplay: inline-block;\n\t}\n\n\tarticle div:nth-child(2) img{\n\t\tfloat: right;\n\t}\n}\n\n/* Pour permettre un affichage un peu plus optimis&#xE9; pour\ntablette/mobile, il reste cependant quelques\nprobl&#xE8;mes d&apos;affichages sur certains appareils:\n\niPhone/iPad: Probl&#xE8;me d&apos;affichage de contenus en zoomant */\n@media only screen and (max-width: 1280px)\n{\n\t.categorieChoisie {\n\tborder-top: 2.5px solid white;\n\tborder-bottom: 2.5px solid white;\n\t}\n\n\tnav {\n\t\twidth: 35%;\n\t}\n\n\tnav ul li {\n\t\tfont-size: 100%;\n\t\tpadding: 10px;\n\t}\n\n\tnav ul li:first-child {\n\t\tfont-size: 120%;\n\t}\n\n\tnav ul li:nth-child(n+2):hover {\n\tborder-left: 5px solid white;\n\tborder-right: 5px solid white;\n\t}\n\n\tdiv#bloc1 {\n\t\tmax-width: 62%;\n\t\tmargin-left: 36.6%;\n\t\tpadding-left: 0px;\n    \tpadding-right: 0px;\n\t}\n\n\th1 {\n\tpadding: 10px;\n\tfont-size: 100%;\n}\n\n\tarticle {\n\twidth: 90%;\n    border-radius: 5px;\n    background-color: white;\n\t}\n\n\tarticle div {\n\twidth: 100%;\n\tmargin: 0;\n\t}\n\n\tarticle div:first-child {\n\theight: 60px;\n\tpadding-top: 10px;\n\tborder-radius: 5px 5px 0 0;\n\t}\n\n\tarticle div:nth-child(2) {\n\t\tborder-radius: 0 0 5px 5px;\n\t\theight: 120px;\n\t}\n\n\tarticle div:nth-child(2) img{\n\tmargin-right: 0px;\n\twidth: 100px;\n\theight: 100px;\n\t}\n\n}\n\n@media only screen and (max-width: 580px)\n{\n\tnav ul li {\n\t\tfont-size: 70%;\n\t}\n\n\n\tnav ul li:first-child {\n\t\tfont-size: 90%;\n\t}\n\n\tarticle div {\n\tfont-size: 50%;\n\t}\n\n\tarticle div:first-child {\n\theight: 40px;\n\t}\n\n\tarticle div:nth-child(2) {\n\t\tborder-radius: 0 0 5px 5px;\n\t\theight: 70px;\n\t}\n\n\tarticle div:nth-child(2) img{\n\twidth: 65px;\n\theight: 65px;\n\t}\n}",
+        "html": "<body id=\"body\" class=\"theme\">\n<header>\n<nav class=\"theme\">\n\t<ul>\n\t<li>Filtre selon la cat&#xE9;gorie&#xA0;!</li><!--\n\t--><li id=\"ViewAll\" class=\"Liste\">Tout afficher</li><!--\n\t--><li id=\"Accessoire\" class=\"Liste\">Accessoires</li><!--\n\t--><li id=\"Connecte\" class=\"Liste\">Appareils connect&#xE9;s</li><!--\n\t--><li id=\"Smartphone\" class=\"Liste\">Smartphone</li><!--\n\t--><li id=\"Telephone\" class=\"Liste\">T&#xE9;l&#xE9;phones</li>\n</ul>\n</nav>\n<div id=\"bloc1\">\n<div id=\"haut\" class=\"theme\">\n<h1 class=\"theme\">Filtrage par cat&#xE9;gorie</h1>\n</div>\n<div id=\"bas\">\n\t<article class=\"Accessoire Connecte All\">\n\t\t<div>Airpods (&#xE9;couteur sans fil)</div><!--\n\t\t--><div><img src=\"https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/M/ME/MMEF2/MMEF2_AV1?wid=1000&amp;hei=1000&amp;fmt=jpeg&amp;qlt=95&amp;op_sharpen=0&amp;resMode=bicub&amp;op_usm=0.5,0.5,0,0&amp;iccEmbed=0&amp;layer=comp&amp;.v=1473201135463\" alt=\"Airpods\"></div>\n\t</article>\n\t<article class=\"Accessoire Connecte All\">\n\t\t<div>Apple Watch</div><!--\n\t\t--><div><img src=\"http://i0.kym-cdn.com/entries/icons/original/000/018/285/h_51561794.jpg\" alt=\"AppleWatch\"></div>\n\t</article>\n\t<article class=\"Connecte All\">\n\t\t<div>Appareil photo num&#xE9;rique</div><!--\n\t\t--><div><img src=\"https://images-na.ssl-images-amazon.com/images/I/61VAxnYMWIL._SL1200_.jpg\" alt=\"photo\"></div>\n\t</article>\n\t<article class=\"Accessoire All\">\n\t\t<div>Cable de chargement</div><!--\n\t\t--><div><img src=\"http://images.techhive.com/images/article/2015/04/monoprice-usbc-usba-130091-100577828-orig.jpg\" alt=\"USBc\"></div>\n\t</article>\n\t<article class=\"Accessoire Connecte All\">\n\t\t<div>Casque sans fil</div><!--\n\t\t--><div><img src=\"https://images-na.ssl-images-amazon.com/images/I/91jPqnErQ%2BL._SL1500_.jpg\" alt=\"Casque\"></div>\n\t</article>\n\t<article class=\"Accessoire All\">\n\t\t<div>Coque de t&#xE9;l&#xE9;phone</div><!--\n\t\t--><div><img src=\"http://g2o.esy.es/wp-content/uploads/2016/04/coque-telephone-geek-chic.jpg\" alt=\"coque\"></div>\n\t</article>\n\t<article class=\"Connecte All\">\n\t\t<div>Freebox V6</div><!--\n\t\t--><div><img src=\"http://www.canalgeek.fr/wp-content/uploads/2013/02/freebox-revolution.png\" alt=\"FreeboxV6\"></div>\n\t</article>\n\t<article class=\"Connecte Smartphone Telephone All\">\n\t\t<div>iPhone 7</div><!--\n\t\t--><div><img src=\"http://img.bfmtv.com/c/1256/708/23d/f793a85b252cd4931a484f2d26a5d.jpg\" alt=\"iphone7\"></div>\n\t</article>\n\t<article class=\"Connecte Telephone All\">\n\t\t<div>Nokia 3310</div><!--\n\t\t--><div><img src=\"http://tech.firstpost.com/wp-content/uploads/2015/06/Nokia-3310.jpg\" alt=\"Nokia-3310\"></div>\n\t</article>\n\t<article class=\"Connecte All\">\n\t\t<div>Ordinateur portable</div><!--\n\t\t--><div><img src=\"http://media.ldlc.com/ld/products/00/03/61/60/LD0003616028_2_0003616605_0003617166_0003617426_0003805707_0003808238.jpg\" alt=\"PC\"></div>\n\t</article>\n</div>\n</div>\n</header>\n</body>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIvN3ozAgQsJOp_A8",
+      "userId": "112679580951201670007",
+      "creationTime": "2017-01-31T11:57:43.526Z",
+      "updateTime": "2017-01-31T11:57:43.525Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODU4MzEwMFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI1J7pzAgQsJOp_A8",
+      "userId": "109138767835241261213",
+      "creationTime": "2017-01-31T11:57:42.376Z",
+      "updateTime": "2017-02-14T16:17:02.512Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODU5MTQ0NFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/Loadz/pen/dNawxb",
+              "title": "A Pen by  Loa",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Loadz/pen/dNawxb&a=AIYkKU9AbQxuEF3_8JGNE1oaqmnLzqkwgQ"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "Loadz",
+          "dNawxb"
+        ],
+        "js": "var omelette \t= document.getElementsByClassName('omelette');\nvar spaghettis \t= document.getElementsByClassName('spaghettis');\nvar quiche \t\t= document.getElementsByClassName('quiche');\n\ndocument.getElementById('all_bouton').onclick = function() {\n\n \n for (var i=0; i<spaghettis.length; i++) {\n    spaghettis[i].classList.add('show');\n  }\n for (var i=0; i<omelette.length; i++) {\n    omelette[i].classList.add('show');\n  }\n  for (var i=0; i<quiche.length; i++) {\n    quiche[i].classList.add('show');\n  }\n};\n\ndocument.getElementById('omelette_bouton').onclick = function() {\n\n for (var i=0; i<quiche.length; i++) {\n    quiche[i].classList.remove('show');\n  }\n for (var i=0; i<spaghettis.length; i++) {\n    spaghettis[i].classList.remove('show');\n  }\n for (var i=0; i<omelette.length; i++) {\n    omelette[i].classList.add('show');\n  }\n};\n\n\ndocument.getElementById('spaghettis_bouton').onclick = function() {\n\n for (var i=0; i<quiche.length; i++) {\n    quiche[i].classList.remove('show');\n  }\n for (var i=0; i<omelette.length; i++) {\n    omelette[i].classList.remove('show');\n  }\n for (var i=0; i<spaghettis.length; i++) {\n    spaghettis[i].classList.add('show');\n  }\n};\n\n\ndocument.getElementById('quiche_bouton').onclick = function() {\n\n \n for (var i=0; i<spaghettis.length; i++) {\n    spaghettis[i].classList.remove('show');\n  }\n for (var i=0; i<omelette.length; i++) {\n    omelette[i].classList.remove('show');\n  }\n  for (var i=0; i<quiche.length; i++) {\n    quiche[i].classList.add('show');\n  }\n};",
+        "css": ".omelette, .quiche, .spaghettis{\n\tdisplay: none;\n}\n\n.show {\n\tdisplay: block;\n}\n\nbody {\n\tdisplay: inline-block;\n\tmargin: auto;\n\tfont-family: helvetica;\n\twidth: 100%;\n\ttext-align: center;\n\tpadding: 30px;\n}\n\nh1 {\n\ttext-align: center;\n\tcolor: #e87e04;\n\tfont-size: 2em;\n}\n\nh2 {\n\ttext-align: center;\n\tcolor: #fec10e;\n\tfont-size: 0.9em;\n}\n\nbutton {\n\tbackground-color: white;\n\tborder-radius: 8px;\n\tborder: 2px solid #e87e04;\n\tpadding: 10px 15px;\n\ttext-align: center;\n\tfont-size: 16px;\n\tmargin: 30px 30px;\n}\n\nbutton:hover {\n\tbackground-color: #e87e04;\n\tcolor: white;\n}\n\narticle{\n\tmargin: 8px;\n}\n\ndiv.liste{\n\tmargin-top: 70px;\n\tmargin-left: auto;\n\tmargin-right: auto;\n\ttext-align: left;\n\twidth: 695px;\n}\n",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n\t<title> TP : Filtrage par catégories </title>\n\t<meta charset=\"utf-8\"/>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"TP.css\"/>\n</head>\n<body>\n\n<h1> Régalez-vous ! </h1>\n<h2> Des petits plats spécialement concoctés pour vous </h2>\n\n<div class=\"bouton\">\n\t<button id=\"omelette_bouton\"> Omelette  </button>\n\t<button id=\"spaghettis_bouton\"> Spaghettis </button>\n\t<button id=\"quiche_bouton\"> Quiche  </button>\n\t<button id=\"all_bouton\"> Tous les ingrédients  </button>\n</div>\n\n<div class=\"liste\">\n\t<article class=\"spaghettis\"> Basilic </article>\n\t<article class=\"quiche\"> Chèvre </article>\n\t<article class=\"omelette\"> Ciboulette </article>\n\t<article class=\"omelette spaghettis quiche\"> Crème </article>\n\t<article class=\"omelette\"> Gruyère </article>\n\t<article class=\"quiche\"> Herbe de provence </article>\n\t<article class=\"omelette\"> Jambon blanc </article>\n\t<article class=\"spaghettis\"> Jambon de parme </article>\n\t<article class=\"quiche omelette\"> Lait </article>\n\t<article class=\"quiche\"> Moutarde </article>\n\t<article class=\"omelette\"> Noix de muscade</article>\n\t<article class=\"omelette quiche\"> Oeuf </article>\t\n\t<article class=\"spaghettis\"> Parmesan </article>\n\t<article class=\"quiche\"> Pâte brisée </article>\n\t<article class=\"spaghettis\"> Pignons de pain </article>\n\t<article class=\"omelette spaghettis quiche\"> Poivre </article>\n\t<article class=\"spaghettis\"> Rockette </article>\n\t<article class=\"omelette spaghettis quiche\"> Sel </article>\t\n\t<article class=\"spaghettis\"> Toasts aillés </article>\n\t<article class=\"omelette spaghettis quiche\"> Tomate </article>\t\n</div>\n<script src=\"TP.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI8JzqzAgQsJOp_A8",
+      "userId": "102659365253444301419",
+      "creationTime": "2017-01-31T11:57:44.245Z",
+      "updateTime": "2017-02-15T14:00:14.201Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODYwNzYwMFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/MaelleBellazar/pen/EZMovQ",
+              "title": "A Pen by  maellebellazar",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/MaelleBellazar/pen/EZMovQ&a=AIYkKU926JM1jzic3TCCViLK_xVBRETInw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "MaelleBellazar",
+          "EZMovQ"
+        ],
+        "js": "var products = document.querySelectorAll(\"#products > article\");\n\nfunction display(element)\n{\n\tif (element.id == \"all\")\n\t{\n\t\tfor (var i = 0; i < products.length; i++)\n\t\t{\n\t\t\tproducts[i].style.display = \"block\";\n\t\t}\n\t}\n\telse\n\t{\n\t\tfor (var i = 0; i < products.length; i++)\n\t\t{\n\t\t\tif (products[i].classList.contains(element.id))\n\t\t\t\tproducts[i].style.display = \"block\";\n\t\t\telse\n\t\t\t\tproducts[i].style.display = \"none\";\n\t\t}\t\t\n\t}\n\n\n}",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');\n\nsection { max-width: 400px; border-radius: 5px; background-color: #eee; box-shadow: 0px 0px 4px #333; font-family: \"Roboto\";}\n\tsection > h2 { padding: 10px; border-bottom: 1px solid #ddd; font-size: 20px; font-weight: 500;}\n#categories { margin-bottom: 10px;}\n\t#categories > div { margin: 5px 10px; padding: 5px 10px; border: 1px solid #ddd; background-color: #f5f5f5; cursor: pointer;}\n\t#categories > div:nth-child(2) { background-color: #def;}\n#products {}\n\t#products > article { padding: 10px;}\n",
+        "html": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"index.css\">\n\t\t<title>Maelle Bellazar</title>\n\t</head>\n\t<body>\n\t\t<section id=\"categories\">\n\t\t\t<h2>Categories</h2>\n\t\t\t<div onclick=\"display(this)\" id=\"all\">All</div>\n\t\t\t<div onclick=\"display(this)\" id=\"fruit\">Fruits</div>\n\t\t\t<div onclick=\"display(this)\" id=\"vegetable\">Vegetables</div>\n\t\t\t<div onclick=\"display(this)\" id=\"nuts\">Nuts</div>\n\t\t\t<div onclick=\"display(this)\" id=\"dessert\">Desserts & Cakes</div>\n\t\t</section>\n\t\t<section id=\"products\">\n\t\t\t<h2>Products</h2>\n\t\t\t<article class=\"fruit dessert\">Product 1</article>\n\t\t\t<article class=\"vegetable nuts\">Product 2</article>\n\t\t\t<article class=\"vegetable\">Product 3</article>\n\t\t\t<article class=\"Vegetable dessert\">Product 4</article>\n\t\t\t<article class=\"fruit\">Product 5</article>\n\t\t\t<article class=\"nuts\">Product 6</article>\n\t\t\t<article class=\"nuts dessert\">Product 7</article>\n\t\t\t<article class=\"fruit\">Product 8</article>\n\t\t\t<article class=\"dessert\">Product 9</article>\n\t\t\t<article class=\"nuts\">Product 10</article>\n\t\t</section>\n\t\t<script type=\"text/javascript\" src=\"index.js\"></script>\n\t</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIwcPrzAgQsJOp_A8",
+      "userId": "104487206113190819384",
+      "creationTime": "2017-01-31T11:57:44.169Z",
+      "updateTime": "2017-02-18T03:29:57.286Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODYyODkyOVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/anon/pen/rjgJQr",
+              "title": "TP E.Hadida Classe 1",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/rjgJQr&a=AIYkKU_k2PAxmZ7pgF5GqPtU74vh7xpDuQ"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "anon",
+          "rjgJQr"
+        ],
+        "js": "var f70s = document.getElementsByClassName('f70');\nvar f80s = document.getElementsByClassName('f80');\nvar f90s = document.getElementsByClassName('f90');\nvar f2000s = document.getElementsByClassName('f2000');\nvar ftop6 = document.getElementsByClassName('top6');\n\ndocument.getElementById('f70s').onclick = function () {\n\tfor (var i = 0; i<f80s.length; i++) {\n\t\tf80s[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<f90s.length; j++) {\n\t\tf90s[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<f2000s.length; k++) {\n\t\tf2000s[k].classList.add('hidden');\n\t}\n\tfor (var m = 0; m<f70s.length; m++) {\n\t\tf70s[m].classList.remove('hidden');\n\t}\n}\n\ndocument.getElementById('f80s').onclick = function () {\n\tfor (var i = 0; i<f80s.length; i++) {\n\t\tf80s[i].classList.remove('hidden');\n\t}\n\tfor (var j = 0; j<f90s.length; j++) {\n\t\tf90s[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<f2000s.length; k++) {\n\t\tf2000s[k].classList.add('hidden');\n\t}\n\tfor (var m = 0; m<f70s.length; m++) {\n\t\tf70s[m].classList.add('hidden');\n\t}\n}\n\ndocument.getElementById('f2000s').onclick = function () {\n\tfor (var i = 0; i<f80s.length; i++) {\n\t\tf80s[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<f90s.length; j++) {\n\t\tf90s[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<f2000s.length; k++) {\n\t\tf2000s[k].classList.remove('hidden');\n\t}\n\tfor (var m = 0; m<f70s.length; m++) {\n\t\tf70s[m].classList.add('hidden');\n\t}\n}\n\ndocument.getElementById('f90s').onclick = function () {\n\tfor (var i = 0; i<f80s.length; i++) {\n\t\tf80s[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<f90s.length; j++) {\n\t\tf90s[j].classList.remove('hidden');\n\t}\n\tfor (var k = 0; k<f2000s.length; k++) {\n\t\tf2000s[k].classList.add('hidden');\n\t}\n\tfor (var m = 0; m<f70s.length; m++) {\n\t\tf70s[m].classList.add('hidden');\n\t}\n}\n\ndocument.getElementById('ftop6').onclick = function () {\n\tfor (var i = 0; i<f80s.length; i++) {\n\t\tf80s[i].classList.add('hidden');\n\t}\n\tfor (var j = 0; j<f90s.length; j++) {\n\t\tf90s[j].classList.add('hidden');\n\t}\n\tfor (var k = 0; k<f2000s.length; k++) {\n\t\tf2000s[k].classList.remove('hidden');\n\t}\n\tfor (var m = 0; m<f70s.length; m++) {\n\t\tf70s[m].classList.remove('hidden');\n\t}\n}\n\ndocument.getElementById('tous').onclick = function () {\n\t\tfor (var i = 0; i<f80s.length; i++) {\n\t\tf80s[i].classList.remove('hidden');\n\t}\n\tfor (var j = 0; j<f90s.length; j++) {\n\t\tf90s[j].classList.remove('hidden');\n\t}\n\tfor (var k = 0; k<f2000s.length; k++) {\n\t\tf2000s[k].classList.remove('hidden');\n\t}\n\tfor (var m = 0; m<f70s.length; m++) {\n\t\tf70s[m].classList.remove('hidden');\n\t}\n}",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Francois+One');\n\nbody {\n  font-family: 'Francois One', sans-serif;\n\tbackground-color: #ECF0F1;\n}\n\nh1 {\n  padding-top: 15px;\n\ttext-align: center;\n\twidth: 100%;\n  margin: auto;\n\tbackground-color: #ECF0F1;\n\tcolor: #2c3e50;\n}\n\nnav {\n\twidth: 40%;\n  margin: auto;\n  text-aling: center;\n\tbackground-color: #2c3e50;\n\tcolor: #ECF0F1;\n}\n\nnav li {\n\tdisplay:inline-block;\n\ttext-align:center;\n  font-size:1.2em;\n\tpadding:15px;\n\tcolor:white;\n}\n\nnav li:hover {\n  color:#DB0A5B;\n  cursor: pointer;\n}\n\narticle {\n\tdisplay:inline-block;\n\twidth:15%;\n\tpadding:5px;\n\ttext-align:center;\n}\n\narticle img {\n\twidth:100%;\n\tpadding:10px;\n}\n\n.hidden {\n\tdisplay: none;\n}",
+        "html": "<body>\n\t<h1> Top 3 des meilleurs films, par décennie :</h1>\n\t<nav>\n\t\t<ul>\n\t\t\t<li id=\"tous\">Tous les films</li>\n\t\t\t<li id=\"f70s\">70s</li>\n\t\t\t<li id=\"f80s\">80s</li>\n\t\t\t<li id=\"f90s\">90s</li>\n\t\t\t<li id=\"f2000s\">2000s</li> \n      <li id=\"ftop6\">Top 6</li> \n\t\t</ul>\n\t</nav>\n\t\t<article class=\"f70\">\n\t\t\t\t<img src=\"http://www.dvdclassik.com/upload/images/affiches/phantom-of-the-paradise.jpeg\">\n\t\t</article>\n\t\t<article class=\"f70\">\n\t\t\t\t<img src=\"https://media.senscritique.com/media/000006360574/source_big/Stalker.jpg\">\n\t\t</article>\n\t\t<article class=\"f70\">\n\t\t\t\t<img src=\"http://images.affiches-et-posters.com//albums/3/2782/medium/2782-affiche-film-apocalypse-now.jpg\">\n  </article>\n\t\t<article class=\"f80\">\n\t\t\t\t<img src=\"https://upload.wikimedia.org/wikipedia/en/5/5f/Raging_Bull_poster.jpg\">\n\t\t</article>\n\t\t<article class=\"f80\">\n\t\t\t\t<img src=\"http://fr.web.img2.acsta.net/medias/nmedia/18/64/85/16/19178964.jpg\">\n\t\t</article>\n\t\t<article class=\"f80\">\n\t\t\t\t<img src=\"http://fr.web.img6.acsta.net/medias/nmedia/18/60/08/31/19079741.jpg\">\n\t\t</article>\n\t\t<article class=\"f90\">\n\t\t\t\t<img src=\"http://fr.web.img6.acsta.net/pictures/15/09/02/15/06/131985.jpg\">\n\t\t</article>\n\t\t<article class=\"f90\">\n\t\t\t\t<img src=\"http://fr.web.img6.acsta.net/r_1920_1080/pictures/16/09/06/16/19/305655.jpg\">\n\t\t</article>\n\t\t<article class=\"f90\">\n\t\t\t\t<img src=\"https://media.senscritique.com/media/000010760789/source_big/Le_Festin_nu.jpg\">\n\t\t</article>\n\t\t<article class=\"f2000\">\n\t\t\t\t<img src=\"https://s-media-cache-ak0.pinimg.com/originals/65/53/72/65537220255e0c3a6fe682cd1e53e11d.jpg\">\n\t\t</article>\n\t\t<article class=\"f2000\">\n\t\t\t\t<img src=\"http://fr.web.img4.acsta.net/medias/nmedia/18/35/08/23/affiche.jpg\">\n\t\t</article>\n  <article class=\"f2000\">\n\t\t\t\t<img src=\"http://7artcinema.online.fr/imagesbg/David_Lynch_Mulholland_Drive_2001_Affiche_04.jpg\">\n\t\t</article>\n</body>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIw8PrzAgQsJOp_A8",
+      "userId": "115955988175068143418",
+      "creationTime": "2017-01-31T11:57:42.907Z",
+      "updateTime": "2017-02-19T23:41:29.672Z",
+      "state": "TURNED_IN",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODYyODkzMVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/tristanmachin/pen/NdyNXz/",
+              "title": "Liste JS",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/tristanmachin/pen/NdyNXz/&a=AIYkKU_5bUvqCryCIQgZWCsUw7eUnGjOnw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "tristanmachin",
+          "NdyNXz"
+        ],
+        "js": "var voir = document.getElementsByClassName('voir');\nvar adresse = document.getElementsByClassName('adresse');\nvar force = document.getElementsByClassName('force');\nvar concentration = document.getElementsByClassName('concentration');\nvar categories = document.getElementsByClassName('categories');\nvar elements = document.getElementsByClassName(\"discipline\");\n\nfor (var i = 0; i < elements.length; i++) {\n  elements[i].classList.add('hidden');\n}\n//\ndocument.getElementById('adresse').onclick = function (){\n  for (var i = 0; i < adresse.length; i++){\n    adresse[i].classList.remove('hidden');\n  }\n  for (var i=0; i < force.length; i++){\n    force[i].classList.add('hidden');\n  }\n  for (var i = 0; i < concentration.length; i++){\n    concentration[i].classList.add('hidden');\n  }\n}",
+        "css": "li {\n\tfont-family: Roboto;\n  list-style-type: armenian;\n}\n.hidden {\n  display: none;\n}\n.voir {\n  \n}\na {\n  cursor: pointer;\n}",
+        "html": "<html lang=\"fr\">\n\t<head>\n\t\t<title>Liste dynamique</title>\n\t\t<meta charset=\"utf-8\">\n\t</head>\n\t<body>\n\t\t<ul class=\"categories\">\n      <li><a rel=\"nofollow\" rel=\"noreferrer\"class=\"voir\">Tout voir</a></li>\n\t\t\t<li><a rel=\"nofollow\" rel=\"noreferrer\"class=\"adresse voir\">Adresse</a></li>\n\t\t\t<li><a rel=\"nofollow\" rel=\"noreferrer\"class=\"force voir\">Force</a></li>\n\t\t\t<li><a rel=\"nofollow\" rel=\"noreferrer\"class=\"concentration voir\">Concentration</a></li>\n\t\t</ul>\n\t\t<ul class=\"discipline\">\n      <li class=\"adresse concentration voir discipline\">Course</li>\n\t\t\t<li class=\"adresse concentration voir discipline\">Tir à l'arc</li>\n\t\t\t<li class=\"concentration voir discipline\">Echecs</li>\n\t\t\t<li class=\"force adresse voir discipline\">Lancer de javelot</li>\n\t\t\t<li class=\"adresse concentration voir discipline\">Funambulisme</li>\n\t\t\t<li class=\"force voir discipline\">Maître Jedi</li>\n\t\t\t<li class=\"adresse force voir discipline\">Maîtrise du combat de sabre laser</li>\n\t\t\t<li class=\"adresse voir discipline\">Equitation</li>\n\t\t\t<li class=\"adresse concentration voir discipline\">Pilotage de modules de course</li>\n\t\t\t<li class=\"adresse voir discipline\">Tir au blaster</li>\n\t\t</ul>\n\t</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI4oPszAgQsJOp_A8",
+      "userId": "103757004282675299924",
+      "creationTime": "2017-01-31T11:57:43.374Z",
+      "updateTime": "2017-01-31T11:57:43.372Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODYzNzE1NFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwItOfszAgQsJOp_A8",
+      "userId": "114131777075378050949",
+      "creationTime": "2017-01-31T11:57:43.852Z",
+      "updateTime": "2017-01-31T11:57:43.850Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODY0OTkwOFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwIuYztzAgQsJOp_A8",
+      "userId": "107488109732824862301",
+      "creationTime": "2017-01-31T11:57:42.755Z",
+      "updateTime": "2017-02-19T19:03:52.011Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODY1NDY0OVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://codepen.io/frenchBackPipe/pen/egVZJx",
+              "title": "Filtrage",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/frenchBackPipe/pen/egVZJx&a=AIYkKU_Lzq1Xe8a2LIkjbgcKcSg0f7bvFQ"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "frenchBackPipe",
+          "egVZJx"
+        ],
+        "js": "var tout1 = document.getElementsByClassName('tout');\nvar livre2 = document.getElementsByClassName('livre');\nvar cinema3 = document.getElementsByClassName('cinema');\nvar musique4 = document.getElementsByClassName('musique');\nvar jv5 = document.getElementsByClassName('jv');\nvar elements = document.getElementsByClassName(\"produit\");\n\nfor (var i = 0; i < elements.length; i++) {\n  elements[i].classList.add('hidden');\n}\n\ndocument.getElementById('tout').onclick = function (){\n  for (var i = 0; i < tout1.length; i++) {\n    tout1[i].classList.remove('hidden');\n  }\n}\n\ndocument.getElementById('livre').onclick = function (){\n  for (var i = 0; i < cinema3.length; i++){\n    cinema3[i].classList.add('hidden');\n  }\n  for (var i=0; i < jv5.length; i++){\n    jv5[i].classList.add('hidden');\n  }\n  for (var i = 0; i < musique4.length; i++){\n    musique4[i].classList.add('hidden');\n  }\n  for (var i = 0; i < livre2.length; i++){\n    livre2[i].classList.remove('hidden');\n  }\n}\n\ndocument.getElementById('cinema').onclick = function leCinema (){\n   for (var i=0; i < livre2.length; i++){\n    livre2[i].classList.add('hidden');\n  }\n  for (var i=0; i < jv5.length; i++){\n    jv5[i].classList.add('hidden');\n  }\n  for (var i = 0; i < musique4.length; i++){\n    musique4[i].classList.add('hidden');\n  }\n  for (var i = 0; i < cinema3.length; i++){\n    cinema3[i].classList.remove('hidden');\n  }\n}\n\ndocument.getElementById('jv').onclick = function lesjv (){\n   for (var i=0; i < livre2.length; i++){\n    livre2[i].classList.add('hidden');\n  }\n  for (var i=0; i < cinema3.length; i++){\n    cinema3[i].classList.add('hidden');\n  }\n  for (var i = 0; i < musique4.length; i++){\n    musique4[i].classList.add('hidden');\n  }\n  for (var i = 0; i < jv5.length; i++){\n    jv5[i].classList.remove('hidden');\n  }\n}\n\ndocument.getElementById('musique').onclick = function lamusique (){\n   for (var i=0; i < livre2.length; i++){\n    livre2[i].classList.add('hidden');\n  }\n  for (var i=0; i < jv5.length; i++){\n    jv5[i].classList.add('hidden');\n  }\n  for (var i = 0; i < cinema3.length; i++){\n    cinema3[i].classList.add('hidden');\n  }\n  for (var i = 0; i < musique4.length; i++){\n    musique4[i].classList.remove('hidden');\n  }\n}",
+        "css": "ul.categories{\n  text-align: center;\n}\n\nul{\n  list-style-type: none;\n}\nh1{\n  text-align: center;\n  background-color: lightgrey;\n  width: 30%;\n  margin: auto;\n  font-family: Vivaldi;\n}\n\nul.categories >li{\n  display: inline-block;\n  width: 13%;\n  padding: 15px;\n  text-decoration: underline lightgrey;\n  text-transform: uppercase;\n  margin: auto;\n}\n\n.hidden{\n  display: none;\n}\n\na{\n  cursor: pointer;\n}\n\np{\n  text-align: center;\n}\n",
+        "html": "<html>\n  <head>\n\t\t<meta charset=\"utf-8\" />\n  </head>\n  <body>\n        <h1>L'univers de Tolkien</h1>\n        <div class=\"filtres\">\n          <ul class=\"categories\">\n            <li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"tout\">Tout les produits</a></li><!--\n            --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"livre\">Littérature</a></li><!--\n            --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"cinema\">Cinéma</a></li><!--\n            --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"musique\">Musique</a></li><!--\n            --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"jv\">Jeux Vidéos</a></li>\n          </ul>\n        </div>\n        <div class=\"produits\">\n          <ul>\n          <li><p class=\"livre cinema tout produit\">Le seigneur des anneaux</p></li>\n          <li><p class=\"jv tout produit\">Lord of the rings Online</p></li>\n          <li><p class=\"livre tout produit\">Les aventures de Tom Bombadil</p></li>\n          <li><p class=\"livre tout produit\">Le silmarillon</p></li>\n          <li><p class=\"jv tout produit\">Le seigneur des anneaux : La guerre du Nord</p></li>\n          <li><p class=\"livre cinema produit tout\">Bilbo le Hobbit</p></li>\n          <li><p class=\"musique tout produit\"> Old Friends - Howard Shore</p></li>\n          <li><p class=\"musique tout produit\"> Concerning Hobbits - Howard Shore</p></li>\n          <li><p class=\"tout produit jv\"> Lego Le Hobbit</p></li>\n          <li><p class=\"cinema tout produit \"> Le seigneur des anneaux - Ralph Bakshi</p></li>\n  </body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001621381",
+      "courseWorkId": "4287252912",
+      "id": "CgwI6b7vzAgQsJOp_A8",
+      "userId": "104560689392005739677",
+      "creationTime": "2017-01-31T11:57:43.692Z",
+      "updateTime": "2017-01-31T11:57:43.691Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyMTM4MVpa/a/NDI4NzI1MjkxMlpa/submissions/student/MjMwODY5Mzg2NVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  }
+]

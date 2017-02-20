@@ -1,0 +1,591 @@
+[
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI0Lu2yggQrpOp_A8",
+      "userId": "106657475933540987931",
+      "creationTime": "2017-01-31T11:57:40.878Z",
+      "updateTime": "2017-02-16T20:11:38.815Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzU2NTI2NFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/inespmn/pen/mRajxv",
+              "title": "Collections",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/inespmn/pen/mRajxv&a=AIYkKU_-aq9TryRKcZ1-QHE7oo3gJpaScw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "inespmn",
+          "mRajxv"
+        ],
+        "js": "var tout = document.getElementById('all');\nvar aventureBouton = document.getElementById('av');\nvar romantiqueBouton = document.getElementById('rom');\nvar fantastiqueBouton = document.getElementById('fant');\nvar cuisineBouton = document.getElementById('cui');\nvar policierBouton = document.getElementById('pol');\nvar adoBouton = document.getElementById('ad');\n\nvar allLivre = document.getElementsByClassName('livre');\nvar aventureLivre = document.getElementsByClassName('aventure');\nvar romantiqueLivre = document.getElementsByClassName('romantique');\nvar fantastiqueLivre = document.getElementsByClassName('fantastique');\nvar cuisineLivre = document.getElementsByClassName('cuisine');\nvar policierLivre = document.getElementsByClassName('policier');\nvar adoLivre = document.getElementsByClassName('ado');\n\nvar voir = function(a) {\n  for (var i=0; i<a.length; i++) {\n    a[i].style.display = 'inline-block';\n  }\n};\n\nvar cacher = function(a) {\n  for (var i=0; i<a.length; i++) {\n    a[i].style.display = 'none';   \n  }\n};\n\ntout.onclick = function(){\n  voir(allLivre);\n}\n\naventureBouton.onclick = function(){\n  cacher(romantiqueLivre);\n  cacher(fantastiqueLivre);\n  cacher(cuisineLivre);\n  cacher(policierLivre);\n  cacher(adoLivre);\n  voir(aventureLivre);\n}\n\nromantiqueBouton.onclick = function(){\n  cacher(aventureLivre);\n  cacher(fantastiqueLivre);\n  cacher(cuisineLivre);\n  cacher(policierLivre);\n  cacher(adoLivre);\n  voir(romantiqueLivre);\n}\n\nfantastiqueBouton.onclick = function(){\n  cacher(aventureLivre);\n  cacher(romantiqueLivre);\n  cacher(cuisineLivre);\n  cacher(policierLivre);\n  cacher(adoLivre);\n  voir(fantastiqueLivre);\n}\n\ncuisineBouton.onclick = function(){\n  cacher(aventureLivre);\n  cacher(romantiqueLivre);\n  cacher(fantastiqueLivre);\n  cacher(policierLivre);\n  cacher(adoLivre);\n  voir(cuisineLivre);\n}\n\npolicierBouton.onclick = function(){\n  cacher(aventureLivre);\n  cacher(romantiqueLivre);\n  cacher(fantastiqueLivre);\n  cacher(cuisineLivre);\n  cacher(adoLivre);\n  voir(policierLivre);\n}\n\nadoBouton.onclick = function(){\n  cacher(aventureLivre);\n  cacher(romantiqueLivre);\n  cacher(fantastiqueLivre);\n  cacher(cuisineLivre);\n  cacher(policierLivre);\n  voir(adoLivre);\n}",
+        "css": "body{\n  margin:0;\n  font-family: helvetica;\n  background: url('http://www.hbc333.com/data/out/114/46910576-image-background.png') no-repeat;\n  background-size:cover;\n}\n\nul{\n  margin:auto;\n  text-align:center;\n  margin-bottom: 20px;\n}\n\nli{\n  display:inline-block;\n  margin: 0;\n  border:1px solid #16a085 ;\n  padding: 10px;\n  background-color: #1abc9c;\n  color:#2c3e50;\n}\n \nli:hover{\n  background-color: #16a085; \n  font-size:1.1em;\n  transition: 0.2s;\n  cursor:pointer;\n}\n\narticle{\n  border:1px dotted #16a085;\n  padding:50px;\n  text-align:center;\n  background-color:rgb(167,235,208);\n  width: 300px;\n  display:none;\n  margin-bottom:5px;\n}\n\narticle:hover{\n  border:1px solid #2980b9;\n}\n\ndiv{\n  width:70%;\n  margin:auto;\n  text-align:center;\n}\n",
+        "html": "<ul>\n  <li id=\"all\">Voir tous nos livres</li><!--\n  --><li id=\"av\">Livres d'aventure</li><!--\n  --><li id=\"rom\">Livres romantiques</li><!--\n  --><li id=\"fant\">Livres fantastiques</li><!--\n  --><li id=\"cui\">Livres de cuisine</li><!--  \n  --><li id=\"pol\">Romans policiers</li><!--  \n  --><li id=\"ad\">Livres Ado</li>\n</ul>\n<div>\n  <article class=\"romantique livre\">50 Nuances de Grey</article>\n  <article class=\"cuisine livre\">Gâteaux et gourmandises</article>\n  <article class=\"policier romantique livre\">Ty & Zane</article>\n  <article class=\"policier aventure livre\">Le frère de sang</article>\n  <article class=\"fantastique romantique ado livre\">Twilight</article>\n  <article class=\"aventure fantastique ado livre\">Hunger Games</article>\n  <article class=\"cuisine livre\">Gordon Ramsay</article>\n    <article class=\"fantastique aventure livre\">L'île mysterieuse</article>\n  <article class=\"fantastique aventure livre\">Harry potter</article>\n  <article class=\"romantique ado livre\">Nos étoiles contraires</article>  \n</div>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIioS4yggQrpOp_A8",
+      "userId": "101394269716091521347",
+      "creationTime": "2017-01-31T11:57:41.314Z",
+      "updateTime": "2017-02-18T19:04:43.959Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzU5MDkyMlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/elsahaddad/pen/bgyZRa",
+              "title": "TP hidden",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/elsahaddad/pen/bgyZRa&a=AIYkKU_9DgVG0kKi4vg_aK0tjJTQyylJsQ"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "elsahaddad",
+          "bgyZRa"
+        ],
+        "js": "(function () {\n  var allButton = document.getElementById('all'); \n  var list1Button = document.getElementById('list1'); \n  var list2Button = document.getElementById('list2');\n  var list3Button = document.getElementById('list3');\n          \n  var showItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"inline-block\";\n    }\n  };\n  var hideItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"none\";\n    }\n  };\n\n  list1Items = document.getElementsByClassName('list1');\n  list2Items = document.getElementsByClassName('list2');\n  list3Items = document.getElementsByClassName('list3');\n            \n  allButton.onclick = function() {\n    showItems(list1Items);\n    showItems(list2Items);\n    showItems(list3Items);\n  };\n  list1Button.onclick = function() {\n    showItems(list1Items);\n    hideItems(list2Items);\n    hideItems(list3Items);\n    };\n  list2Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list3Items);\n    showItems(list2Items);\n    };\n  list3Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list2Items);\n    showItems(list3Items);\n    };\n  })();",
+        "css": ".hidden {\n    display: none;\n}\n\n.show {\n    display: block;\n}\n\ndiv{\n    padding-top: 100px;\n}\n\nhtml,body {\n    font-family: 'Roboto';\n    text-align: center;\n    margin: 0;\n    background-color: #2c3e50;\n    color: #3E4651;\n}\n\np {\n    margin: 2% 0;\n    font-size: 1em;\n}\n\nul {\n\tposition: absolute;\n    list-style-type: none;\n    margin: 0 10%;\n    padding: 0;\n\twidth: 80%;\n\tz-index: 99;\n\n}\n\nh2 {\n  \n    font-size: 3em;\n    padding: 5% 0;\n    margin: 0;\n}\n\nh3 {\n  \n    font-size: 2em;\n     margin: 0;\n}\n\na {\n\n    font-size: 2em;\n    text-decoration: none;\n    padding: 0 5%;\n   \n}\n\na:hover {\n    font-weight: bold;\n    color: #2c3e50; \n    cursor: pointer;\n\n}\n\nli {\n    background-color: white;\n    margin: 0;\n    padding: 0.5%;\n}\n\nsection {\n    margin: 2% 10%;\n    background-color: white;\n}\n\n\narticle{\n    display: inline-block;\n\n}\n\n.item {\n\n    margin: 5%;\n}",
+        "html": "<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"hidden.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n</head>\n<body>  \n    <ul id=\"fixed-floater\">\n        <li>\n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Voir tous les hauts</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">Débardeurs</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">T-shirts</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">Pulls</a>  \n        </li>\n    </ul>\n<section>\n    <div class=\"main\">\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Débardeur rayé</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Pull gris</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Pull rouge à capuche</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>T-shirt brodé</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Débardeur ouvert</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>T-shirt logo</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Pull col roulé</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>T-shirt bleu</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Débardeur moutarde</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Pull long</h3>\n            </div>\n        </article>\n</section>\n</script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI14S4yggQrpOp_A8",
+      "userId": "114436420144224697398",
+      "creationTime": "2017-01-31T11:57:40.252Z",
+      "updateTime": "2017-02-19T19:19:53.671Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzU5MDk5OVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/wjv74yyq/1/",
+              "title": "Edit fiddle - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/wjv74yyq/1/&a=AIYkKU8XkEH9oSoT4AnHd5C_JpMj5QGSjQ"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "wjv74yyq",
+          "1"
+        ],
+        "js": "(function() {\n  var allButton = document.getElementById(&apos;all&apos;);\n  var list1Button = document.getElementById(&apos;list1&apos;);\n  var list2Button = document.getElementById(&apos;list2&apos;);\n  var list3Button = document.getElementById(&apos;list3&apos;);\n\n  var showItems = function(items) {\n    for (var i = 0; i &lt; items.length; i++) {\n      items[i].style.display = &quot;inline-block&quot;;\n    }\n  };\n  var hideItems = function(items) {\n    for (var i = 0; i &lt; items.length; i++) {\n      items[i].style.display = &quot;none&quot;;\n    }\n  };\n\n  list1Items = document.getElementsByClassName(&apos;list1&apos;);\n  list2Items = document.getElementsByClassName(&apos;list2&apos;);\n  list3Items = document.getElementsByClassName(&apos;list3&apos;);\n\n  allButton.onclick = function() {\n    showItems(list1Items);\n    showItems(list2Items);\n    showItems(list3Items);\n  };\n  list1Button.onclick = function() {\n    showItems(list1Items);\n    hideItems(list2Items);\n    hideItems(list3Items);\n  };\n  list2Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list3Items);\n    showItems(list2Items);\n  };\n  list3Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list2Items);\n    showItems(list3Items);\n  };\n})();\n",
+        "css": "hidden {\n  display: none;\n}\n\n.show {\n  display: block;\n}\n\ndiv {\n  padding-top: 100px;\n}\n\nhtml,\nbody {\n  font-family: &apos;Arial Black&apos;;\n  text-align: center;\n  margin: 0;\n  color: blue;\n}\n\np {\n  margin: 2% 0;\n  font-size: 1em;\n}\n\nul {\n  position: absolute;\n  list-style-type: none;\n  margin: 0 10%;\n  padding: 0;\n  width: 80%;\n  z-index: 99;\n}\n\nh2 {\n  font-size: 3em;\n  padding: 5% 0;\n  margin: 0;\n}\n\nh3 {\n  font-size: 2em;\n  margin: 0;\n}\n\na {\n  font-size: 2em;\n  text-decoration: none;\n  padding: 0 5%;\n}\n\na:hover {\n  font-weight: bold;\n  color: #2c3e50;\n  cursor: pointer;\n}\n\nli {\n  background-color: white;\n  margin: 0;\n  padding: 0.5%;\n}\n\nsection {\n  margin: 2% 10%;\n  background-color: white;\n}\n\narticle {\n  display: inline-block;\n}\n\n.item {\n  margin: 5%;\n}\n",
+        "html": "<ul>\n  <li>\n    <a id=\"all\">Voir tout</a>\n    <a id=\"list1\">fruits</a>\n    <a id=\"list2\">l&#xE9;gumes</a>\n    <a id=\"list3\">soda</a>\n  </li>\n</ul>\n<section>\n  <div class=\"main\">\n    <article class=\"list1 item\">\n      <div class=\"grid\">\n        <h3>1</h3>\n      </div>\n    </article>\n    <article class=\"list3 item\">\n      <div class=\"grid\">\n        <h3>3</h3>\n      </div>\n    </article>\n    <article class=\"list3 item\">\n      <div class=\"grid\">\n        <h3>3</h3>\n      </div>\n    </article>\n    <article class=\"list2 item\">\n      <div class=\"grid\">\n        <h3>2</h3>\n      </div>\n    </article>\n    <article class=\"list1 item\">\n      <div class=\"grid\">\n        <h3>1</h3>\n      </div>\n    </article>\n    <article class=\"list2 item\">\n      <div class=\"grid\">\n        <h3>2</h3>\n      </div>\n    </article>\n    <article class=\"list3 item\">\n      <div class=\"grid\">\n        <h3>3</h3>\n      </div>\n    </article>\n    <article class=\"list2 item\">\n      <div class=\"grid\">\n        <h3>2</h3>\n      </div>\n    </article>\n    <article class=\"list1 item\">\n      <div class=\"grid\">\n        <h3>1</h3>\n      </div>\n    </article>\n    <article class=\"list3 item\">\n      <div class=\"grid\">\n        <h3>3</h3>\n      </div>\n    </article>\n</div></section>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI8sS4yggQrpOp_A8",
+      "userId": "101709901815932283235",
+      "creationTime": "2017-01-31T11:57:41.703Z",
+      "updateTime": "2017-02-19T16:43:00.994Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzU5OTIxOFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/Paul_Esmenard/pen/mRZEEE",
+              "title": "Filtrage_par_categories_ESMENARD-C2",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Paul_Esmenard/pen/mRZEEE&a=AIYkKU_tHtlOLUBecV3GyvLmDhI4si5qmg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "Paul_Esmenard",
+          "mRZEEE"
+        ],
+        "js": "(function() {\n    var allButton = document.getElementById('all');\n    var list1Button = document.getElementById('list1');\n    var list2Button = document.getElementById('list2');\n    var list3Button = document.getElementById('list3');\n\n    var showItems = function(items) {\n        for (var i = 0; i < items.length; i++) {\n            items[i].style.display = \"inline-block\";\n        }\n    };\n    var hideItems = function(items) {\n        for (var i = 0; i < items.length; i++) {\n            items[i].style.display = \"none\";\n        }\n    };\n\n    list1Items = document.getElementsByClassName('list1');\n    list2Items = document.getElementsByClassName('list2');\n    list3Items = document.getElementsByClassName('list3');\n\n    allButton.onclick = function() {\n        showItems(list1Items);\n        showItems(list2Items);\n        showItems(list3Items);\n    };\n    list1Button.onclick = function() {\n        showItems(list1Items);\n        hideItems(list2Items);\n        hideItems(list3Items);\n    };\n    list2Button.onclick = function() {\n        hideItems(list1Items);\n        hideItems(list3Items);\n        showItems(list2Items);\n    };\n    list3Button.onclick = function() {\n        hideItems(list1Items);\n        hideItems(list2Items);\n        showItems(list3Items);\n    };\n})();",
+        "css": ".hidden {\n  display: none;\n}\n\n.show {\n  display: block;\n}\n\ndiv{\n  padding-top: 50px;\n}\n\nhtml,body {\n  text-align: center;\n  margin: 0;\n  background-color: pink;\n  color: black;\n}\n\np {\n  margin 0;\n  font-size: 1.5em;\n}\n\nul {\n  list-style-type: none;\n  margin: 0 10%;\n  padding: 0;\n\twidth: 80%;\n}\n\na {\n  font-size: 2em;\n  text-decoration: none;\n  padding: 0 5%;\n}\n\na:hover {\n  color: pink; \n  cursor: pointer;\n}\n\nli {\n  background-color: white;\n  margin: 0;\n  padding: 0.5%;\n}\n\nsection {\n  margin: 2% 10%;\n  background-color: white;\n}\n\n\narticle{\n  display: inline-block;\n}\n\n.item {\n  margin: 5%;\n}",
+        "html": "<!DOCTYPE html>\n<html>\n  \n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"listeCH.css\">\n</head>\n  \n<body>  \n    <ul>\n        <li>\n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Tout voir</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">Chaussures</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">Téléphone</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">Enceintes</a>  \n        </li>\n    </ul>\n<section>\n    <div class=\"main\">\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <p>Nike air max 90</p>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <p>Bose companion 50</p>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <p>Logitech Z-625</p>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <p>Iphone 6S</p>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <p>Adidas nmd r1 triple white</p>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <p>Samsung Galaxy A5</p>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <p>Yamaha ZX-50</p>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <p>HTC Desire 508</p>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <p>Asics gel lyte III</p>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <p>Hercules XPS</p>\n            </div>\n        </article>\n</section>\n<script type=\"text/javascript\" src=\"listeCH.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIiqK5yggQrpOp_A8",
+      "userId": "110487536965862998916",
+      "creationTime": "2017-01-31T11:57:40.895Z",
+      "updateTime": "2017-02-19T21:56:42.720Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYxMTE0Nlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/haroon7/pen/OWeWrz",
+              "title": "Filtrage",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/haroon7/pen/OWeWrz&a=AIYkKU9rbGjzuHO7vgK0Y4urffu45zpI-Q"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "haroon7",
+          "OWeWrz"
+        ],
+        "js": "var tous = document.getElementsByClassName('produit');\nvar type1 = document.getElementsByClassName('produit type1');\nvar type2 = document.getElementsByClassName('produit type2');\nvar type3 = document.getElementsByClassName('produit type3');\n\nvar afficherProduits = function (produits){\n  for (var i=0; i<produits.length; i++) {\n    produits[i].classList.remove('caché');\n  }\n}\n\nvar masquerProduits = function (produits){\n  for (var i=0; i<produits.length; i++) {\n    produits[i].classList.add('caché');\n  }\n}\n\ndocument.getElementById('bouton-toutafficher').onclick = function() {\n  afficherProduits(tous);\n};\n\ndocument.getElementById('bouton-filtre1').onclick = function() {\n  afficherProduits(type1); //\n  masquerProduits(type2);\n  masquerProduits(type3);\n};\n\ndocument.getElementById('bouton-filtre2').onclick = function() {\n  masquerProduits(type1);\n  afficherProduits(type2); //\n  masquerProduits(type3);\n};\n\ndocument.getElementById('bouton-filtre3').onclick = function() {\n  masquerProduits(type1);\n  masquerProduits(type2);\n  afficherProduits(type3); //\n};",
+        "css": ".caché {\n  display: none;\n}",
+        "html": "\n<body>\n<button id=\"bouton-toutafficher\">afficher tous les produits</button>\n<button id=\"bouton-filtre1\">afficher produits 1</button>\n<button id=\"bouton-filtre2\">afficher produits 2</button>\n<button id=\"bouton-filtre3\">afficher produits 3</button>\n\n  <article class=\"produit type1\">Pistache</article>\n  <article class=\"produit type1\">Amandes</article>\n  <article class=\"produit type1\">Coriandre</article>\n  <article class=\"produit type1\">Menthe</article>\n  <article class=\"produit type1\">Paprika</article>\n  <article class=\"produit type1\">Safran</article>\n  <article class=\"produit type2\">Poire</article>\n  <article class=\"produit type2\">Fraise</article>\n  <article class=\"produit type2\">Framboise</article>\n  <article class=\"produit type2\">Pomme</article>\n  <article class=\"produit type2\">Pastèque</article>\n  <article class=\"produit type3\">Eau</article>\n  <article class=\"produit type3\">Jus d'orange</article>\n  <article class=\"produit type3\">Jus de Citron</article>\n  <article class=\"produit type3\">Jus de Pomme</article>\n  <article class=\"produit type3\">Un peu d'alcool</article>\n  <script type=\"text/javascript\" src=\"Exo_filtrage.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIndO5yggQrpOp_A8",
+      "userId": "112679448788785463225",
+      "creationTime": "2017-01-31T11:57:42.177Z",
+      "updateTime": "2017-01-31T11:57:42.175Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYxNzQzN1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwInea5yggQrpOp_A8",
+      "userId": "105005097564840876975",
+      "creationTime": "2017-01-31T11:57:42.417Z",
+      "updateTime": "2017-02-19T22:18:43.730Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYxOTg2OVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIree6yggQrpOp_A8",
+      "userId": "114828137552143483518",
+      "creationTime": "2017-01-31T11:57:41.547Z",
+      "updateTime": "2017-02-19T22:50:11.621Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYzNjM5N1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIxa27yggQrpOp_A8",
+      "userId": "117755246149238226250",
+      "creationTime": "2017-01-31T11:57:41.109Z",
+      "updateTime": "2017-02-19T16:08:08Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY0NTM4MVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI85G8yggQrpOp_A8",
+      "userId": "100010787573355604224",
+      "creationTime": "2017-01-31T11:57:41.032Z",
+      "updateTime": "2017-02-19T22:47:11.169Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY1ODIyN1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/pauline_btn/pen/oBrgWe",
+              "title": "A Pen by  Bittatnte",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/pauline_btn/pen/oBrgWe&a=AIYkKU8oeC2Wvic2rCgI6oA6bkX3_q_PDA"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "pauline_btn",
+          "oBrgWe"
+        ],
+        "js": "var ville = document.getElementsByClassName('sport');\ndocument.getElementById('ville').onclick = function() {\n  for (var i=0; i<ville.length; i++) {\n    ville[i].classList.add('hidden');\n  }\n};\n\nvar sport = document.getElementsByClassName('ville');\ndocument.getElementById('sport').onclick = function() {\n  for (var j=0; j<sport.length; j++) {\n    sport[j].classList.add('hidden');\n  }\n};\n\nvar talons = document.getElementsByClassName('plates');\ndocument.getElementById('talons').onclick = function() {\n  for (var k=0; k<talons.length; k++) {\n    talons[k].classList.add('hidden');\n  }\n};\n\nvar plates = document.getElementsByClassName('talons');\ndocument.getElementById('plates').onclick = function() {\n  for (var l=0; l<plates.length; l++) {\n    plates[l].classList.add('hidden');\n  }\n};",
+        "css": ".hidden {\n  display: none;\n}\n\nli {\ncursor:  pointer;\n}\n\narticle {\nmargin-left : 50px;\n}\n\n",
+        "html": "<ul>\n<li id='plates'>Chaussures plates</li>\n<li id='talons'>Chaussures à talons</li>\n<li id='sport'>Chaussures de sport</li>\n<li id='ville'>Chaussures de ville</li>\n</ul>\n<article class=\"plates sport\">Baskets</article>\n<article class=\"talons ville\">Escarpins</article>\n<article class=\"plates ville\">Derbies</article>\n<article class=\"plates ville\">Mocassins</article>\n<article class=\"plates ville\">Espadrilles</article>\n<article class=\"plates sport\">Chaussures de marche</article>\n<article class=\"talons ville\">Bottes</article>\n<article class=\"talons ville\">Bottines</article>\n<article class=\"plates ville\">Sandalles</article>\n<article class=\"plates sport\">Running</article>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIzZO8yggQrpOp_A8",
+      "userId": "108155646187443573287",
+      "creationTime": "2017-01-31T11:57:42.256Z",
+      "updateTime": "2017-01-31T11:57:42.254Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY1ODQ0NVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIv5-8yggQrpOp_A8",
+      "userId": "107614857740657485924",
+      "creationTime": "2017-01-31T11:57:41.940Z",
+      "updateTime": "2017-01-31T11:57:41.939Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY1OTk2N1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI24m9yggQrpOp_A8",
+      "userId": "116655606952938744905",
+      "creationTime": "2017-01-31T11:57:40.426Z",
+      "updateTime": "2017-02-19T21:31:24.800Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY3MzU2M1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/valentinepiol/pen/XpLNLP",
+              "title": "Cat�gorie par filtrage",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/valentinepiol/pen/XpLNLP&a=AIYkKU-vFGDRQAUQgtMPQrI4ukfkkx_Rdw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "valentinepiol",
+          "XpLNLP"
+        ],
+        "js": "function visibilite (id)\n{\n\tvar xx = document.getElementById(\"categorie\").getElementsByTagName(\"div\");\n\n\tfor (var i=0; i<xx.length; i++)\n\t\txx.item(i).style.display = \"none\";\n\n\tdocument.getElementById(id).style.display = \"block\";\n}",
+        "css": ".divs\t{ \ndisplay: none;\t\n}",
+        "html": "<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Catégorie par filtrage</title>\n</head>\n<body>\n\t<a rel=\"nofollow\" rel=\"noreferrer\"href=\"javascript:visibilite('vetement');\">Vêtements</a>\n\t<a rel=\"nofollow\" rel=\"noreferrer\"href=\"javascript:visibilite('chaussure');\">Chaussures</a>\n\t<a rel=\"nofollow\" rel=\"noreferrer\"href=\"javascript:visibilite('accessoire');\">Accessoires</a>\n\t\n\t<div id=\"categorie\">\n\t\t<div id=\"vetement\" class=\"divs\">\n        <li>Jeans</li>\n        <li>Pulls</li>\n        <li>Vestes</li>\n        <li>Tops</li>\n    </div>\n\t\t<div id=\"chaussure\" class=\"divs\">\n        <li>Talons hauts</li>\n        <li>Sandales</li>\n        <li>Boots</li>\n        <li>Baskets</li>\n    </div>\n\t\t<div id=\"accessoire\" class=\"divs\">\n        <li>Bijoux</li>\n        <li>Montres</li>\n    </div>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIo72-yggQrpOp_A8",
+      "userId": "112207424605643686358",
+      "creationTime": "2017-01-31T11:57:42.582Z",
+      "updateTime": "2017-02-19T15:08:53.549Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY5NjU0N1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/thomas_marketing/pen/ygdOya",
+              "title": "A Pen by  thomas",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/thomas_marketing/pen/ygdOya&a=AIYkKU9Lt90QgtyPCIwQJRKDACt9WLT4SQ"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "thomas_marketing",
+          "ygdOya"
+        ],
+        "js": "(function () {\n  var allButton = document.getElementById('all'); \n  var list1Button = document.getElementById('list1'); \n  var list2Button = document.getElementById('list2');\n  var list3Button = document.getElementById('list3');\n          \n  var showItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"inline-block\";\n    }\n  };\n  var hideItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"none\";\n    }\n  };\n\n  list1Items = document.getElementsByClassName('list1');\n  list2Items = document.getElementsByClassName('list2');\n  list3Items = document.getElementsByClassName('list3');\n            \n  allButton.onclick = function() {\n    showItems(list1Items);\n    showItems(list2Items);\n    showItems(list3Items);\n  };\n  list1Button.onclick = function() {\n    showItems(list1Items);\n    hideItems(list2Items);\n    hideItems(list3Items);\n    };\n  list2Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list3Items);\n    showItems(list2Items);\n    };\n  list3Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list2Items);\n    showItems(list3Items);\n    };\n  })();",
+        "css": ".hidden {\n    display: none;\n}\n\n.show {\n    display: block;\n}\n\ndiv{\n    padding-top: 100px;\n}\n\nhtml,body {\n    font-family: 'Roboto';\n    text-align: center;\n    margin: 0;\n    background-color: #08389A;\n    color: #81DB6B;\n}\n\np {\n    margin: 2% 0;\n    font-size: 1em;\n}\n\nul {\n\tposition: absolute;\n    list-style-type: none;\n    margin: 0 10%;\n    padding: 0;\n\twidth: 80%;\n\tz-index: 99;\n\n}\n\nh2 {\n  \n    font-size: 3em;\n    padding: 5% 0;\n    margin: 0;\n}\n\nh3 {\n  \n    font-size: 2em;\n     margin: 0;\n}\n\na {\n\n    font-size: 2em;\n    text-decoration: none;\n    padding: 0 5%;\n   \n}\n\na:hover {\n    font-weight: bold;\n    color: #08389A; \n    cursor: pointer;\n\n}\n\nli {\n    background-color: white;\n    margin: 0;\n    padding: 0.5%;\n}\n\nsection {\n    margin: 2% 10%;\n    background-color: white;\n}\n\n\narticle{\n    display: inline-block;\n\n}\n\n.item {\n\n    margin: 5%;\n}",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"hidden.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n</head>\n<body>  \n    <ul>\n        <li>\n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Voir tout</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">1</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">2</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">3</a>  \n        </li>\n    </ul>\n<section>\n    <div class=\"main\">\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>1</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>2</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>1</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>2</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>2</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>1</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n</section>\n<script type=\"text/javascript\" src=\"hidden.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI__i-yggQrpOp_A8",
+      "userId": "104619351768692396442",
+      "creationTime": "2017-01-31T11:57:41.863Z",
+      "updateTime": "2017-01-31T11:57:41.862Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzcwNDE5MVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI5I6cywgQrpOp_A8",
+      "userId": "114441804527282195733",
+      "creationTime": "2017-01-31T11:57:40.341Z",
+      "updateTime": "2017-02-19T19:23:53.679Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwNTIzMDY5Mlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/llacheny/pen/apgObV",
+              "title": "A Pen by  Lucas Lacheny",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/llacheny/pen/apgObV&a=AIYkKU9s6DbgX9uLPvPtmms-S4Qz8TH2ug"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "llacheny",
+          "apgObV"
+        ],
+        "js": "var tab = document.getElementsByClassName('produit');\nvar type1 = document.getElementsByClassName('informatique');\nvar type2 = document.getElementsByClassName('cours');\nvar type3 = document.getElementsByClassName('detente');\nvar afficherProduits = function (produit){\n  for (var i=0; i<produit.length; i++) {\n    produit[i].classList.remove('hidden');\n  }\n}\nvar masquerProduits = function (produit){\n  for (var i=0; i<produit.length; i++) {\n    produit[i].classList.add('hidden');\n  }\n}\ndocument.getElementById('button').onclick = function() {\n    afficherProduits(tab);\n};\ndocument.getElementById('filtre1').onclick = function() {\n  masquerProduits(type2);\n  masquerProduits(type3);\n  afficherProduits(type1);\n};\ndocument.getElementById('filtre2').onclick = function() {\n  masquerProduits(type1);\n  masquerProduits(type3);\nafficherProduits(type2);\n};\ndocument.getElementById('filtre3').onclick = function() {\n  masquerProduits(type1);\n  masquerProduits(type2);\n  afficherProduits(type3);\n};",
+        "css": ".hidden {\n  display: none;\n}\n\narticle {\n  margin-top:15px;\n  margin-left:200px;\n}\n\n",
+        "html": "<html lang=\"fr\">\n<head>\n<meta charset=\"utf-8\" />\n<meta name=\"description\" content=\"Nouveau\" />\n<title>Nouveau</title>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"filtrage.css\">\n</head>\n\n<body>\n<button id=\"button\">afficher tous les produits</button>\n<button id=\"filtre1\">informatique</button>\n<button id=\"filtre2\">cours</button>\n<button id=\"filtre3\">detente</button>\n\n  <article class=\"produit informatique\">ping</article>\n  <article class=\"produit informatique\">42</article>\n  <article class=\"produit informatique cours\">javascript</article>\n  <article class=\"produit informatique detente\">internet</article>\n  <article class=\"produit informatique detente\">twitch</article>\n  <article class=\"produit informatique cours\">codepen</article>\n  <article class=\"produit detente\">Lit</article>\n  <article class=\"produit informatique detente cours\">Ordinateur</article>\n  <article class=\"produit cours detente\">Plop</article>\n  <article class=\"produit cours informatique\">Css</article>\n\n<script type=\"text/javascript\" src=\"filtrage.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIwP2fzggQrpOp_A8",
+      "userId": "113830218979025225964",
+      "creationTime": "2017-01-31T11:57:42.676Z",
+      "updateTime": "2017-02-19T19:08:18.179Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMxMTU4NTQ3Mlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/Guillaumedesaintsernin/pen/NdZbWW",
+              "title": "A Pen by  Guillaume de Saint-Sernin",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Guillaumedesaintsernin/pen/NdZbWW&a=AIYkKU_HSBxLEWjg0W95fbWIIYbVspZvFA"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "Guillaumedesaintsernin",
+          "NdZbWW"
+        ],
+        "js": "(function () {\n  var allButton = document.getElementById('all'); \n  var list1Button = document.getElementById('list1'); \n  var list2Button = document.getElementById('list2');\n  var list3Button = document.getElementById('list3');\n          \n  var showItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"inline-block\";\n    }\n  };\n  var hideItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"none\";\n    }\n  };\n\n  list1Items = document.getElementsByClassName('list1');\n  list2Items = document.getElementsByClassName('list2');\n  list3Items = document.getElementsByClassName('list3');\n            \n  allButton.onclick = function() {\n    showItems(list1Items);\n    showItems(list2Items);\n    showItems(list3Items);\n  };\n  list1Button.onclick = function() {\n    showItems(list1Items);\n    hideItems(list2Items);\n    hideItems(list3Items);\n    };\n  list2Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list3Items);\n    showItems(list2Items);\n    };\n  list3Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list2Items);\n    showItems(list3Items);\n    };\n  })();",
+        "css": ".hidden {\n    display: none;\n}\n\n.show {\n    display: block;\n}\n\ndiv{\n    padding-top: 150px;\n}\n\nhtml,body {\n    font-family: 'Arial';\n    text-align: center;\n    margin: 0;\n    background-color: #2c3e99;\n    color: #3E4559;\n}\n\np {\n    margin: 5% 0;\n    font-size: 1em;\n}\n\nul {\n\tposition: absolute;\n    list-style-type: none;\n    margin: 0 10%;\n    padding: 0;\n\twidth: 80%;\n\tz-index: 99;\n\n}\n\nh2 {\n  \n    font-size: 3em;\n    padding: 5% 0;\n    margin: 0;\n}\n\nh3 {\n  \n    font-size: 2em;\n     margin: 0;\n}\n\na {\n\n    font-size: 2em;\n    text-decoration: none;\n    padding: 0 5%;\n   \n}\n\na:hover {\n    font-weight: bold;\n    color: #2c3e50; \n    cursor: pointer;\n\n}\n\nli {\n    background-color: white;\n    margin: 0;\n    padding: 0.5%;\n}\n\nsection {\n    margin: 2% 10%;\n    background-color: white;\n}\n\n\narticle{\n    display: inline-block;\n\n}\n\n.item {\n\n    margin: 5%;\n}",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"hidden.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n</head>\n<body>  \n    <ul>\n        <li>\n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Tout voir</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">1</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">2</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">3</a>  \n        </li>\n    </ul>\n<section>\n    <div class=\"main\">\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>1</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>2</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>1</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>2</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>2</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>1</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>3</h3>\n            </div>\n        </article>\n</section>\n<script type=\"text/javascript\" src=\"hidden.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI2Y2qzggQrpOp_A8",
+      "userId": "105336490945396134624",
+      "creationTime": "2017-01-31T11:57:41.701Z",
+      "updateTime": "2017-02-19T21:07:45.910Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMxMTc1MTM4NVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/raphaelaagusazoubel/pen/zNVNEX",
+              "title": "TP JS ",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/raphaelaagusazoubel/pen/zNVNEX&a=AIYkKU_OKcUCng2VDUiYTY0I5IO20WHsSw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "raphaelaagusazoubel",
+          "zNVNEX"
+        ],
+        "js": "(function () {\n  var allButton = document.getElementById('all'); \n  var list1Button = document.getElementById('list1'); \n  var list2Button = document.getElementById('list2');\n  var list3Button = document.getElementById('list3');\n          \n  var showItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"inline-block\";\n    }\n  };\n  var hideItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"none\";\n    }\n  };\n\n  list1Items = document.getElementsByClassName('list1');\n  list2Items = document.getElementsByClassName('list2');\n  list3Items = document.getElementsByClassName('list3');\n            \n  allButton.onclick = function() {\n    showItems(list1Items);\n    showItems(list2Items);\n    showItems(list3Items);\n  };\n  list1Button.onclick = function() {\n    showItems(list1Items);\n    hideItems(list2Items);\n    hideItems(list3Items);\n    };\n  list2Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list3Items);\n    showItems(list2Items);\n    };\n  list3Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list2Items);\n    showItems(list3Items);\n    };\n  })();",
+        "css": ".hidden {\n    display: none;\n}\n\n.show {\n    display: block;\n}\n\ndiv{\n    padding-top: 100px;\n}\n\nhtml,body {\n    font-family: 'Roboto';\n    text-align: center;\n    margin: 0;\n    background-color: #2c3e50;\n    color: white;\n}\n\np {\n    margin: 2% 0;\n    font-size: 1em;\n}\n\nul {\n\tposition: absolute;\n    list-style-type: none;\n    margin: 0 10%;\n    padding: 0;\n\twidth: 80%;\n\tz-index: 99;\n\n}\n\na {\n\n    font-size: 2em;\n    text-decoration: none;\n    padding: 0 5%;\n   \n}\n\nh2 {\n  \n    font-size: 3em;\n    padding: 5% 0;\n    margin: 0;\n}\n\nh3 {\n  \n    font-size: 2em;\n     margin: 0;\n}\n\nli {\n    background-color: black;\n    margin: 0;\n    padding: 0.5%;\n}\n\na:hover {\n    font-weight: bold;\n    color: pink; \n    cursor: pointer;\n\n}\n\nsection {\n    margin: 2% 10%;\n    background-color: pink;\n}\n\n\narticle{\n    display: inline-block;\n\n}\n\n.item {\n\n    margin: 5%;\n}\n",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"hidden.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">\n</head>\n<body>  \n    <ul>\n        <li>\n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Tous nos produits</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">Sneakers</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">Sandales</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">Bottes</a>  \n        </li>\n    </ul>\n<section>\n    <div class=\"main\">\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Baskets à scratch</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Bottines à talon</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Bottes en cuir rouge</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>Sandales à talons</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Baskets à lacets</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>Sandales montante</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Bottes de pluie</h3>\n            </div>\n        </article>\n        <article class=\"list2 item\">\n            <div class=\"grid\">\n                <h3>Sandales à paillettes</h3>\n            </div>\n        </article>\n        <article class=\"list1 item\">\n            <div class=\"grid\">\n                <h3>Baskets montantes</h3>\n            </div>\n        </article>\n        <article class=\"list3 item\">\n            <div class=\"grid\">\n                <h3>Bottes vernies</h3>\n            </div>\n        </article>\n</section>\n<script type=\"text/javascript\" src=\"hidden.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwI-L3f1QgQrpOp_A8",
+      "userId": "103008450972577145005",
+      "creationTime": "2017-01-31T11:57:42.019Z",
+      "updateTime": "2017-01-31T11:57:42.017Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMyNzMwNTk3Nlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIof_g1QgQrpOp_A8",
+      "userId": "105977069709569854539",
+      "creationTime": "2017-01-31T11:57:41.232Z",
+      "updateTime": "2017-01-31T11:57:41.231Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMyNzMzMDcyMVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIotuh2QgQrpOp_A8",
+      "userId": "110577522341247316518",
+      "creationTime": "2017-01-31T11:57:42.759Z",
+      "updateTime": "2017-01-31T11:57:42.758Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMzNDY4MjUzMFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001638443",
+      "courseWorkId": "4287252910",
+      "id": "CgwIxYL42wgQrpOp_A8",
+      "userId": "100055098899108735971",
+      "creationTime": "2017-01-31T11:57:40.627Z",
+      "updateTime": "2017-02-19T22:53:32.457Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjM0MDI5MDg4NVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://codepen.io/anon/pen/VPJPJP",
+              "title": "Create a New Pen",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/anon/pen/VPJPJP&a=AIYkKU-tvYBHPgByMEdVTVyraWe6uzLZlw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "anon",
+          "VPJPJP"
+        ],
+        "js": "var jeux = document.getElementsByClassName('Jeux');\ndocument.getElementById('jeux').onclick = function() {\n  for (var i=0; i<jeux.length; i++) {\n    online[i].classList.remove('hidden');\n  }\n};\n\nvar online = document.getElementsByClassName('Online');\ndocument.getElementById('online').onclick = function() {\n  for (var i=0; i<online.length; i++) {\n    online[i].classList.add('hidden');\n  }\n};\n\nvar rpg = document.getElementsByClassName('RPG');\ndocument.getElementById('rpg').onclick = function() {\n  for (var i=0; i<rpg.length; i++) {\n    rpg[i].classList.add('hidden');\n  }\n};\n\nvar fps = document.getElementsByClassName('FPS');\ndocument.getElementById('fps').onclick = function() {\n  for (var i=0; i<fps.length; i++) {\n    fps[i].classList.add('hidden');\n  }\n};",
+        "css": ".hidden {\n  display: none;\n}\n\nli {\n  cursor : pointer;\n  display: inline-block;\n  padding-left: 50px;\n  padding-right: 50px;\n  padding-bottom: 20px;\n}\nul {\n  width: 100%;\n  padding: 0px;\n  text-align: center;\n}\n\narticle {\n  text-align: center;\n}\n",
+        "html": "<ul>\n  <li id=\"jeux\">Tout voir</li><!--\n  --><li id=\"online\">Online</li><!--\n  --><li id=\"rpg\">RPG</li><!--\n  --><li id=\"fps\">FPS</li><!--\n--></ul>\n<article class=\"Jeux Online FPS\">Skyrim</article>\n<article class=\"Jeux Online RPG\">Half-life</article>\n<article class=\"Jeux RPG\">Counter Strike</article>\n<article class=\"Jeux FPS\">League of Legends</article>\n<article class=\"Jeux Online\">Fallout 4</article>\n<article class=\"Jeux FPS\">World of Warcraft</article>\n<article class=\"Jeux FPS\">Dota 2</article>\n<article class=\"Jeux RPG\">Overwatch</article>\n<article class=\"Jeux Online FPS\">Final Fantasy</article>\n<article class=\"Jeux RPG\">Call of Duty</article>"
+      }
+    ]
+  }
+]

@@ -1,0 +1,834 @@
+[
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwI89e9yggQ7a-q_A8",
+      "userId": "107477289419153585422",
+      "creationTime": "2017-01-31T11:57:38.985Z",
+      "updateTime": "2017-02-19T10:38:21.795Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwMzY4MzU3MVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/edlmt/25wy47Lh/1/",
+              "title": "filtreJS - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/edlmt/25wy47Lh/1/&a=AIYkKU-WIwMmuvsDWyWeVO7Bfw4DrJZlrw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "edlmt",
+          "25wy47Lh",
+          "1"
+        ],
+        "js": "var toutButton = document.getElementsByClassName(&apos;tout&apos;);\nvar scienceButton = document.getElementsByClassName(&apos;science&apos;);\nvar poesieButton = document.getElementsByClassName(&apos;poesie&apos;);\nvar fantastiqueButton = document.getElementsByClassName(&apos;fantastique&apos;);\nvar sciencefantastiqueButton = document.getElementsByClassName(&apos;science fantastique&apos;);\n\nvar affich&#xE9; = function(object) {\n  for (var i = 0; i &lt; object.length; i++) {\n    object[i].style.display = &quot;inline-block&quot;;\n  }\n};\nvar cach&#xE9; = function(object) {\n  for (var i = 0; i &lt; object.length; i++) {\n    object[i].style.display = &quot;none&quot;;\n  }\n};\n\nbuttonTout = document.getElementById(&apos;tout&apos;);\nbuttonScience = document.getElementById(&apos;science&apos;);\nbuttonPoesie = document.getElementById(&apos;poesie&apos;);\nbuttonFantastique = document.getElementById(&apos;fantastique&apos;);\n\nbuttonTout.onclick = function() {\n  affich&#xE9;(toutButton);\n  affich&#xE9;(scienceButton);\n  affich&#xE9;(poesieButton);\n  affich&#xE9;(fantastiqueButton);\n};\nbuttonPoesie.onclick = function() {\n  cach&#xE9;(toutButton);\n  cach&#xE9;(scienceButton);\n  affich&#xE9;(poesieButton);\n  cach&#xE9;(fantastiqueButton);\n};\nbuttonFantastique.onclick = function() {\n  cach&#xE9;(toutButton);\n  cach&#xE9;(scienceButton);\n  cach&#xE9;(poesieButton);\n  affich&#xE9;(fantastiqueButton);\n  affich&#xE9;(sciencefantastiqueButton);\n};\nbuttonScience.onclick = function() {\n  cach&#xE9;(toutButton);\n  affich&#xE9;(scienceButton);\n  cach&#xE9;(poesieButton);\n  cach&#xE9;(fantastiqueButton);\n  affich&#xE9;(sciencefantastiqueButton);\n};\n",
+        "css": "<link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:600\" rel=\"stylesheet\"> .tableau {\n  color: white;\n}\n\nh1 {\n  margin-top: 0px;\n  padding-left: 20px;\n  text-align: left;\n  float: left;\n  font-size: 3em;\n  font-family: &apos;Source Sans Pro&apos;;\n}\n\nh2 {\n  margin-top: 0px;\n  padding-right: 20px;\n  text-align: right;\n  float: right;\n  font-size: 2em;\n  font-family: &apos;Source Sans Pro&apos;;\n}\n\n.sujet {\n  padding-left: 20px;\n  margin-bottom: 20px;\n  font-family: &apos;Source Sans Pro&apos;;\n  vertical-align: middle;\n  font-size: 1, 5em;\n  width: 150px;\n}\n\nli {\n  list-style-type: none;\n}\n\ntable {\n  border-width: 1px;\n  border-style: solid;\n  border-color: white;\n  width: 100%;\n  table-layout: fixed;\n}\n\ntd {\n  vertical-align: text-top;\n  border-width: 10px;\n  border-style: solid;\n  border-color: white;\n  width: 20vw;\n  height: 20vw;\n  color: white;\n  padding: 20px;\n  font-size: 1, 5em;\n  font-family: &apos;Source Sans Pro&apos;;\n}\n\n.fantastique {\n  background-color: #212322;\n}\n\n.science {\n  background-color: #D6001C;\n}\n\n.poesie {\n  background-color: #19993B;\n}\n\na {\n  text-decoration: none;\n  color: black;\n}\n",
+        "html": "<!DOCTYPE html>\n<html lang=\"fr\">\n\n  <head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"biblioth&#xE8;que.css\">\n    <title>biblioth&#xE8;que</title>\n  </head>\n\n  <body>\n    <header>\n      <h1>la biblioth&#xE8;que <br>partag&#xE9;e _</h1>\n      <h2>ajouter un livre <a href=\"#\">+</a> <br>rechercher</h2>\n    </header>\n    <div class=\"sujet\">\n      <ul id=\"listehead\">\n        <li><a href=\"#\" id=\"tout\">Tout</a></li>\n        <!--\n        -->\n        <li><a href=\"#\" id=\"science\">Science</a></li>\n        <!--\n        -->\n        <li><a href=\"#\" id=\"poesie\">Poesie</a></li>\n        <!--\n        -->\n        <li><a href=\"#\" id=\"fantastique\">Fantastique</a></li>\n      </ul>\n    </div>\n    <div class=\"tableau\">\n\n      <table>\n        <tr>\n          <td class=\"science\">Lib&#xE9;rez votre cerveau !\n            <br>Aberkane</td>\n          <td class=\"science fantastique\">l&apos;Ile Myst&#xE9;rieuse\n            <br>Jules Vernes</td>\n          <td class=\"science\">Prenez le temps d&apos;y penser\n            <br>Benamran</td>\n          <td class=\"science fantastique\">World of Warcraft\n            <br>Golden</td>\n        </tr>\n        <tr>\n          <td class=\"fantastique\">Demain les chats\n            <br>Werber</td>\n          <td class=\"fantastique\">Le Petit Prince\n            <br>St Exup&#xE9;ry</td>\n          <td class=\"fantastique\">Le Hobbit\n            <br>Tolkien</td>\n          <td class=\"fantastique \">L&apos;Ile du Cr&#xE2;ne\n            <br>Horowitz</td>\n        </tr>\n        <tr>\n          <td class=\"poesie\">Les fleurs du mal\n            <br>Baudelaire</td>\n          <td class=\"poesie\">Paroles\n            <br>Pr&#xE9;vert</td>\n          <td class=\"poesie \">Fables\n            <br>La Fontaine</td>\n          <td class=\"poesie\">Les Contemplations\n            <br>Victor Hugo</td>\n        </tr>\n        <tr>\n          <td class=\"science fantastique\">Fondation\n            <br>Azimov</td>\n          <td class=\"science\">Les petites bulles de l&apos;attention\n            <br>Lachaux</td>\n          <td class=\"fantastique\">Harry Potter 1\n            <br>J.K Rowling</td>\n\n          <td class=\"science\">Le temps des algorithmes\n            <br>Abiteboul</td>\n        </tr>\n      </table>\n    </div>\n    <script src=\"biblioth&#xE8;que.js\" type=\"text/javascript\"></script>\n  </body>\n\n</html>\n"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwI6OP-yggQ7a-q_A8",
+      "userId": "110503983348176565158",
+      "creationTime": "2017-01-31T11:57:38.900Z",
+      "updateTime": "2017-02-19T20:06:57.702Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNDc1MDA1Nlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/Kmil/pen/QdXGZp",
+              "title": "A Pen by  Kamil",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Kmil/pen/QdXGZp&a=AIYkKU-68VulNcdatasR-FNVi58-qEkFrg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "Kmil",
+          "QdXGZp"
+        ],
+        "js": "var allproduct = document.getElementsByClassName('all');\nvar fruitproduct = document.getElementsByClassName('fruit');\nvar vegetableproduct = document.getElementsByClassName('vegetable');\nvar nutproduct = document.getElementsByClassName('nut');\nvar cakeproduct = document.getElementsByClassName('cake');\n\nvar double1 = document.getElementsByClassName('fruit vegetable');\nvar double2 = document.getElementsByClassName('fruit nut');\nvar double3 = document.getElementsByClassName('fruit cake');\n\nvar double4 = document.getElementsByClassName('vegetable fruit');\nvar double5 = document.getElementsByClassName('vegetable nut');\nvar double6 = document.getElementsByClassName('vegetable cake');\n\nvar double7 = document.getElementsByClassName('nut fruit');\nvar double8 = document.getElementsByClassName('nut vegetable');\nvar double9 = document.getElementsByClassName('nut cake');\n\nvar double10 = document.getElementsByClassName('cake fruit');\nvar double10 = document.getElementsByClassName('cake vegetable');\nvar double10 = document.getElementsByClassName('cake nut');\n\nvar on = function(object) {\n    for (var i = 0; i < object.length; i++) {\n        object[i].style.display=\"\";\n    }\n};\nvar off = function(object) {\n    for (var i = 0; i < object.length; i++) {\n        object[i].style.display=\"none\";\n    }\n};\n\nproductall = document.getElementById('all');\nproductfruit = document.getElementById('fruit');\nproductvegetable = document.getElementById('vegetable');\nproductnut = document.getElementById('nut');\nproductcake = document.getElementById('cake');\n\nproductall.onclick = function() {\n    on(fruitproduct);\n    on(vegetableproduct);\n    on(nutproduct);\n    on(cakeproduct);\n};\nproductfruit.onclick = function() {\n    on(fruitproduct);\n    off(vegetableproduct);\n    off(nutproduct);\n    off(cakeproduct);\n    on(double1);\n};\nproductvegetable.onclick = function() {\n    off(fruitproduct);\n    on(vegetableproduct);\n    off(nutproduct);\n    off(cakeproduct);\n};\nproductnut.onclick = function() {\n    off(fruitproduct);\n    off(vegetableproduct);\n    on(nutproduct);\n    off(cakeproduct);\n};\nproductcake.onclick = function() {\n    off(fruitproduct);\n    off(vegetableproduct);\n    off(nutproduct);\n    on(cakeproduct);\n};",
+        "css": "",
+        "html": "<ul>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\"> View all</a></li><!--\n    --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"fruit\">Fruits</a></li><!--\n    --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"vegetable\">Vegetables</a></li><!--\n    --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"nut\">Nuts</a></li><!--\n    --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"cake\">Desserts & Cakes</a></li>\n</ul>\n<div class=\"all\">\n<ul>\n\t<li class =\"vegetable\">Product 1</li>\n\t<li class=\"vegetable\">Product 2</li>\n\t<li class=\"fruit\">Product 3</li>\n\t<li class=\"fruit\">Product 4</li>\n\t<li class=\"nut\">Product 5</li>\n\t<li class=\"cake\">Product 6</li>\n\t<li class=\"cake\">Product 7</li><li class=\"nut\">Product 8</li>  \n\t<li class =\"fruit vegetable\">Product 9</li>\n\t<li class=\"fruit vegetable\">Product 10</li>\n</ul>\n</div>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIsLXOywgQ7a-q_A8",
+      "userId": "106180904736643783286",
+      "creationTime": "2017-01-31T11:57:38.732Z",
+      "updateTime": "2017-02-18T15:13:44.560Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjA1NDgzMlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/goumille/pen/egaQBb",
+              "title": "Skin Csgo",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/goumille/pen/egaQBb&a=AIYkKU8KDb3d5qMBr4zQsQn3FdHZLRfYhg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "goumille",
+          "egaQBb"
+        ],
+        "js": " (function () {\n            var allButton = document.getElementById('all'); \n            var list1Button = document.getElementById('list1'); \n            var list2Button = document.getElementById('list2');\n            var list3Button = document.getElementById('list3');\n            var list4Button = document.getElementById('list4');\n          \n            var showItems = function (items) {\n                for (var i=0; i<items.length; i++) {\n                    items[i].style.display = \"inline-block\";\n                }\n            };\n            var hideItems = function (items) {\n                for (var i=0; i<items.length; i++) {\n                    items[i].style.display = \"none\";\n                }\n            };\n\n            list1Items = document.getElementsByClassName('list1');\n            list2Items = document.getElementsByClassName('list2');\n            list3Items = document.getElementsByClassName('list3');\n            list4Items = document.getElementsByClassName('list4');\n            \n            titre1Items = document.getElementsByClassName('titre1');\n            titre2Items = document.getElementsByClassName('titre2');\n            titre3Items = document.getElementsByClassName('titre3');\n            titre4Items = document.getElementsByClassName('titre4');\n            \n            allButton.onclick = function() {\n                showItems(list1Items);\n                showItems(list2Items);\n                showItems(list3Items);\n\t\t\t\tshowItems(list4Items);\n                hideItems(titre1Items);\n                hideItems(titre2Items);\n                hideItems(titre3Items);\n                hideItems(titre4Items);\n            };\n            list1Button.onclick = function() {\n                showItems(list1Items);\n                hideItems(list2Items);\n\t\t\t\thideItems(list4Items);\n                hideItems(list3Items);\n            };\n            list2Button.onclick = function() {\n                hideItems(list1Items);\n                hideItems(list3Items);\n\t\t\t\thideItems(list4Items);\n                showItems(list2Items);\n            };\n             list3Button.onclick = function() {\n                hideItems(list1Items);\n                hideItems(list2Items);\n                hideItems(list4Items);\n                showItems(list3Items);\n            };\n\t\t\t list4Button.onclick = function() {\n                hideItems(list1Items);\n                hideItems(list2Items);\n                hideItems(list3Items);\n\t\t\t\tshowItems(list4Items);\n            };\n        })();\n  \n\n//script pour la barre de navigation // \n// inutile dans le bon fonctionement du site\n// elle est juste décorative\n \n\t\tfunction scrollFunction() {\n    var scrollPos = document.body.scrollTop;\n\n    if (scrollPos > 590) {\n        document.getElementById(\"fixed-floater\").style.position = \"fixed\";;\n        document.getElementById(\"fixed-floater\").style.top = \"0px\";\n    } else {\n        document.getElementById(\"fixed-floater\").style.position = \"relative\";\n        document.getElementById(\"fixed-floater\").style.top = \"0px\";\n    }\n}\n\t\twindow.onscroll = scrollFunction;",
+        "css": ".hidden {\n    display: none;\n}\n\n.show {\n    display: block;\n}\n\nhtml,body {\n    font-family: 'QuickSand';\n    text-align: center;\n    margin: 0;\n    background-color: #4b5a6d;\n\toverflow-x: hidden;\n}\n\nheader {\n    background: url('img/counter_strike_cs_go-wallpaper-1920x1080.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n\tdisplay: block;\n\tmargin : auto;\n}\n\n#logo {\n\tvertical-align: middle;\n}\n\n#back {\n    background-color: #4b5a6d;\n\tposition: relative;\n}\n\n\n\nul {\n    list-style-type: none;\n    margin: 0 10%;\n    padding: 0;\n\twidth: 80%;\n\tz-index: 99;\n    transition: all 0.5s ease-in-out;\n    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);\n}\n\nh1 {\n    color: white;\n    font-size: 6em;\n    padding: 10% 0;\n    margin: auto;\n}\nh2 {\n    color: #4b5a6d;\n    display: none;\n    font-size: 3em;\n    padding: 5% 0;\n    margin: 0;\n    transition: all 0.5s ease-in;\n}\n\nh3 {\n    color: #4b5a6d;\n    font-size: 2em;\n     margin: 0;\n}\n\na {\n    color: #4b5a6d;\n    font-size: 2em;\n    text-decoration: none;\n    padding: 0 5%;\n    font-weight: bolder;\n    transition: all 0.5s;\n    cursor: pointer;\n}\n\na:hover {\n    color: #EA9B33;\n}\n\n\n\nli {\n    background-color: white;\n    margin: 0;\n    padding: 0.5%;\n}\n\nsection {\n    margin: 0 10%;\n    background-color: #fff;\n    transition: all 0.5s ease-in-out;\n}\n\n.main {\n    padding: 0;\n}\n\narticle{\n    display: inline-block;\n    padding: 0;\n    -moz-box-shadow: 0px 10px 10px 0px #000;\n    -webkit-box-shadow: 0px 10px 10px 0px #000;\n    -o-box-shadow: 0px 10px 10px 0px #000;\n    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);\n}\n\n.item {\n    display: inline-block;\n    margin: 1%;\n}\n\n.item img {\n    display: inline-block;\n  -moz-transition: all 0.3s;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n\n::selection{\n        background: #EA9B33;\n        color: #fff;\n}\n\n/*---------------*/\n/***  CAPTION  ***/\n/*---------------*/\n\nfigure.effect img {\n\tmax-width: none;\n\twidth: 100%;\n\ttransition: opacity 0.35s, transform 0.35s;\n    transform:matrix(0.6,0,0,0.586,-1,-1);\n\tbackface-visibility: hidden;\n}\n\nfigure.effect:hover img {\n\topacity: 0.5;\n    transform: translate3d(-10px,0,0);\n}\n\nfigure.effect figcaption {\n\ttext-align: center;\n    color: #363948;\n}\n\nfigure.effect h3 {\n\tposition: relative;\n\toverflow: hidden;\n\tpadding: 0;\n}\n\nfigure.effect h3::after {\n\tposition: absolute;\n\tbottom: 0;\n\tleft: 0;\n\twidth: 100%;\n\tbackground: #fff;\n\tcontent: 'Qualité';\n\ttransition: transform 0.35s;\n\ttransform: translate3d(0,-100%,0);\n}\n\nfigure.effect:hover h3::after {\n\ttransform: translate3d(0,0,0);\n}\n\nfigure.effect p {\n\topacity: 0;\n    color: #363948; \n\ttransition: opacity 0.35s, transform 0.35s;\n\ttransform: translate3d(10%,0,0);\n}\n\nfigure.effect:hover p {\n\topacity: 1;\n\ttransform: translate3d(0,0,0);\n}\n\np {\n    margin: 2% 0;\n    font-size: 1em;\n}\n\n.md-24 {\n\tcolor: #EA9B33;\n}\n\ni {\n\twidth: 24px;\n}\n\n\n@keyframes flash {\n  0%   { opacity: 0; }\n  100% { opacity: 1; }\n}\n\nbody {\n\t\tanimation: flash 2s;\n}\n\n\nbutton {\n\tbackground: none;\n\tborder: none;\n}\n\nbutton>span>i {\n  color: #ffffff;\n  border: none;\n   padding: 7px;\n  font-size: 20px;\n  vertical-align: middle;\n  background: #4b5a6d;\n  text-decoration: none;\n  transition: all 0.4s ease;\n}\n\nbutton>span>i:hover {\n  background: #61758e;\n  text-decoration: none;\n}\n\nbutton>span>i:focus {\n  outline: none;\n  background: #363948;\n}\n\n\ninput[type=search] {\n  color: #ffffff;\n  border: none;\n  padding: 10px 24px 10px 24px;\n  text-decoration: none;\n  transition: all 0.4s ease;\n}\n\ninput[type=search]:hover {\n  background: #61758e;\n  text-decoration: none;\n}\n\ninput[type=search]:focus {\n  outline: none;\n  background: #363948;\n}\n",
+        "html": "\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"calcul.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Quicksand\" rel=\"stylesheet\">\n    <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n</head>\n<body>\n    <nav id=\"back\">\n        <a rel=\"nofollow\" rel=\"noreferrer\"href=\"index.html\"><img src=\"img/logo.png\" id=\"logo\"></a>\n        <input type=\"search\" placeholder=\"Recherche ton skin\" name=\"q\">\n\t\t<button><span><i class=\"material-icons md-24\">search</i></span></button>\n    </nav>\n    <header>\n            <h1>\n             Librairie Skin CSGO\n            </h1>\n    </header>    \n    <ul id=\"fixed-floater\">\n        <li>\n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Voir tous les Skins</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">AK-47</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">M4A4</a>  \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">AWP</a> \n            <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list4\">Knife</a> \n        </li>\n    </ul>\n<section>\n    <h2 class=\"list2 titre2\">-Ramasse l'awp en fin de round-</h2>\n    <h2 class=\"list1 titre1\">- Parfait pour le RUSH B -</h2>\n    <h2 class=\"list3 titre3\">- En mode KennyS -</h2>\n    <h2 class=\"list4 titre4\">- Sort le cut -</h2>\n    <div class=\"main\">\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>20€ <span>Revanche Marine</span></h3>\n                            <p> \n                            <i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife4.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>80 € <span>M9 Bayonet</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>3€ <span>Dragon Swag</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4a.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>120 € <span>Aziimov</span></h3>\n                            <p>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak2.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>50 € <span>Néon</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4c.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>75 € <span>Dieu de la mer</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak3.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>45 € <span>Vulcain</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>25 € <span>Aziimov</span></h3>\n                           \t<p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife3.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>120 € <span>Gut</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp2.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>4 € <span>Phobos</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp3.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>2 € <span>Ligne Rouge</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp4.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>35 € <span>Ruche électrique</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak4.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>85 € <span>Cémenté</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n\t\t\t\t\t\t\t<i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife2.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>170 € <span>De Chasse</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4d.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>900 € <span>Hurleur</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak5.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>50 € <span>Circuit d'injonction</span></h3>\n\t\t\t\t\t\t\t<p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife5.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>300 € <span>Karambit</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp5.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>1 € <span>Version d'élite</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4e.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>74 € <span>Zirka</span></h3>\n                            <p>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4f.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>15 € <span>DayBreak</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4g.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>140 € <span>Electron</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife1.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>140 € <span>Fauchon</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife6.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>140 € <span>Dagues Sombres</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4h.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>0.50 € <span>Nucléaire</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list2 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/m4b.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>20 € <span>Espace Désolé</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak6.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>60 € <span>Terre Désolé</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife9.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>140 € <span>Flip</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp6.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>25 € <span>Bêtes Déchainées</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp8.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3> 40 € <span>BOOM</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp7.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>55 € <span>Coup de Foudre</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak7.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>20 € <span>Lignes Rouges</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife7.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>140 € <span>Papillon</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list3 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/awp9.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>40 € <span>DDPAT</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak8.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>70 € <span>Rouge Laminé</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list1 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/ak9.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>120 € <span>Hydroponic</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n            <article class=\"list4 item\">\n                <div class=\"grid\">\n                    <figure class=\"effect\">\n                    <img src=\"img/knife8.png\" alt=\"img13\"/>\n                        <figcaption>\n                            <h3>140 € <span>Bowie</span></h3>\n                            <p>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons md-24\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <i class=\"material-icons\">star_rate</i>\n                            <br>Disponible en stattrack et en collection souvenir</p>\n                        </figcaption>\t\t\t\n                    </figure>\n                </div>\n            </article>\n    \t</div>\n</section>\n  <script type=\"text/javascript\" src=\"script.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwI85vcywgQ7a-q_A8",
+      "userId": "101787338833938307621",
+      "creationTime": "2017-01-31T11:57:40.746Z",
+      "updateTime": "2017-02-18T12:28:37.538Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjI4MDk0N1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://codepen.io/n5c12xpro/pen/zNQZWw",
+              "title": "Filtrage en JS",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/n5c12xpro/pen/zNQZWw&a=AIYkKU8xkP9Pbt8DVIG8uRrUfzA-1SJK0A"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "n5c12xpro",
+          "zNQZWw"
+        ],
+        "js": "(function () {\n//Boutons\nvar tous = document.getElementById('bestioles');\nvar ver = document.getElementById('vertebres');\nvar inv = document.getElementById('invertebres');\nvar mam = document.getElementById('fam1');\nvar rep = document.getElementById('fam2');\nvar poi = document.getElementById('fam3');\nvar lpcv = document.getElementById('fam4');\nvar ins = document.getElementById('fam5');\nvar mol = document.getElementById('fam6');\nvar cru = document.getElementById('fam7');\nvar lpci = document.getElementById('fam8');\n//Fonctions\nvar show = function(liste) {\n    for (var i = 0; i < liste.length; i++) {\n        liste[i].style.display = \"inline-block\";\n    }\n};\nvar hide = function(liste) {\n    for (var i = 0; i < liste.length; i++) {\n        liste[i].style.display = \"none\";\n    }\n};\n//listes\nanimal = document.getElementsByClassName('animal')\nmami = document.getElementsByClassName('mam');\nrept = document.getElementsByClassName('rep');\npois = document.getElementsByClassName('poi');\ninse = document.getElementsByClassName('ins');\nmolu = document.getElementsByClassName('mol');\ncrus = document.getElementsByClassName('cru');\nlpcve = document.getElementsByClassName('xv');\nlpcin = document.getElementsByClassName('xi');\n//actions\ntous.onclick = function() {\n    show(animal);\n};        \nver.onclick = function() {\n    hide(animal);\n    show(mami);\n    show(rept);\n    show(pois);\n\n};       \nmam.onclick = function() {\n    hide(animal);\n    show(mami);\n\n};     \nrep.onclick = function() {\n    hide(animal);\n    show(rept);\n};\npoi.onclick = function() {\n    hide(animal);\n    show(pois);\n\n};\nlpcv.onclick = function() {\n    hide(animal);\n    show(lpcve);\n};     \ninv.onclick = function() {\n    hide(animal);\n    show(inse);\n    show(molu);\n    show(crus);\n};        \nins.onclick = function() {\n    hide(animal);\n    show(inse);\n\n};\nmol.onclick = function() {\n    hide(animal);\n    show(molu);\n};        \ncru.onclick = function() {\n    hide(animal);\n    show(crus);\n};\nlpci.onclick = function() {\n    hide(animal);\n    show(lpcin);\n};\n})();",
+        "css": "body {\n    margin-left: auto;\n    margin-right:auto;\n    \n}\nh1{\n    text-align: center;\n}\n\n}\nul {\n    text-align: justify;\n}\n\n.left {\n    float:left;\n    margin-left: 600px;\n}\n\n.right {\n    float: right;\n    margin-right: 600px\n}\n\n.ex {\n    float:inherit;\n    margin-left: 900px;\n    margin-top:400px;\n}\n\nli {\n    list-style-type: none;\n}\n",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n      <meta charset=\"utf-8\"/>\n      <link rel=\"stylesheet\" type=\"text/css\" href=\"web.css\"/>\n</head>\n<body>\n    <h1><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\"  id=\"bestioles\" >Les bestioles</a></h1>\n    <div class=\"left\">\n    <h2><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"vertebres\">Les vertébrés:</a></h2>\n    <ul>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam1\" class=\"fam\">Les mammifères</a></li>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam2\" class=\"fam\">Les reptiles</a></li>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam3\" class=\"fam\">Les poissons</a></li>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam4\" class=\"fam\">Les plus classes</a></li>\n    </ul>\n    </div>\n    <div class=\"right\">\n    <h2><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\"id=invertebres>Les invertébrés:</a></h2>\n    <ul>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam5\" class=\"fam\">Les insectes</a></li>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam6\" class=\"fam\">Les mollusques</a></li>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam7\" class=\"fam\">Les crustacés</a></li>\n    <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"fam8\" class=\"fam\">Les plus classes</a></li>\n    </ul>\n    </div>\n    <div class=\"ex\">\n    <h2>Retours:</h2>\n    <ul>\n    <li><p class=\"animal mam\">Chien</p></li>\n    <li><p class=\"animal mam\">Chat</p></li>\n    <li><p class=\"animal mam\">Lion</p></li>\n    <li><p class=\"animal mam\">Cheval</p></li>\n    <li><p class=\"animal mam xv\">Giraffe</p></li>\n        \n    <li><p class=\"animal rep\">Sserpent</p></li>\n    <li><p class=\"animal rep\">Lézard</p></li>\n    <li><p  class=\"animal rep\">Crocodile</p></li>\n    <li><p  class=\"animal rep\">Tortue</p></li>\n    <li><p  class=\"animal rep xv\">Caméléon</p></li>\n        \n    <li><p  class=\"animal poi\">Morue</p></li>\n    <li><p  class=\"animal poi\">Maquerau</p></li>\n    <li><p  class=\"animal poi\">Thon</p></li>\n    <li><p  class=\"animal poi\">Saumon</p></li>\n    <li><p  class=\"animal poi xv\">Sardine</p></li>\n        \n\n    <li><p  class=\"animal ins\">Fourmis</p></li>\n    <li><p  class=\"animal ins\">Scarabée</p></li>\n    <li><p  class=\"animal ins\">Abeille</p></li>\n    <li><p  class=\"animal ins\">Papillon</p></li>\n    <li><p  class=\"animal ins xi\">Phasme</p></li>\n        \n    <li><p  class=\"animal mol\">Huître</p></li>\n    <li><p  class=\"animal mol\">Krakeeen</p></li>\n    <li><p  class=\"animal mol\">Escargot</p></li>\n    <li><p  class=\"animal mol\">Limace</p></li>\n    <li><p  class=\"animal mol xi\">Anémone</p></li>\n        \n    <li><p  class=\"animal cru xi\">Ecrevisse !</p></li>\n    <li><p  class=\"animal cru\">Crevette</p></li>\n    <li><p  class=\"animal cru\">Crabe</p></li>\n    <li><p  class=\"animal cru\">Homard</p></li>\n    <li><p  class=\"animal cru\">Bernard l'ermite</p></li>\n    </ul>\n    </div>\n    \n    \n\n<script src=\"web.js\"></script>\n</body>\n\n\n\n\n\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwI1dndywgQ7a-q_A8",
+      "userId": "108537857415545477339",
+      "creationTime": "2017-01-31T11:57:40.003Z",
+      "updateTime": "2017-02-19T22:36:22.793Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMwNTIzN1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://codepen.io/LouisGosse/pen/RKzpLM",
+              "title": "A Pen by  Louis",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/LouisGosse/pen/RKzpLM&a=AIYkKU8NDzl35A-iHZAPS8751ARav-hiBg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "LouisGosse",
+          "RKzpLM"
+        ],
+        "js": "var total = document.getElementById('all'); \nvar btitre = document.getElementById('L1titre'); \nvar briche = document.getElementById('L1riche');\nvar bsup = document.getElementById('L1sup');\n\nvar tout = document.getElementsByClassName('all');\nvar titre = document.getElementsByClassName('L1titre');\nvar riche = document.getElementsByClassName('L1riche');\nvar supporters = document.getElementsByClassName('L1sup');\n\nvar afficher = function(filtres) {\n  for (var i=0; i<filtres.length; i++) {\n    filtres[i].classList.remove('hidden');\n  }\n};\n\nvar cacher = function(filtres) {\n  for (var i=0; i<filtres.length; i++) {\n    filtres[i].classList.add('hidden');\n  }\n};\n\ntotal.onclick = function(){\n\tafficher(tout);\n}\n\n\nbtitre.onclick = function(){\n  cacher(tout);\n  afficher(titre);\n}\n\nbsup.onclick = function(){\n  cacher(tout);\n  afficher(supporters);\n}\n\nbriche.onclick = function(){\n  cacher(tout);\n  afficher(riche);\n}",
+        "css": "body {\n\tbackground-color: black;\n\twidth: 100%;\n\tcolor: white;\n}\n.hidden {\n\tdisplay: none;\n\n}\n\nh1 { \n  text-align: center;\n}",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>Ligue 1</title>\n\t<meta charset=\"utf-8\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"filtre.css\">\n\n</head>\n<body>\n<header>\n\t<h1>La ligue 1</h1>\n</header>\n\t\t\t<ul class=\"nav\">\n\t\t\t\t<li><input type=\"button\" id=\"all\" value=\"Les clubs\">\n\t\t\t\t<li><input type=\"button\" id=\"L1titre\" value=\"Les plus titrés\">\n\t\t\t\t<li><input type=\"button\" id=\"L1riche\" value=\"Les plus riches\">\n\t\t\t\t<li><input type=\"button\" id=\"L1sup\" value=\"Les meilleurs supporters\">\t\t\n\t\t\t</ul>\n\t\t\t\n\n\t\t\t\n\t\t\t\n\t<section>\n\t\t\t\t\n\t\t\t\t\t\n\t<article class=\"all\">BASTIA</article>\n \t<article class=\"all\">FC LORIENT</article>\n \t<article class=\"all\">OLYMPIQUE LYONNAIS</article>\n \t<article class=\"all\">OLYMPIQUE MARSEILLE</article>\n \t<article class=\"all\">AS MONACO</article>\n \t<article class=\"all\">FC NANTES</article>\n \t<article class=\"all\">PSG</article>\n \t<article class=\"all\">ASSE</article>\n \t<article class=\"all\">RENNES</article>\n\t\n\t<article class=\"L1titre\">ASSE</article>\n    <article class=\"L1titre\">OLYMPIQUE MARSEILLE</article>\n    <article class=\"L1titre\">OLYMPIQUE LYONNAIS</article>\n    <article class=\"L1titre\">FC NANTES</article>\n    \n    \t\n\t<article class=\"L1sup\">RENNES</article>\n\t<article class=\"L1sup\">BASTIA</article>\n\t<article class=\"L1sup\">FC NANTES</article>\n    \t\t\t\n\t<article class=\"L1riche\">PSG</article>\n\t<article class=\"L1riche\">AS MONACO</article>\n\t<article class=\"L1riche\">OLYMPIQUE LYONNAIS</article>\n\t\t\t\n\t\t\t\n         \n     <script src=\"filtre.js\"></script>\n\n    </section>\n    \n\n\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIoJneywgQ7a-q_A8",
+      "userId": "112281272114786432836",
+      "creationTime": "2017-01-31T11:57:39.216Z",
+      "updateTime": "2017-02-16T22:25:50.391Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMxMzM3Nlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/JeanneV/pen/dNLgba",
+              "title": "A Pen by  Jeanne",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/JeanneV/pen/dNLgba&a=AIYkKU8g1DfTKg5YWtHnO0GBSGdQqUCRXg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "JeanneV",
+          "dNLgba"
+        ],
+        "js": "var boutonAll = document.getElementById('all'); \nvar boutonMul2 = document.getElementById('mul2'); \nvar boutonMul3 = document.getElementById('mul3');\nvar boutonMul4 = document.getElementById('mul4');\nvar tout = document.getElementsByClassName('all');\nvar multi2 = document.getElementsByClassName('mul2');\nvar multi3 = document.getElementsByClassName('mul3');\nvar multi4 = document.getElementsByClassName('mul4');\n\nvar afficher = function(a) {\n  for (var i=0; i<a.length; i++) {\n    a[i].classList.remove('hidden');\n  }\n};\n\nvar cacher = function(a) {\n  for (var i=0; i<a.length; i++) {\n    a[i].classList.add('hidden');\n  }\n};\n\nboutonAll.onclick = function(){\n\tafficher(tout);\n}\n\n\nboutonMul2.onclick = function(){\n  cacher(tout);\n  afficher(multi2);\n}\n\nboutonMul3.onclick = function(){\n  cacher(tout);\n  afficher(multi3);\n}\n\nboutonMul4.onclick = function(){\n  cacher(tout);\n  afficher(multi4);\n}",
+        "css": "ul{\n\tbackground-color: black; \n\tcolor:white;\n\tlist-style-type: none;\n\t\n\ttext-align: center; \n}\n\nli{\n\tdisplay: inline-block; \n\tpadding: 2em; \n}\n\n.hidden{\n    display:none;\n}\n\n.tableau{\n\tmargin:auto;\n\ttext-align:center;\n}\n\ntd{\n\tfont-family: verdana; \n\tfont-size: 2em; \n\tpadding: 2em;\n}\n\ndiv{\n\ttext-align: center; \n\tfont-family: verdana; \n\tfont-size: 3em; \n}",
+        "html": "<!DOCTYPE html>\n<html>\n    <head>\n        <title>\n        Les multiples\n        </title>\n        <link rel=\"stylesheet\" href=\"listejs.css\">\n    </head>\n    <body>\n\t\t\t\n\t\t\t<div>Les multiples</div>\n\t\t\t\n\t\t\t<ul class=\"nav\">\n\t\t\t\t<li><input type=\"button\" id=\"all\" value=\"Nombres\">\n\t\t\t\t<li><input type=\"button\" id=\"mul2\" value=\"Multiples de 2\">\n\t\t\t\t<li><input type=\"button\" id=\"mul3\" value=\"Multiples de 3\">\n\t\t\t\t<li><input type=\"button\" id=\"mul4\" value=\"Multiples de 4\">\t\t\n\t\t\t</ul>\n\t\t\t\n\n\t\t\t\n\t\t\t<table class=\"tableau\">\n\t\t\t<tr>\n\t\t\t\t<td class=\"all hidden\"> 1 </td>\n\t\t\t\t<td class=\"all mul2 hidden\"> 2 </td>\n\t\t\t\t<td class=\"all mul3 hidden\"> 3 </td>\n\t\t\t\t<td class=\"all mul2 mul4 hidden\"> 4 </td>\n\t\t\t\t<td class=\"all hidden\"> 5 </td>\n\t\t\t\t<td class=\"all mul2 mul3 hidden\"> 6 </td>\n\t\t\t\t<td class=\"all hidden\"> 7 </td>\n\t\t\t\t<td class=\"all mul2 mul4 hidden\"> 8 </td>\n\t\t\t\t<td class=\"all mul3 hidden\"> 9 </td>\n\t\t\t\t</tr>\n\t\t\t</table>\n\t\t\t\n\t\t\t\n         \n     <script src=\"listejs.js\"></script>\n    </body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIu_veywgQ7a-q_A8",
+      "userId": "117576151158786046837",
+      "creationTime": "2017-01-31T11:57:39.293Z",
+      "updateTime": "2017-02-19T16:17:15.656Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMyNTk0N1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/ct1zn68u/3/",
+              "title": "Edit fiddle - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/ct1zn68u/3/&a=AIYkKU92v8Qm2ARipU7yRQ76fIKBDrF5Eg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "ct1zn68u",
+          "3"
+        ],
+        "js": "var allProduct = document.getElementsByClassName(&apos;all&apos;);\nvar glisseProduct = document.getElementsByClassName(&apos;sportGlisse&apos;);\nvar combatProduct = document.getElementsByClassName(&apos;sportCombat&apos;);\nvar extremeProduct = document.getElementsByClassName(&apos;sportExtreme&apos;);\n\nvar double1 = document.getElementsByClassName(&apos;sportExtreme sportGlisse&apos;);\nvar double2 = document.getElementsByClassName(&apos;sportExtreme sportCombat&apos;);\n\nvar on = function (object) {\n   for (var i = 0; i &lt; object.length; i++) {\n      object[i].style.display = &quot;block&quot;;\n   }\n};\nvar off = function(object) {\n      for (var i = 0; i &lt; object.length; i++) {\n         object[i].style.display = &quot;none&quot;;\n      }\n};\n\n      allProduct1 = document.getElementById(&apos;all&apos;);\n      glisseProduct1 = document.getElementById(&apos;sportGlisse&apos;);\n      combatProduct1 = document.getElementById(&apos;sportCombat&apos;);\n      extremeProduct1 = document.getElementById(&apos;sportExtreme&apos;);\n\n      allProduct1.onclick = function() {\n         on(glisseProduct);\n         on(combatProduct);\n         on(extremeProduct);\n         on(double1);\n         on(double2);\n      };\n\n      glisseProduct1.onclick = function() {\n         on(glisseProduct);\n         off(combatProduct);\n         off(extremeProduct);\n         on(double1);\n      };\n\n      combatProduct1.onclick = function() {\n         off(glisseProduct);\n         on(combatProduct);\n         off(extremeProduct);\n         on(double2);\n      };\n\n      extremeProduct1.onclick = function() {\n         off(glisseProduct);\n         off(combatProduct);\n         on(extremeProduct);\n         on(double1);\n         on(double2);\n      };\n",
+        "css": ".list {\n   list-style-type: none;\n   font-weight: bold;\n   font-size: 1.2em;\n}\na {\n  cursor: pointer;\n}",
+        "html": "<h1>Bienvenue chez Ultimate Sports Shop</h1>\n<ul class=\"list\">\n<li><a id=\"all\">Tous les produit</a></li>\n   <li><a id=\"sportGlisse\">Produits de sports de glisse</a></li>\n   <li><a id=\"sportCombat\">Produits de sports de combat</a></li>\n   <li><a id=\"sportExtreme\">Produits de sports extr&#xEA;mes</a></li>\n</ul>\n<div class=\"all\">\n   <p class=\"sportGlisse\">Snowboard Burton fixations + boots</p>\n   <p class=\"sportGlisse\">Skateboard Globe, board + deck + 8 roues</p>\n   <p class=\"sportGlisse\">Planche de surf Ripcurl custom 5&apos;6 + 4 ailerons </p>\n   <p class=\"sportGlisse\">Wakeboard seule</p>\n   <p class=\"sportCombat\">Gants de MMA</p>\n   <p class=\"sportCombat\">Short Muay Thai competition</p>\n   <p class=\"sportCombat\">Casque et plastron Penchak Silat, Taekwondo, Karate </p>\n   <p class=\"sportExtreme\">Wingsuit Nylon haute resistance</p>\n   <p class=\"sportExtreme sportGlisse\">Parapente pour snowboard, ski, descente </p>\n   <p class=\"sportExtreme sportCombat\">Ring pour boxe, MMA, FreeFight, Ju jistu</p>\n   <p class=\"sportExtreme sportGlisse\">Camera Go Pro Hero 4 Black Edition</p>\n   <p class=\"sportExtreme sportCombat\">CardioBlast : combi intelligente, chauffante, connect&#xE9;e</p>\n</div>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIuY7fywgQ7a-q_A8",
+      "userId": "102010675502767179627",
+      "creationTime": "2017-01-31T11:57:38.645Z",
+      "updateTime": "2017-02-17T21:28:12.234Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMyODM3N1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/anon/pen/GravYz",
+              "title": "Create a New Pen",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/GravYz&a=AIYkKU9wKPY8JjgG-enmYzC2iqeL6vH95w"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "anon",
+          "GravYz"
+        ],
+        "js": "var allseries = document.getElementsByClassName('zero');\nvar thrillerseries = document.getElementsByClassName('thriller');\nvar horreurseries = document.getElementsByClassName('horreur');\nvar comedieseries = document.getElementsByClassName('comedie');\nvar animeseries = document.getElementsByClassName('anime');\n\nvar double1 = document.getElementsByClassName('thriller horreur');\nvar double2 = document.getElementsByClassName('thriller comedie');\nvar double3 = document.getElementsByClassName('thriller anime');\n\nvar double4 = document.getElementsByClassName('horreur thriller');\nvar double5 = document.getElementsByClassName('horreur comedie');\nvar double6 = document.getElementsByClassName('horreur anime');\n\nvar double7 = document.getElementsByClassName('comedie thriller');\nvar double8 = document.getElementsByClassName('comedie horreur');\nvar double9 = document.getElementsByClassName('comedie anime');\n\nvar double10 = document.getElementsByClassName('anime thriller');\nvar double10 = document.getElementsByClassName('anime horreur');\nvar double10 = document.getElementsByClassName('anime comedie');\n\nvar on = function(object) {\n    for (var i = 0; i < object.length; i++) {\n        object[i].style.display=\"inline\";\n    }\n};\nvar off = function(object) {\n    for (var i = 0; i < object.length; i++) {\n        object[i].style.display=\"none\";\n    }\n};\n\nseriesall = document.getElementById('zero');\nseriesthriller = document.getElementById('thriller');\nserieshorreur = document.getElementById('horreur');\nseriescomedie = document.getElementById('comedie');\nseriesanime = document.getElementById('anime');\n\nseriesall.onclick = function() {\n    on(thrillerseries);\n    on(horreurseries);\n    on(comedieseries);\n    on(animeseries);\n};\nseriesthriller.onclick = function() {\n    on(thrillerseries);\n    off(horreurseries);\n    off(comedieseries);\n    off(animeseries);\n    on(double1);\n};\nserieshorreur.onclick = function() {\n    off(thrillerseries);\n    on(horreurseries);\n    off(comedieseries);\n    off(animeseries);\n};\nseriescomedie.onclick = function() {\n    off(thrillerseries);\n    off(horreurseries);\n    on(comedieseries);\n    off(animeseries);\n};\nseriesanime.onclick = function() {\n    off(thrillerseries);\n    off(horreurseries);\n    off(comedieseries);\n    on(animeseries);\n};",
+        "css": "/******* font *******/\n\n@font-face {\n    font-family: 'Montserrat';\n    src: url('font/Montserrat-Hairline.otf');\n    font-weight: normal;\n    font-style: normal;\n}\n/******* hover navbar *******/\n\n.menu1 {\n    transition: 1s ease;\n    color: #ffffff;\n    border-top: 4px solid #111;\n    border-bottom: 4px solid #111;\n}\n.menu1:hover {\n    border-bottom: 4px solid #ffffff;\n    color: #B9090B;\n}\n/******* search bar *******/\n\n#recherche {\n    display: inline-block;\n    position: relative;\n    height: 60px;\n    float: right;\n    padding: 0;\n    position: relative;\n}\ninput[type=\"text\"] {\n    height: 60px;\n    font-size: 30px;\n    display: inline-block;\n    font-family: \"Montserrat\";\n    font-weight: 20;\n    border: none;\n    outline: none;\n    color: #555;\n    padding: 3px;\n    padding-right: 30px;\n    width: 0px;\n    position: absolute;\n    top: 0;\n    right: 13em;\n    background: none;\n    z-index: 3;\n    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);\n    cursor: pointer;\n}\ninput[type=\"text\"]:focus:hover {\n    border-bottom: 1px solid #BBB;\n}\ninput[type=\"text\"]:focus {\n    width: 400px;\n    z-index: 1;\n    border-bottom: 1px solid #BBB;\n    cursor: text;\n}\ninput[type=\"submit\"] {\n    height: 67px;\n    width: 63px;\n    display: inline-block;\n    color: red;\n    float: right;\n    background: url(../img/loupe.png) center center no-repeat;\n    text-indent: -10000px;\n    border: none;\n    position: absolute;\n    top: 0;\n    right: 27em;\n    z-index: 2;\n    cursor: pointer;\n    opacity: 1;\n    cursor: pointer;\n    transition: opacity .4s ease;\n}\ninput[type=\"submit\"]:hover {\n    opacity: 0.6;\n}\n/******* banner *******/\n\nheader {\n    background: url('../img/zombie.jpg');\n    background-attachment: fixed;\n    background-position:center;\n    margin: 0;\n    padding: 0;\n}\n.title {\n    color: white;\n    font-size: 4em;\n    text-align: center;\n    padding: 8% 0;\n    margin: 0;\n}\n/******* menu2 *******/\n\n#listehead {\n    position: inherit;\n    font-size: 2em;\n    background-color: #111;\n    width: 100%;\n    top: 0;\n    left: 0;\n    margin: 0;\n    padding: 5px 0px;\n    text-align: center;\n}\n#listehead a {\n    text-decoration: none;\n    padding: 5px 15px;\n    display: inline-block;\n    cursor: pointer;\n}\n/******* css *******/\n\nbody {\n    font-family: 'Montserrat';\n    margin: 0;\n    font-weight: 300;\n}\n#nav {\n    background-color: #111;\n    position: relative;\n    width: 100%;\n    top: 0;\n    left: 0;\n}\n#logo a {\n    text-decoration: none;\n    padding: 15px 20px;\n    display: inline-block;\n}\n#nav a {\n    text-decoration: none;\n    padding: 15px 20px;\n    display: inline-block;\n}\n#logo img{\n    width: 4em;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 23em;\n    padding: 0;\n}\nul {\n    margin: 0;\n    padding: 0;\n    display: inline-block;\n    vertical-align: middle;\n}\nli {\n    display: inline-block;\n    list-style-type: none;\n    vertical-align: middle;\n}\n#logo, ul, #recherche {\n    display: inline-block;\n}\nh3 {\n    color: #4b5a6d;\n    font-size: 2em;\n     margin: 0;\n}\nsection {\n    margin: 0 18em;\n    background-color: #fff;\n    transition: all 0.5s ease-in-out;\n}\n/******* listejs *******/\nh1,\nh1+p {\n\tmargin: 30px 15px 0;\n\tfont-weight: 300;\n}\nh1+p a {\n\tcolor: #333;\n}\nh1+p a: hover {\n\ttext-decoration: none;\n}\nh2 {\n\tmargin: 60px 15px 0;\n\tpadding: 0;\n\tfont-weight: 300;\n}\nh2 span {\n\tmargin-left: 1em;\n\tcolor: #B9090B;\n\tfont-size: 85%;\n}\n.column {\n\tmargin: 0 0 0;\n\tpadding: 0;\n}\n.column: last-child {\n\tpadding-bottom: 60px;\n}\n.column: after {\n\tcontent: '';\n\tclear: both;\n\tdisplay: block;\n}\n.column div {\n\tposition: relative;\n\tfloat: left;\n\twidth: 300px;\n\theight: 200px;\n\tmargin: 0 0 0 0;\n\tpadding: 25px 14px;\n}\n.column div:first-child {\n\tmargin-left: 0;\n}\n.column div span {\n\tposition: absolute;\n\tbottom: -20px;\n\tleft: 0;\n\tz-index: -1;\n\tdisplay: block;\n\twidth: 300px;\n\tmargin: 0;\n\tpadding: 0;\n\tcolor: #B9090B ;\n\tfont-size: 18px;\n\ttext-decoration: none;\n\ttext-align: center;\n\t-webkit-transition: .3s ease-in-out;\n\ttransition: .3s ease-in-out;\n\topacity: 0;\n}\nfigure {\n\twidth: 300px;\n\theight: 200px;\n\tmargin: 0;\n\tpadding: 0;\n\tbackground: #fff;\n\toverflow: hidden;\n}\nfigure:hover+span {\n\tbottom: 0;\n\topacity: 1;\n}\n.hover08 figure img {\n\t-webkit-filter: grayscale(100%);\n\tfilter: grayscale(100%);\n\t-webkit-transition: .3s ease-in-out;\n\ttransition: .3s ease-in-out;\n}\n.hover08 figure:hover img {\n\t-webkit-filter: grayscale(0);\n\tfilter: grayscale(0);\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "html": "<!DOCTYPE HTML>\n\n<html>\n\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"shortcut icon\" href=\"img/favicon.ico\">\n    <link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\">\n</head>\n\n<body>\n<nav>\n    <div id=\"nav\">\n        <div id=\"menu\">\n            <div id=\"logo\">\n                <a rel=\"nofollow\" rel=\"noreferrer\"href=\"index.html\"><img src=\"img/logo.png\" alt=\"logo de UltraFlix\"></a>\n            </div>\n            <ul id=\"menulist\">\n                <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" class=\"menu1\">ACCUEIL</a>\n                </li><!--\n                --><li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" class=\"menu1\">CLASSEMENT</a>\n                </li><!--\n                --><li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" class=\"menu1\">AVIS</a>\n                </li><!--\n                --><li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" class=\"menu1\">CONTACT</a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n    <header>\n        <h1 class=\"title\">UltraFlix Les meilleures séries</h1>\n    </header>\n    <ul id=\"listehead\">\n        <li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"zero\" class=\"menu1\">Toutes les séries</a></li><!--\n        --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"thriller\" class=\"menu1\">Thriller</a></li><!--\n        --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"horreur\" class=\"menu1\">Horreur</a></li><!--\n        --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"comedie\" class=\"menu1\">Comédie</a></li><!--\n        --><li><a rel=\"nofollow\" rel=\"noreferrer\"id=\"anime\" class=\"menu1\">Animé</a></li>\n    </ul>\n    \n    <section>\n\t<article class=\"zero\">\n        <div class=\"hover08 column\">\n\t\t<div class =\"horreur\">\n            <figure><a rel=\"nofollow\" rel=\"noreferrer\"href=\"twd.html\"><img src=\"img/twd.jpg\"/></a></figure>\n\t\t\t<span>The Walking Dead</span>\n\t\t</div>\n\t\t<div class=\"horreur\">\n\t\t\t<figure><img src=\"img/ahs.jpg\"/></figure>\n\t\t\t<span>American Horror Story</span>\n\t\t</div>\n\t\t<div class=\"thriller\">\n\t\t\t<figure><img src=\"img/bb.jpg\"/></figure>\n\t\t\t<span>Breaking Bad</span>\n\t\t</div>\n\t\t<div class=\"thriller\">\n\t\t\t<figure><img src=\"img/pb.jpg\"/></figure>\n\t\t\t<span>Prison Break</span>\n\t\t</div>\n        </div>\n    </article>\n    \t<article class=\"zero\">\n        <div class=\"hover08 column\">\n\t\t<div class=\"comedie\">\n\t\t\t<figure><img src=\"img/jtv.jpg\"/></figure>\n\t\t\t<span>Jane The Virgin</span>\n\t\t</div>\n\t\t<div class=\"anime\">\n\t\t\t<figure><img src=\"img/aot.jpg\"/></figure>\n\t\t\t<span>Attack on Titan</span>\n\t\t</div>\n\t\t<div class=\"anime\">\n\t\t\t<figure><img src=\"img/dn.jpg\"/></figure>\n\t\t\t<span>Death Note</span>\n\t\t</div>\n\t\t<div class=\"comedie\">\n\t\t\t<figure><img src=\"img/oinb.jpg\"/></figure>\n\t\t\t<span>Orange is the new black</span>\n\t\t</div>\n            </div>\n    </article>\n\t<article class=\"zero\">\n        <div class=\"hover08 column\">\n\t\t<div class =\"thriller horreur\">\n\t\t\t<figure><img src=\"img/twd.jpg\"/></figure>\n\t\t\t<span>Games Of Thrones</span>\n\t\t</div>\n\t\t<div class=\"thriller horreur\">\n\t\t\t<figure><img src=\"img/ahs.jpg\"/></figure>\n\t\t\t<span>American Horror Story</span>\n\t\t</div>\n        </div>\n    </article>\n    </section>\n    <script type=\"text/javascript\" src=\"javascript/script.js\"></script> \n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwI78bfywgQ7a-q_A8",
+      "userId": "108296987848356040668",
+      "creationTime": "2017-01-31T11:57:41.978Z",
+      "updateTime": "2017-02-19T22:39:22.878Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMzNTU5OVpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://jsbin.com/zidawac/3/edit?html,js,output",
+              "title": "JS Bin - Collaborative JavaScript Debugging",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jsbin.com/zidawac/3/edit?html,js,output&a=AIYkKU9sn7RtvJnAFvw9ZPaoo2I9uOmuEw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsbin",
+          "zidawac",
+          "3"
+        ],
+        "js": "var allProduct = document.getElementsByClassName('all');\nvar alimentProduct = document.getElementsByClassName('aliment');\nvar sportProduct = document.getElementsByClassName('sport');\nvar musiqueProduct = document.getElementsByClassName('musique');\n\nvar on = function (object) {\n   for (var i = 0; i < object.length; i++) {\n      object[i].style.display = \"block\";\n   }\n};\nvar off = function(object) {\n      for (var i = 0; i < object.length; i++) {\n         object[i].style.display = \"none\";\n      }\n};\n\n      allProduct1 = document.getElementById('all');\n      alimentProduct1 = document.getElementById('sportGlisse');\n      sportProduct1 = document.getElementById('sportCombat');\n      musiqueProduct1 = document.getElementById('sportExtreme');\n\n      allProduct1.onclick = function() {\n         on(alimentProduct);\n         on(sportProduct);\n         on(musiqueProduct);\n      };\n\n      alimentProduct1.onclick = function() {\n         on(alimentProduct);\n         off(sportProduct);\n         off(musiqueProduct);\n      };\n\n      sportProduct1.onclick = function() {\n         off(alimentProduct);\n         on(sportProduct);\n         off(musiqueProduct);\n      };\n\n      musiqueProduct1.onclick = function() {\n         off(alimentProduct);\n         off(sportProduct);\n         on(musiqueProduct);\n      };\n",
+        "css": "",
+        "html": "<!DOCTYPE html>\n<html>\n    <body>\n        <h1>Mady's Shop</h1>\n        <ul class=\"list\">\n            <li><a id=\"all\">Tous les produit</a></li>\n            <li><a id=\"aliment\">Alimentaire</a></li>\n            <li><a id=\"sport\">Sport</a></li>\n           <li><a id=\"musique\">Musique</a></li>\n        </ul>\n        <div class=\"all\">\n            <p class=\"aliment\">Bonbons</p>\n            <p class=\"aliment\">Gâteaux</p>\n            <p class=\"aliment\">Pop-Corn </p>\n               <p class=\"aliment\">Chips</p>\n               <p class=\"sport\">Gant de boxe</p>\n               <p class=\"sport\">Ski</p>\n               <p class=\"sport\">Raquette de tennis</p>\n               <p class=\"musique\">Piano</p>\n               <p class=\"musique\">Guitare</p>\n               <p class=\"musique\">Harpe</p>\n    </div>\n    </body>\n    <script src=\"filtrage.js\"></script>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIns_hywgQ7a-q_A8",
+      "userId": "113909539356196281852",
+      "creationTime": "2017-01-31T11:57:41.526Z",
+      "updateTime": "2017-02-19T22:05:21.275Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM2OTQzOFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://codepen.io/antalis_victoria/pen/GrbWgy",
+              "title": "A Pen by  Antalis",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/antalis_victoria/pen/GrbWgy&a=AIYkKU-4zA2DHLzJlbcUqS_SM7LwLMTPvw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "antalis_victoria",
+          "GrbWgy"
+        ],
+        "js": "(function () {\n  var allButton = document.getElementById('all'); \n  var list1Button = document.getElementById('list1'); \n  var list2Button = document.getElementById('list2');\n  var list3Button = document.getElementById('list3');\n          \n  var showItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"inline-block\";\n    }\n  };\n  var hideItems = function (items) {\n    for (var i=0; i<items.length; i++) {\n      items[i].style.display = \"none\";\n    }\n  };\n\n  list1Items = document.getElementsByClassName('list1');\n  list2Items = document.getElementsByClassName('list2');\n  list3Items = document.getElementsByClassName('list3');\n            \n  allButton.onclick = function() {\n    showItems(list1Items);\n    showItems(list2Items);\n    showItems(list3Items);\n  };\n  list1Button.onclick = function() {\n    hideItems(list2Items);\n    hideItems(list3Items);\n    showItems(list1Items);\n    };\n  list2Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list3Items);\n    showItems(list2Items);\n    };\n  list3Button.onclick = function() {\n    hideItems(list1Items);\n    hideItems(list2Items);\n    showItems(list3Items);\n    };\n  })();",
+        "css": ".hidden {\n    display: none;\n}\n\n.show {\n    display: block;\n}\n\ndiv{\n    padding-top: 100px;\n}\n\nhtml,body {\n    font-family: 'Roboto';\n    text-align: center;\n    margin: 0;\n    background-color: #6C7A89;\n    color: #674172;\n}\n\np {\n    margin: 2% 0;\n    font-size: 1em;\n}\n\nul {\n\tposition: absolute;\n    list-style-type: none;\n    margin: 0 10%;\n    padding: 0;\n\twidth: 80%;\n\tz-index: 99;\n\n}\n\nh2 {\n  \n    font-size: 3em;\n    padding: 5% 0;\n    margin: 0;\n}\n\nh3 {\n  \n    font-size: 2em;\n     margin: 0;\n}\n\na {\n\n    font-size: 2em;\n    text-decoration: none;\n    padding: 0 5%;\n   \n}\n\na:hover {\n    font-weight: bold;\n    color: #674172; \n    cursor: pointer;\n\n}\n\nli {\n    background-color: white;\n    margin: 0;\n    padding: 0.5%;\n    font-size: 10px;\n}\n\nsection {\n    margin: 2% 10%;\n    background-color: white;\n}\n\n\narticle{\n    display: inline-block;\n\n}\n\n.item {\n\n    margin: 5%;\n}\n",
+        "html": "<ul>\n  <li>\n    <a rel=\"nofollow\" rel=\"noreferrer\"id=\"all\">Voir tous les sports</a>  \n    <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list1\">Sports collectifs</a>  \n    <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list2\">Sports individuels</a>  \n    <a rel=\"nofollow\" rel=\"noreferrer\"id=\"list3\">Sports aquatiques</a>\n  </li>\n</ul>\n<section>\n  <div class=\"main\">\n    <article class=\"list2 item\">\n      <div class=\"grid\">\n        <h3>Basketball</h3>\n      </div>\n    </article>\n    <article class=\"list2 list3 item\">\n      <div class=\"grid\">\n        <h3>Surf</h3>\n      </div>\n    </article>\n    <article class=\"list2 list3 item\">\n      <div class=\"grid\">\n        <h3>Ski nautique</h3>\n      </div>\n    </article>\n    <article class=\"list2 item\">\n      <div class=\"grid\">\n        <h3>Tennis</h3>\n      </div>\n    </article>\n    <article class=\"list1 item\">\n      <div class=\"grid\">\n        <h3>Handball</h3>\n      </div>\n    </article>\n    <article class=\"list2 item\">\n      <div class=\"grid\">\n        <h3>Escalade</h3>\n      </div>\n    </article>\n    <article class=\"list1 list3 item\">\n      <div class=\"grid\">\n        <h3>Waterpolo</h3>\n      </div>\n    </article>\n    <article class=\"list2 item\">\n      <div class=\"grid\">\n        <h3>Golf</h3>\n      </div>\n    </article>\n    <article class=\"list1 item\">\n      <div class=\"grid\">\n        <h3>Football</h3>\n      </div>\n    </article>\n    <article class=\"list1 list3 item\">\n      <div class=\"grid\">\n        <h3>Aqua Volley</h3>\n      </div>\n    </article>\n</section>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIgY7iywgQ7a-q_A8",
+      "userId": "112719197127636831937",
+      "creationTime": "2017-01-31T11:57:40.326Z",
+      "updateTime": "2017-02-19T17:26:37.011Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM3NzQ3M1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/clarches/pen/NdZryy",
+              "title": "A Pen by  Kiefer",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/clarches/pen/NdZryy&a=AIYkKU9D2eWZFs7ndFUZalaOzcKNr_LIjg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "clarches",
+          "NdZryy"
+        ],
+        "js": "var tout = document.getElementsByClassName('tout');\nvar hommes = document.getElementsByClassName('hommes');\nvar femmes = document.getElementsByClassName('femmes');\nvar enfants = document.getElementsByClassName('enfants');\nvar triple = document.getElementsByClassName('hommes femmes enfants');\n\nvar on = function(object) {\n    for (var i = 0; i < object.length; i++) {\n        object[i].style.display=\"inline-block\";\n    }\n};\nvar off = function(object) {\n    for (var i = 0; i < object.length; i++) {\n        object[i].style.display=\"none\";\n    }\n};\n\nall = document.getElementById('tout');\nvetementshommes = document.getElementById('hommes');\nvetementsfemmes = document.getElementById('femmes');\nvetementsenfants = document.getElementById('enfants');\n\nall.onclick = function() {\n    on(hommes);\n    on(femmes);\n    on(enfants);\n};\nvetementshommes.onclick = function() {\n    on(hommes);\n    off(femmes);\n    off(enfants);\n    on(triple);\n};\nvetementsfemmes.onclick = function() {\n    off(hommes);\n    on(femmes);\n    off(enfants);\n    on(triple);\n};\nvetementsenfants.onclick = function() {\n    off(hommes);\n    off(femmes);\n    on(enfants);\n    on(triple);\n};",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Roboto');\n\nbody {\n\twidth: 100%;\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: 'Roboto';\n}\n\nul {\n\tbackground-color: #111;\n\ttext-align: center;\n\tmargin: 0;\n}\n\nli {\n\tdisplay: inline-block;\n\tmargin: 20px 60px;\n\ttext-decoration: none;\n}\n\nli a {\n\tcolor: white;\n\ttext-decoration: none;\n\tfont-size: 1.7em;\n}\n\n.hover {\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-transform: perspective(1px) translateZ(0);\n  transform: perspective(1px) translateZ(0);\n  box-shadow: 0 0 1px transparent;\n  position: relative;\n  overflow: hidden;\n}\n.hover:before {\n  content: \"\";\n  position: absolute;\n  z-index: -1;\n  left: 50%;\n  right: 50%;\n  bottom: 0;\n  background: white;\n  height: 4px;\n  -webkit-transition-property: left, right;\n  transition-property: left, right;\n  -webkit-transition-duration: 0.3s;\n  transition-duration: 0.3s;\n  -webkit-transition-timing-function: ease-out;\n  transition-timing-function: ease-out;\n}\n.hover:hover:before, .hover:focus:before, .hover:active:before {\n  left: 0;\n  right: 0;\n}\n\n.tout {\n\tmargin-top: 20px;\n\tdisplay: inline-block;\n}\n\n.hommes {\n\tmargin: 20px 40px;\n\tdisplay: inline-block;\n}\n\n.femmes {\n\tmargin: 20px 40px;\n\tdisplay: inline-block;\n}\n\n.enfants {\n\tmargin: 20px 40px;\n\tdisplay: inline-block;\n}\n\nspan {\n\tfont-size: 40px;\n}",
+        "html": "<html lang=\"fr\">\n<head>\n\t<meta charset=\"utf-8\">\n\t<title>FiltreJs</title>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"filtre.css\">\n</head>\n<body>\n\t<ul>\n        <li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"tout\" class=\"hover\">Voir tout</a></li><!--\n        --><li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"hommes\" class=\"hover\">HOMMES</a></li><!--\n        --><li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"femmes\" class=\"hover\">FEMMES</a></li><!--\n        --><li><a rel=\"nofollow\" rel=\"noreferrer\"href=\"#\" id=\"enfants\" class=\"hover\">ENFANTS</a></li>\n    </ul>\n\t<article class=\"tout\">\n\t\t<div class =\"hommes femmes enfants\">\n        \n\t\t\t<span>Tshirt</span>\n\t\t</div>\n\t\t<div class=\"femmes\">\n\t\t\t<span>Robe</span>\n\t\t</div>\n\t\t<div class=\"hommes femmes enfants\">\n\t\t\t<span>Pantalon</span>\n\t\t</div>\n\t\t<div class=\"femmes\">\n\t\t\t<span>Soutien Gorge</span>\n\t\t</div>\n\t\t<div class=\"hommes femmes enfants\">\n\t\t\t<span>Bonnet</span>\n\t\t</div>\n    </article>\n    <article class=\"tout\">\n\t\t<div class=\"hommes\">\n\t\t\t<span>Costume</span>\n\t\t</div>\n\t\t<div class=\"hommes\">\n\t\t\t<span>Cravate</span>\n\t\t</div>\n\t\t<div class=\"hommes femmes enfants\">\n\t\t\t<span>Pull</span>\n\t\t</div>\n\t\t<div class=\"femmes\">\n\t\t\t<span>Chassure à talon</span>\n\t\t</div>\n\t\t<div class=\"hommes femmes enfants\">\n\t\t\t<span>Echarpe</span>\n\t\t</div>\n    </article>\n    <script type=\"text/javascript\" src=\"filtre.js\"></script> \n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIusLiywgQ7a-q_A8",
+      "userId": "105669289189926745848",
+      "creationTime": "2017-01-31T11:57:40.559Z",
+      "updateTime": "2017-02-19T13:38:19.427Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM4NDE4Nlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://lkounowski.etudiant-eemi.com/JS/filtrage/filtrage.html",
+              "title": "Bienvenue dans notre boutique",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://lkounowski.etudiant-eemi.com/JS/filtrage/filtrage.html&a=AIYkKU9leBqt2ey_h_x2zrMgVBS7l1sHUg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "err": "unsupported url: http://lkounowski.etudiant-eemi.com/JS/filtrage/filtrage.html"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIpdzjywgQ7a-q_A8",
+      "userId": "109298205465213755751",
+      "creationTime": "2017-01-31T11:57:41.299Z",
+      "updateTime": "2017-01-31T11:57:41.298Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwMzg3N1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIjd_jywgQ7a-q_A8",
+      "userId": "116165333928554373922",
+      "creationTime": "2017-01-31T11:57:41.198Z",
+      "updateTime": "2017-02-19T15:16:50.389Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwNDIzN1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/7hctwodm/",
+              "title": "Edit fiddle - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/7hctwodm/&a=AIYkKU_GeRUR6uiOgW3h5ydzn6fJKzr7zg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "7hctwodm"
+        ],
+        "js": "var view = document.getElementById(&apos;view&apos;);\nvar chaussures = document.getElementById(&apos;chaussures&apos;);\nvar tshirt = document.getElementById(&apos;tshirt&apos;);\nvar pull = document.getElementById(&apos;pull&apos;);\n\n\nvar chaussuresProduit = document.getElementsByClassName(&apos;chaussures&apos;);\nvar tshirtProduit = document.getElementsByClassName(&apos;tshirt&apos;);\nvar pullProduit = document.getElementsByClassName(&apos;pull&apos;);\nvar doublon = document.getElementsByClassName(&apos;doublon&apos;);\n\n\nview.onclick = function() {\n  for (var i = 0; i <= 4;=\"\" i++)=\"\" {=\"\" tshirtproduit[i].classlist.remove('hidden');=\"\" pullproduit[i].classlist.remove('hidden');=\"\" chaussuresproduit[i].classlist.remove('hidden');=\"\" };=\"\" tshirt.onclick=\"function()\" for=\"\" (var=\"\" i=\"0;\" <=\"4;\" chaussuresproduit[i].classlist.add('hidden');=\"\" pullproduit[i].classlist.add('hidden');=\"\" pull.onclick=\"function()\" tshirtproduit[i].classlist.add('hidden');=\"\" chaussures.onclick=\"function()\" };<=\"\" textarea=\"\">\n    <a href=\"#\" class=\"windowLabel\" data-panel=\"js\">\n      <span class=\"label\">JavaScript</span><i class=\"bts bt-gear\"></i>\n    </a>\n  </=>",
+        "css": ".hidden {\n\tdisplay: none;\n}",
+        "html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Les filtres</title>\n<link href=\"devoir index.css\" type=\"text/css\" rel=\"stylesheet\"> \n\t\t\n</head>\n<body>\n<ul>\n\t<li><h2><p id=\"view\"><a href=\"#\"><u>view all</u></a></p></h2></li>\n\t<li><h2><p id=\"chaussures\"><a href=\"#\"><u>Chaussures</u></a></p></h2></li>\n\t<li><h2><p id=\"tshirt\"><a href=\"#\"><u>T-shirt</u></a></p></h2></li>\n\t<li><h2><p id=\"pull\"><a href=\"#\"><u>Pull</u></a></p></h2></li>\n</ul>\n<ul>\n\t<li><article class=\"chaussures\">Nike</article></li>\n\t<li><article class=\"chaussures\">Adidas</article></li>\n\t<li><article class=\"chaussures\">Puma</article></li>\n\t<li><article class=\"tshirt\">The Kooples</article></li>\n\t<li><article class=\"tshirt\">Sandro</article></li>\n\t<li><article class=\"tshirt\">Ralph Lauren</article></li>\n\t<li><article class=\"tshirt chaussures\">Valentino</article></li>\n\t<li><article class=\"pull\">Saint-Laurent</article></li>\n\t<li><article class=\"pull\">Ami</article></li>\n\t<li><article class=\"pull\">Zara</article></li>\n\t<li><article class=\"pull\">Stone Island</article></li>\n</ul>\n\n<script src=\"devoir index.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwI7uPjywgQ7a-q_A8",
+      "userId": "114408121396184932572",
+      "creationTime": "2017-01-31T11:57:39.857Z",
+      "updateTime": "2017-02-19T21:01:55.023Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwNDg0Nlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://jsbin.com/vurohefori/edit?html,css,js,output",
+              "title": "JS Bin - Collaborative JavaScript Debugging",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jsbin.com/vurohefori/edit?html,css,js,output&a=AIYkKU_JgKA2ibYoNPvW9J3JOcJ9rErCiw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsbin",
+          "vurohefori"
+        ],
+        "js": "var affiche = document.getElementById('affiche');\nvar Formes = document.getElementById('Formes');\nvar instru = document.getElementById('instru');\nvar langues = document.getElementById('langues');\n\n\nvar formesProduit = document.getElementsByClassName('Formes');\nvar instruProduit = document.getElementsByClassName('instru');\nvar villesProduit = document.getElementsByClassName('langues');\nvar doublon = document.getElementsByClassName('doublon');\n\n\naffiche.onclick = function() {\n  for (var i = 0; i <= 4; i++) {\n    instruProduit[i].classList.remove('hidden');\n    villesProduit[i].classList.remove('hidden');\n    formesProduit[i].classList.remove('hidden');\n  };\n};\n\n\ninstru.onclick = function() {\n  for (var i = 0; i <= 4; i++) {\n    formesProduit[i].classList.add('hidden');\n    instruProduit[i].classList.remove('hidden');\n    villesProduit[i].classList.add('hidden');\n  };\n};\n\n\nlangues.onclick = function() {\n  for (var i = 0; i <= 4; i++) {\n    villesProduit[i].classList.remove('hidden');\n    formesProduit[i].classList.add('hidden');\n    instruProduit[i].classList.add('hidden');\n  };\n};\n\n\n\nFormes.onclick = function() {\n  for (var i = 0; i <= 3; i++) {\n    formesProduit[i].classList.remove('hidden');\n    instruProduit[i].classList.add('hidden');\n    villesProduit[i].classList.add('hidden');\n  };\n};",
+        "css": ".hidden {\n\tdisplay: none;\n}\n",
+        "html": "<!DOCTYPE html>\r\n<html lang=\"fr\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Filtres</title>\r\n  <link href=\"index.css\" type=\"text/css\" rel=\"stylesheet\">\r\n\r\n\r\n</head>\r\n\r\n<body>\r\n\r\n  <header>\r\n    <h1>Filtres des éléments</h1>\r\n  </header>\r\n\r\n\r\n  <p id=\"affiche\">Tout afficher</p>\r\n  <p id=\"Formes\">Formes</p>\r\n  <p id=\"instru\">Instruments</p>\r\n  <p id=\"langues\">Langues</p>\r\n\r\n\r\n  <article class=\"Formes\">Rectangle</article>\r\n  <article class=\"Formes\">Carré</article>\r\n  <article class=\"Formes\">Rond</article>\r\n  <article class=\"instru\">Guitare</article>\r\n  <article class=\"instru\">Piano</article>\r\n  <article class=\"instru\">Flûte</article>\r\n  <article class=\"langues\">Français</article>\r\n  <article class=\"langues\">Anglais</article>\r\n  <article class=\"langues\">Espagnol</article>\r\n\r\n\r\n  <script src=\"index.js\"></script>\r\n</body>\r\n\r\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIyOLmywgQ7a-q_A8",
+      "userId": "107652103502670549727",
+      "creationTime": "2017-01-31T11:57:39.602Z",
+      "updateTime": "2017-02-19T23:48:27.031Z",
+      "state": "TURNED_IN",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQ1MzgzMlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/Raphael-Parets/pen/PWrmog",
+              "title": "Exercice: Cacher les spoilers",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Raphael-Parets/pen/PWrmog&a=AIYkKU9gnoIb9yKmltsvGHmTlyVFhts4-g"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "Raphael-Parets",
+          "PWrmog"
+        ],
+        "js": "var show = function (quotes){\n  for (var i=0; i<quotes.length; i++) {\n    quotes[i].classList.remove('hidden');\n  }\n}\nvar hide = function (quotes){\n  for (var i=0; i<quotes.length; i++) {\n    quotes[i].classList.add('hidden');\n  }\n}\ndocument.getElementById('tout').onclick = function() {\n  show(document.getElementsByClassName('citation'));\n};\ndocument.getElementById('humour').onclick = function() {\n  hide(document.getElementsByClassName('citation'));\n  show(document.getElementsByClassName('humour'));\n};\ndocument.getElementById('anglais').onclick = function() {\n  hide(document.getElementsByClassName('citation'));\n  show(document.getElementsByClassName('anglais'));\n};\ndocument.getElementById('francais').onclick = function() {\n  hide(document.getElementsByClassName('citation'));\n  show(document.getElementsByClassName('francais'));\n};",
+        "css": ".hidden {\n  display: none;\n}\n\nbutton {\n  border: none;\n}",
+        "html": "<button id=\"tout\">afficher toutes les citations</button>\n<button id=\"humour\">Humour</button>\n<button id=\"anglais\">Citations en anglais</button>\n<button id=\"francais\">Citations en français</button>\n\n<article class=\"citation anglais\">“So many books, so little time.” \n― Frank Zappa</article>\n<article class=\"citation anglais\">“Some people never go crazy. What truly horrible lives they must lead.” \n― Charles Bukowski</article>\n<article class=\"citation humour anglais\">“I'm not afraid of death; I just don't want to be there when it happens.” \n― Woody Allen</article>\n<article class=\"citation humour francais\">Il ne faut pas désespérer des imbéciles, avec un peu d'entrainement on peut en faire des militaires.  - Pierre Desproges</article>\n<article class=\"citation humour francais\">\"Mozart était tellement précoce qu'à 35 ans il était déjà  mort.\"  - Pierre Desproges</article>\n<article class=\"citation humour francais\">\"Comme le pou, le coiffeur est un parasite du cheveu.\"  - Pierre Desproges</article>\n<article class=\"citation humour anglais\">“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.” \n― Albert Einstein</article>\n<article class=\"citation anglais\">“You would think that a rock star being married to a supermodel would be one of the greatest things in the world. It is.” - David Bowie</article>\n<article class=\"citation humour francais\">\"Il va falloir qu'un jour enfin je me décide à lire les livres que, depuis trente ans, je conseille à mes amis de lire.\"  - Sacha Guitry</article>\n<article class=\"citation anglais\">“Be nice to nerds. You may end up working for them. We all could.” \n― Charles J. Sykes</article>\n<article class=\"citation anglais\">“I love deadlines. I love the whooshing noise they make as they go by.” \n― Douglas Adams</article>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIzqT_zQgQ7a-q_A8",
+      "userId": "114109946239238848472",
+      "creationTime": "2017-01-31T11:57:39.797Z",
+      "updateTime": "2017-02-17T16:16:07.825Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMTA0OTgwNlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/ilanabloch/428wenw3/",
+              "title": "filtrage - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/ilanabloch/428wenw3/&a=AIYkKU_4DV9DIyTFWYPn3SVRj-aOccyNiA"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "ilanabloch",
+          "428wenw3"
+        ],
+        "js": "// D&#xE9;finition des variables\n\nvar tutu = document.getElementsByClassName(&apos;tout&apos;)[0];\nvar fufu = document.getElementsByClassName(&apos;fruits&apos;)[0];\nvar lulu = document.getElementsByClassName(&apos;legumes&apos;)[0];\nvar auau = document.getElementsByClassName(&apos;autres&apos;)[0];\n\n// Fonctions\n\ntutu.onclick = function functionTutu() {\n  var tutuone = document.getElementsByTagName(&apos;li&apos;);\n  for (var i=0; i<tutuone.length; i++)=\"\" {=\"\" tutuone[i].classlist.remove('hide');=\"\" };=\"\" fufu.onclick=\"function\" functionfufu()=\"\" var=\"\" fufuone=\"document.getElementsByClassName(&apos;z&apos;);\" for=\"\" (var=\"\" i=\"0;\" i<fufuone.length;=\"\" fufuone[i].classlist.add('hide');=\"\" fufutwo=\"document.getElementsByClassName(&apos;y&apos;);\" i<fufutwo.length;=\"\" fufutwo[i].classlist.add('hide');=\"\" fufuthree=\"document.getElementsByClassName(&apos;x&apos;);\" i<fufuthree.length;=\"\" fufuthree[i].classlist.remove('hide');=\"\" lulu.onclick=\"function\" functionlulu()=\"\" luluone=\"document.getElementsByClassName(&apos;x&apos;);\" i<luluone.length;=\"\" luluone[i].classlist.add('hide');=\"\" lulutwo=\"document.getElementsByClassName(&apos;z&apos;);\" i<lulutwo.length;=\"\" lulutwo[i].classlist.add('hide');=\"\" luluthree=\"document.getElementsByClassName(&apos;y&apos;);\" i<luluthree.length;=\"\" luluthree[i].classlist.remove('hide');=\"\" auau.onclick=\"function\" functionauau()=\"\" auauone=\"document.getElementsByClassName(&apos;x&apos;);\" i<auauone.length;=\"\" auauone[i].classlist.add('hide');=\"\" auautwo=\"document.getElementsByClassName(&apos;y&apos;);\" i<auautwo.length;=\"\" auautwo[i].classlist.add('hide');=\"\" auauthree=\"document.getElementsByClassName(&apos;z&apos;);\" i<auauthree.length;=\"\" auauthree[i].classlist.remove('hide');=\"\" };<=\"\" textarea=\"\">\n    <a href=\"#\" class=\"windowLabel\" data-panel=\"js\">\n      <span class=\"label\">JavaScript</span><i class=\"bts bt-gear\"></i>\n    </a>\n  </tutuone.length;>",
+        "css": "@import url(&apos;https://fonts.googleapis.com/css?family=Pacifico&apos;);\n\nbody {\n  margin: 0;\n  background-color: #ecf0f1;\n  font-family: &apos;Pacifico&apos;, cursive;\n}\n\nh1 {\n  text-align: center;\n  color: darkgreen;\n}\n\narticle {\n  display: inline-block;\n  width: 24%;\n  vertical-align: middle;\n  text-align: center;\n  color: darkgreen;\n  text-transform: uppercase;\n}\n\nul {\n  display: auto;\n  vertical-align: middle;\n  margin-left: 45%;\n}\n\nli {\n  margin: 4px;\n  color: darkgreen;\n}\n\n.hide {\n  display: none;\n}",
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Filtrage par cat&#xE9;gories</title>\n  <link rel=\"icon\" type=\"image/png\" href=\"http://fgribreau.com/articles/_voyage-au-coeur-de-javascript/js_logo.png\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"filtrage.css\">\n  <meta charset=\"utf-8\">\n  <meta content=\"text/html\">\n  <meta http-equiv=\"Content-Type\">\n</head>\n<body>\n  <h1>Filtrage par cat&#xE9;gories</h1>\n  \n  <!--Catégories-->\n    <article class=\"tout\">voir tout les produits</article>\n    <article class=\"fruits\">fruits</article>\n    <article class=\"legumes\">l&#xE9;gumes</article>\n    <article class=\"autres\">autres</article>\n  <br>\n  \n  <!--Produits-->\n  <ul>\n    <li class=\"x\">P&#xEA;ches</li>\n    <li class=\"x\">Pommes</li>\n    <li class=\"x\">Ananas</li>\n    <li class=\"x\">Litchis</li>\n    <li class=\"x y\">Tomates</li>\n    <li class=\"x y\">Avocats</li>\n    <li class=\"y\">Carottes</li>\n    <li class=\"y\">Courgettes</li>\n    <li class=\"z\">Gateaux</li>\n    <li class=\"z\">Bonbons</li>\n    <li class=\"z\">Chocolat</li>\n  </ul>\n  <script src=\"filtrage.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIzNL_zQgQ7a-q_A8",
+      "userId": "102313166894740477450",
+      "creationTime": "2017-01-31T11:57:40.738Z",
+      "updateTime": "2017-02-19T20:52:52.923Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMTA1NTY5Mlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsfiddle.net/L3zd645h/3/",
+              "title": "Filtrages - JSFiddle",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/L3zd645h/3/&a=AIYkKU-4kYC926BZFzKzsZAC1TYYavfVzg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsfiddle",
+          "L3zd645h",
+          "3"
+        ],
+        "js": "var all = document.getElementsByClassName(&apos;zero&apos;);\nvar dub = document.getElementsByClassName(&apos;dub&apos;);\nvar deep = document.getElementsByClassName(&apos;deep&apos;);\nvar dnb = document.getElementsByClassName(&apos;dnb&apos;);\nvar minimal = document.getElementsByClassName(&apos;minimal&apos;);\n\n\nvar on = function(object) {\n    for (var i = 0; i &lt; object.length; i++) {\n        object[i].style.display = &quot;inline&quot;;\n    }\n};\n\nvar off = function(object) {\n    for (var i = 0; i &lt; object.length; i++) {\n        object[i].style.display = &quot;none&quot;;\n    }\n};\n\nallmusic = document.getElementById(&apos;zero&apos;);\ndubtech = document.getElementById(&apos;dub&apos;);\ndeeph = document.getElementById(&apos;deep&apos;);\ndnbass = document.getElementById(&apos;dnb&apos;);\nminimale = document.getElementById(&apos;minimal&apos;);\nallmusic.onclick = function () {\n    on(dub);\n    on(deep);\n    on(dnb);\n    on(minimal);\n};\ndubtech.onclick = function () {\n    on(dub);\n    off(deep);\n    off(dnb);\n    off(minimal);\n};\ndeeph.onclick = function () {\n    off(dub);\n    on(deep);\n    off(dnb);\n    off(minimal);\n};\ndnbass.onclick = function () {\n    off(dub);\n    off(deep);\n    on(dnb);\n    off(minimal);\n};\nminimale.onclick = function () {\n    off(dub);\n    off(deep);\n    off(dnb);\n    on(minimal);\n};",
+        "css": "\n.menu1 {\n    transition: 1s ease;\n    color: #ffffff;\n    border-top: 4px solid #111;\n    border-bottom: 4px solid #111;\n}\n\n.menu1:hover {\n    border-bottom: 4px solid #ffffff;\n    color: forestgreen;\n}\n\n\n\n\n\ninput[type=&quot;text&quot;] {\n    height: 60px;\n    font-size: 30px;\n    display: inline-block;\n    font-family: &quot;Montserrat&quot;;\n    font-weight: 20;\n    border: none;\n    outline: none;\n    color: #555;\n    padding: 3px;\n    padding-right: 30px;\n    width: 0px;\n    position: absolute;\n    top: 0;\n    right: 13em;\n    background: none;\n    z-index: 3;\n    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);\n    cursor: pointer;\n}\n\ninput[type=&quot;text&quot;]:focus:hover {\n    border-bottom: 1px solid #BBB;\n}\n\ninput[type=&quot;text&quot;]:focus {\n    width: 400px;\n    z-index: 1;\n    border-bottom: 1px solid #BBB;\n    cursor: text;\n}\n\ninput[type=&quot;submit&quot;] {\n    height: 67px;\n    width: 63px;\n    display: inline-block;\n    color: red;\n    float: right;\n    background: url(../img/loupe.png) center center no-repeat;\n    text-indent: -10000px;\n    border: none;\n    position: absolute;\n    top: 0;\n    right: 27em;\n    z-index: 2;\n    cursor: pointer;\n    opacity: 1;\n    cursor: pointer;\n    transition: opacity .4s ease;\n}\n\ninput[type=&quot;submit&quot;]:hover {\n    opacity: 0.6;\n}\n\n\n\n\nheader {\n    background: url(&apos;../img/zombie.jpg&apos;);\n    background-attachment: fixed;\n    background-position: center;\n    margin: 0;\n    padding: 0;\n}\n\n.title {\n    color: black;\n    font-size: 4em;\n    text-align: center;\n    padding: 8% 0;\n    margin: 0;\n}\n\n\n\n\n#listehead {\n    position: inherit;\n    font-size: 2em;\n    background-color: #111;\n    width: 100%;\n    top: 0;\n    left: 0;\n    margin: 0;\n    padding: 5px 0px;\n    text-align: center;\n}\n\n#listehead a {\n    text-decoration: none;\n    padding: 5px 15px;\n    display: inline-block;\n    cursor: pointer;\n}\n\n\n\n\nbody {\n    font-family: &apos;Montserrat&apos;;\n    margin: 0;\n    font-weight: 300;\n}\n\n#nav {\n    background-color: #111;\n    position: relative;\n    width: 100%;\n    top: 0;\n    left: 0;\n}\n\n#logo a {\n    text-decoration: none;\n    padding: 15px 20px;\n    display: inline-block;\n}\n\n#nav a {\n    text-decoration: none;\n    padding: 15px 20px;\n    display: inline-block;\n}\n\n#logo img {\n    width: 8em;\n    display: inline-block;\n    vertical-align: middle;\n    margin-left: 23em;\n    padding: 0;\n}\n\nul {\n    margin: 0;\n    padding: 0;\n    display: inline-block;\n    vertical-align: middle;\n}\n\nli {\n    display: inline-block;\n    list-style-type: none;\n    vertical-align: middle;\n}\n\n#logo,\nul,\n#recherche {\n    display: inline-block;\n}\n\nh3 {\n    color: #4b5a6d;\n    font-size: 2em;\n    margin: 0;\n}\n\nsection {\n    margin: 0 18em;\n    background-color: #fff;\n    transition: all 0.5s ease-in-out;\n}\n\n\nh1,\nh1+p {\n    margin: 30px 15px 0;\n    font-weight: 300;\n}\n\nh1+p a {\n    color: #333;\n}\n\nh1+p a: hover {\n    text-decoration: none;\n}\n\nh2 {\n    margin: 60px 15px 0;\n    padding: 0;\n    font-weight: 300;\n}\n\nh2 span {\n    margin-left: 1em;\n    color: #B9090B;\n    font-size: 85%;\n}\n\n.column {\n    margin: 0 0 0;\n    padding: 0;\n}\n\n.column: last-child {\n    padding-bottom: 60px;\n}\n\n.column: after {\n    content: &apos;&apos;;\n    clear: both;\n    display: block;\n}\n\n.column div {\n    position: relative;\n    float: left;\n    width: 300px;\n    height: 200px;\n    margin: 0 0 0 0;\n    padding: 25px 14px;\n}\n\n.column div:first-child {\n    margin-left: 0;\n}\n\n.column div span {\n    position: absolute;\n    bottom: -20px;\n    left: 0;\n    z-index: -1;\n    display: block;\n    width: 300px;\n    margin: 0;\n    padding: 0;\n    color: #B9090B;\n    font-size: 18px;\n    text-decoration: none;\n    text-align: center;\n    -webkit-transition: .3s ease-in-out;\n    transition: .3s ease-in-out;\n    opacity: 0;\n}\n\nfigure {\n    width: 300px;\n    height: 200px;\n    margin: 0;\n    padding: 0;\n    background: #fff;\n    overflow: hidden;\n}\n\nfigure:hover+span {\n    bottom: 0;\n    opacity: 1;\n}\n\n",
+        "html": "<!DOCTYPE HTML>\n<html>\n\n<head>\n    <meta charset=\"utf-8\">\n    <title>ElectroGender pour comprendre l&apos;&#xE9;lectronique</title>\n    <meta name=\"description\" content=\"electrogender permet de mieux connaitre les genres pr&#xE9;cis des musiques electro\">\n    <meta name=\"author\" content=\"ElectroGender\">\n    <link rel=\"shortcut icon\" href=\"\">\n    <link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\"> </head>\n    \n\n<body>\n    <nav>\n        <div id=\"nav\">\n            <div id=\"menu\">\n                <div id=\"logo\">\n                    <a href=\"index.html\"><img src=\"logo-blanc.png\" alt=\"Logo\"></a>\n                </div>\n                <ul id=\"menulist\">\n                    <li><a href=\"#\" class=\"menu1\">ACCUEIL</a> </li>\n                    <!--\n                -->\n                    <li><a href=\"#\" class=\"menu1\">EQUIPES</a> </li>\n                    <!--\n                -->\n                    <li><a href=\"#\" class=\"menu1\">PLAYLIST</a> </li>\n                    <!--\n                -->\n                    <li><a href=\"#\" class=\"menu1\">CONTACT</a> </li>\n                </ul>\n            </div>\n        </div>\n    </nav>\n    <header>\n        <h1 class=\"title\">ElectroGender</h1> </header>\n    <ul id=\"listehead\">\n        <li><a id=\"zero\" class=\"menu1\">Toutes les styles</a></li>\n        <!--\n        -->\n        <li><a id=\"dub\" class=\"menu1\">Dub Techno</a></li>\n        <!--\n        -->\n        <li><a id=\"deep\" class=\"menu1\">Deep House</a></li>\n        <!--\n        -->\n        <li><a id=\"dnb\" class=\"menu1\">Drum&apos;n&apos;Bass</a></li>\n        <!--\n        -->\n        <li><a id=\"minimal\" class=\"menu1\">Minimal</a></li>\n    </ul>\n    <section>\n        <article class=\"zero\">\n            <div class=\"hover08 column\">\n                <div class=\"dub\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/xqo7mGda4A8\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"dub\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/xqo7mGda4A8\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"deep\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/7WgMCyhl6fQ\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"dnb\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/U9FkLmMEXKQ\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n            </div>\n        </article>\n        <article class=\"zero\">\n            <div class=\"hover08 column\">\n                <div class=\"minimal\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/t2lHDKH5JcI\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"minimal\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/GvwqK-01dpk\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span>Attack on Titan</span> </div>\n                <div class=\"dub deep\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/8R9UMPXM7ZE\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"deep\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/UOd-yScmxD4\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n            </div>\n        </article>\n        <article class=\"zero\">\n            <div class=\"hover08 column\">\n                <div class=\"dub minimal\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/ius9LCkW_J4\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"deep\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/we5skTbZFXk\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"deep\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/IZ_p_9E0nDA\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"minimal\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/6EnUIrdQeGw\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n            </div>\n        </article>\n        <article class=\"zero\">\n            <div class=\"hover08 column\">\n                <div class=\"dub\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/i-5maiuaInE\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"deep\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/HFOLjmvf1Nw\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"minimal\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/iCrScX5IsE8\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n                <div class=\"deep\">\n                    <figure>\n                        <iframe width=\"300\" height=\"200\" src=\"https://www.youtube.com/embed/mpVJpiTbciA\" frameborder=\"0\" allowfullscreen></iframe>\n                    </figure> <span></span> </div>\n            </div>\n        </article>\n    </section>\n    <script type=\"text/javascript\" src=\"script.js\"></script>\n\n</body></html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwI0Iu_zggQ7a-q_A8",
+      "userId": "113103264829571653000",
+      "creationTime": "2017-01-31T11:57:40.269Z",
+      "updateTime": "2017-02-19T13:13:07.510Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMjA5NTE4NFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://jsbin.com/baximixaxa/edit?html,js,output",
+              "title": "JS Bin - Collaborative JavaScript Debugging",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsbin.com/baximixaxa/edit?html,js,output&a=AIYkKU-RPdK5CYoKU0ONvQlB0p-icZxPtQ"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsbin",
+          "baximixaxa"
+        ],
+        "js": "(function () {\n  var allButton = document.getElementById('all'); \n  var equipement1Button = document.getElementById('equipement1'); \n  var equipement2Button = document.getElementById('equipement2');\n  var equipement3Button = document.getElementById('equipement3');\n  var equipement4Button = document.getElementById('equipement4');\n          \n  var montreProduits = function (produits) {\n    for (var i=0; i<produits.length; i++) {\n      produits[i].style.display = \"block\";\n                }\n            };\n  var cacheProduits = function (produits) {\n    for (var i=0; i<produits.length; i++) {\n      produits[i].style.display = \"none\";\n                }\n            };\n  equipement1Produits = document.getElementsByClassName('equipement1');\n  equipement2Produits = document.getElementsByClassName('equipement2');\n  equipement3Produits = document.getElementsByClassName('equipement3');\n  equipement4Produits = document.getElementsByClassName('equipement4');          \n  titre1Produits = document.getElementsByClassName('titre1');\n  titre2Produits = document.getElementsByClassName('titre2');\n  titre3Produits = document.getElementsByClassName('titre3');\n  titre4Produits = document.getElementsByClassName('titre4');\n  \n  allButton.onclick = function() {\n    montreProduits(equipement1Produits);\n    montreProduits(equipement2Produits);\n    montreProduits(equipement3Produits);\n    montreProduits(equipement4Produits);\n    cacheProduits(titre1Produits);\n    cacheProduits(titre2Produits);\n    cacheProduits(titre3Produits);\n    cacheProduits(titre4Produits);\n  };\n  equipement1Button.onclick = function() {\n    montreProduits(equipement1Produits);\n    cacheProduits(equipement2Produits);\n    cacheProduits(equipement4Produits);\n    cacheProduits(equipement3Produits);\n  };\n  equipement2Button.onclick = function() {\n    cacheProduits(equipement1Produits);\n    cacheProduits(equipement3Produits);\n    cacheProduits(equipement4Produits);\n    montreProduits(equipement2Produits);\n            };\n  equipement3Button.onclick = function() {\n    cacheProduits(equipement1Produits);\n    cacheProduits(equipement2Produits);\n    cacheProduits(equipement4Produits);\n    montreProduits(equipement3Produits);\n            };\n  equipement4Button.onclick = function() {\n    cacheProduits(equipement1Produits);\n    cacheProduits(equipement2Produits);\n    cacheProduits(equipement3Produits);\n    montreProduits(equipement4Produits);\n            };\n        })();\n",
+        "css": "",
+        "html": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n</head>\r\n<body>\r\n    <header>\r\n            <h1 align=\"center\">Choisissez votre équipement</h1>\r\n    </header>    \r\n    <ul>\r\n        <li>\r\n          <button id=\"all\">Voir tous les equipement</button>  \r\n          <button id=\"equipement1\">Les shorts</button>  \r\n          <button id=\"equipement2\">Les chaussures</button>  \r\n          <button id=\"equipement3\">Les hauts/lacets </button> \r\n          <button id=\"equipement4\">Les accessoires</button> \r\n        </li>\r\n    </ul>\r\n<section>\r\n    <h2 class=\"equipement1 titre1\">Les shorts disponibles :</h2>\r\n    <h2 class=\"equipement2 titre2\">Les chaussures disponibles:</h2>\r\n    <h2 class=\"equipement3 titre3\">Les hauts et lacets disponibles :</h2>\r\n    <h2 class=\"equipement4 titre4\">Les accessoires disponibles: </h2>\r\n    <div>\r\n            <article class=\"equipement1 produit\">\r\n              <li>Les shorts rouge</li>\r\n              <li>Les shorts noirs</li>\r\n              <li>Les shorts Blancs</li>\r\n      </article>\r\n            <article class=\"equipement2 produit equipement3 produit equipement4 produit\">\r\n              <li>Les chaussures bleues</li>\r\n              <li>Les lacets noires</li>\r\n      </article>\r\n            <article class=\"equipement2 produit equipement3 produit\">\r\n              <li>Les lacets rouges</li>\r\n      </article>\r\n            <article class=\"equipement3 produit\">\r\n              <li>Les hauts bleues</li>\r\n              <li>Les hauts verts</li>\r\n      </article>\r\n            <article class=\"equipement4 produit\">\r\n            <li>Protèges tibias</li>\r\n            <li>Ballons ligue des champions</li>\r\n      </article>    \r\n  </div>\r\n  </section>\r\n<script lang=\"javascript\" src=\"san.js\"></script>\r\n  </body>\r\n      </html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIgoTN1AgQ7a-q_A8",
+      "userId": "112793317213724843677",
+      "creationTime": "2017-01-31T11:57:40.963Z",
+      "updateTime": "2017-02-19T22:59:23.198Z",
+      "state": "TURNED_IN",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMyNDkwNjQ5OFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/pierre7592/pen/MJMpqK",
+              "title": "A Pen by  Pierre Salesse",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/pierre7592/pen/MJMpqK&a=AIYkKU-3QRQTbFTW7ef9JxV7lBVSS1iCDA"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "pierre7592",
+          "MJMpqK"
+        ],
+        "js": "var film = document.getElementById('film');\nvar livre = document.getElementById('livre');\nvar art = document.getElementById('art');\n\nvar movie = document.getElementsByClassName('movie');\nvar auteur = document.getElementsByClassName('auteur');\nvar artiste = document.getElementsByClassName('artiste');\n\n\nfilm.onclick = function () {\n\tfor (var i = 0; i <= nomdetaclasse.length; i++){\n\t\tmovie[i].classList.add('hidden');\n\t\tauteur[i].classList.remove('hidden');\n\t\tartiste[i].classList.remove('hidden');\n\t};\n};\n\nlivre.onclick = function() {\n\tfor (var i = 0; i <= nomdetaclasse.length; i++){\n\t\tauteur[i].classList.add('hidden');\n\t\tmovie[i].classList.remove('hidden');\n\t\tartiste[i].classList.remove('hidden');\n\n\t\t\n\n\t};\n};\n\nart.onclick = function () {\n\tfor ( var i = 0; i <= nomdetaclasse.length; i++){\n\t\tmovie[i].classList.remove('hidden');\n\t\tauteur[i].classList.remove('hidden');\n\t\tartiste[i].classList.add('hidden');\n\t};\n};\n\n//== mon code ne fonctionne pas je ne comprend pas pourquoi, j'ai l'impression d'avoir tout bien appliqué",
+        "css": "#liste li \n{\n\tlist-style-type: none;\n\tdisplay: inline-block;\n\tpadding: 50px;\n\tcursor: pointer;\n}\nhr \n{\n\twidth: 20%;\n\tmargin-left: 0px;\n}\n#contenu\n{\n\tmargin-left: 30px;\n}\n.hidden\n{\n\tdisplay: none;\n}",
+        "html": "<html>\n<head>\n<title>Exercice Filtres JS</title>\n<meta charset=\"utf-8\" />\n<link rel=\"stylesheet\" type=\"text/css\" href=\"filtres.css\">\n</head>\n<body>\n\t<div id=\"titre\">\n \t\t<h1>Quelle est votre recherche ?</h1>\n \t</div>\n \t<div id=\"liste\">\n \t\t<ul>\n \t\t\t<li id=\"film\">Les Films</li>\n \t\t\t<li id=\"livre\">Les Livres</li>\n \t\t\t<li id=\"art\">Les artistes</li>\n \t\t</ul>\n \t</div>\n \t<div id=\"contenu\">\n \t\t<article class=\"movie\">Batman</article>\n \t\t<article class=\"movie\">Seven</article>\n \t\t<article class=\"movie\">Millenium</article>\n \t\t<article class=\"movie\">Le prestige</article>\n \t\t<hr>\n \t\t<article class=\"auteur\">R. Price</article>\n \t\t<article class=\"auteur\">M. Connelly</article>\n \t\t<article class=\"auteur\">D. Lehan</article>\n \t\t<article class=\"auteur\">G. Pelecanos</article>\n \t\t<hr>\n \t\t<article class=\"artiste\">R. Price</article>\n \t\t<article class=\"artiste\">D. Lehan</article>\n \t\t<article class=\"artiste\">M. Connelly</article>\n \t\t<article class=\"artiste\">G. Pelecanos</article>\n\n \t</div>\n\n\n<script type=\"text/javascript\" src=\"filtres.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwInujP1AgQ7a-q_A8",
+      "userId": "116429873633355841301",
+      "creationTime": "2017-01-31T11:57:39.529Z",
+      "updateTime": "2017-02-19T22:16:46.423Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMyNDk1MjA5NFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "https://codepen.io/QuentinChampenois/pen/QdXpNY",
+              "title": "quentinchampenois3",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/QuentinChampenois/pen/QdXpNY&a=AIYkKU8BvyHGOfEGo1pdNnNnE9xLjwc20Q"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "QuentinChampenois",
+          "QdXpNY"
+        ],
+        "js": "\n// ==================================== Définition des catégories ====================================\nvar view = document.getElementById('view');\nvar smartphone = document.getElementById('smartphone');\nvar console = document.getElementById('console');\nvar voiture = document.getElementById('voiture');\n\n// ==================================== Définition des produits ====================================\nvar smartphoneProduit = document.getElementsByClassName('smartphone');\nvar consoleProduit = document.getElementsByClassName('console');\nvar voitureProduit = document.getElementsByClassName('voiture');\nvar doublon = document.getElementsByClassName('doublon');\n\n// ==================================== Function du bouton View ==================================== \nview.onclick = function (){\t\n  for (var i=0; i <= 4; i++){\n    consoleProduit[i].classList.remove('hidden');\n    voitureProduit[i].classList.remove('hidden');\n    smartphoneProduit[i].classList.remove('hidden');\n  };\n};\n\n// ==================================== Catégorie Consoles ====================================\nconsole.onclick = function (){\n  for (var i=0; i <= 4; i++){\n\tsmartphoneProduit[i].classList.add('hidden');\n    consoleProduit[i].classList.remove('hidden');\n\tvoitureProduit[i].classList.add('hidden');\n};\n};\n\n// ==================================== Catégorie Voiture ====================================\nvoiture.onclick = function (){\n  for (var i=0; i <= 4; i++){\n\tvoitureProduit[i].classList.remove('hidden');\t  \n    smartphoneProduit[i].classList.add('hidden');\n\tconsoleProduit[i].classList.add('hidden');\n};\n};\n\n// ==================================== Catégorie Smartphones ====================================\n\nsmartphone.onclick = function (){\n  for (var i=0; i <= 3; i++){\n\tsmartphoneProduit[i].classList.remove('hidden');\t    \n    consoleProduit[i].classList.add('hidden');\n\tvoitureProduit[i].classList.add('hidden');\n};\n};",
+        "css": "@import url('https://fonts.googleapis.com/css?family=Lobster');\n\nhtml {\n\tbackground-image: url('mcdo.jpg');\n}\n\nbody {\n\twidth: 70%;\n\tmargin: auto;\n\tborder: 1px solid black;\n\tbackground-color: #FFFFFF;\n\n}\n\n.hidden {\n\tdisplay: none;\n}\nheader {\n\tbackground-image: url('')\n}\n\nh1 {\n\ttext-align: center;\n\tcolor: #F64747;\n\tfont-family: 'Lobster', cursive;\n}\nnav {\n\twidth: 100%;\n}\n\nnav p {\n\tdisplay: inline-block;\n\tbackground-color: #F64747;\n\ttext-align: center;\n\twidth: 25%;\n\tmargin: auto;\n\tfont-size: 1.6em;\n\tcolor: #FFFFFF;\n\tfont-family: 'Lobster', cursive;\n}\n\nnav p:hover {\n\tzoom: 1.2;\n\tcursor: pointer;\n\tfont-weight: bold;\n}\n\narticle {\n\tfont-size: 1.8em;\n\ttext-align: center;\n\tpadding: 20px;\n\tfont-family: 'Lobster', cursive;\n}\n\nsection, div {\n\tdisplay: inline-block;\n\ttext-align: center;\n\tpadding: 100px;\n}",
+        "html": "\n<html lang=\"fr\">\n<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Les filtres</title>\n<link href=\"index.css\" type=\"text/css\" rel=\"stylesheet\"> \n<link href=\"https://fonts.googleapis.com/css?family=Lobster\" rel=\"stylesheet\">\n\t\t<!-- <link rel=\"icon\" type=\"image/png\" href=\"icone.png\" /> -->\n\t\t\n</head>\n<body>\n\n<header>\n\t<h1>Les filtres</h1>\n</header>\n<nav>\n\t<p id=\"view\">Tout voir</p><!--\n\t--><p id=\"smartphone\">Smartphones</p><!--\n\t--><p id=\"console\">Consoles</p><!--\n\t--><p id=\"voiture\">Voitures</p>\n</nav>\n\n<section>\n<div class=\"part1\">\n<article class=\"smartphone\">Samsung</article>\n<article class=\"smartphone\">Iphone</article>\n<article class=\"smartphone\">Sony</article>\n</div><!--\n--><div class=\"part2\">\n<article class=\"console\">Xbox</article>\n<article class=\"console\">Gamecube</article>\n<article class=\"console\">Sony Console</article>\n<article class=\"console smartphone\">Iphone Console</article>\n</div><!--\n--><div class=\"part3\">\n<article class=\"voiture\">Tesla</article>\n<article class=\"voiture\">BMW</article>\n<article class=\"voiture\">Audi</article>\n<article class=\"voiture\">Mercedes</article>\n</div>\n</section>\n\n<script src=\"index.js\"></script>\n</body>\n</html>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIvbXg2AgQ7a-q_A8",
+      "userId": "113176638625803008551",
+      "creationTime": "2017-01-31T11:57:39.374Z",
+      "updateTime": "2017-02-19T17:59:01.495Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMzMzYxMjczM1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://codepen.io/flofloz/pen/OWeRLv",
+              "title": "A Pen by  Florian",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/flofloz/pen/OWeRLv&a=AIYkKU_qcDT36aTSmcrtPOZbft2CLfjunw"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "codepen",
+          "flofloz",
+          "OWeRLv"
+        ],
+        "js": "var tout = document.getElementById('tout');\nvar premierBouton = document.getElementById('un');\nvar qBouton = document.getElementById('deux');\nvar hBouton = document.getElementById('trois');\nvar cuisineBouton = document.getElementById('quatre');\nvar gBouton = document.getElementById('cinq');\nvar jBouton = document.getElementById('six');\nvar alls = document.getElementsByClassName('s');\nvar fs = document.getElementsByClassName('f');\nvar qs = document.getElementsByClassName('q');\nvar hs = document.getElementsByClassName('h');\nvar cuisines = document.getElementsByClassName('cuisine');\nvar gs = document.getElementsByClassName('g');\nvar d = document.getElementsByClassName('j')\nvar voir = function (a) {\n    for (var i = 0; i < a.length; i++) {\n        a[i].style.display = 'inline-block';\n    }\n};\nvar cacher = function (a) {\n    for (var i = 0; i < a.length; i++) {\n        a[i].style.display = 'none';\n    }\n};\ntout.onclick = function () {\n    voir(alls);\n}\npremierBouton.onclick = function () {\n    cacher(qs);\n    cacher(hs);\n    cacher(cuisines);\n    cacher(gs);\n    cacher(d);\n    voir(fs);\n}\nqBouton.onclick = function () {\n    cacher(fs);\n    cacher(hs);\n    cacher(cuisines);\n    cacher(gs);\n    cacher(d);\n    voir(qs);\n}\nhBouton.onclick = function () {\n    cacher(fs);\n    cacher(qs);\n    cacher(cuisines);\n    cacher(gs);\n    cacher(d);\n    voir(hs);\n}\ncuisineBouton.onclick = function () {\n    cacher(fs);\n    cacher(qs);\n    cacher(hs);\n    cacher(gs);\n    cacher(d);\n    voir(cuisines);\n}\ngBouton.onclick = function () {\n    cacher(fs);\n    cacher(qs);\n    cacher(hs);\n    cacher(cuisines);\n    cacher(d);\n    voir(gs);\n}\njBouton.onclick = function () {\n    cacher(fs);\n    cacher(qs);\n    cacher(hs);\n    cacher(cuisines);\n    cacher(gs);\n    voir(d);\n}",
+        "css": "body {\n  margin:0;\n  font-family: arial;\n}\n\n.s {\n  border: 1px #CEDAD9 solid;\n    box-shadow: 5px 3px 4px #BDC3C7;\n    border-radius: 1px;\n    width: 250px;\n    text-align:center;\n}",
+        "html": "<ul>\n  <li id=\"tout\">Voir tous nos meubles</li><!--\n  --><li id=\"un\">Meubles 1</li><!--\n  --><li id=\"deux\">Meubles 2</li><!--\n  --><li id=\"trois\">Meubles 3</li><!--\n  --><li id=\"quatre\">Meubles 4</li><!--  \n  --><li id=\"cinq\">Meubles 5</li><!--  \n  --><li id=\"six\">Meubles 6</li>\n</ul>\n<div>\n  <article class=\"q s\">-produit1-</article>\n  <article class=\"d s\">-produit2-</article>\n  <article class=\"g q s\">-produit3-</article>\n  <article class=\"g f s\">-produit4-</article>\n  <article class=\"h q j s\">-produit5-</article>\n  <article class=\"f h j s\">-produit6-</article>\n  <article class=\"d s\">-produit7-</article>\n    <article class=\"h f s\">-produit8-</article>\n  <article class=\"h f s\">-produit9-</article>\n  <article class=\"q j s\">-produit10-</article>  \n</div>"
+      }
+    ]
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIwN_e3AgQ7a-q_A8",
+      "userId": "105099553100923382847",
+      "creationTime": "2017-01-31T11:57:40.962Z",
+      "updateTime": "2017-01-31T11:57:40.961Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM0MTk3Mzk1Mlpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIgsXV3ggQ7a-q_A8",
+      "userId": "118232406805048865000",
+      "creationTime": "2017-01-31T11:57:41.459Z",
+      "updateTime": "2017-01-31T11:57:41.458Z",
+      "state": "CREATED",
+      "late": true,
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM0NjAxNzQxMFpa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {}
+    },
+    "fetchedAttachments": []
+  },
+  {
+    "_gcla_subm": {
+      "courseId": "3001624136",
+      "courseWorkId": "4287272941",
+      "id": "CgwIrZfD4wgQ7a-q_A8",
+      "userId": "100526324821579489480",
+      "creationTime": "2017-01-31T11:57:40.483Z",
+      "updateTime": "2017-02-19T19:56:15.149Z",
+      "state": "TURNED_IN",
+      "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM1NjIwMjQxM1pa",
+      "courseWorkType": "ASSIGNMENT",
+      "assignmentSubmission": {
+        "attachments": [
+          {
+            "link": {
+              "url": "http://jsbin.com/fatomuceca/edit?html,css,js",
+              "title": "JS Bin - Collaborative JavaScript Debugging",
+              "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jsbin.com/fatomuceca/edit?html,css,js&a=AIYkKU8lUKDUxxW9mv94ElkWJ3Bm3L6VDg"
+            }
+          }
+        ]
+      }
+    },
+    "fetchedAttachments": [
+      {
+        "source": [
+          "jsbin",
+          "fatomuceca"
+        ],
+        "js": "\n\nvar voir = document.getElementById('voir');\nvar fruits = document.getElementById('fruits');\nvar couleurs = document.getElementById('couleurs');\nvar villes = document.getElementById('villes');\n\n\nvar fruitsProduit = document.getElementsByClassName('fruits');\nvar couleursProduit = document.getElementsByClassName('couleurs');\nvar villesProduit = document.getElementsByClassName('villes');\nvar doublon = document.getElementsByClassName('doublon');\n\n\nvoir.onclick = function (){\t\n  for (var i=0; i <= 4; i++){\n    couleursProduit[i].classList.remove('hidden');\n    villesProduit[i].classList.remove('hidden');\n    fruitsProduit[i].classList.remove('hidden');\n  };\n};\n\n\ncouleurs.onclick = function (){\n  for (var i=0; i <= 4; i++){\n\tfruitsProduit[i].classList.add('hidden');\n    couleursProduit[i].classList.remove('hidden');\n\tvillesProduit[i].classList.add('hidden');\n};\n};\n\n\nvilles.onclick = function (){\n  for (var i=0; i <= 4; i++){\n\tvillesProduit[i].classList.remove('hidden');\t  \n    fruitsProduit[i].classList.add('hidden');\n\tcouleursProduit[i].classList.add('hidden');\n};\n};\n\n\n\nfruits.onclick = function (){\n  for (var i=0; i <= 3; i++){\n\tfruitsProduit[i].classList.remove('hidden');\t    \n    couleursProduit[i].classList.add('hidden');\n\tvillesProduit[i].classList.add('hidden');\n};\n};\n",
+        "css": ".hidden {\n\tdisplay: none;\n}\n",
+        "html": "<!DOCTYPE html>\r\n<html lang=\"fr\">\r\n<head>\r\n\t\t<meta charset=\"utf-8\">\r\n\t\t<title>Les filtres</title>\r\n<link href=\"index.css\" type=\"text/css\" rel=\"stylesheet\"> \r\n\r\n\t\t\r\n</head>\r\n<body>\r\n\r\n<header>\r\n\t<h1>Les filtres</h1>\r\n</header>\r\n\r\n<div class=\"div1\">\r\n<p id=\"voir\">Tout voir</p>\r\n<p id=\"fruits\">Fruits</p>\r\n<p id=\"couleurs\">Couleurs</p>\r\n<p id=\"villes\">Villes</p>\r\n</div>\r\n\r\n</br>\r\n\r\n<article class=\"fruits\">pomme</article>\r\n<article class=\"fruits\">fraise</article>\r\n<article class=\"fruits\">poire</article>\r\n<article class=\"couleurs\">rouge</article>\r\n<article class=\"couleurs\">vert</article>\r\n<article class=\"couleurs\">bleu</article>\r\n<article class=\"couleurs fruits\">orange</article>\r\n<article class=\"villes\">Paris</article>\r\n<article class=\"villes\">Rouen</article>\r\n<article class=\"villes\">Dijon</article>\r\n<article class=\"villes\">Lyon</article>\r\n\r\n\r\n<script src=\"index.js\"></script>\r\n</body>\r\n</html>"
+      }
+    ]
+  }
+]
