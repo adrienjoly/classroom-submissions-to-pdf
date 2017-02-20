@@ -4,7 +4,7 @@
   "author": "Adrien Joly <adrien.joly@gmail.com>",
   "repository": "https://github.com/cours-javascript-eemi-2016-2017/classroom-submissions-to-pdf.git",
   "scripts": {
-    "start": "source .env; node src/download-students.js; node src/download-submissions.js; node src/convert-submissions.js",
+    "start": "source .env; node src/download-students.js; node src/download-submissions.js; node src/convert-submissions.js; node src/render-submissions.js",
     "test": "source .env; node tests/test.js",
     "tests": "source .env; node tests/test-pdf.js; node tests/test-apis.js; node tests/test-classroom-api.js"
   },
