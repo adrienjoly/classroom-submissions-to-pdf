@@ -14,7 +14,7 @@
     "googleapis": "^14.0.0",
     "html-pdf": "^2.1.0",
     "jsbin-client": "^0.1.1",
-    "jsfiddle": "^1.1.2",
+    "jsfiddle": "https://github.com/adrienjoly/node-jsfiddle#2351bc5",
     "request": "^2.79.0"
   }
 }
