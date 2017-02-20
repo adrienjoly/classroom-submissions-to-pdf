@@ -5,11 +5,21 @@
     "id": "CgwI89e9yggQ7a-q_A8",
     "userId": "107477289419153585422",
     "creationTime": "2017-01-31T11:57:38.985Z",
-    "updateTime": "2017-01-31T11:57:38.983Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T10:38:21.795Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwMzY4MzU3MVpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://jsfiddle.net/edlmt/25wy47Lh/1/",
+            "title": "filtreJS - JSFiddle",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/edlmt/25wy47Lh/1/&a=AIYkKU-WIwMmuvsDWyWeVO7Bfw4DrJZlrw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -17,11 +27,21 @@
     "id": "CgwI6OP-yggQ7a-q_A8",
     "userId": "110503983348176565158",
     "creationTime": "2017-01-31T11:57:38.900Z",
-    "updateTime": "2017-01-31T11:57:38.898Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T20:06:57.702Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNDc1MDA1Nlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/Kmil/pen/QdXGZp",
+            "title": "A Pen by  Kamil",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Kmil/pen/QdXGZp&a=AIYkKU-68VulNcdatasR-FNVi58-qEkFrg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -29,11 +49,21 @@
     "id": "CgwIsLXOywgQ7a-q_A8",
     "userId": "106180904736643783286",
     "creationTime": "2017-01-31T11:57:38.732Z",
-    "updateTime": "2017-01-31T11:57:38.730Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-18T15:13:44.560Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjA1NDgzMlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/goumille/pen/egaQBb",
+            "title": "Skin Csgo",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/goumille/pen/egaQBb&a=AIYkKU8KDb3d5qMBr4zQsQn3FdHZLRfYhg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -41,11 +71,21 @@
     "id": "CgwI85vcywgQ7a-q_A8",
     "userId": "101787338833938307621",
     "creationTime": "2017-01-31T11:57:40.746Z",
-    "updateTime": "2017-01-31T11:57:40.745Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-18T12:28:37.538Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjI4MDk0N1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://codepen.io/n5c12xpro/pen/zNQZWw",
+            "title": "Filtrage en JS",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/n5c12xpro/pen/zNQZWw&a=AIYkKU8xkP9Pbt8DVIG8uRrUfzA-1SJK0A"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -53,11 +93,21 @@
     "id": "CgwI1dndywgQ7a-q_A8",
     "userId": "108537857415545477339",
     "creationTime": "2017-01-31T11:57:40.003Z",
-    "updateTime": "2017-01-31T11:57:40.002Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:36:22.793Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMwNTIzN1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://codepen.io/LouisGosse/pen/RKzpLM",
+            "title": "A Pen by  Louis",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/LouisGosse/pen/RKzpLM&a=AIYkKU8NDzl35A-iHZAPS8751ARav-hiBg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -75,7 +125,7 @@
           "link": {
             "url": "http://codepen.io/JeanneV/pen/dNLgba",
             "title": "A Pen by  Jeanne",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/JeanneV/pen/dNLgba&a=AIYkKU-6_ABZZbGoK77wxQaW-eCbO-8-iA"
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/JeanneV/pen/dNLgba&a=AIYkKU8g1DfTKg5YWtHnO0GBSGdQqUCRXg"
           }
         }
       ]
@@ -87,11 +137,21 @@
     "id": "CgwIu_veywgQ7a-q_A8",
     "userId": "117576151158786046837",
     "creationTime": "2017-01-31T11:57:39.293Z",
-    "updateTime": "2017-01-31T11:57:39.291Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T16:17:15.656Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMyNTk0N1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://jsfiddle.net/ct1zn68u/3/",
+            "title": "Edit fiddle - JSFiddle",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/ct1zn68u/3/&a=AIYkKU92v8Qm2ARipU7yRQ76fIKBDrF5Eg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -99,7 +159,7 @@
     "id": "CgwIuY7fywgQ7a-q_A8",
     "userId": "102010675502767179627",
     "creationTime": "2017-01-31T11:57:38.645Z",
-    "updateTime": "2017-02-12T12:00:14.761Z",
+    "updateTime": "2017-02-17T21:28:12.234Z",
     "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMyODM3N1pa",
     "courseWorkType": "ASSIGNMENT",
@@ -107,9 +167,9 @@
       "attachments": [
         {
           "link": {
-            "url": "http://jessyhachet.bsthbg.fr/",
-            "title": "Bienvenue sur UltraFlix | Classeur des meilleures s�ries",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jessyhachet.bsthbg.fr/&a=AIYkKU8zAHUGp4FbGAmhbQw3hDARRm1TUg"
+            "url": "http://codepen.io/anon/pen/GravYz",
+            "title": "Create a New Pen",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/anon/pen/GravYz&a=AIYkKU9wKPY8JjgG-enmYzC2iqeL6vH95w"
           }
         }
       ]
@@ -121,11 +181,21 @@
     "id": "CgwI78bfywgQ7a-q_A8",
     "userId": "108296987848356040668",
     "creationTime": "2017-01-31T11:57:41.978Z",
-    "updateTime": "2017-01-31T11:57:41.976Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:39:22.878Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjMzNTU5OVpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://jsbin.com/zidawac/3/edit?html,js,output",
+            "title": "JS Bin - Collaborative JavaScript Debugging",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jsbin.com/zidawac/3/edit?html,js,output&a=AIYkKU9sn7RtvJnAFvw9ZPaoo2I9uOmuEw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -133,11 +203,21 @@
     "id": "CgwIns_hywgQ7a-q_A8",
     "userId": "113909539356196281852",
     "creationTime": "2017-01-31T11:57:41.526Z",
-    "updateTime": "2017-01-31T11:57:41.525Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:05:21.275Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM2OTQzOFpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://codepen.io/antalis_victoria/pen/GrbWgy",
+            "title": "A Pen by  Antalis",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/antalis_victoria/pen/GrbWgy&a=AIYkKU-4zA2DHLzJlbcUqS_SM7LwLMTPvw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -145,11 +225,21 @@
     "id": "CgwIgY7iywgQ7a-q_A8",
     "userId": "112719197127636831937",
     "creationTime": "2017-01-31T11:57:40.326Z",
-    "updateTime": "2017-01-31T11:57:40.325Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T17:26:37.011Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM3NzQ3M1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/clarches/pen/NdZryy",
+            "title": "A Pen by  Kiefer",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/clarches/pen/NdZryy&a=AIYkKU9D2eWZFs7ndFUZalaOzcKNr_LIjg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -157,11 +247,21 @@
     "id": "CgwIusLiywgQ7a-q_A8",
     "userId": "105669289189926745848",
     "creationTime": "2017-01-31T11:57:40.559Z",
-    "updateTime": "2017-01-31T11:57:40.557Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T13:38:19.427Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjM4NDE4Nlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://lkounowski.etudiant-eemi.com/JS/filtrage/filtrage.html",
+            "title": "Bienvenue dans notre boutique",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://lkounowski.etudiant-eemi.com/JS/filtrage/filtrage.html&a=AIYkKU9leBqt2ey_h_x2zrMgVBS7l1sHUg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -171,6 +271,7 @@
     "creationTime": "2017-01-31T11:57:41.299Z",
     "updateTime": "2017-01-31T11:57:41.298Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwMzg3N1pa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -181,11 +282,21 @@
     "id": "CgwIjd_jywgQ7a-q_A8",
     "userId": "116165333928554373922",
     "creationTime": "2017-01-31T11:57:41.198Z",
-    "updateTime": "2017-01-31T11:57:41.196Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T15:16:50.389Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwNDIzN1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://jsfiddle.net/7hctwodm/",
+            "title": "Edit fiddle - JSFiddle",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/7hctwodm/&a=AIYkKU_GeRUR6uiOgW3h5ydzn6fJKzr7zg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -193,11 +304,21 @@
     "id": "CgwI7uPjywgQ7a-q_A8",
     "userId": "114408121396184932572",
     "creationTime": "2017-01-31T11:57:39.857Z",
-    "updateTime": "2017-01-31T11:57:39.856Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T21:01:55.023Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQwNDg0Nlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://jsbin.com/vurohefori/edit?html,css,js,output",
+            "title": "JS Bin - Collaborative JavaScript Debugging",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jsbin.com/vurohefori/edit?html,css,js,output&a=AIYkKU_JgKA2ibYoNPvW9J3JOcJ9rErCiw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -205,11 +326,22 @@
     "id": "CgwIyOLmywgQ7a-q_A8",
     "userId": "107652103502670549727",
     "creationTime": "2017-01-31T11:57:39.602Z",
-    "updateTime": "2017-01-31T11:57:39.601Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T23:48:27.031Z",
+    "state": "TURNED_IN",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMwNjQ1MzgzMlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/Raphael-Parets/pen/PWrmog",
+            "title": "Exercice: Cacher les spoilers",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Raphael-Parets/pen/PWrmog&a=AIYkKU9gnoIb9yKmltsvGHmTlyVFhts4-g"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -217,11 +349,21 @@
     "id": "CgwIzqT_zQgQ7a-q_A8",
     "userId": "114109946239238848472",
     "creationTime": "2017-01-31T11:57:39.797Z",
-    "updateTime": "2017-01-31T11:57:39.795Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-17T16:16:07.825Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMTA0OTgwNlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://jsfiddle.net/ilanabloch/428wenw3/",
+            "title": "filtrage - JSFiddle",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/ilanabloch/428wenw3/&a=AIYkKU_4DV9DIyTFWYPn3SVRj-aOccyNiA"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -229,11 +371,21 @@
     "id": "CgwIzNL_zQgQ7a-q_A8",
     "userId": "102313166894740477450",
     "creationTime": "2017-01-31T11:57:40.738Z",
-    "updateTime": "2017-01-31T11:57:40.737Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T20:52:52.923Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMTA1NTY5Mlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://jsfiddle.net/L3zd645h/3/",
+            "title": "Filtrages - JSFiddle",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/L3zd645h/3/&a=AIYkKU-4kYC926BZFzKzsZAC1TYYavfVzg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -241,11 +393,21 @@
     "id": "CgwI0Iu_zggQ7a-q_A8",
     "userId": "113103264829571653000",
     "creationTime": "2017-01-31T11:57:40.269Z",
-    "updateTime": "2017-01-31T11:57:40.267Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T13:13:07.510Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMxMjA5NTE4NFpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://jsbin.com/baximixaxa/edit?html,js,output",
+            "title": "JS Bin - Collaborative JavaScript Debugging",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsbin.com/baximixaxa/edit?html,js,output&a=AIYkKU-RPdK5CYoKU0ONvQlB0p-icZxPtQ"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -253,11 +415,22 @@
     "id": "CgwIgoTN1AgQ7a-q_A8",
     "userId": "112793317213724843677",
     "creationTime": "2017-01-31T11:57:40.963Z",
-    "updateTime": "2017-01-31T11:57:40.961Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:59:23.198Z",
+    "state": "TURNED_IN",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMyNDkwNjQ5OFpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/pierre7592/pen/MJMpqK",
+            "title": "A Pen by  Pierre Salesse",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/pierre7592/pen/MJMpqK&a=AIYkKU-3QRQTbFTW7ef9JxV7lBVSS1iCDA"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -265,11 +438,21 @@
     "id": "CgwInujP1AgQ7a-q_A8",
     "userId": "116429873633355841301",
     "creationTime": "2017-01-31T11:57:39.529Z",
-    "updateTime": "2017-01-31T11:57:39.527Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:16:46.423Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMyNDk1MjA5NFpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://codepen.io/QuentinChampenois/pen/QdXpNY",
+            "title": "quentinchampenois3",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/QuentinChampenois/pen/QdXpNY&a=AIYkKU8BvyHGOfEGo1pdNnNnE9xLjwc20Q"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -277,11 +460,21 @@
     "id": "CgwIvbXg2AgQ7a-q_A8",
     "userId": "113176638625803008551",
     "creationTime": "2017-01-31T11:57:39.374Z",
-    "updateTime": "2017-01-31T11:57:39.373Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T17:59:01.495Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjMzMzYxMjczM1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/flofloz/pen/OWeRLv",
+            "title": "A Pen by  Florian",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/flofloz/pen/OWeRLv&a=AIYkKU_qcDT36aTSmcrtPOZbft2CLfjunw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001624136",
@@ -291,6 +484,7 @@
     "creationTime": "2017-01-31T11:57:40.962Z",
     "updateTime": "2017-01-31T11:57:40.961Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM0MTk3Mzk1Mlpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -303,6 +497,7 @@
     "creationTime": "2017-01-31T11:57:41.459Z",
     "updateTime": "2017-01-31T11:57:41.458Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM0NjAxNzQxMFpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -313,10 +508,20 @@
     "id": "CgwIrZfD4wgQ7a-q_A8",
     "userId": "100526324821579489480",
     "creationTime": "2017-01-31T11:57:40.483Z",
-    "updateTime": "2017-01-31T11:57:40.482Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T19:56:15.149Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYyNDEzNlpa/a/NDI4NzI3Mjk0MVpa/submissions/student/MjM1NjIwMjQxM1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://jsbin.com/fatomuceca/edit?html,css,js",
+            "title": "JS Bin - Collaborative JavaScript Debugging",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://jsbin.com/fatomuceca/edit?html,css,js&a=AIYkKU8lUKDUxxW9mv94ElkWJ3Bm3L6VDg"
+          }
+        }
+      ]
+    }
   }
 ]

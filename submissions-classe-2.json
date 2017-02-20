@@ -15,7 +15,7 @@
           "link": {
             "url": "http://codepen.io/inespmn/pen/mRajxv",
             "title": "Collections",
-            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/inespmn/pen/mRajxv&a=AIYkKU_-1MNeeBKKafRFGiyMvriGXTke6Q"
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/inespmn/pen/mRajxv&a=AIYkKU_-aq9TryRKcZ1-QHE7oo3gJpaScw"
           }
         }
       ]
@@ -27,11 +27,21 @@
     "id": "CgwIioS4yggQrpOp_A8",
     "userId": "101394269716091521347",
     "creationTime": "2017-01-31T11:57:41.314Z",
-    "updateTime": "2017-01-31T11:57:41.313Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-18T19:04:43.959Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzU5MDkyMlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/elsahaddad/pen/bgyZRa",
+            "title": "TP hidden",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/elsahaddad/pen/bgyZRa&a=AIYkKU_9DgVG0kKi4vg_aK0tjJTQyylJsQ"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -39,11 +49,21 @@
     "id": "CgwI14S4yggQrpOp_A8",
     "userId": "114436420144224697398",
     "creationTime": "2017-01-31T11:57:40.252Z",
-    "updateTime": "2017-01-31T11:57:40.251Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T19:19:53.671Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzU5MDk5OVpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://jsfiddle.net/wjv74yyq/1/",
+            "title": "Edit fiddle - JSFiddle",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://jsfiddle.net/wjv74yyq/1/&a=AIYkKU8XkEH9oSoT4AnHd5C_JpMj5QGSjQ"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -51,11 +71,21 @@
     "id": "CgwI8sS4yggQrpOp_A8",
     "userId": "101709901815932283235",
     "creationTime": "2017-01-31T11:57:41.703Z",
-    "updateTime": "2017-01-31T11:57:41.701Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T16:43:00.994Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzU5OTIxOFpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/Paul_Esmenard/pen/mRZEEE",
+            "title": "Filtrage_par_categories_ESMENARD-C2",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Paul_Esmenard/pen/mRZEEE&a=AIYkKU_tHtlOLUBecV3GyvLmDhI4si5qmg"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -63,11 +93,21 @@
     "id": "CgwIiqK5yggQrpOp_A8",
     "userId": "110487536965862998916",
     "creationTime": "2017-01-31T11:57:40.895Z",
-    "updateTime": "2017-01-31T11:57:40.894Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T21:56:42.720Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYxMTE0Nlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/haroon7/pen/OWeWrz",
+            "title": "Filtrage",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/haroon7/pen/OWeWrz&a=AIYkKU9rbGjzuHO7vgK0Y4urffu45zpI-Q"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -77,6 +117,7 @@
     "creationTime": "2017-01-31T11:57:42.177Z",
     "updateTime": "2017-01-31T11:57:42.175Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYxNzQzN1pa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -87,8 +128,8 @@
     "id": "CgwInea5yggQrpOp_A8",
     "userId": "105005097564840876975",
     "creationTime": "2017-01-31T11:57:42.417Z",
-    "updateTime": "2017-01-31T11:57:42.415Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:18:43.730Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYxOTg2OVpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -99,8 +140,8 @@
     "id": "CgwIree6yggQrpOp_A8",
     "userId": "114828137552143483518",
     "creationTime": "2017-01-31T11:57:41.547Z",
-    "updateTime": "2017-01-31T11:57:41.546Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:50:11.621Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzYzNjM5N1pa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -111,8 +152,8 @@
     "id": "CgwIxa27yggQrpOp_A8",
     "userId": "117755246149238226250",
     "creationTime": "2017-01-31T11:57:41.109Z",
-    "updateTime": "2017-01-31T11:57:41.108Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T16:08:08Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY0NTM4MVpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -123,11 +164,21 @@
     "id": "CgwI85G8yggQrpOp_A8",
     "userId": "100010787573355604224",
     "creationTime": "2017-01-31T11:57:41.032Z",
-    "updateTime": "2017-01-31T11:57:41.030Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:47:11.169Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY1ODIyN1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/pauline_btn/pen/oBrgWe",
+            "title": "A Pen by  Bittatnte",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/pauline_btn/pen/oBrgWe&a=AIYkKU8oeC2Wvic2rCgI6oA6bkX3_q_PDA"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -137,6 +188,7 @@
     "creationTime": "2017-01-31T11:57:42.256Z",
     "updateTime": "2017-01-31T11:57:42.254Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY1ODQ0NVpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -149,6 +201,7 @@
     "creationTime": "2017-01-31T11:57:41.940Z",
     "updateTime": "2017-01-31T11:57:41.939Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY1OTk2N1pa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -159,11 +212,21 @@
     "id": "CgwI24m9yggQrpOp_A8",
     "userId": "116655606952938744905",
     "creationTime": "2017-01-31T11:57:40.426Z",
-    "updateTime": "2017-01-31T11:57:40.424Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T21:31:24.800Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY3MzU2M1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/valentinepiol/pen/XpLNLP",
+            "title": "Cat�gorie par filtrage",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/valentinepiol/pen/XpLNLP&a=AIYkKU-vFGDRQAUQgtMPQrI4ukfkkx_Rdw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -171,11 +234,21 @@
     "id": "CgwIo72-yggQrpOp_A8",
     "userId": "112207424605643686358",
     "creationTime": "2017-01-31T11:57:42.582Z",
-    "updateTime": "2017-01-31T11:57:42.581Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T15:08:53.549Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzY5NjU0N1pa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/thomas_marketing/pen/ygdOya",
+            "title": "A Pen by  thomas",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/thomas_marketing/pen/ygdOya&a=AIYkKU9Lt90QgtyPCIwQJRKDACt9WLT4SQ"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -185,6 +258,7 @@
     "creationTime": "2017-01-31T11:57:41.863Z",
     "updateTime": "2017-01-31T11:57:41.862Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwMzcwNDE5MVpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -195,11 +269,21 @@
     "id": "CgwI5I6cywgQrpOp_A8",
     "userId": "114441804527282195733",
     "creationTime": "2017-01-31T11:57:40.341Z",
-    "updateTime": "2017-01-31T11:57:40.339Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T19:23:53.679Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMwNTIzMDY5Mlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/llacheny/pen/apgObV",
+            "title": "A Pen by  Lucas Lacheny",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/llacheny/pen/apgObV&a=AIYkKU9s6DbgX9uLPvPtmms-S4Qz8TH2ug"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -207,11 +291,21 @@
     "id": "CgwIwP2fzggQrpOp_A8",
     "userId": "113830218979025225964",
     "creationTime": "2017-01-31T11:57:42.676Z",
-    "updateTime": "2017-01-31T11:57:42.674Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T19:08:18.179Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMxMTU4NTQ3Mlpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/Guillaumedesaintsernin/pen/NdZbWW",
+            "title": "A Pen by  Guillaume de Saint-Sernin",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/Guillaumedesaintsernin/pen/NdZbWW&a=AIYkKU_HSBxLEWjg0W95fbWIIYbVspZvFA"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -219,11 +313,21 @@
     "id": "CgwI2Y2qzggQrpOp_A8",
     "userId": "105336490945396134624",
     "creationTime": "2017-01-31T11:57:41.701Z",
-    "updateTime": "2017-01-31T11:57:41.700Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T21:07:45.910Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMxMTc1MTM4NVpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "http://codepen.io/raphaelaagusazoubel/pen/zNVNEX",
+            "title": "TP JS ",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=http://codepen.io/raphaelaagusazoubel/pen/zNVNEX&a=AIYkKU_OKcUCng2VDUiYTY0I5IO20WHsSw"
+          }
+        }
+      ]
+    }
   },
   {
     "courseId": "3001638443",
@@ -233,6 +337,7 @@
     "creationTime": "2017-01-31T11:57:42.019Z",
     "updateTime": "2017-01-31T11:57:42.017Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMyNzMwNTk3Nlpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -245,6 +350,7 @@
     "creationTime": "2017-01-31T11:57:41.232Z",
     "updateTime": "2017-01-31T11:57:41.231Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMyNzMzMDcyMVpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -257,6 +363,7 @@
     "creationTime": "2017-01-31T11:57:42.759Z",
     "updateTime": "2017-01-31T11:57:42.758Z",
     "state": "CREATED",
+    "late": true,
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjMzNDY4MjUzMFpa",
     "courseWorkType": "ASSIGNMENT",
     "assignmentSubmission": {}
@@ -267,10 +374,20 @@
     "id": "CgwIxYL42wgQrpOp_A8",
     "userId": "100055098899108735971",
     "creationTime": "2017-01-31T11:57:40.627Z",
-    "updateTime": "2017-01-31T11:57:40.625Z",
-    "state": "CREATED",
+    "updateTime": "2017-02-19T22:53:32.457Z",
+    "state": "TURNED_IN",
     "alternateLink": "http://classroom.google.com/c/MzAwMTYzODQ0M1pa/a/NDI4NzI1MjkxMFpa/submissions/student/MjM0MDI5MDg4NVpa",
     "courseWorkType": "ASSIGNMENT",
-    "assignmentSubmission": {}
+    "assignmentSubmission": {
+      "attachments": [
+        {
+          "link": {
+            "url": "https://codepen.io/anon/pen/VPJPJP",
+            "title": "Create a New Pen",
+            "thumbnailUrl": "https://www.google.com/webpagethumbnail?c=73&s=105:70&f=0&d=https://codepen.io/anon/pen/VPJPJP&a=AIYkKU-tvYBHPgByMEdVTVyraWe6uzLZlw"
+          }
+        }
+      ]
+    }
   }
 ]
