@@ -400,249 +400,496 @@ h2 {
 }</xmp></code></pre>
 </section>
 <section>
+  <p>Student: Julien LACHAUX (codepen:anon:VPOYqE)</p>
+  <pre><code><xmp><body>
+  <ul class="menu">
+    <li id="product" class="active">Tout voir</li>
+    <li id="asus">Asus</li>
+    <li id="msi">Msi</li>
+    <li id="hp">Hp</li>
+    <li id="dell">Dell</li>
+  </ul>
+  <div>
+    <div class="product asus"><p class="productTitle">G55VW</p></div>
+    <div class="product asus"><p class="productTitle">G75VW</p></div>
+    <div class="product asus msi"><p class="productTitle">Super Calculator</p></div>
+    <div class="product Msi dell"><p class="productTitle">Pc entrée de gamme</p></div>
+    <div class="product Msi"><p class="productTitle">Pc millieu de gamme</p></div>
+    <div class="product Msi asus"><p class="productTitle">Pc haut de gamme</p></div>
+    <div class="product dell hp"><p class="productTitle">Pc mulimedia</p></div>
+    <div class="product dell msi asus"><p class="productTitle">Pc gaming</p></div>
+    <div class="product dell"><p class="productTitle">Pc pro</p></div>
+    <div class="product hp"><p class="productTitle">Pavillon</p></div>
+  </div>  
+  <script type="text/javascript" src="script.js"></script>
+</body></xmp></code></pre>
+  <pre><code><xmp>var menu = document.querySelectorAll('.menu li');
+var product = document.querySelectorAll('.product');
+for (var i = 0; i < menu.length; i++) {
+    menu[i].onclick = function afficher(e) {
+        var menuID = this.id;
+        var selection = this;
+        for (var i = 0; i < product.length; i++) {
+            if (product[i].classList.contains(menuID)) {
+                product[i].classList.remove('hidden');
+            }else {
+                product[i].classList.add('hidden');
+            }}
+        for (var i = 0; i < menu.length; i++) {
+            menu[i].classList.remove('active');
+        }
+        selection.classList.add('active');
+    }}</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none !important;
+}
+.active {
+    border: 5px solid #0e8813 !important;
+}
+.menu {
+    list-style-type: none;
+}
+.menu li {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    margin: 0 10px;
+    color: #454545;
+    border: 5px solid #a0a52a;
+    text-align: center;
+}
+.product {
+    background-color: #858585;
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: aquamarine;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Lucille VAN LAER (jsfiddle:lucillevl:o5skom1u)</p>
+  <pre><code><xmp><ul class="navi">
+<li class="nav" id="view-all">View all</li>
+<li class="nav" id="jean">Jean</li>
+<li class="nav" id="hiver">Hiver</li>
+<li class="nav" id="cuir">Cuir</li>
+<li class="nav" id="gris">Gris</li>
+</ul>
+<ul>
+<div><li><article class="jean hidden">Jupe en jean<br><img src="http://media.meltyfashion.fr/article-3201522-ajust_930-f1461075377/topshop-jupe-en-jean-a-taille-haute-grande.jpg" alt="jupe en jean"></article></li></div>
+<div><li><article class="cuir hidden">Jupe en cuir<br><img src="http://www.streetshooting.fr/wp-content/uploads/2013/09/jupe-en-cuir-fermeture-eclair-femme-zara-noir-2.jpg" alt="jupe en cuir"></article></li></div>
+<div><li><article class="jean hiver hidden">Veste en jean<br><img src="http://www.stylistic.fr/wp-content/uploads/2015/11/veste-jean-fourr&#xE9;e-tendance.jpg" alt="veste en jean"></article></li></div>
+<div><li><article class="cuir hidden">Veste en cuir<br><img src="https://s-media-cache-ak0.pinimg.com/originals/1f/6d/22/1f6d2223a7437385e66ea708b8631372.jpg" alt="veste en cuir"></article></li></div>
+<div><li><article class="hiver gris hidden">Pull col roul&#xE9; gris<br><img src="http://demandware.edgesuite.net/sits_pod25/dw/image/v2/AAYN_PRD/on/demandware.static/-/Sites-pimkie-master-catalog/default/dw19453f81/images/431165_830J08_portrait_HD_2.JPG?sw=760&amp;sh=938" alt="pull col roul&#xE9; gris"></article></li></div>
+<div><li><article class="gris hidden">Pantalon ray&#xE9; gris et blanc<br><img src="http://static.zara.net/photos///2016/I/0/1/p/7923/709/802/2/w/1024/7923709802_2_3_1.jpg?ts=1472729523257" alt="pantalon gris blanc ray&#xE9;"></article></li></div>
+<div><li><article class="gris hidden">Chemise grise<br><img src="http://static.zara.net/photos///2017/V/0/1/p/7200/022/803/2/w/560/7200022803_2_1_1.jpg?ts=1487066266675" alt="chemise grise"></article></li></div>
+<div><li><article class="jean gris hidden">Jean gris<br><img src="https://s-media-cache-ak0.pinimg.com/736x/5b/0e/da/5b0eda821adaaf880ceddc3ce41f9aa3.jpg" alt="jean gris"></article></li></div>
+<div><li><article class="hiver hidden">Manteau d&apos;hiver<br><img src="https://s-media-cache-ak0.pinimg.com/564x/5f/7b/18/5f7b186a30b3c64af0c9da6b88f28fd8.jpg" alt="manteau d&apos;hiver"></article></li></div>
+<div><li><article class="jean hidden">Chemise en jean<br><img src="https://s-media-cache-ak0.pinimg.com/564x/ef/43/b0/ef43b0aaf21adaddb4399005844ffe2e.jpg" alt="chemise en jean"></article></li></div>
+</ul></xmp></code></pre>
+  <pre><code><xmp>var tab = document.getElementsByClassName(&apos;jean&apos;);
+
+var tabDeux = document.getElementsByClassName(&apos;hiver&apos;);
+
+var tabTrois = document.getElementsByClassName(&apos;cuir&apos;);
+
+var tabQuatre = document.getElementsByClassName(&apos;gris&apos;);
+
+document.getElementById(&apos;view-all&apos;).onclick = function() {
+  for (var i=0; i<tabdeux.length; i++)="" {="" tabdeux[i].classlist.remove('hidden');="" }="" for="" (var="" i="0;" i<tabtrois.length;="" tabtrois[i].classlist.remove('hidden');="" i<tabquatre.length;="" tabquatre[i].classlist.remove('hidden');="" i<tab.length;="" tab[i].classlist.remove('hidden');="" };="" document.getelementbyid('jean').onclick="function()" i<tabdeux.length;="" tabdeux[i].classlist.add('hidden');="" tabtrois[i].classlist.add('hidden');="" tabquatre[i].classlist.add('hidden');="" document.getelementbyid('hiver').onclick="function()" tab[i].classlist.add('hidden');="" document.getelementbyid('cuir').onclick="function()" document.getelementbyid('gris').onclick="function()" };<="" textarea="">
+    <a href="#" class="windowLabel" data-panel="js">
+      <span class="label">JavaScript</span><i class="bts bt-gear"></i>
+    </a>
+  </tabdeux.length;></xmp></code></pre>
+  <pre><code><xmp>@import url(&apos;https://fonts.googleapis.com/css?family=Roboto|Varela+Round&apos;);
+body{
+  font-family: &apos;Roboto&apos;;
+}
+.hidden {
+  display:none;
+}
+img {
+  width: 12%;
+  height: 70px;
+}
+li {
+  list-style-type: none;
+}
+
+.navi{
+background-color: white;
+text-align: center;
+padding: 0;
+margin: 0;
+}
+.nav {↦   
+display: inline-block;
+text-align: center;
+padding : 30px;
+}
+.nav:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Pauline FERAUT (codepen:pferaut:MJdzWX)</p>
+  <pre><code><xmp><body>
+  
+  <header>
+↦   ↦   ↦   <h1>IKKS Mode</h1>
+↦   ↦   </header>
+
+↦   ↦   <nav>
+↦   ↦   ↦   <ul>
+↦   ↦   ↦   ↦   <li id="tout">TOUT</li><!--
+↦   ↦   ↦    --><li id="mode_femme">MODE FEMME</li><!--
+↦   ↦   ↦    --><li id="sacs">SACS</li><!--
+--><li id="chaussures">CHAUSSURES</li>
+↦   ↦   ↦   </ul>
+  </nav>
+  <div id="tout"> 
+    <div id="div1">
+↦   ↦   ↦   <article class="mode_femme">
+↦   ↦   ↦   ↦   <h2>Manteau, Veste</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/manteau.jpg">
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="mode_femme">
+↦   ↦   ↦   ↦   <h2>Robe, Jupe</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/robe.jpg">
+↦   ↦   ↦   </article><!--
+
+↦   ↦   ↦   --><article class="mode_femme">
+↦   ↦   ↦   ↦   <h2>Top</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/top.jpg">
+↦   ↦   ↦   </article><!--
+
+↦   ↦   ↦   --><article class="mode_femme">
+↦   ↦   ↦   ↦   <h2>Pull</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/pull.jpg">
+↦   ↦   ↦   </article><!--
+--><article class="mode_femme">
+↦   ↦   ↦   ↦   <h2>Pantalon, Jean</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/pantalon.jpg">
+↦   ↦   ↦   </article><!--
+↦   ↦   --></div>
+  
+    
+↦   ↦   <div id="div2">
+↦   ↦   ↦   <article class="sacs">
+↦   ↦   ↦   ↦   <h2>Sac à main</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/sac_a_main.jpg">
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="sacs">
+↦   ↦   ↦   ↦   <h2>Cabas</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/cabas.jpg">
+↦   ↦   ↦   </article><!--
+
+↦   ↦   ↦   --><article class="sacs">
+↦   ↦   ↦   ↦   <h2>Sacs Bandoulière</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/bandouliere.jpg">
+↦   ↦   ↦   </article><!--
+
+↦   ↦   ↦   --><article class="sacs">
+↦   ↦   ↦   ↦   <h2>Pochettes et Sacs de soirée</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/pochette.jpg">
+↦   ↦   ↦   </article><!--
+↦   ↦   --></div>
+    
+  
+  
+↦   ↦   <div id="div3">
+↦   ↦   ↦   <article class="chaussures">
+↦   ↦   ↦   ↦   <h2>Botte</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/botte.jpg">
+↦   ↦   ↦   </article><!--
+↦   ↦    --><article class="chaussures">
+↦   ↦   ↦   ↦   <h2>Bottine</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/bottine.jpg">
+↦   ↦   ↦   </article><!--
+
+↦   ↦   ↦   --><article class="chaussures">
+↦   ↦   ↦   ↦   <h2>Escarpin</h2>
+↦   ↦   ↦   ↦   <img src="http://pferaut.eemi.tech/TP_filtrage/images/escarpin.jpg">
+↦   ↦   ↦   </article><!--
+
+↦   ↦   ↦   --><article class="chaussures">
+↦   ↦   ↦   ↦   <h2>Basket</h2>
+↦   ↦   ↦   ↦   <img id="basket" src="http://pferaut.eemi.tech/TP_filtrage/images/basket.jpg">
+↦   ↦   ↦   </article>
+    </div>
+  </div>
+↦   </div>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var tab1 = document.getElementsByClassName('mode_femme');
+var tab2 =
+document.getElementsByClassName('sacs');
+var tab3 =
+document.getElementsByClassName('chaussures');
+
+document.getElementById('mode_femme').onclick = function() {
+  for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.add('hidden');
+  }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.add('hidden');
+    }for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.remove('hidden');
+  }
+};
+
+document.getElementById('sacs').onclick = function() {
+  for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.add('hidden');
+  }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.add('hidden');
+   }for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.remove('hidden');
+  }
+};
+  
+document.getElementById('chaussures').onclick = function() {
+  for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.add('hidden');
+  }for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.add('hidden');
+    }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.remove('hidden');
+  }
+};
+
+document.getElementById('tout').onclick = function() { for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.remove('hidden');
+  }for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.remove('hidden');
+  }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.remove('hidden');
+  }
+}</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+
+.hidden{
+↦   display:none;
+}
+
+body{
+↦   margin:0;
+↦   width:100%;
+  font-family: 'Crimson Text';
+}
+
+header{
+↦   margin:auto;
+↦   text-align:center;
+↦   color:black;
+↦   border-bottom: solid 2px black;
+}
+
+li {
+list-style-type: none;
+display: inline-block;
+background-color: grey;
+text-align: center;
+padding: 20px 60px;
+}
+
+ul {
+background-color: #333;
+padding: 0;
+margin: 0;
+text-align: center;
+padding-top: 50px;
+padding-bottom: 50px;
+color: white; 
+}
+
+#div1, #div2, #div3 {
+text-align: center;
+}
+
+article{
+↦   display:inline-block;
+↦   margin:10px;
+↦   padding:10px;
+↦   vertical-align: top;
+↦   background-color:rgba(0,0,0,0.2);
+↦   border-radius: 10px;
+  width: 40%;
+  height: 40%;
+  
+}
+
+img {
+  width: 40%;
+  height: 40%;
+  border-radius:10px;
+}
+
+#basket {
+  width: 36%;
+}
+
+nav li:hover{
+↦   cursor:pointer;
+↦   background-color:rgba(255,255,255,0.8);
+↦   color:black;
+}</xmp></code></pre>
+</section>
+<section>
   <p>Student: Benoît BOUREAU (codepen:anon:xgeEEX)</p>
-  <pre><code><xmp><!DOCTYPE html>
-<html>
+  <pre><code><xmp><html>
 <head>
-
 ↦   <meta charset="utf-8">
-↦   
-↦   <title>Tableaux par Artistes</title>
-↦   
-↦   <link rel="stylesheet" type="text/css" href="index.css">
-↦   
+↦   <title>Tableaux par Artistes</title>↦   
+↦   <link rel="stylesheet" type="text/css" href="index.css">↦   
 </head>
-
 <body>
-
-↦   <header>
-↦   ↦   <a rel="nofollow" rel="noreferrer"href="index.html"><h1>Tableaux par Artistes</h1></a>
-↦   </header>
-
-↦   <nav>
-↦   ↦   <ul>
-↦   ↦   ↦   <li id="filtre_tous">Tous</li><!--
-↦   ↦    --><li id="filtre_picasso">Picasso</li><!--
-↦   ↦    --><li id="filtre_renoir">Renoir</li><!--
-↦   ↦    --><li id="filtre_monet">Monet</li>
-↦   ↦   </ul>
-↦   </nav>
-
-↦   <div class="main">
-↦   
-↦   
-↦   
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   
-↦   ↦   ↦   <article class="Picasso">
+<input type="checkbox" id="menuToggle">
+<label for="menuToggle" class="menu-icon">&#9776;</label>
+<header>
+↦   <div id="brand">
+↦   ↦   <h1>Tableaux par Artistes</h1>
+↦   </div>
+</header>
+<div id="page"></div>
+<nav class="menu">↦   
+↦   <ul>
+↦   ↦   ↦   <li id="filtre_tous">&#9830;&nbsp; Tous</li><!--↦   ↦   
+        --><li id="filtre_picasso">&#9830;&nbsp; Picasso</li><!--↦   ↦   
+        --><li id="filtre_renoir">&#9830;&nbsp; Renoir</li><!--↦   ↦   
+        --><li id="filtre_monet">&#9830;&nbsp; Monet</li>
+    </ul>↦   
+</nav>
+↦   <div class="main">↦   
+↦   ↦   <article class="Picasso">
 ↦   ↦   ↦   ↦   <h2>Guernica</h2>
 ↦   ↦   ↦   ↦   <img src="http://dp.mariottini.free.fr/weekend/madrid/photo/guernica.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   ↦   ↦   
 ↦   ↦    --><article class="Renoir">
 ↦   ↦    ↦   ↦   <h2>Le Dejeuner des Canotiers</h2>
 ↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg/260px-Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   ↦   ↦   
 ↦   ↦    --><article class="Monet">
 ↦   ↦    ↦   ↦   <h2>Parlements de Londres</h2>
 ↦   ↦    ↦   ↦   <img src="http://articles.chantiers-philo.fr//wp-content/galleries/parlements/Londres,%20le%20Parlement,%20effet%20de%20soleil%20dans%20le%20brouillard,%20Claude%20Monet%201900-1901.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   ↦   ↦   
 ↦   ↦    --><article class="Picasso">
 ↦   ↦    ↦   ↦   <h2>Les Demoiselles d'Avignon</h2>
 ↦   ↦    ↦   ↦   <img src="http://www.clioetcalliope.com/oeuvres/peinture/picasso/avignon.jpg"/>
 ↦   ↦   ↦   </article>
-↦   ↦   ↦   
-↦   ↦   ↦   
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   
-↦   ↦   
 ↦   ↦   ↦   <article class="Renoir">
 ↦   ↦    ↦   ↦   <h2>Bal Du Moulin de la Galette</h2>
 ↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d'Orsay_RF_2739_(derivative_work_-_AutoContrast_edit_in_LCH_space).jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   ↦   ↦   
 ↦   ↦    --><article class="Picasso">
 ↦   ↦    ↦   ↦   <h2>Le Vieux Guitariste Aveugle</h2>
 ↦   ↦    ↦   ↦   <img src="http://imgc.allpostersimages.com/images/P-473-488-90/9/908/B95X000Z/affiches/pablo-picasso-le-vieux-guitariste-aveugle-vers-1903.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   ↦   ↦   
 ↦   ↦    --><article class="Monet">
 ↦   ↦    ↦   ↦   <h2>Impression, Soleil Levant</h2>
 ↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Claude_Monet,_Impression,_soleil_levant.jpg/260px-Claude_Monet,_Impression,_soleil_levant.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   ↦   ↦   
 ↦   ↦    --><article class="Monet">
 ↦   ↦    ↦   ↦   <h2>La Promenade</h2>
 ↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Monet_Umbrella.JPG/260px-Monet_Umbrella.JPG"/>
 ↦   ↦   ↦   </article><!-- -->
-↦   ↦   ↦   
-↦   ↦   ↦   
-↦   ↦   ↦   
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   <!------------------------------------------------------- -->
-↦   ↦   
-↦   ↦   
-↦   ↦   
-↦   ↦       <article class="Renoir">
+↦   ↦   ↦   <article class="Renoir">
 ↦   ↦    ↦   ↦   <h2>Les Deux Soeurs</h2>
 ↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Renoir,_Pierre-Auguste_-_The_Two_Sisters,_On_the_Terrace.jpg/260px-Renoir,_Pierre-Auguste_-_The_Two_Sisters,_On_the_Terrace.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   ↦   
 ↦   ↦    --><article class="Monet">
 ↦   ↦    ↦   ↦   <h2>Les Coquelicots</h2>
 ↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Claude_Monet_037.jpg/260px-Claude_Monet_037.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   
 ↦   ↦    --><article class="Renoir">
 ↦   ↦    ↦   ↦   <h2>Les Baigneuses</h2>
 ↦   ↦    ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Les_Baigneuses-Courbet.jpg/260px-Les_Baigneuses-Courbet.jpg"/>
-↦   ↦   ↦   </article><!--
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!--↦   
 ↦   ↦    --><article class="Picasso">
 ↦   ↦    ↦   ↦   <h2>La Femme Qui Pleure</h2>
 ↦   ↦    ↦   ↦   <img src="http://static.intellego.fr/uploads/1/1/110279/media/31937-Femme-qui-pleure-ultimo-periodo-pablo-picasso.jpg"/>
-↦   ↦   ↦   </article><!-- -->
-↦   ↦   ↦   
+↦   ↦   ↦   </article><!-- -->↦   
 ↦   </div>
-
-
 ↦   <script src="index.js"></script>
-↦   
-↦   
 ↦   </body>
-↦   
 </html></xmp></code></pre>
-  <pre><code><xmp>/* ------------------------------------------- */
-
-// TYPES
+  <pre><code><xmp>/* ------------------------------------------ */
 var TablPicasso = document.getElementsByClassName('Picasso');
 var TablRenoir = document.getElementsByClassName('Renoir');
 var TablMonet = document.getElementsByClassName('Monet');
-
-//BOUTONS
-
 var tousClic = document.getElementById('filtre_tous');
 var FiltrePicasso = document.getElementById('filtre_picasso');
 var FiltreRenoir = document.getElementById('filtre_renoir');
 var FiltreMonet = document.getElementById('filtre_monet');
-
-
-/* ------------------------------------------- */
-
-/* ------------------------------------------- */
-
-// TOUS
+/* ------------------- TOUS ------------------- */
 document.getElementById('filtre_tous').onclick = function (){
-
-
  ↦   for(var i = 0; i < TablRenoir.length; i++){
 ↦   ↦   TablRenoir[i].classList.remove('hidden'); 
 ↦   }
-
 ↦   for(var i = 0; i < TablMonet.length; i++){
 ↦   ↦   TablMonet[i].classList.remove('hidden'); 
 ↦   }
-
 ↦   for(var i = 0; i < TablPicasso.length; i++){
 ↦   ↦   TablPicasso[i].classList.remove('hidden'); 
 ↦   }
-
 ↦   tousClic.classList.add('clic');
 ↦   FiltrePicasso.classList.remove('clic');
 ↦   FiltreRenoir.classList.remove('clic');
 ↦   FiltreMonet.classList.remove('clic');
 }
-
-/* ------------------------------------------- */
-
-/* ------------------------------------------- */
-
-//Picasso
+/* ------------------ Picasso ----------------- */
 document.getElementById('filtre_picasso').onclick = function (){
-
  ↦   for(var i = 0; i < TablRenoir.length; i++){
 ↦   ↦   TablRenoir[i].classList.add('hidden'); 
 ↦   }
-
 ↦   for(var i = 0; i < TablMonet.length; i++){
 ↦   ↦   TablMonet[i].classList.add('hidden'); 
 ↦   }
-
 ↦   for(var i = 0; i < TablPicasso.length; i++){
 ↦   ↦   TablPicasso[i].classList.remove('hidden'); 
 ↦   }
-
 ↦   FiltrePicasso.classList.add('clic');
 ↦   FiltreRenoir.classList.remove('clic');
 ↦   FiltreMonet.classList.remove('clic');
 ↦   tousClic.classList.remove('clic');
 }
-
-/* ------------------------------------------- */
-
-/* ------------------------------------------- */
-
-//Renoir
+/* ------------------- Renoir ------------------ */
 document.getElementById('filtre_renoir').onclick = function (){
-
 ↦   for(var i = 0; i < TablRenoir.length; i++){
 ↦   ↦   TablRenoir[i].classList.remove('hidden'); 
 ↦   }
-
 ↦   for(var i = 0; i < TablMonet.length; i++){
 ↦   ↦   TablMonet[i].classList.add('hidden'); 
 ↦   }
-
-
 ↦   for(var i = 0; i < TablPicasso.length; i++){
 ↦   ↦   TablPicasso[i].classList.add('hidden'); 
 ↦   }
-
 ↦   tousClic.classList.remove('clic');
 ↦   FiltrePicasso.classList.remove('clic');
 ↦   FiltreRenoir.classList.add('clic');
 ↦   FiltreMonet.classList.remove('clic');
-
 }
-
-/* ------------------------------------------- */
-
-/* ------------------------------------------- */
-
-// Monet
+/* ------------------- Monet ------------------- */
 document.getElementById('filtre_monet').onclick = function (){
 
 ↦   for(var i = 0; i < TablMonet.length; i++){
 ↦   ↦   TablMonet[i].classList.remove('hidden'); 
 ↦   }
-
-
 ↦   for(var i = 0; i < TablPicasso.length; i++){
 ↦   ↦   TablPicasso[i].classList.add('hidden'); 
 ↦   }
-
 ↦   for(var i = 0; i < TablRenoir.length; i++){
 ↦   ↦   TablRenoir[i].classList.add('hidden'); 
 ↦   }
-
 ↦   tousClic.classList.remove('clic');
 ↦   FiltrePicasso.classList.remove('clic');
 ↦   FiltreRenoir.classList.remove('clic');
 ↦   FiltreMonet.classList.add('clic');
-
-
-}
-
-/* ------------------------------------------- */
-
-/* ------------------------------------------- */</xmp></code></pre>
+}</xmp></code></pre>
   <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 a{
@@ -689,14 +936,6 @@ body{
 
 }
 
-header{
-↦   padding:↦   ↦   ↦   ↦   ↦   10px;
-↦   margin:↦   ↦   ↦   ↦   ↦   ↦   auto;
-↦   width:↦   ↦   ↦   ↦   ↦   ↦   calc(100% - 20px);
-↦   text-align:↦   ↦   ↦   ↦   ↦   center;
-↦   border-bottom:↦   ↦   ↦   ↦   solid 2px white;
-}
-
 
 
 /* ------------------------------------------------------- */
@@ -737,17 +976,6 @@ nav li:hover{
 }
 
 /* ------------------------------------------------------- */
-/* ------------------------------------------------------- */
-/* ------------------------------------------------------- */
-
-.main{
-↦   margin:↦   ↦   ↦   ↦   ↦   ↦   auto;
-
-}
-
-
-
-/* ------------------------------------------------------- */
 /* ------------------- Article (images) ------------------ */
 /* ------------------------------------------------------- */
 
@@ -764,7 +992,6 @@ article{
 }
 
 article:hover{
-↦   border:↦   ↦   ↦   ↦   ↦   ↦   solid black 3px;
 ↦   background-color:↦   ↦   ↦   #333;
 ↦   color:↦   ↦   ↦   ↦   ↦   ↦   #eee;
 }
@@ -778,552 +1005,752 @@ article > img{
 
 /* ------------------------------------------------------- */
 /* ------------------------------------------------------- */
-/* ------------------------------------------------------- */</xmp></code></pre>
+/* ------------------------------------------------------- */
+* {
+↦   padding: ↦   ↦   ↦   ↦   0;
+↦   margin: ↦   ↦   ↦   ↦   0;
+}
+
+a {
+↦   text-decoration: ↦   ↦   none;
+}
+
+li {
+↦   list-style-type: ↦   ↦   none;
+}
+
+/*-----------------------------------------*/
+
+header { 
+↦   width: ↦   ↦   ↦   ↦   ↦   100%; 
+↦   height: ↦   ↦   ↦   ↦   50px; 
+↦   margin: ↦   ↦   ↦   ↦   auto;
+↦   border-bottom: ↦   ↦   ↦   1px solid black; /*COULEUR BORDURE HEADER*/
+↦   top: ↦   ↦   ↦   ↦   ↦   0;
+}
+#brand, .res {
+↦   display: ↦   ↦   ↦   ↦   inline;
+}
+
+#brand {
+↦   text-align: ↦   ↦   ↦   center;
+}
+
+#brand h1{
+↦   padding-top:↦   ↦   ↦   6px;
+}
+/*-----------------------------------------*/
+
+nav {
+↦   width: ↦   ↦   ↦   ↦   ↦   100%;
+↦   text-align: ↦   ↦   ↦   center; 
+}
+
+nav a, #recherche{ 
+↦   display:↦   ↦   ↦   ↦   block; 
+↦   padding: ↦   ↦   ↦   ↦   15px 0;
+↦   border-bottom: ↦   ↦   ↦   1px solid black;↦   /*COULEUR BORDURE menu*/
+↦   color: ↦   ↦   ↦   ↦   ↦   #F0EADC;↦   /*COULEUR TEXTE menu*/
+}
+
+nav a:hover {
+↦   background: ↦   ↦   ↦   #dddddd;
+↦   color: ↦   ↦   ↦   ↦   ↦   black;
+}
+
+nav li:last-child a {
+↦   border-bottom: ↦   ↦   ↦   none;
+}
+
+/*-----------------------------------------*/
+
+
+.menu {
+↦   height:↦   ↦   ↦   ↦   ↦   auto;
+↦   position: ↦   ↦   ↦   ↦   absolute;
+↦   background: ↦   ↦   ↦   #333;
+↦   left: ↦   ↦   ↦   ↦   ↦   -110%;
+↦   transition: ↦   ↦   ↦   all .2s ease-in-out;
+↦   z-index:↦   ↦   ↦   ↦   3;
+}
+
+
+.menu-icon {
+↦   padding-top: ↦   ↦   ↦   10px;
+↦   cursor: ↦   ↦   ↦   ↦   pointer;
+↦   float: ↦   ↦   ↦   ↦   ↦   left;
+↦   margin-top: ↦   ↦   ↦   -10px;
+↦   margin-left: ↦   ↦   ↦   20px;
+↦   border-radius: ↦   ↦   ↦   5px;
+↦   color: ↦   ↦   ↦   ↦   ↦   black;
+↦   font-size: ↦   ↦   ↦   ↦   2em;
+↦   
+}
+
+.main{
+↦   transition: ↦   ↦   ↦   all .2s ease-in-out;
+↦   top:↦   ↦   ↦   ↦   ↦   0px;
+}
+
+#menuToggle {
+↦   display: ↦   ↦   ↦   ↦   none;
+}
+
+.menu-icon:hover {
+↦   transition: ↦   ↦   ↦   all .2s ease-in-out;
+↦   color:↦   ↦   ↦   ↦   ↦   white;
+}
+
+#menuToggle:checked ~ .menu {
+↦   position: ↦   ↦   ↦   ↦   absolute;
+↦   left: ↦   ↦   ↦   ↦   ↦   0;
+↦   z-index:↦   ↦   ↦   ↦   2;
+}↦   
+
+#menuToggle:checked ~ .page {
+↦   position: ↦   ↦   ↦   ↦   absolute;
+↦   left: ↦   ↦   ↦   ↦   ↦   0;
+↦   z-index:↦   ↦   ↦   ↦   3;
+}↦   
+
+#menuToggle:checked ~ .main {
+↦   position: ↦   ↦   ↦   ↦   absolute;
+↦   top: ↦   ↦   ↦   ↦   ↦   150px;
+}
+
+/*-----------------------------------------*/
+
+#barrerecherche{
+↦   padding-top:↦   ↦   ↦   5px;
+↦   padding-bottom:↦   ↦   ↦   5px;
+↦   padding-left:↦   ↦   ↦   10px;
+↦   padding-right:↦   ↦   ↦   10px;
+}
+
+/*-----------------------------------------*/
+
+header{
+background-color: ↦   ↦   ↦   grey;
+}
+
+/*--------------------------------------------------*/
+
+#brand img{
+↦   width:↦   ↦   ↦   ↦   ↦   2%;
+}</xmp></code></pre>
 </section>
 <section>
-  <p>Student: Jacques HOVINE (codepen:SpaCeDuDe:ygEdWr)</p>
+  <p>Student: Johanne BORDEAUX (codepen:johannebordeaux:pRXRdZ)</p>
   <pre><code><xmp><body>
-  <header>
-    <h1>Mes jeux préférés !</h1>
-  </header>
+<h1>Johanne Bordeaux</h1>
 
-  <nav>
+<nav>
     <ul>
-      <li id="filtre_tous">Tous</li><!--
---><li id="filtre_aventure">Aventure</li><!--
---><li id="filtre_course">Course</li><!--
---><li id="filtre_plateforme">Plateforme</li><!--
---><li id="filtre_baston">Baston</li><!--
---><li id="filtre_rpg">RPG</li><!--
---><li id="filtre_portable">Console portable</li><!--
---><li id="filtre_salon">Console de salon</li>
+      <li id="accueil">home</li><!--
+       --><li id="shop">Whislist</li><!--
+       --><li id="categorie">Categories</li><!--
+       --><li id="cityguide">City Guide</li><!--
+       -->
     </ul>
-  </nav>
+</nav>
 
-  <div class="main">
-    <!-- DEBUT LIGNE 1 -->
-    <article class="plateforme portable">
-      <h2>Super Mario</h2>
-      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/supermario.jpg"/>
-      <p>Un jeu légendaire qui n'est plus à présenter.</p>
+<div id="accueil">
+<div id="contenuphoto">
+  <article class="shop">
+  <div class="phrase">WHISLIST</div>
+    <div class="photo_item photo1">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            Urban Outfitters
+        </div>
+      </div>
+    </div>
     </article><!--
---><article class="aventure portable">
-    <h2>Pokémon</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/pokemon.jpg"/>
-    <p>Attrapez les tous !</p>
+    --><article class="shop">
+    <div class="photo_item photo2">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            Urban Outfitters
+       </div>
+      </div>
+    </div>
     </article><!--
---><article class="aventure salon portable">
-    <h2>The Legend of Zelda</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/windwaker.jpg"/>
-    <p>Et pourquoi pas "The Legend of Link" ?!</p>
+    --><article class="shop">
+    <div class="photo_item photo3">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            Urban Outfitters
+        </div>
+      </div>
+    </div>
     </article><!--
---><article class="baston salon">
-    <h2>Street Fighter</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/street.jpg"/>
-    <p>You win ! Perfect !</p>
-    </article>
-    <!-- DEBUT LIGNE 2 -->
-    <article class="baston salon">
-      <h2>Super Smash Bros</h2>
-      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/ssbm.jpg"/>
-      <p>Show me your moves !</p>
+    --><article class="shop">
+    <div class="photo_item photo4">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            H&M
+        </div>
+      </div>
+    </div>
     </article><!--
---><article class="plateforme portable">
-    <h2>Donkey Kong Country</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/dk.jpg"/>
-    <p>De mon temps, les jeux avaient un vrai gameplay !</p>
+    --><article class="shop">
+    <div class="photo_item photo5">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          Brandy Melville
+        </div>
+      </div>
+    </div>
     </article><!--
---><article class="aventure plateforme salon">
-    <h2>Tomb Raider</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/tomb.jpg"/>
-    <p>Qui ne connait pas le nom de Lara Croft ?</p>
+    --><article class="shop"><div class="photo_item photo6">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          Brandy Melville
+        </div>
+      </div>
+    </div>
+    </div>
     </article><!--
---><article class="course salon">
-    <h2>Mario Kart</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/mariokart.jpg"/>
-    <p>Maudites carapaces bleues !</p>
-    </article><!-- -->
-    <!-- DEBUT LIGNE 3 -->
-    <article class="rpg portable">
-      <h2>Final Fantasy</h2>
-      <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/final.jpg"/>
-      <p>Enorme durée de vie</p>
+    --><article class="shop">
+    <div class="photo_item photo7">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          Brandy Melville
+        </div>
+      </div>
+    </div>
     </article><!--
---><article class="rpg plateforme portable">
-    <h2>Castlevania</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/castle.jpg"/>
-    <p>Pour renvoyer Dracula en Enfer !</p>
+    --><article class="shop">
+    <div class="photo_item photo8">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            Brandy Melville
+        </div>
+      </div>
+    </div>
     </article><!--
---><article class="aventure plateforme portable">
-    <h2>Metroid</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/metroid.jpg"/>
-    <p>Dans l'espace, personne ne vous entendra crier.</p>
-    </article><!--
---><article class="plateforme salon portable">
-    <h2>Super Meat Boy</h2>
-    <img src="http://jhovine.eemi.tech/Javascript/TP_Filtrage/image/super.png"/>
-    <p>Die and Retry :D</p>
-    </article><!-- -->
-  </div>
+  --></div>
 
+<!--DEUXIEME CONTENU-->
+  <br />
+  <br />
+  <div id="contenuphoto2">
+  <article class="categorie">
+    <div class="phrase">CATEGORIES</div>
+    <div class="photo_item photo9">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            LES LOOKS MODE
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="categorie">
+    <div class="photo_item photo10">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            BEAUTY TIPS
+       </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="categorie">
+    <div class="photo_item photo11">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            LIFESTYLE
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="categorie">
+    <div class="photo_item photo12">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            FOOD
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="categorie">
+    <div class="photo_item photo13">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          MES ADRESSES
+        </div>
+      </div>
+    </div>
+    </article><!--
+   --><article class="categorie">
+    <div class="photo_item photo14">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          SHOP MY STYLE
+        </div>
+      </div>
+    </div>
+    </article><!--
+   --><article class="categorie">
+    <div class="photo_item photo15">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          CONTACT
+        </div>
+      </div>
+    </div>
+    </article><!--
+   --><article class="categorie">
+    <div class="photo_item photo16">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          A PROPOS
+        </div>
+      </div>
+    </div>
+    </article><!--
+   --></div>
 
-  <script src="filtrage.js"></script>
+<!--TROISIEME CONTENU-->
+
+  <div id="contenuphoto3">
+  <article class="cityguide">
+    <div class="phrase">CITY GUIDE</div>
+    <div class="photo_item photo17">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            PARIS
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="cityguide">
+    <div class="photo_item photo18">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            SAINT PETERSBOURG
+       </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="cityguide">
+    <div class="photo_item photo19">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            MOSCOW
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="cityguide">
+    <div class="photo_item photo20">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            MADRID
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="cityguide">
+    <div class="photo_item photo22">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          PALMA DE MAJORQUE
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="cityguide"><div class="photo_item photo23">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          BARCELONE
+        </div>
+      </div>
+    </div>
+    </div>
+    </article><!--
+    --><article class="cityguide">
+    <div class="photo_item photo24">
+      <div class="photo_item_hover">
+        <div class="item_info">
+          DUBLIN
+        </div>
+      </div>
+    </div>
+    </article><!--
+    --><article class="cityguide">
+    <div class="photo_item photo25">
+      <div class="photo_item_hover">
+        <div class="item_info">
+            PRAGUE
+        </div>
+      </div>
+    </div>
+    </article><!--
+  --></div>
+</div>
+</div>
 </body></xmp></code></pre>
-  <pre><code><xmp>
-// TYPES
-var jeuAventure = document.getElementsByClassName('aventure'); // => TABLEAU D'ELEMENTS
-var jeuBaston = document.getElementsByClassName('baston');
-var jeuRPG = document.getElementsByClassName('rpg');
-var jeuPlateforme = document.getElementsByClassName('plateforme');
-var jeuCourse = document.getElementsByClassName('course');
+  <pre><code><xmp>var tab1 = document.getElementsByClassName('shop');
+var tab2 =
+document.getElementsByClassName('categorie');
+var tab3 =
+document.getElementsByClassName('cityguide');
 
-// PLATEFORME
-var jeuSalon = document.getElementsByClassName('salon');
-var jeuPortable = document.getElementsByClassName('portable');
-
-//BOUTONS
-var tousClic = document.getElementById('filtre_tous');
-var aventureClic = document.getElementById('filtre_aventure');
-var courseClic = document.getElementById('filtre_course');
-var plateformeClic = document.getElementById('filtre_plateforme');
-var bastonClic = document.getElementById('filtre_baston');
-var rpgClic = document.getElementById('filtre_rpg');
-var portableClic = document.getElementById('filtre_portable');
-var salonClic = document.getElementById('filtre_salon');
-
-
-/* ----------------------------------------------------------------------------- */
-
-
-// TOUS
-document.getElementById('filtre_tous').onclick = function (){
-
-↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.remove('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   ↦   jeuRPG[i].classList.remove('hidden'); 
-↦   }
-
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){
-↦   ↦   jeuPlateforme[i].classList.remove('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   ↦   jeuCourse[i].classList.remove('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.remove('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.remove('hidden');
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.remove('hidden');
-↦   }
-
-↦   tousClic.classList.add('clic');
-↦   aventureClic.classList.remove('clic');
-↦   courseClic.classList.remove('clic');
-↦   plateformeClic.classList.remove('clic');
-↦   bastonClic.classList.remove('clic');
-↦   rpgClic.classList.remove('clic');
-↦   portableClic.classList.remove('clic');
-↦   salonClic.classList.remove('clic');
+document.getElementById('accueil').onclick = function() { for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.remove('hidden');
+  }for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.remove('hidden');
+  }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.remove('hidden');
+  }
 }
 
-//AVENTURE
-document.getElementById('filtre_aventure').onclick = function (){
-
- ↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   ↦   jeuRPG[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){
-↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   ↦   jeuCourse[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.remove('hidden'); 
-↦   }
-
-↦   tousClic.classList.remove('clic');
-↦   aventureClic.classList.add('clic');
-↦   courseClic.classList.remove('clic');
-↦   plateformeClic.classList.remove('clic');
-↦   bastonClic.classList.remove('clic');
-↦   rpgClic.classList.remove('clic');
-↦   portableClic.classList.remove('clic');
-↦   salonClic.classList.remove('clic');
-
-}
-
-//PLATEFORME
-document.getElementById('filtre_plateforme').onclick = function (){
-
-↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   ↦   jeuRPG[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   ↦   jeuCourse[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){ /*Toujours le remove à la fin */
-↦   ↦   jeuPlateforme[i].classList.remove('hidden'); 
-↦   }
-
-↦   tousClic.classList.remove('clic');
-↦   aventureClic.classList.remove('clic');
-↦   courseClic.classList.remove('clic');
-↦   plateformeClic.classList.add('clic');
-↦   bastonClic.classList.remove('clic');
-↦   rpgClic.classList.remove('clic');
-↦   portableClic.classList.remove('clic');
-↦   salonClic.classList.remove('clic');
-
-}
-
-// BASTON
-document.getElementById('filtre_baston').onclick = function (){
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   ↦   jeuRPG[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){
-↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   ↦   jeuCourse[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.remove('hidden'); 
-↦   }
-
-↦   tousClic.classList.remove('clic');
-↦   aventureClic.classList.remove('clic');
-↦   courseClic.classList.remove('clic');
-↦   plateformeClic.classList.remove('clic');
-↦   bastonClic.classList.add('clic');
-↦   rpgClic.classList.remove('clic');
-↦   portableClic.classList.remove('clic');
-↦   salonClic.classList.remove('clic');
-
-}
-
-// COURSE
-document.getElementById('filtre_course').onclick = function (){
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   ↦   jeuRPG[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){
-↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   ↦   jeuCourse[i].classList.remove('hidden'); 
-↦   }
-
-↦   tousClic.classList.remove('clic');
-↦   aventureClic.classList.remove('clic');
-↦   courseClic.classList.add('clic');
-↦   plateformeClic.classList.remove('clic');
-↦   bastonClic.classList.remove('clic');
-↦   rpgClic.classList.remove('clic');
-↦   portableClic.classList.remove('clic');
-↦   salonClic.classList.remove('clic');
-
-}
-
-// RPG
-document.getElementById('filtre_rpg').onclick = function (){
-
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){
-↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   jeuCourse[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   jeuRPG[i].classList.remove('hidden'); 
-↦   }
-
-↦   tousClic.classList.remove('clic');
-↦   aventureClic.classList.remove('clic');
-↦   courseClic.classList.remove('clic');
-↦   plateformeClic.classList.remove('clic');
-↦   bastonClic.classList.remove('clic');
-↦   rpgClic.classList.add('clic');
-↦   portableClic.classList.remove('clic');
-↦   salonClic.classList.remove('clic');
-
-}
-
-// PORTABLE
-document.getElementById('filtre_portable').onclick = function (){
-
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){
-↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   ↦   jeuCourse[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   ↦   jeuRPG[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.add('hidden')
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.remove('hidden')
-↦   }
-
-↦   tousClic.classList.remove('clic');
-↦   aventureClic.classList.remove('clic');
-↦   courseClic.classList.remove('clic');
-↦   plateformeClic.classList.remove('clic');
-↦   bastonClic.classList.remove('clic');
-↦   rpgClic.classList.remove('clic');
-↦   portableClic.classList.add('clic');
-↦   salonClic.classList.remove('clic');
-
-}
-
-// SALON
-document.getElementById('filtre_salon').onclick = function (){
-
-
-↦   for(var i = 0; i < jeuPlateforme.length; i++){
-↦   ↦   jeuPlateforme[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuAventure.length; i++){
-↦   ↦   jeuAventure[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuBaston.length; i++){
-↦   ↦   jeuBaston[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuCourse.length; i++){
-↦   ↦   jeuCourse[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuRPG.length; i++){
-↦   ↦   jeuRPG[i].classList.add('hidden'); 
-↦   }
-
-↦   for(var i = 0; i < jeuPortable.length; i++){
-↦   ↦   jeuPortable[i].classList.add('hidden');
-↦   }
-
-↦   for(var i = 0; i < jeuSalon.length; i++){
-↦   ↦   jeuSalon[i].classList.remove('hidden');
-↦   }
-
-↦   tousClic.classList.remove('clic');
-↦   aventureClic.classList.remove('clic');
-↦   courseClic.classList.remove('clic');
-↦   plateformeClic.classList.remove('clic');
-↦   bastonClic.classList.remove('clic');
-↦   rpgClic.classList.remove('clic');
-↦   portableClic.classList.remove('clic');
-↦   salonClic.classList.add('clic');
-
+document.getElementById('shop').onclick = function() {
+  for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.add('hidden');
+  }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.add('hidden');
+    }for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.remove('hidden');
+  }
+};
+
+document.getElementById('categorie').onclick = function() {
+  for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.add('hidden');
+  }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.add('hidden');
+   }for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.remove('hidden');
+  }
+};
+  
+document.getElementById('cityguide').onclick = function() {
+  for (var i=0; i<tab1.length; i++) {
+    tab1[i].classList.add('hidden');
+  }for (var i=0; i<tab2.length; i++) {
+    tab2[i].classList.add('hidden');
+    }for (var i=0; i<tab3.length; i++) {
+    tab3[i].classList.remove('hidden');
+  }
 }</xmp></code></pre>
-  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Capriola');
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-
-/* Pour masquer des éléments */
-.hidden{
-↦   display:none;
+h1{
+↦   text-align: center;
+↦   font-size: 54px;
+↦   font-family: "Dosis", sans-serif;
+↦   font-style: italic;
 }
 
-/* Pour garder un fond sur les onglets après le clic */
-.clic{
-↦   background-color:rgba(255,255,255,0.8);
-↦   border-radius:20px;
-↦   color:black;
+li {
+↦   list-style-type: none;
+↦   display: inline-block;
+↦   text-align: center;
+↦   padding: 20px 60px;
+↦   padding-bottom: 10px;
+}
+
+ul {
+↦   background-image: url("http://www.marcmaison.fr/maisonpedia/noirmarquina/_01_pedia.jpg");
+↦   padding: 0;
+↦   margin: 0;
+↦   text-align: center;
+↦   padding-top: 50px;
+↦   padding-bottom: 50px;
+↦   color: white;
+↦   font-size:1em; 
+↦   text-transform: uppercase;
 }
 
 body{
-↦   margin:0;
-↦   width:100%;
-↦   background-color:#3498db;
-↦   transition:color 250ms;
-↦   font-family:"Capriola";
+↦   text-align: center;
+↦   position: center;
 
 }
 
-header{
-↦   padding:10px;
-↦   margin:auto;
-↦   width:calc(100% - 20px);
-↦   text-align:center;
-↦   color:white;
-↦   border-bottom:solid 2px white;
-}
-
-nav{
-↦   width:calc(100% - 20px);
-↦   background-color:#e74c3c;
-↦   margin:0;
-↦   padding:10px;
-↦   border-bottom:solid 2px white;
-}
-
-nav ul{
-↦   margin:0;
-↦   padding:0;
-}
-
-nav li{
-↦   display:inline-block;
-↦   list-style-type:none;
-↦   width:calc(25% - 40px);
-↦   text-align:center;
-↦   font-size:1.5em;
-↦   text-transform: uppercase;
-↦   padding:10px;
-↦   margin:10px;
-↦   /*background-color:rgba(255,255,255,0.8);
-↦   border-radius:20px;*/
-↦   color:white;
+.hidden{
+↦   display:none;
 }
 
 nav li:hover{
 ↦   cursor:pointer;
 ↦   background-color:rgba(255,255,255,0.8);
-↦   border-radius:20px;
 ↦   color:black;
 }
 
-
-.main{
-↦   margin:auto;
-
+#contenuphoto #contenuphoto2 #contenuphoto3 {
+    margin:0 auto;
+    position: center;
+    width:100%;
+    height:auto; 
 }
 
-article{
-↦   display:inline-block;
-↦   width:calc(24.8% - 40px);
-↦   margin:10px;
-↦   padding:10px;
-↦   vertical-align: top;
-↦   text-align:center;
-↦   background-color:rgba(255,255,255,0.6);
-↦   border-radius: 10px;
+.photo1 {
+    background:url("http://euimages.urbanoutfitters.com/is/image/UrbanOutfittersEU/5129462116000_040_b?$xlarge$&defaultImage=");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
 
+    
 }
 
-article > img{
-↦   width:calc(100% - 20px);
-↦   padding:10px;
-↦   height: 185px;
-↦   border-radius: 20px;
-}</xmp></code></pre>
+.photo2 {
+    background:url("http://euimages.urbanoutfitters.com/is/image/UrbanOutfittersEU/5139092940011_001_b?$xlarge$&defaultImage=");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+.photo3 {
+    background:url("http://euimages.urbanoutfitters.com/is/image/UrbanOutfittersEU/5119251630011_004_b?$xlarge$&defaultImage=");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+.photo4 {
+    background:url("http://lp2.hm.com/hmprod?set=source[/environment/2017/8HZ_0400_007R.jpg],width[3970],height[4642],y[-1],type[FASHION_FRONT]&hmver=0&call=url[file:/product/main]");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo5 {
+    background:url("https://mosaic01.ztat.net/vgs/media/pdp-gallery/LE/22/1N/01/JK/13/LE221N01J-K13@14.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo6 {
+    background:url("http://cdn.brandymelvilleusa.com/media/catalog/product/cache/1/image/547x820/9df78eab33525d08d6e5fb8d27136e95/m/w/mw798va-933s0010000_f21.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo7 {
+    background:url("http://cdn.brandymelvilleusa.com/media/catalog/product/cache/1/image/547x820/9df78eab33525d08d6e5fb8d27136e95/m/d/md195-343s0720000_full.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+.photo8 {
+    background:url("http://cdn.brandymelvilleusa.com/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/m/n/mn256-f19s1670000_f2_1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo9 {
+    background:url("http://maxpixel.freegreatpicture.com/static/photo/1x/Fashion-Leather-Jacket-Leather-Jacket-Pink-Style-1663286.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    
+}
+
+.photo10 {
+    background:url("http://maxpixel.freegreatpicture.com/static/photo/1x/Makeup-Brush-1669951.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+.photo11 {
+    background:url("http://maxpixel.freegreatpicture.com/static/photo/1x/Computer-Screen-Imac-Apple-Laptop-Macbook-606763.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+.photo12 {
+    background:url("https://c1.staticflickr.com/9/8269/15204309883_f6e00423e6_b.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo13 {
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPsC17FK1cA-flV47yk0Ol2NKAqaPURKcv1DPY1ioICMAuDcG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo14 {
+    background:url("http://maxpixel.freegreatpicture.com/static/photo/1x/Computer-Keyboard-Hands-Apple-Mouse-1839391.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo15 {
+    background:url("https://images.pexels.com/photos/4831/hands-coffee-smartphone-technology.jpg?h=350&auto=compress&cs=tinysrgb");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+.photo16 {
+    background:url("https://images.pexels.com/photos/6330/smartphone-notebook-technology-calendar.jpg?h=350&auto=compress&cs=tinysrgb");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo17 {
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsKiqSj9VTvB-RSMJstjCsd045FLD1Eclye2Sd283LxQRjODxK");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    
+}
+
+.photo18 {
+    background:url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQQ9jMF4tp-7JprJG7PvG0ymMz4wmwlsbGYLIDa_3_jYz5AX_PIfA");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+.photo19 {
+    background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Moscou_1033b.jpg/1280px-Moscou_1033b.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+.photo20 {
+    background:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQPGRmcL08GPYaJTArFcTVtkZREMgyc9SIjxwlC6kbwHigIhBe8");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo21 {
+    background:url("https://mosaic01.ztat.net/vgs/media/pdp-gallery/LE/22/1N/01/JK/13/LE221N01J-K13@14.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo22 {
+    background:url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTLr44AAtHH3a_sVn3rCfnt5X9z9cJe_QSeW2HjCPHTTXUNaqf0");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo23 {
+    background:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjVc07meKgXcBcSRGdJEDo7zQuSpXqaPJ1cJOXHpLg9P4j1yWr");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo24 {
+    background:url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXkGPhcw4-mIw1IWSUIzOpOARH0uah_Fa7MF-H9cRkWAQrqiLOkw");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.photo25 {
+    background:url("https://upload.wikimedia.org/wikipedia/commons/1/12/Prague_-_night.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+↦   ↦   
+.photo_item {
+    position: relative;
+    overflow: hidden;
+    display: block;
+↦   ↦   width: 20%;
+↦   ↦   height:250px;
+↦   ↦   margin: 0 35px; 
+↦   ↦   float: left;
+↦   padding-top: 90px;
+↦   margin-top: 20px;
+}
+
+.photo_item .photo_item_hover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(0, 0, 0, .8);
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.photo_item .photo_item_hover .item_info {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.photo_item .photo_item_hover .item_info span {
+    display: block;
+    color: white;
+    font-size: 18px;
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    -webkit-transition: all .2s ease-in-out .2s;
+    transition: all .2s ease-in-out .2s;
+    opacity: 0;
+}
+
+
+.photo_item:hover .photo_item_hover {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+
+.phto_item:hover .item_info{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+div .item_info{
+    color: white;
+}
+
+.phrase{
+↦   font-size:1em; 
+    text-align: center;
+↦   font-size: 54px;
+↦   font-family: "Oswald", sans-serif;
+}
+
+</xmp></code></pre>
 </section>
 <section>
   <p>Student: Jacques HOVINE (codepen:SpaCeDuDe:rjgNOR)</p>
@@ -1389,12 +1816,6 @@ var jeuAventure = document.getElementsByClassName('aventure'); // => TABLEAU D'E
 var jeuPlateforme = document.getElementsByClassName('plateforme');
 var jeuPortable = document.getElementsByClassName('portable');
 
-//BOUTONS
-var tousClic = document.getElementById('filtre_tous');
-var aventureClic = document.getElementById('filtre_aventure');
-var plateformeClic = document.getElementById('filtre_plateforme');
-var portableClic = document.getElementById('filtre_portable');
-
 // TOUS
 document.getElementById('filtre_tous').onclick = function (){
 
@@ -1543,17 +1964,446 @@ article > img{
 }</xmp></code></pre>
 </section>
 <section>
+  <p>Student: Erwan ALLAIN (codepen:erwan_allain:xgoZoP)</p>
+  <pre><code><xmp><html>
+↦   ↦   <title>Mes champions</title>
+↦   <body>
+↦   ↦   <nav>
+↦   ↦   ↦   <button type="button" id="champtous">Tous</button><!--
+↦   ↦    --><button type="button" id="champmid">Mid</button><!--
+↦   ↦    --><button type="button" id="champbot">Bot</button><!--
+↦   ↦    --><button type="button" id="champtop">Top</button><!--
+↦   ↦    --><button type="button" id="champjungle">Jungle</button>
+↦   ↦   </nav>
+
+↦   ↦   <div>
+↦   ↦   ↦   <div id="col1">
+↦   ↦   ↦   ↦   <div class="mid">
+↦   ↦   ↦   ↦   ↦   <p>Lux</p>
+↦   ↦   ↦   ↦   ↦   <img src ="http://vignette1.wikia.nocookie.net/leagueoflegends/images/5/52/LuxPortrait.png/revision/latest?cb=20121005030826&path-prefix=fr"/>
+↦   ↦   ↦   ↦   </div><!--
+↦   ↦   ↦    --><div class="mid">
+↦   ↦   ↦    ↦   ↦   <p>LeBlanc</p>
+↦   ↦   ↦    ↦   ↦   <img src="http://www.mobafire.com/images/champion/icon/leblanc.png"/>
+↦   ↦   ↦    ↦   </div><!--
+↦   ↦   ↦    --><div class="mid bot">
+↦   ↦   ↦    ↦   ↦   <p>Annie</p>
+↦   ↦   ↦    ↦   ↦   <img src="http://blackworldforum.com/images/avatar/Annie.jpg"/>
+↦   ↦   ↦    ↦   </div>
+↦   ↦   ↦   </div><!--
+↦   ↦    --><div id="col2">
+↦   ↦    ↦   ↦   <div class="bot">
+↦   ↦   ↦   ↦   ↦   <p>Ezreal</p>
+↦   ↦   ↦   ↦   ↦   <img src ="http://api.arcana-gaming.com/Content/arcana/lol/Ezreal_square_0.png"/>
+↦   ↦   ↦   ↦   </div><!--
+↦   ↦   ↦    --><div class="bot">
+↦   ↦   ↦    ↦   ↦   <p>Draven</p>
+↦   ↦   ↦    ↦   ↦   <img src="https://pbs.twimg.com/profile_images/579278092574662656/U71LP7BW.png"/>
+↦   ↦   ↦    ↦   </div><!--
+↦   ↦   ↦    --><div class="bot">
+↦   ↦   ↦    ↦   ↦   <p>Sona</p>
+↦   ↦   ↦    ↦   ↦   <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Sona.png"/>
+↦   ↦   ↦    ↦   </div>
+↦   ↦   ↦   </div><!--
+↦   ↦    --><div id="col3">
+↦   ↦    ↦   ↦   <div class="top jungle">
+↦   ↦   ↦   ↦   ↦   <p>Jax</p>
+↦   ↦   ↦   ↦   ↦   <img src ="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Jax.png"/>
+↦   ↦   ↦   ↦   </div><!--
+↦   ↦   ↦    --><div class="top jungle">
+↦   ↦   ↦    ↦   ↦   <p>Poppy</p>
+↦   ↦   ↦    ↦   ↦   <img src="http://vignette2.wikia.nocookie.net/leagueoflegends/images/7/7c/PoppyPortrait.png/revision/latest?cb=20151125124912&path-prefix=fr"/>
+↦   ↦   ↦    ↦   </div><!--
+↦   ↦   ↦    --><div class="top">
+↦   ↦   ↦    ↦   ↦   <p>Shen</p>
+↦   ↦   ↦    ↦   ↦   <img src="http://vignette4.wikia.nocookie.net/leagueoflegends/images/f/f7/ShenPortrait.png/revision/latest?cb=20141013201442&path-prefix=fr"/>
+↦   ↦   ↦    ↦   </div>
+↦   ↦   ↦   </div><!--
+↦   ↦    --><div id="col4">
+↦   ↦    ↦   ↦   <div class="jungle mid">
+↦   ↦   ↦   ↦   ↦   <p>Diana</p>
+↦   ↦   ↦   ↦   ↦   <img src ="http://vignette3.wikia.nocookie.net/leagueoflegends/images/f/f5/DianaPortrait.png/revision/latest?cb=20120728030158&path-prefix=fr"/>
+↦   ↦   ↦   ↦   </div><!--
+↦   ↦   ↦    --><div class="jungle">
+↦   ↦   ↦    ↦   ↦   <p>Fiddlestick</p>
+↦   ↦   ↦    ↦   ↦   <img src="http://cdn.fansided.com/wp-content/blogs.dir/359/files/2016/04/Fiddlesticks_Square-1.jpg"/>
+↦   ↦   ↦    ↦   </div><!--
+↦   ↦   ↦    --><div class="jungle">
+↦   ↦   ↦    ↦   ↦   <p>Elise</p>
+↦   ↦   ↦    ↦   ↦   <img src="http://vignette4.wikia.nocookie.net/leagueoflegends/images/1/1a/ElisePortrait.png/revision/latest?cb=20121023032747&path-prefix=fr"/>
+↦   ↦   ↦    ↦   </div>
+↦   ↦   ↦   </div><!--
+↦   ↦    -->
+↦   ↦   </div>↦   ↦   
+↦   </body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var championMid = document.getElementsByClassName('mid');
+var championTop = document.getElementsByClassName('top');
+var championBot = document.getElementsByClassName('bot');
+var championJungle = document.getElementsByClassName('jungle');
+
+document.getElementById('champtous').onclick = function (){
+
+↦   for(var i = 0; i < championMid.length; i++){
+↦   ↦   championMid[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championTop.length; i++){
+↦   ↦   championTop[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championBot.length; i++){
+↦   ↦   championBot[i].classList.remove('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championJungle.length; i++){
+↦   ↦   championJungle[i].classList.remove('hidden'); 
+↦   }
+}
+
+document.getElementById('champmid').onclick = function (){
+
+↦   for(var i = 0; i < championTop.length; i++){
+↦   ↦   championTop[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championBot.length; i++){
+↦   ↦   championBot[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championJungle.length; i++){
+↦   ↦   championJungle[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championMid.length; i++){
+↦   ↦   championMid[i].classList.remove('hidden'); 
+↦   }
+}
+
+document.getElementById('champtop').onclick = function (){
+
+↦   for(var i = 0; i < championBot.length; i++){
+↦   ↦   championBot[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championJungle.length; i++){
+↦   ↦   championJungle[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championMid.length; i++){
+↦   ↦   championMid[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championTop.length; i++){
+↦   ↦   championTop[i].classList.remove('hidden'); 
+↦   }
+}
+
+document.getElementById('champbot').onclick = function (){
+
+↦   for(var i = 0; i < championTop.length; i++){
+↦   ↦   championTop[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championJungle.length; i++){
+↦   ↦   championJungle[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championMid.length; i++){
+↦   ↦   championMid[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championBot.length; i++){
+↦   ↦   championBot[i].classList.remove('hidden'); 
+↦   }
+}
+
+document.getElementById('champjungle').onclick = function (){
+
+↦   for(var i = 0; i < championMid.length; i++){
+↦   ↦   championMid[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championTop.length; i++){
+↦   ↦   championTop[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championBot.length; i++){
+↦   ↦   championBot[i].classList.add('hidden'); 
+↦   }
+
+↦   for(var i = 0; i < championJungle.length; i++){
+↦   ↦   championJungle[i].classList.remove('hidden'); 
+↦   }
+}</xmp></code></pre>
+  <pre><code><xmp>body{
+↦   font-family:"Arial", sans-serif;
+↦   margin:0;
+↦   width:100%;
+}
+
+.hidden{
+↦   display:none;
+}
+
+nav{
+↦   text-align:center;
+}
+
+button{
+↦   border:none;
+↦   width:15%;
+↦   margin:5px;
+↦   height: 50px;
+↦   text-transform:uppercase;
+}
+
+button:hover{
+↦   background-color:rgb(46, 204, 113);
+↦   cursor:pointer;
+}
+
+img{
+↦   height: 75px;
+↦   border-radius:100px;
+}
+
+#col1, #col2, #col3, #col4{
+↦   display:inline-block;
+↦   width:25%;
+↦   text-align:center;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Garance FABRE (codepen:Garancef1:ZLdpeY)</p>
+  <pre><code><xmp><head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="liste.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
+</head>
+
+
+<body> 
+
+<nav>
+
+    <ul>
+
+        <li>
+
+            <a rel="nofollow" rel="noreferrer"id="all">Voir tout</a>  
+            <a rel="nofollow" rel="noreferrer"id="list1">Pomme</a>  
+            <a rel="nofollow" rel="noreferrer"id="list2">Pates</a>  
+            <a rel="nofollow" rel="noreferrer"id="list3">Plats cuisinés</a>  
+
+        </li>
+
+    </ul>
+
+</nav>
+<section>
+    <div class="main">
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Pink Lady</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Lasagnes</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Soupes Chinoises</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>Coquilettes</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Golden</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>Fusilli</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Gratins</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>Spagetti</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Granny Smith</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Hachis parmentier</h3>
+            </div>
+        </article>
+</section>
+<script type="text/javascript" src="scriptliste.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>(function () {
+  var allButton = document.getElementById('all'); 
+  var list1Button = document.getElementById('list1'); 
+  var list2Button = document.getElementById('list2');
+  var list3Button = document.getElementById('list3');
+          
+  var showItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "inline-block";
+    }
+  };
+  var hideItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "none";
+    }
+  };
+
+  list1Items = document.getElementsByClassName('list1');
+  list2Items = document.getElementsByClassName('list2');
+  list3Items = document.getElementsByClassName('list3');
+            
+  allButton.onclick = function() {
+    showItems(list1Items);
+    showItems(list2Items);
+    showItems(list3Items);
+  };
+  list1Button.onclick = function() {
+    showItems(list1Items);
+    hideItems(list2Items);
+    hideItems(list3Items);
+    };
+  list2Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list3Items);
+    showItems(list2Items);
+    };
+  list3Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list2Items);
+    showItems(list3Items);
+    };
+  })();</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+div{
+    padding-top: 100px;
+}
+
+html,body {
+    font-family: 'Inconsolata', monospace;
+    color: #F1A9A0;
+    text-align: center;
+}
+
+nav {
+    background-color: #F1A9A0;
+    position: fixed;
+    width: 100%;
+}
+
+p {
+    margin: 2% 0;
+    font-size: 1em;
+}
+
+ul {
+↦   position: absolute;
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+↦   width: 80%;
+↦   z-index: 99;
+
+}
+
+h2 {
+  
+    font-size: 3em;
+    padding: 5% 0;
+    margin: 0;
+}
+
+h3 {
+  
+    font-size: 1,5em;
+     margin: 0;
+}
+
+a {
+
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 5%;
+   
+}
+
+a:hover {
+    font-weight: bold;
+    color: #2c3e50; 
+    cursor: pointer;
+
+}
+
+li {
+    background-color: white;
+    margin: 0;
+    padding: 0.5%;
+}
+
+section {
+    margin: 2% 10%;
+    background-color: white;
+}
+
+
+article{
+    display: inline-block;
+
+}
+
+.item {
+
+    margin: 5%;
+}
+
+#all { font-size: 3em; }</xmp></code></pre>
+</section>
+<section>
   <p>Student: Pierry LIM (jsfiddle:pixrrl:jkav8oe3)</p>
   <pre><code><xmp><body id="body" class="theme">
 <header>
 <nav class="theme">
 ↦   <ul>
 ↦   <li>Filtre selon la cat&#xE9;gorie&#xA0;!</li><!--
-↦   --><li id="ViewAll">Tout afficher</li><!--
-↦   --><li id="Accessoire">Accessoires</li><!--
-↦   --><li id="Connecte">Appareils connect&#xE9;s</li><!--
-↦   --><li id="Smartphone">Smartphone</li><!--
-↦   --><li id="Telephone">T&#xE9;l&#xE9;phones</li>
+↦   --><li id="ViewAll" class="Liste">Tout afficher</li><!--
+↦   --><li id="Accessoire" class="Liste">Accessoires</li><!--
+↦   --><li id="Connecte" class="Liste">Appareils connect&#xE9;s</li><!--
+↦   --><li id="Smartphone" class="Liste">Smartphone</li><!--
+↦   --><li id="Telephone" class="Liste">T&#xE9;l&#xE9;phones</li>
 </ul>
 </nav>
 <div id="bloc1">
@@ -1605,30 +2455,104 @@ article > img{
 </div>
 </header>
 </body></xmp></code></pre>
-  <pre><code><xmp>/* Le travail est aussi visionnable sur le nouveau serveur de l&apos;EEMI
-en suivant ce lien: http://plim.eemi.tech/Javascript/Filtrage/ */
-// D&#xE9;finition des variables
-var accessoire1 = document.getElementsByClassName(&apos;Accessoire&apos;);
-var connecte2 = document.getElementsByClassName(&apos;Connecte&apos;);
-var smartphone3 = document.getElementsByClassName(&apos;Smartphone&apos;);
-var telephone4 = document.getElementsByClassName(&apos;Telephone&apos;);
-var tout5 = document.getElementsByClassName(&apos;All&apos;);
-var theme = document.getElementsByClassName(&apos;theme&apos;);
-var bloc = document.getElementById(&apos;bloc1&apos;);
-
-// D&#xE9;finition des fonctions
-function tousLesProduits() {
-  // Supression de la class hidden &#xE0; tous les produits
-  for (var i = 0; i &lt; tout5.length; i++) {
-    tout5[i].classList.remove(&apos;hidden&apos;);
+  <pre><code><xmp>var tout5 = document.getElementsByClassName(&apos;All&apos;);
+document.getElementById(&apos;ViewAll&apos;).onclick = function () {
+  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {
+    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);
   }
-  // Change le titre h1
-  document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class="theme">Tous les produits</h1>&apos;;
-  // Si l&apos;&#xE9;cran a une largeur maximale de 1280px, le titre h1 passera en couleur blanche
-  if (screen.width <= 1="" 1280="" )="" {="" theme[3].style.color="white" ;="" }="" passage="" de="" l'opacité="" du="" bloc="" contenant="" les="" articles="" à="" pour="" une="" transition="" css="" bloc.style.opacity="1" function="" lesaccessoires()="" ajout="" la="" class="" hidden tous="" produits="" concernés="" for="" (var="" i="0;" <="" connecte2.length;="" i++)="" connecte2[i].classlist.add('hidden');="" smartphone3.length;="" smartphone3[i].classlist.add('hidden');="" telephone4.length;="" telephone4[i].classlist.add('hidden');="" accessoire1.length;="" accessoire1[i].classlist.remove('hidden');="" document.getelementbyid('haut').innerhtml="&lt;h1 class=&quot;theme&quot;&gt;Tous les accessoires&lt;/h1&gt;" if="" (screen.width="" tousconnectes()="" accessoire1[i].classlist.add('hidden');="" connecte2[i].classlist.remove('hidden');="" lesmartphone()="" smartphone3[i].classlist.remove('hidden');="" lestelephones()="" telephone4[i].classlist.remove('hidden');="" document.getelementbyid('viewall').onclick="function" ()="" *="" ajoute="" des="" bordures="" en="" haut="" et="" bas="" d'un="" li="" qu'on="" puisse="" savoir="" quel="" est="" le="" dernier="" bouton="" appuyé="" document.getelementbyid('viewall').classlist.add('categoriechoisie');="" document.getelementbyid('accessoire').classlist.remove('categoriechoisie');="" document.getelementbyid('telephone').classlist.remove('categoriechoisie');="" document.getelementbyid('connecte').classlist.remove('categoriechoisie');="" document.getelementbyid('smartphone').classlist.remove('categoriechoisie');="" theme[0].style.backgroundcolor="rgb(132, 232, 255)" theme[1].style.backgroundcolor="rgba(0,180,220,1)" div="" titre="" h1="" change="" couleur="" fond,="" ce="" sera="" un="" affichage="" mobile="" theme[2].style.backgroundcolor="rgba(0,180,220,1)" opacité="" avec="" 0.8="" seconde="" lancement="" fonction="" retard="" settimeout(touslesproduits,="" 800);="" document.getelementbyid('accessoire').onclick="function" document.getelementbyid('accessoire').classlist.add('categoriechoisie');="" document.getelementbyid('viewall').classlist.remove('categoriechoisie');="" settimeout(lesaccessoires,="" document.getelementbyid('connecte').onclick="function" document.getelementbyid('connecte').classlist.add('categoriechoisie');="" settimeout(tousconnectes,="" document.getelementbyid('smartphone').onclick="function" document.getelementbyid('smartphone').classlist.add('categoriechoisie');="" settimeout(lesmartphone,="" document.getelementbyid('telephone').onclick="function" document.getelementbyid('telephone').classlist.add('categoriechoisie');="" settimeout(lestelephones,="" dans="" cas="" où="" l'utilisateur="" ferait="" zoom="" assez="" important="" puis="" dézoom="" revenir="" normale="" sur="" navigateur,="" verra="" son="" fond="" enlevé="" police="" repassera="" noire=""> 1280 ) {
-  theme[2].style.backgroundColor = null;
-  theme[3].style.color = &apos;black&apos;;
-}</=></xmp></code></pre>
+  document.getElementById(&apos;ViewAll&apos;).classList.add(&apos;categorieChoisie&apos;);
+  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgb(132, 232, 255)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(0,180,220,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(0,180,220,1)&apos;;
+  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;
+  setTimeout(function () {
+    for (var i = 0; i &lt; tout5.length; i++) {
+      tout5[i].classList.remove(&apos;hidden&apos;);
+    }
+    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class="theme">Tous les produits</h1>&apos;;
+    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;
+  }, 800);
+}
+document.getElementById(&apos;Accessoire&apos;).onclick = function () {
+  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {
+    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);
+  }
+  document.getElementById(&apos;Accessoire&apos;).classList.add(&apos;categorieChoisie&apos;);
+  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(160,25,85,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(80,15,45,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(80,15,45,1)&apos;;
+  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;
+  setTimeout(function () {
+    for (var i = 0; i &lt; tout5.length; i++) {
+      tout5[i].classList.add(&apos;hidden&apos;);
+    }
+    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Accessoire&apos;).length; i++) {
+      document.getElementsByClassName(&apos;Accessoire&apos;)[i].classList.remove(&apos;hidden&apos;);
+    }
+    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class="theme">Tous les accessoires</h1>&apos;;
+    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;
+  }, 800);
+}
+document.getElementById(&apos;Connecte&apos;).onclick = function () {
+  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {
+    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);
+  }
+  document.getElementById(&apos;Connecte&apos;).classList.add(&apos;categorieChoisie&apos;);
+  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(255,205,125,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(255,155,0,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(255,155,0,1)&apos;;
+  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;
+  setTimeout(function () {
+    for (var i = 0; i &lt; tout5.length; i++) {
+      tout5[i].classList.add(&apos;hidden&apos;);
+    }
+    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Connecte&apos;).length; i++) {
+      document.getElementsByClassName(&apos;Connecte&apos;)[i].classList.remove(&apos;hidden&apos;);
+    }
+    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class="theme">Tous les appareils connect&#xE9;s</h1>&apos;;
+    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;
+  }, 800);
+}
+document.getElementById(&apos;Smartphone&apos;).onclick = function () {
+  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {
+    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);
+  }
+  document.getElementById(&apos;Smartphone&apos;).classList.add(&apos;categorieChoisie&apos;);
+  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(186,236,80,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(90,190,15,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(90,190,15,1)&apos;;
+  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;
+  setTimeout(function () {
+    for (var i = 0; i &lt; tout5.length; i++) {
+      tout5[i].classList.add(&apos;hidden&apos;);
+    }
+    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Smartphone&apos;).length; i++) {
+      document.getElementsByClassName(&apos;Smartphone&apos;)[i].classList.remove(&apos;hidden&apos;);
+    }
+    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class="theme">Le smartphone</h1>&apos;;
+    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;
+  }, 800);
+}
+document.getElementById(&apos;Telephone&apos;).onclick = function () {
+  for (var i = 0; i &lt; document.getElementsByClassName(&apos;Liste&apos;).length; i++) {
+    document.getElementsByClassName(&apos;Liste&apos;)[i].classList.remove(&apos;categorieChoisie&apos;);
+  }
+  document.getElementById(&apos;Telephone&apos;).classList.add(&apos;categorieChoisie&apos;);
+  document.getElementsByClassName(&apos;theme&apos;)[0].style.backgroundColor = &apos;rgba(135,250,230,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[1].style.backgroundColor = &apos;rgba(5,205,165,1)&apos;;
+  document.getElementsByClassName(&apos;theme&apos;)[2].style.backgroundColor = &apos;rgba(5,205,165,1)&apos;;
+  document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;0&apos;;
+  setTimeout(function () {
+    for (var i = 0; i &lt; tout5.length; i++) {
+      tout5[i].classList.add(&apos;hidden&apos;);
+    }
+    for (var i = 0; i &lt; document.getElementsByClassName(&apos;Telephone&apos;).length; i++) {
+      document.getElementsByClassName(&apos;Telephone&apos;)[i].classList.remove(&apos;hidden&apos;);
+    }
+    document.getElementById(&apos;haut&apos;).innerHTML = &apos;<h1 class="theme">Tous les t&#xE9;l&#xE9;phones</h1>&apos;;
+    document.getElementById(&apos;bloc1&apos;).style.opacity = &apos;1&apos;;
+  }, 800);
+}</xmp></code></pre>
   <pre><code><xmp>@import url(&apos;https://fonts.googleapis.com/css?family=Montserrat&apos;);
 
 *{
@@ -1697,7 +2621,7 @@ nav ul li:nth-child(n+2):hover {
 h1 {
 ↦   text-align: center;
 ↦   padding: 20px;
-↦   color: rgb(38,38,38);
+↦   color: white;
 ↦   font-size: 24px;
 ↦   user-select : none;
 }
@@ -1724,6 +2648,11 @@ div#bloc1 {
 div#haut {
 ↦   text-align: center;
 ↦   text-transform: uppercase;
+  border-radius: 5px 5px 0 0;
+↦   background-color: rgba(0,180,220,1);
+↦   transition-property: background-color;
+↦   transition-duration: 1.5s;
+↦   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 div#bas {
@@ -1804,14 +2733,6 @@ iPhone/iPad: Probl&#xE8;me d&apos;affichage de contenus en zoomant */
 ↦   ↦   margin-left: 36.6%;
 ↦   ↦   padding-left: 0px;
     ↦   padding-right: 0px;
-↦   }
-
-↦   div#haut {
-    border-radius: 5px 5px 0 0;
-↦   background-color: rgba(255,255,255,1);
-↦   transition-property: background-color;
-↦   transition-duration: 1.5s;
-↦   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 ↦   }
 
 ↦   h1 {
@@ -2108,6 +3029,413 @@ section { max-width: 400px; border-radius: 5px; background-color: #eee; box-shad
 ↦   #categories > div:nth-child(2) { background-color: #def;}
 #products {}
 ↦   #products > article { padding: 10px;}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Eliott HADIDA (codepen:anon:rjgJQr)</p>
+  <pre><code><xmp><body>
+↦   <h1> Top 3 des meilleurs films, par décennie :</h1>
+↦   <nav>
+↦   ↦   <ul>
+↦   ↦   ↦   <li id="tous">Tous les films</li>
+↦   ↦   ↦   <li id="f70s">70s</li>
+↦   ↦   ↦   <li id="f80s">80s</li>
+↦   ↦   ↦   <li id="f90s">90s</li>
+↦   ↦   ↦   <li id="f2000s">2000s</li> 
+      <li id="ftop6">Top 6</li> 
+↦   ↦   </ul>
+↦   </nav>
+↦   ↦   <article class="f70">
+↦   ↦   ↦   ↦   <img src="http://www.dvdclassik.com/upload/images/affiches/phantom-of-the-paradise.jpeg">
+↦   ↦   </article>
+↦   ↦   <article class="f70">
+↦   ↦   ↦   ↦   <img src="https://media.senscritique.com/media/000006360574/source_big/Stalker.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f70">
+↦   ↦   ↦   ↦   <img src="http://images.affiches-et-posters.com//albums/3/2782/medium/2782-affiche-film-apocalypse-now.jpg">
+  </article>
+↦   ↦   <article class="f80">
+↦   ↦   ↦   ↦   <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Raging_Bull_poster.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f80">
+↦   ↦   ↦   ↦   <img src="http://fr.web.img2.acsta.net/medias/nmedia/18/64/85/16/19178964.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f80">
+↦   ↦   ↦   ↦   <img src="http://fr.web.img6.acsta.net/medias/nmedia/18/60/08/31/19079741.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f90">
+↦   ↦   ↦   ↦   <img src="http://fr.web.img6.acsta.net/pictures/15/09/02/15/06/131985.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f90">
+↦   ↦   ↦   ↦   <img src="http://fr.web.img6.acsta.net/r_1920_1080/pictures/16/09/06/16/19/305655.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f90">
+↦   ↦   ↦   ↦   <img src="https://media.senscritique.com/media/000010760789/source_big/Le_Festin_nu.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f2000">
+↦   ↦   ↦   ↦   <img src="https://s-media-cache-ak0.pinimg.com/originals/65/53/72/65537220255e0c3a6fe682cd1e53e11d.jpg">
+↦   ↦   </article>
+↦   ↦   <article class="f2000">
+↦   ↦   ↦   ↦   <img src="http://fr.web.img4.acsta.net/medias/nmedia/18/35/08/23/affiche.jpg">
+↦   ↦   </article>
+  <article class="f2000">
+↦   ↦   ↦   ↦   <img src="http://7artcinema.online.fr/imagesbg/David_Lynch_Mulholland_Drive_2001_Affiche_04.jpg">
+↦   ↦   </article>
+</body></xmp></code></pre>
+  <pre><code><xmp>var f70s = document.getElementsByClassName('f70');
+var f80s = document.getElementsByClassName('f80');
+var f90s = document.getElementsByClassName('f90');
+var f2000s = document.getElementsByClassName('f2000');
+var ftop6 = document.getElementsByClassName('top6');
+
+document.getElementById('f70s').onclick = function () {
+↦   for (var i = 0; i<f80s.length; i++) {
+↦   ↦   f80s[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<f90s.length; j++) {
+↦   ↦   f90s[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<f2000s.length; k++) {
+↦   ↦   f2000s[k].classList.add('hidden');
+↦   }
+↦   for (var m = 0; m<f70s.length; m++) {
+↦   ↦   f70s[m].classList.remove('hidden');
+↦   }
+}
+
+document.getElementById('f80s').onclick = function () {
+↦   for (var i = 0; i<f80s.length; i++) {
+↦   ↦   f80s[i].classList.remove('hidden');
+↦   }
+↦   for (var j = 0; j<f90s.length; j++) {
+↦   ↦   f90s[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<f2000s.length; k++) {
+↦   ↦   f2000s[k].classList.add('hidden');
+↦   }
+↦   for (var m = 0; m<f70s.length; m++) {
+↦   ↦   f70s[m].classList.add('hidden');
+↦   }
+}
+
+document.getElementById('f2000s').onclick = function () {
+↦   for (var i = 0; i<f80s.length; i++) {
+↦   ↦   f80s[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<f90s.length; j++) {
+↦   ↦   f90s[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<f2000s.length; k++) {
+↦   ↦   f2000s[k].classList.remove('hidden');
+↦   }
+↦   for (var m = 0; m<f70s.length; m++) {
+↦   ↦   f70s[m].classList.add('hidden');
+↦   }
+}
+
+document.getElementById('f90s').onclick = function () {
+↦   for (var i = 0; i<f80s.length; i++) {
+↦   ↦   f80s[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<f90s.length; j++) {
+↦   ↦   f90s[j].classList.remove('hidden');
+↦   }
+↦   for (var k = 0; k<f2000s.length; k++) {
+↦   ↦   f2000s[k].classList.add('hidden');
+↦   }
+↦   for (var m = 0; m<f70s.length; m++) {
+↦   ↦   f70s[m].classList.add('hidden');
+↦   }
+}
+
+document.getElementById('ftop6').onclick = function () {
+↦   for (var i = 0; i<f80s.length; i++) {
+↦   ↦   f80s[i].classList.add('hidden');
+↦   }
+↦   for (var j = 0; j<f90s.length; j++) {
+↦   ↦   f90s[j].classList.add('hidden');
+↦   }
+↦   for (var k = 0; k<f2000s.length; k++) {
+↦   ↦   f2000s[k].classList.remove('hidden');
+↦   }
+↦   for (var m = 0; m<f70s.length; m++) {
+↦   ↦   f70s[m].classList.remove('hidden');
+↦   }
+}
+
+document.getElementById('tous').onclick = function () {
+↦   ↦   for (var i = 0; i<f80s.length; i++) {
+↦   ↦   f80s[i].classList.remove('hidden');
+↦   }
+↦   for (var j = 0; j<f90s.length; j++) {
+↦   ↦   f90s[j].classList.remove('hidden');
+↦   }
+↦   for (var k = 0; k<f2000s.length; k++) {
+↦   ↦   f2000s[k].classList.remove('hidden');
+↦   }
+↦   for (var m = 0; m<f70s.length; m++) {
+↦   ↦   f70s[m].classList.remove('hidden');
+↦   }
+}</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Francois+One');
+
+body {
+  font-family: 'Francois One', sans-serif;
+↦   background-color: #ECF0F1;
+}
+
+h1 {
+  padding-top: 15px;
+↦   text-align: center;
+↦   width: 100%;
+  margin: auto;
+↦   background-color: #ECF0F1;
+↦   color: #2c3e50;
+}
+
+nav {
+↦   width: 40%;
+  margin: auto;
+  text-aling: center;
+↦   background-color: #2c3e50;
+↦   color: #ECF0F1;
+}
+
+nav li {
+↦   display:inline-block;
+↦   text-align:center;
+  font-size:1.2em;
+↦   padding:15px;
+↦   color:white;
+}
+
+nav li:hover {
+  color:#DB0A5B;
+  cursor: pointer;
+}
+
+article {
+↦   display:inline-block;
+↦   width:15%;
+↦   padding:5px;
+↦   text-align:center;
+}
+
+article img {
+↦   width:100%;
+↦   padding:10px;
+}
+
+.hidden {
+↦   display: none;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Tristan MACHIN (codepen:tristanmachin:NdyNXz)</p>
+  <pre><code><xmp><html lang="fr">
+↦   <head>
+↦   ↦   <title>Liste dynamique</title>
+↦   ↦   <meta charset="utf-8">
+↦   </head>
+↦   <body>
+↦   ↦   <ul class="categories">
+      <li><a rel="nofollow" rel="noreferrer"class="voir">Tout voir</a></li>
+↦   ↦   ↦   <li><a rel="nofollow" rel="noreferrer"class="adresse voir">Adresse</a></li>
+↦   ↦   ↦   <li><a rel="nofollow" rel="noreferrer"class="force voir">Force</a></li>
+↦   ↦   ↦   <li><a rel="nofollow" rel="noreferrer"class="concentration voir">Concentration</a></li>
+↦   ↦   </ul>
+↦   ↦   <ul class="discipline">
+      <li class="adresse concentration voir discipline">Course</li>
+↦   ↦   ↦   <li class="adresse concentration voir discipline">Tir à l'arc</li>
+↦   ↦   ↦   <li class="concentration voir discipline">Echecs</li>
+↦   ↦   ↦   <li class="force adresse voir discipline">Lancer de javelot</li>
+↦   ↦   ↦   <li class="adresse concentration voir discipline">Funambulisme</li>
+↦   ↦   ↦   <li class="force voir discipline">Maître Jedi</li>
+↦   ↦   ↦   <li class="adresse force voir discipline">Maîtrise du combat de sabre laser</li>
+↦   ↦   ↦   <li class="adresse voir discipline">Equitation</li>
+↦   ↦   ↦   <li class="adresse concentration voir discipline">Pilotage de modules de course</li>
+↦   ↦   ↦   <li class="adresse voir discipline">Tir au blaster</li>
+↦   ↦   </ul>
+↦   </body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var voir = document.getElementsByClassName('voir');
+var adresse = document.getElementsByClassName('adresse');
+var force = document.getElementsByClassName('force');
+var concentration = document.getElementsByClassName('concentration');
+var categories = document.getElementsByClassName('categories');
+var elements = document.getElementsByClassName("discipline");
+
+for (var i = 0; i < elements.length; i++) {
+  elements[i].classList.add('hidden');
+}
+//
+document.getElementById('adresse').onclick = function (){
+  for (var i = 0; i < adresse.length; i++){
+    adresse[i].classList.remove('hidden');
+  }
+  for (var i=0; i < force.length; i++){
+    force[i].classList.add('hidden');
+  }
+  for (var i = 0; i < concentration.length; i++){
+    concentration[i].classList.add('hidden');
+  }
+}</xmp></code></pre>
+  <pre><code><xmp>li {
+↦   font-family: Roboto;
+  list-style-type: armenian;
+}
+.hidden {
+  display: none;
+}
+.voir {
+  
+}
+a {
+  cursor: pointer;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Léo MARTIN (codepen:frenchBackPipe:egVZJx)</p>
+  <pre><code><xmp><html>
+  <head>
+↦   ↦   <meta charset="utf-8" />
+  </head>
+  <body>
+        <h1>L'univers de Tolkien</h1>
+        <div class="filtres">
+          <ul class="categories">
+            <li><a rel="nofollow" rel="noreferrer"id="tout">Tout les produits</a></li><!--
+            --><li><a rel="nofollow" rel="noreferrer"id="livre">Littérature</a></li><!--
+            --><li><a rel="nofollow" rel="noreferrer"id="cinema">Cinéma</a></li><!--
+            --><li><a rel="nofollow" rel="noreferrer"id="musique">Musique</a></li><!--
+            --><li><a rel="nofollow" rel="noreferrer"id="jv">Jeux Vidéos</a></li>
+          </ul>
+        </div>
+        <div class="produits">
+          <ul>
+          <li><p class="livre cinema tout produit">Le seigneur des anneaux</p></li>
+          <li><p class="jv tout produit">Lord of the rings Online</p></li>
+          <li><p class="livre tout produit">Les aventures de Tom Bombadil</p></li>
+          <li><p class="livre tout produit">Le silmarillon</p></li>
+          <li><p class="jv tout produit">Le seigneur des anneaux : La guerre du Nord</p></li>
+          <li><p class="livre cinema produit tout">Bilbo le Hobbit</p></li>
+          <li><p class="musique tout produit"> Old Friends - Howard Shore</p></li>
+          <li><p class="musique tout produit"> Concerning Hobbits - Howard Shore</p></li>
+          <li><p class="tout produit jv"> Lego Le Hobbit</p></li>
+          <li><p class="cinema tout produit "> Le seigneur des anneaux - Ralph Bakshi</p></li>
+  </body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var tout1 = document.getElementsByClassName('tout');
+var livre2 = document.getElementsByClassName('livre');
+var cinema3 = document.getElementsByClassName('cinema');
+var musique4 = document.getElementsByClassName('musique');
+var jv5 = document.getElementsByClassName('jv');
+var elements = document.getElementsByClassName("produit");
+
+for (var i = 0; i < elements.length; i++) {
+  elements[i].classList.add('hidden');
+}
+
+document.getElementById('tout').onclick = function (){
+  for (var i = 0; i < tout1.length; i++) {
+    tout1[i].classList.remove('hidden');
+  }
+}
+
+document.getElementById('livre').onclick = function (){
+  for (var i = 0; i < cinema3.length; i++){
+    cinema3[i].classList.add('hidden');
+  }
+  for (var i=0; i < jv5.length; i++){
+    jv5[i].classList.add('hidden');
+  }
+  for (var i = 0; i < musique4.length; i++){
+    musique4[i].classList.add('hidden');
+  }
+  for (var i = 0; i < livre2.length; i++){
+    livre2[i].classList.remove('hidden');
+  }
+}
+
+document.getElementById('cinema').onclick = function leCinema (){
+   for (var i=0; i < livre2.length; i++){
+    livre2[i].classList.add('hidden');
+  }
+  for (var i=0; i < jv5.length; i++){
+    jv5[i].classList.add('hidden');
+  }
+  for (var i = 0; i < musique4.length; i++){
+    musique4[i].classList.add('hidden');
+  }
+  for (var i = 0; i < cinema3.length; i++){
+    cinema3[i].classList.remove('hidden');
+  }
+}
+
+document.getElementById('jv').onclick = function lesjv (){
+   for (var i=0; i < livre2.length; i++){
+    livre2[i].classList.add('hidden');
+  }
+  for (var i=0; i < cinema3.length; i++){
+    cinema3[i].classList.add('hidden');
+  }
+  for (var i = 0; i < musique4.length; i++){
+    musique4[i].classList.add('hidden');
+  }
+  for (var i = 0; i < jv5.length; i++){
+    jv5[i].classList.remove('hidden');
+  }
+}
+
+document.getElementById('musique').onclick = function lamusique (){
+   for (var i=0; i < livre2.length; i++){
+    livre2[i].classList.add('hidden');
+  }
+  for (var i=0; i < jv5.length; i++){
+    jv5[i].classList.add('hidden');
+  }
+  for (var i = 0; i < cinema3.length; i++){
+    cinema3[i].classList.add('hidden');
+  }
+  for (var i = 0; i < musique4.length; i++){
+    musique4[i].classList.remove('hidden');
+  }
+}</xmp></code></pre>
+  <pre><code><xmp>ul.categories{
+  text-align: center;
+}
+
+ul{
+  list-style-type: none;
+}
+h1{
+  text-align: center;
+  background-color: lightgrey;
+  width: 30%;
+  margin: auto;
+  font-family: Vivaldi;
+}
+
+ul.categories >li{
+  display: inline-block;
+  width: 13%;
+  padding: 15px;
+  text-decoration: underline lightgrey;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.hidden{
+  display: none;
+}
+
+a{
+  cursor: pointer;
+}
+
+p{
+  text-align: center;
+}
 </xmp></code></pre>
 </section>
   </body>

@@ -10,6 +10,1607 @@
   </head>
   <body>
 <section>
+  <p>Student: Edouard DUCHESNE DE LAMOTTE (jsfiddle:edlmt:25wy47Lh:1)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="biblioth&#xE8;que.css">
+    <title>biblioth&#xE8;que</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>la biblioth&#xE8;que <br>partag&#xE9;e _</h1>
+      <h2>ajouter un livre <a href="#">+</a> <br>rechercher</h2>
+    </header>
+    <div class="sujet">
+      <ul id="listehead">
+        <li><a href="#" id="tout">Tout</a></li>
+        <!--
+        -->
+        <li><a href="#" id="science">Science</a></li>
+        <!--
+        -->
+        <li><a href="#" id="poesie">Poesie</a></li>
+        <!--
+        -->
+        <li><a href="#" id="fantastique">Fantastique</a></li>
+      </ul>
+    </div>
+    <div class="tableau">
+
+      <table>
+        <tr>
+          <td class="science">Lib&#xE9;rez votre cerveau !
+            <br>Aberkane</td>
+          <td class="science fantastique">l&apos;Ile Myst&#xE9;rieuse
+            <br>Jules Vernes</td>
+          <td class="science">Prenez le temps d&apos;y penser
+            <br>Benamran</td>
+          <td class="science fantastique">World of Warcraft
+            <br>Golden</td>
+        </tr>
+        <tr>
+          <td class="fantastique">Demain les chats
+            <br>Werber</td>
+          <td class="fantastique">Le Petit Prince
+            <br>St Exup&#xE9;ry</td>
+          <td class="fantastique">Le Hobbit
+            <br>Tolkien</td>
+          <td class="fantastique ">L&apos;Ile du Cr&#xE2;ne
+            <br>Horowitz</td>
+        </tr>
+        <tr>
+          <td class="poesie">Les fleurs du mal
+            <br>Baudelaire</td>
+          <td class="poesie">Paroles
+            <br>Pr&#xE9;vert</td>
+          <td class="poesie ">Fables
+            <br>La Fontaine</td>
+          <td class="poesie">Les Contemplations
+            <br>Victor Hugo</td>
+        </tr>
+        <tr>
+          <td class="science fantastique">Fondation
+            <br>Azimov</td>
+          <td class="science">Les petites bulles de l&apos;attention
+            <br>Lachaux</td>
+          <td class="fantastique">Harry Potter 1
+            <br>J.K Rowling</td>
+
+          <td class="science">Le temps des algorithmes
+            <br>Abiteboul</td>
+        </tr>
+      </table>
+    </div>
+    <script src="biblioth&#xE8;que.js" type="text/javascript"></script>
+  </body>
+
+</html>
+</xmp></code></pre>
+  <pre><code><xmp>var toutButton = document.getElementsByClassName(&apos;tout&apos;);
+var scienceButton = document.getElementsByClassName(&apos;science&apos;);
+var poesieButton = document.getElementsByClassName(&apos;poesie&apos;);
+var fantastiqueButton = document.getElementsByClassName(&apos;fantastique&apos;);
+var sciencefantastiqueButton = document.getElementsByClassName(&apos;science fantastique&apos;);
+
+var affich&#xE9; = function(object) {
+  for (var i = 0; i &lt; object.length; i++) {
+    object[i].style.display = &quot;inline-block&quot;;
+  }
+};
+var cach&#xE9; = function(object) {
+  for (var i = 0; i &lt; object.length; i++) {
+    object[i].style.display = &quot;none&quot;;
+  }
+};
+
+buttonTout = document.getElementById(&apos;tout&apos;);
+buttonScience = document.getElementById(&apos;science&apos;);
+buttonPoesie = document.getElementById(&apos;poesie&apos;);
+buttonFantastique = document.getElementById(&apos;fantastique&apos;);
+
+buttonTout.onclick = function() {
+  affich&#xE9;(toutButton);
+  affich&#xE9;(scienceButton);
+  affich&#xE9;(poesieButton);
+  affich&#xE9;(fantastiqueButton);
+};
+buttonPoesie.onclick = function() {
+  cach&#xE9;(toutButton);
+  cach&#xE9;(scienceButton);
+  affich&#xE9;(poesieButton);
+  cach&#xE9;(fantastiqueButton);
+};
+buttonFantastique.onclick = function() {
+  cach&#xE9;(toutButton);
+  cach&#xE9;(scienceButton);
+  cach&#xE9;(poesieButton);
+  affich&#xE9;(fantastiqueButton);
+  affich&#xE9;(sciencefantastiqueButton);
+};
+buttonScience.onclick = function() {
+  cach&#xE9;(toutButton);
+  affich&#xE9;(scienceButton);
+  cach&#xE9;(poesieButton);
+  cach&#xE9;(fantastiqueButton);
+  affich&#xE9;(sciencefantastiqueButton);
+};
+</xmp></code></pre>
+  <pre><code><xmp><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet"> .tableau {
+  color: white;
+}
+
+h1 {
+  margin-top: 0px;
+  padding-left: 20px;
+  text-align: left;
+  float: left;
+  font-size: 3em;
+  font-family: &apos;Source Sans Pro&apos;;
+}
+
+h2 {
+  margin-top: 0px;
+  padding-right: 20px;
+  text-align: right;
+  float: right;
+  font-size: 2em;
+  font-family: &apos;Source Sans Pro&apos;;
+}
+
+.sujet {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-family: &apos;Source Sans Pro&apos;;
+  vertical-align: middle;
+  font-size: 1, 5em;
+  width: 150px;
+}
+
+li {
+  list-style-type: none;
+}
+
+table {
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  width: 100%;
+  table-layout: fixed;
+}
+
+td {
+  vertical-align: text-top;
+  border-width: 10px;
+  border-style: solid;
+  border-color: white;
+  width: 20vw;
+  height: 20vw;
+  color: white;
+  padding: 20px;
+  font-size: 1, 5em;
+  font-family: &apos;Source Sans Pro&apos;;
+}
+
+.fantastique {
+  background-color: #212322;
+}
+
+.science {
+  background-color: #D6001C;
+}
+
+.poesie {
+  background-color: #19993B;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Kamil IZARET (codepen:Kmil:QdXGZp)</p>
+  <pre><code><xmp><ul>
+    <li><a rel="nofollow" rel="noreferrer"id="all"> View all</a></li><!--
+    --><li><a rel="nofollow" rel="noreferrer"id="fruit">Fruits</a></li><!--
+    --><li><a rel="nofollow" rel="noreferrer"id="vegetable">Vegetables</a></li><!--
+    --><li><a rel="nofollow" rel="noreferrer"id="nut">Nuts</a></li><!--
+    --><li><a rel="nofollow" rel="noreferrer"id="cake">Desserts & Cakes</a></li>
+</ul>
+<div class="all">
+<ul>
+↦   <li class ="vegetable">Product 1</li>
+↦   <li class="vegetable">Product 2</li>
+↦   <li class="fruit">Product 3</li>
+↦   <li class="fruit">Product 4</li>
+↦   <li class="nut">Product 5</li>
+↦   <li class="cake">Product 6</li>
+↦   <li class="cake">Product 7</li><li class="nut">Product 8</li>  
+↦   <li class ="fruit vegetable">Product 9</li>
+↦   <li class="fruit vegetable">Product 10</li>
+</ul>
+</div></xmp></code></pre>
+  <pre><code><xmp>var allproduct = document.getElementsByClassName('all');
+var fruitproduct = document.getElementsByClassName('fruit');
+var vegetableproduct = document.getElementsByClassName('vegetable');
+var nutproduct = document.getElementsByClassName('nut');
+var cakeproduct = document.getElementsByClassName('cake');
+
+var double1 = document.getElementsByClassName('fruit vegetable');
+var double2 = document.getElementsByClassName('fruit nut');
+var double3 = document.getElementsByClassName('fruit cake');
+
+var double4 = document.getElementsByClassName('vegetable fruit');
+var double5 = document.getElementsByClassName('vegetable nut');
+var double6 = document.getElementsByClassName('vegetable cake');
+
+var double7 = document.getElementsByClassName('nut fruit');
+var double8 = document.getElementsByClassName('nut vegetable');
+var double9 = document.getElementsByClassName('nut cake');
+
+var double10 = document.getElementsByClassName('cake fruit');
+var double10 = document.getElementsByClassName('cake vegetable');
+var double10 = document.getElementsByClassName('cake nut');
+
+var on = function(object) {
+    for (var i = 0; i < object.length; i++) {
+        object[i].style.display="";
+    }
+};
+var off = function(object) {
+    for (var i = 0; i < object.length; i++) {
+        object[i].style.display="none";
+    }
+};
+
+productall = document.getElementById('all');
+productfruit = document.getElementById('fruit');
+productvegetable = document.getElementById('vegetable');
+productnut = document.getElementById('nut');
+productcake = document.getElementById('cake');
+
+productall.onclick = function() {
+    on(fruitproduct);
+    on(vegetableproduct);
+    on(nutproduct);
+    on(cakeproduct);
+};
+productfruit.onclick = function() {
+    on(fruitproduct);
+    off(vegetableproduct);
+    off(nutproduct);
+    off(cakeproduct);
+    on(double1);
+};
+productvegetable.onclick = function() {
+    off(fruitproduct);
+    on(vegetableproduct);
+    off(nutproduct);
+    off(cakeproduct);
+};
+productnut.onclick = function() {
+    off(fruitproduct);
+    off(vegetableproduct);
+    on(nutproduct);
+    off(cakeproduct);
+};
+productcake.onclick = function() {
+    off(fruitproduct);
+    off(vegetableproduct);
+    off(nutproduct);
+    on(cakeproduct);
+};</xmp></code></pre>
+  <pre><code><xmp></xmp></code></pre>
+</section>
+<section>
+  <p>Student: Victor LE GAC (codepen:goumille:egaQBb)</p>
+  <pre><code><xmp>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="calcul.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav id="back">
+        <a rel="nofollow" rel="noreferrer"href="index.html"><img src="img/logo.png" id="logo"></a>
+        <input type="search" placeholder="Recherche ton skin" name="q">
+↦   ↦   <button><span><i class="material-icons md-24">search</i></span></button>
+    </nav>
+    <header>
+            <h1>
+             Librairie Skin CSGO
+            </h1>
+    </header>    
+    <ul id="fixed-floater">
+        <li>
+            <a rel="nofollow" rel="noreferrer"id="all">Voir tous les Skins</a>  
+            <a rel="nofollow" rel="noreferrer"id="list1">AK-47</a>  
+            <a rel="nofollow" rel="noreferrer"id="list2">M4A4</a>  
+            <a rel="nofollow" rel="noreferrer"id="list3">AWP</a> 
+            <a rel="nofollow" rel="noreferrer"id="list4">Knife</a> 
+        </li>
+    </ul>
+<section>
+    <h2 class="list2 titre2">-Ramasse l'awp en fin de round-</h2>
+    <h2 class="list1 titre1">- Parfait pour le RUSH B -</h2>
+    <h2 class="list3 titre3">- En mode KennyS -</h2>
+    <h2 class="list4 titre4">- Sort le cut -</h2>
+    <div class="main">
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak.png" alt="img13"/>
+                        <figcaption>
+                            <h3>20€ <span>Revanche Marine</span></h3>
+                            <p> 
+                            <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife4.png" alt="img13"/>
+                        <figcaption>
+                            <h3>80 € <span>M9 Bayonet</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4.png" alt="img13"/>
+                        <figcaption>
+                            <h3>3€ <span>Dragon Swag</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4a.png" alt="img13"/>
+                        <figcaption>
+                            <h3>120 € <span>Aziimov</span></h3>
+                            <p>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak2.png" alt="img13"/>
+                        <figcaption>
+                            <h3>50 € <span>Néon</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4c.png" alt="img13"/>
+                        <figcaption>
+                            <h3>75 € <span>Dieu de la mer</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak3.png" alt="img13"/>
+                        <figcaption>
+                            <h3>45 € <span>Vulcain</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp.png" alt="img13"/>
+                        <figcaption>
+                            <h3>25 € <span>Aziimov</span></h3>
+                           ↦   <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife3.png" alt="img13"/>
+                        <figcaption>
+                            <h3>120 € <span>Gut</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp2.png" alt="img13"/>
+                        <figcaption>
+                            <h3>4 € <span>Phobos</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp3.png" alt="img13"/>
+                        <figcaption>
+                            <h3>2 € <span>Ligne Rouge</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp4.png" alt="img13"/>
+                        <figcaption>
+                            <h3>35 € <span>Ruche électrique</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak4.png" alt="img13"/>
+                        <figcaption>
+                            <h3>85 € <span>Cémenté</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife2.png" alt="img13"/>
+                        <figcaption>
+                            <h3>170 € <span>De Chasse</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4d.png" alt="img13"/>
+                        <figcaption>
+                            <h3>900 € <span>Hurleur</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak5.png" alt="img13"/>
+                        <figcaption>
+                            <h3>50 € <span>Circuit d'injonction</span></h3>
+↦   ↦   ↦   ↦   ↦   ↦   ↦   <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife5.png" alt="img13"/>
+                        <figcaption>
+                            <h3>300 € <span>Karambit</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp5.png" alt="img13"/>
+                        <figcaption>
+                            <h3>1 € <span>Version d'élite</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4e.png" alt="img13"/>
+                        <figcaption>
+                            <h3>74 € <span>Zirka</span></h3>
+                            <p>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4f.png" alt="img13"/>
+                        <figcaption>
+                            <h3>15 € <span>DayBreak</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4g.png" alt="img13"/>
+                        <figcaption>
+                            <h3>140 € <span>Electron</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife1.png" alt="img13"/>
+                        <figcaption>
+                            <h3>140 € <span>Fauchon</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife6.png" alt="img13"/>
+                        <figcaption>
+                            <h3>140 € <span>Dagues Sombres</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4h.png" alt="img13"/>
+                        <figcaption>
+                            <h3>0.50 € <span>Nucléaire</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list2 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/m4b.png" alt="img13"/>
+                        <figcaption>
+                            <h3>20 € <span>Espace Désolé</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak6.png" alt="img13"/>
+                        <figcaption>
+                            <h3>60 € <span>Terre Désolé</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife9.png" alt="img13"/>
+                        <figcaption>
+                            <h3>140 € <span>Flip</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp6.png" alt="img13"/>
+                        <figcaption>
+                            <h3>25 € <span>Bêtes Déchainées</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp8.png" alt="img13"/>
+                        <figcaption>
+                            <h3> 40 € <span>BOOM</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp7.png" alt="img13"/>
+                        <figcaption>
+                            <h3>55 € <span>Coup de Foudre</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak7.png" alt="img13"/>
+                        <figcaption>
+                            <h3>20 € <span>Lignes Rouges</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife7.png" alt="img13"/>
+                        <figcaption>
+                            <h3>140 € <span>Papillon</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list3 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/awp9.png" alt="img13"/>
+                        <figcaption>
+                            <h3>40 € <span>DDPAT</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak8.png" alt="img13"/>
+                        <figcaption>
+                            <h3>70 € <span>Rouge Laminé</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list1 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/ak9.png" alt="img13"/>
+                        <figcaption>
+                            <h3>120 € <span>Hydroponic</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+            <article class="list4 item">
+                <div class="grid">
+                    <figure class="effect">
+                    <img src="img/knife8.png" alt="img13"/>
+                        <figcaption>
+                            <h3>140 € <span>Bowie</span></h3>
+                            <p>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons md-24">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <i class="material-icons">star_rate</i>
+                            <br>Disponible en stattrack et en collection souvenir</p>
+                        </figcaption>↦   ↦   ↦   
+                    </figure>
+                </div>
+            </article>
+    ↦   </div>
+</section>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp> (function () {
+            var allButton = document.getElementById('all'); 
+            var list1Button = document.getElementById('list1'); 
+            var list2Button = document.getElementById('list2');
+            var list3Button = document.getElementById('list3');
+            var list4Button = document.getElementById('list4');
+          
+            var showItems = function (items) {
+                for (var i=0; i<items.length; i++) {
+                    items[i].style.display = "inline-block";
+                }
+            };
+            var hideItems = function (items) {
+                for (var i=0; i<items.length; i++) {
+                    items[i].style.display = "none";
+                }
+            };
+
+            list1Items = document.getElementsByClassName('list1');
+            list2Items = document.getElementsByClassName('list2');
+            list3Items = document.getElementsByClassName('list3');
+            list4Items = document.getElementsByClassName('list4');
+            
+            titre1Items = document.getElementsByClassName('titre1');
+            titre2Items = document.getElementsByClassName('titre2');
+            titre3Items = document.getElementsByClassName('titre3');
+            titre4Items = document.getElementsByClassName('titre4');
+            
+            allButton.onclick = function() {
+                showItems(list1Items);
+                showItems(list2Items);
+                showItems(list3Items);
+↦   ↦   ↦   ↦   showItems(list4Items);
+                hideItems(titre1Items);
+                hideItems(titre2Items);
+                hideItems(titre3Items);
+                hideItems(titre4Items);
+            };
+            list1Button.onclick = function() {
+                showItems(list1Items);
+                hideItems(list2Items);
+↦   ↦   ↦   ↦   hideItems(list4Items);
+                hideItems(list3Items);
+            };
+            list2Button.onclick = function() {
+                hideItems(list1Items);
+                hideItems(list3Items);
+↦   ↦   ↦   ↦   hideItems(list4Items);
+                showItems(list2Items);
+            };
+             list3Button.onclick = function() {
+                hideItems(list1Items);
+                hideItems(list2Items);
+                hideItems(list4Items);
+                showItems(list3Items);
+            };
+↦   ↦   ↦    list4Button.onclick = function() {
+                hideItems(list1Items);
+                hideItems(list2Items);
+                hideItems(list3Items);
+↦   ↦   ↦   ↦   showItems(list4Items);
+            };
+        })();
+  
+
+//script pour la barre de navigation // 
+// inutile dans le bon fonctionement du site
+// elle est juste décorative
+ 
+↦   ↦   function scrollFunction() {
+    var scrollPos = document.body.scrollTop;
+
+    if (scrollPos > 590) {
+        document.getElementById("fixed-floater").style.position = "fixed";;
+        document.getElementById("fixed-floater").style.top = "0px";
+    } else {
+        document.getElementById("fixed-floater").style.position = "relative";
+        document.getElementById("fixed-floater").style.top = "0px";
+    }
+}
+↦   ↦   window.onscroll = scrollFunction;</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+html,body {
+    font-family: 'QuickSand';
+    text-align: center;
+    margin: 0;
+    background-color: #4b5a6d;
+↦   overflow-x: hidden;
+}
+
+header {
+    background: url('img/counter_strike_cs_go-wallpaper-1920x1080.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+↦   display: block;
+↦   margin : auto;
+}
+
+#logo {
+↦   vertical-align: middle;
+}
+
+#back {
+    background-color: #4b5a6d;
+↦   position: relative;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+↦   width: 80%;
+↦   z-index: 99;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: white;
+    font-size: 6em;
+    padding: 10% 0;
+    margin: auto;
+}
+h2 {
+    color: #4b5a6d;
+    display: none;
+    font-size: 3em;
+    padding: 5% 0;
+    margin: 0;
+    transition: all 0.5s ease-in;
+}
+
+h3 {
+    color: #4b5a6d;
+    font-size: 2em;
+     margin: 0;
+}
+
+a {
+    color: #4b5a6d;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 5%;
+    font-weight: bolder;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #EA9B33;
+}
+
+
+
+li {
+    background-color: white;
+    margin: 0;
+    padding: 0.5%;
+}
+
+section {
+    margin: 0 10%;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.main {
+    padding: 0;
+}
+
+article{
+    display: inline-block;
+    padding: 0;
+    -moz-box-shadow: 0px 10px 10px 0px #000;
+    -webkit-box-shadow: 0px 10px 10px 0px #000;
+    -o-box-shadow: 0px 10px 10px 0px #000;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.item {
+    display: inline-block;
+    margin: 1%;
+}
+
+.item img {
+    display: inline-block;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+::selection{
+        background: #EA9B33;
+        color: #fff;
+}
+
+/*---------------*/
+/***  CAPTION  ***/
+/*---------------*/
+
+figure.effect img {
+↦   max-width: none;
+↦   width: 100%;
+↦   transition: opacity 0.35s, transform 0.35s;
+    transform:matrix(0.6,0,0,0.586,-1,-1);
+↦   backface-visibility: hidden;
+}
+
+figure.effect:hover img {
+↦   opacity: 0.5;
+    transform: translate3d(-10px,0,0);
+}
+
+figure.effect figcaption {
+↦   text-align: center;
+    color: #363948;
+}
+
+figure.effect h3 {
+↦   position: relative;
+↦   overflow: hidden;
+↦   padding: 0;
+}
+
+figure.effect h3::after {
+↦   position: absolute;
+↦   bottom: 0;
+↦   left: 0;
+↦   width: 100%;
+↦   background: #fff;
+↦   content: 'Qualité';
+↦   transition: transform 0.35s;
+↦   transform: translate3d(0,-100%,0);
+}
+
+figure.effect:hover h3::after {
+↦   transform: translate3d(0,0,0);
+}
+
+figure.effect p {
+↦   opacity: 0;
+    color: #363948; 
+↦   transition: opacity 0.35s, transform 0.35s;
+↦   transform: translate3d(10%,0,0);
+}
+
+figure.effect:hover p {
+↦   opacity: 1;
+↦   transform: translate3d(0,0,0);
+}
+
+p {
+    margin: 2% 0;
+    font-size: 1em;
+}
+
+.md-24 {
+↦   color: #EA9B33;
+}
+
+i {
+↦   width: 24px;
+}
+
+
+@keyframes flash {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+↦   ↦   animation: flash 2s;
+}
+
+
+button {
+↦   background: none;
+↦   border: none;
+}
+
+button>span>i {
+  color: #ffffff;
+  border: none;
+   padding: 7px;
+  font-size: 20px;
+  vertical-align: middle;
+  background: #4b5a6d;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+button>span>i:hover {
+  background: #61758e;
+  text-decoration: none;
+}
+
+button>span>i:focus {
+  outline: none;
+  background: #363948;
+}
+
+
+input[type=search] {
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px 10px 24px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+input[type=search]:hover {
+  background: #61758e;
+  text-decoration: none;
+}
+
+input[type=search]:focus {
+  outline: none;
+  background: #363948;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Théo GEAY (codepen:n5c12xpro:zNQZWw)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="web.css"/>
+</head>
+<body>
+    <h1><a rel="nofollow" rel="noreferrer"href="#"  id="bestioles" >Les bestioles</a></h1>
+    <div class="left">
+    <h2><a rel="nofollow" rel="noreferrer"href="#" id="vertebres">Les vertébrés:</a></h2>
+    <ul>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam1" class="fam">Les mammifères</a></li>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam2" class="fam">Les reptiles</a></li>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam3" class="fam">Les poissons</a></li>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam4" class="fam">Les plus classes</a></li>
+    </ul>
+    </div>
+    <div class="right">
+    <h2><a rel="nofollow" rel="noreferrer"href="#"id=invertebres>Les invertébrés:</a></h2>
+    <ul>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam5" class="fam">Les insectes</a></li>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam6" class="fam">Les mollusques</a></li>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam7" class="fam">Les crustacés</a></li>
+    <li><a rel="nofollow" rel="noreferrer"href="#" id="fam8" class="fam">Les plus classes</a></li>
+    </ul>
+    </div>
+    <div class="ex">
+    <h2>Retours:</h2>
+    <ul>
+    <li><p class="animal mam">Chien</p></li>
+    <li><p class="animal mam">Chat</p></li>
+    <li><p class="animal mam">Lion</p></li>
+    <li><p class="animal mam">Cheval</p></li>
+    <li><p class="animal mam xv">Giraffe</p></li>
+        
+    <li><p class="animal rep">Sserpent</p></li>
+    <li><p class="animal rep">Lézard</p></li>
+    <li><p  class="animal rep">Crocodile</p></li>
+    <li><p  class="animal rep">Tortue</p></li>
+    <li><p  class="animal rep xv">Caméléon</p></li>
+        
+    <li><p  class="animal poi">Morue</p></li>
+    <li><p  class="animal poi">Maquerau</p></li>
+    <li><p  class="animal poi">Thon</p></li>
+    <li><p  class="animal poi">Saumon</p></li>
+    <li><p  class="animal poi xv">Sardine</p></li>
+        
+
+    <li><p  class="animal ins">Fourmis</p></li>
+    <li><p  class="animal ins">Scarabée</p></li>
+    <li><p  class="animal ins">Abeille</p></li>
+    <li><p  class="animal ins">Papillon</p></li>
+    <li><p  class="animal ins xi">Phasme</p></li>
+        
+    <li><p  class="animal mol">Huître</p></li>
+    <li><p  class="animal mol">Krakeeen</p></li>
+    <li><p  class="animal mol">Escargot</p></li>
+    <li><p  class="animal mol">Limace</p></li>
+    <li><p  class="animal mol xi">Anémone</p></li>
+        
+    <li><p  class="animal cru xi">Ecrevisse !</p></li>
+    <li><p  class="animal cru">Crevette</p></li>
+    <li><p  class="animal cru">Crabe</p></li>
+    <li><p  class="animal cru">Homard</p></li>
+    <li><p  class="animal cru">Bernard l'ermite</p></li>
+    </ul>
+    </div>
+    
+    
+
+<script src="web.js"></script>
+</body>
+
+
+
+
+
+</html></xmp></code></pre>
+  <pre><code><xmp>(function () {
+//Boutons
+var tous = document.getElementById('bestioles');
+var ver = document.getElementById('vertebres');
+var inv = document.getElementById('invertebres');
+var mam = document.getElementById('fam1');
+var rep = document.getElementById('fam2');
+var poi = document.getElementById('fam3');
+var lpcv = document.getElementById('fam4');
+var ins = document.getElementById('fam5');
+var mol = document.getElementById('fam6');
+var cru = document.getElementById('fam7');
+var lpci = document.getElementById('fam8');
+//Fonctions
+var show = function(liste) {
+    for (var i = 0; i < liste.length; i++) {
+        liste[i].style.display = "inline-block";
+    }
+};
+var hide = function(liste) {
+    for (var i = 0; i < liste.length; i++) {
+        liste[i].style.display = "none";
+    }
+};
+//listes
+animal = document.getElementsByClassName('animal')
+mami = document.getElementsByClassName('mam');
+rept = document.getElementsByClassName('rep');
+pois = document.getElementsByClassName('poi');
+inse = document.getElementsByClassName('ins');
+molu = document.getElementsByClassName('mol');
+crus = document.getElementsByClassName('cru');
+lpcve = document.getElementsByClassName('xv');
+lpcin = document.getElementsByClassName('xi');
+//actions
+tous.onclick = function() {
+    show(animal);
+};        
+ver.onclick = function() {
+    hide(animal);
+    show(mami);
+    show(rept);
+    show(pois);
+
+};       
+mam.onclick = function() {
+    hide(animal);
+    show(mami);
+
+};     
+rep.onclick = function() {
+    hide(animal);
+    show(rept);
+};
+poi.onclick = function() {
+    hide(animal);
+    show(pois);
+
+};
+lpcv.onclick = function() {
+    hide(animal);
+    show(lpcve);
+};     
+inv.onclick = function() {
+    hide(animal);
+    show(inse);
+    show(molu);
+    show(crus);
+};        
+ins.onclick = function() {
+    hide(animal);
+    show(inse);
+
+};
+mol.onclick = function() {
+    hide(animal);
+    show(molu);
+};        
+cru.onclick = function() {
+    hide(animal);
+    show(crus);
+};
+lpci.onclick = function() {
+    hide(animal);
+    show(lpcin);
+};
+})();</xmp></code></pre>
+  <pre><code><xmp>body {
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+h1{
+    text-align: center;
+}
+
+}
+ul {
+    text-align: justify;
+}
+
+.left {
+    float:left;
+    margin-left: 600px;
+}
+
+.right {
+    float: right;
+    margin-right: 600px
+}
+
+.ex {
+    float:inherit;
+    margin-left: 900px;
+    margin-top:400px;
+}
+
+li {
+    list-style-type: none;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Louis GOSSE (codepen:LouisGosse:RKzpLM)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+↦   <title>Ligue 1</title>
+↦   <meta charset="utf-8">
+↦   <link rel="stylesheet" type="text/css" href="filtre.css">
+
+</head>
+<body>
+<header>
+↦   <h1>La ligue 1</h1>
+</header>
+↦   ↦   ↦   <ul class="nav">
+↦   ↦   ↦   ↦   <li><input type="button" id="all" value="Les clubs">
+↦   ↦   ↦   ↦   <li><input type="button" id="L1titre" value="Les plus titrés">
+↦   ↦   ↦   ↦   <li><input type="button" id="L1riche" value="Les plus riches">
+↦   ↦   ↦   ↦   <li><input type="button" id="L1sup" value="Les meilleurs supporters">↦   ↦   
+↦   ↦   ↦   </ul>
+↦   ↦   ↦   
+
+↦   ↦   ↦   
+↦   ↦   ↦   
+↦   <section>
+↦   ↦   ↦   ↦   
+↦   ↦   ↦   ↦   ↦   
+↦   <article class="all">BASTIA</article>
+ ↦   <article class="all">FC LORIENT</article>
+ ↦   <article class="all">OLYMPIQUE LYONNAIS</article>
+ ↦   <article class="all">OLYMPIQUE MARSEILLE</article>
+ ↦   <article class="all">AS MONACO</article>
+ ↦   <article class="all">FC NANTES</article>
+ ↦   <article class="all">PSG</article>
+ ↦   <article class="all">ASSE</article>
+ ↦   <article class="all">RENNES</article>
+↦   
+↦   <article class="L1titre">ASSE</article>
+    <article class="L1titre">OLYMPIQUE MARSEILLE</article>
+    <article class="L1titre">OLYMPIQUE LYONNAIS</article>
+    <article class="L1titre">FC NANTES</article>
+    
+    ↦   
+↦   <article class="L1sup">RENNES</article>
+↦   <article class="L1sup">BASTIA</article>
+↦   <article class="L1sup">FC NANTES</article>
+    ↦   ↦   ↦   
+↦   <article class="L1riche">PSG</article>
+↦   <article class="L1riche">AS MONACO</article>
+↦   <article class="L1riche">OLYMPIQUE LYONNAIS</article>
+↦   ↦   ↦   
+↦   ↦   ↦   
+         
+     <script src="filtre.js"></script>
+
+    </section>
+    
+
+
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var total = document.getElementById('all'); 
+var btitre = document.getElementById('L1titre'); 
+var briche = document.getElementById('L1riche');
+var bsup = document.getElementById('L1sup');
+
+var tout = document.getElementsByClassName('all');
+var titre = document.getElementsByClassName('L1titre');
+var riche = document.getElementsByClassName('L1riche');
+var supporters = document.getElementsByClassName('L1sup');
+
+var afficher = function(filtres) {
+  for (var i=0; i<filtres.length; i++) {
+    filtres[i].classList.remove('hidden');
+  }
+};
+
+var cacher = function(filtres) {
+  for (var i=0; i<filtres.length; i++) {
+    filtres[i].classList.add('hidden');
+  }
+};
+
+total.onclick = function(){
+↦   afficher(tout);
+}
+
+
+btitre.onclick = function(){
+  cacher(tout);
+  afficher(titre);
+}
+
+bsup.onclick = function(){
+  cacher(tout);
+  afficher(supporters);
+}
+
+briche.onclick = function(){
+  cacher(tout);
+  afficher(riche);
+}</xmp></code></pre>
+  <pre><code><xmp>body {
+↦   background-color: black;
+↦   width: 100%;
+↦   color: white;
+}
+.hidden {
+↦   display: none;
+
+}
+
+h1 { 
+  text-align: center;
+}</xmp></code></pre>
+</section>
+<section>
   <p>Student: Jeanne VINAY (codepen:JeanneV:dNLgba)</p>
   <pre><code><xmp><!DOCTYPE html>
 <html>
@@ -126,10 +1727,2322 @@ div{
 }</xmp></code></pre>
 </section>
 <section>
-  <p>Student: Jessy HACHET ()</p>
-  <pre><code><xmp>unsupported url: http://jessyhachet.bsthbg.fr/</xmp></code></pre>
+  <p>Student: Aubin KERAVEL (jsfiddle:ct1zn68u:3)</p>
+  <pre><code><xmp><h1>Bienvenue chez Ultimate Sports Shop</h1>
+<ul class="list">
+<li><a id="all">Tous les produit</a></li>
+   <li><a id="sportGlisse">Produits de sports de glisse</a></li>
+   <li><a id="sportCombat">Produits de sports de combat</a></li>
+   <li><a id="sportExtreme">Produits de sports extr&#xEA;mes</a></li>
+</ul>
+<div class="all">
+   <p class="sportGlisse">Snowboard Burton fixations + boots</p>
+   <p class="sportGlisse">Skateboard Globe, board + deck + 8 roues</p>
+   <p class="sportGlisse">Planche de surf Ripcurl custom 5&apos;6 + 4 ailerons </p>
+   <p class="sportGlisse">Wakeboard seule</p>
+   <p class="sportCombat">Gants de MMA</p>
+   <p class="sportCombat">Short Muay Thai competition</p>
+   <p class="sportCombat">Casque et plastron Penchak Silat, Taekwondo, Karate </p>
+   <p class="sportExtreme">Wingsuit Nylon haute resistance</p>
+   <p class="sportExtreme sportGlisse">Parapente pour snowboard, ski, descente </p>
+   <p class="sportExtreme sportCombat">Ring pour boxe, MMA, FreeFight, Ju jistu</p>
+   <p class="sportExtreme sportGlisse">Camera Go Pro Hero 4 Black Edition</p>
+   <p class="sportExtreme sportCombat">CardioBlast : combi intelligente, chauffante, connect&#xE9;e</p>
+</div></xmp></code></pre>
+  <pre><code><xmp>var allProduct = document.getElementsByClassName(&apos;all&apos;);
+var glisseProduct = document.getElementsByClassName(&apos;sportGlisse&apos;);
+var combatProduct = document.getElementsByClassName(&apos;sportCombat&apos;);
+var extremeProduct = document.getElementsByClassName(&apos;sportExtreme&apos;);
+
+var double1 = document.getElementsByClassName(&apos;sportExtreme sportGlisse&apos;);
+var double2 = document.getElementsByClassName(&apos;sportExtreme sportCombat&apos;);
+
+var on = function (object) {
+   for (var i = 0; i &lt; object.length; i++) {
+      object[i].style.display = &quot;block&quot;;
+   }
+};
+var off = function(object) {
+      for (var i = 0; i &lt; object.length; i++) {
+         object[i].style.display = &quot;none&quot;;
+      }
+};
+
+      allProduct1 = document.getElementById(&apos;all&apos;);
+      glisseProduct1 = document.getElementById(&apos;sportGlisse&apos;);
+      combatProduct1 = document.getElementById(&apos;sportCombat&apos;);
+      extremeProduct1 = document.getElementById(&apos;sportExtreme&apos;);
+
+      allProduct1.onclick = function() {
+         on(glisseProduct);
+         on(combatProduct);
+         on(extremeProduct);
+         on(double1);
+         on(double2);
+      };
+
+      glisseProduct1.onclick = function() {
+         on(glisseProduct);
+         off(combatProduct);
+         off(extremeProduct);
+         on(double1);
+      };
+
+      combatProduct1.onclick = function() {
+         off(glisseProduct);
+         on(combatProduct);
+         off(extremeProduct);
+         on(double2);
+      };
+
+      extremeProduct1.onclick = function() {
+         off(glisseProduct);
+         off(combatProduct);
+         on(extremeProduct);
+         on(double1);
+         on(double2);
+      };
+</xmp></code></pre>
+  <pre><code><xmp>.list {
+   list-style-type: none;
+   font-weight: bold;
+   font-size: 1.2em;
+}
+a {
+  cursor: pointer;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Jessy HACHET (codepen:anon:GravYz)</p>
+  <pre><code><xmp><!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+<nav>
+    <div id="nav">
+        <div id="menu">
+            <div id="logo">
+                <a rel="nofollow" rel="noreferrer"href="index.html"><img src="img/logo.png" alt="logo de UltraFlix"></a>
+            </div>
+            <ul id="menulist">
+                <li><a rel="nofollow" rel="noreferrer"href="#" class="menu1">ACCUEIL</a>
+                </li><!--
+                --><li><a rel="nofollow" rel="noreferrer"href="#" class="menu1">CLASSEMENT</a>
+                </li><!--
+                --><li><a rel="nofollow" rel="noreferrer"href="#" class="menu1">AVIS</a>
+                </li><!--
+                --><li><a rel="nofollow" rel="noreferrer"href="#" class="menu1">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <header>
+        <h1 class="title">UltraFlix Les meilleures séries</h1>
+    </header>
+    <ul id="listehead">
+        <li><a rel="nofollow" rel="noreferrer"id="zero" class="menu1">Toutes les séries</a></li><!--
+        --><li><a rel="nofollow" rel="noreferrer"id="thriller" class="menu1">Thriller</a></li><!--
+        --><li><a rel="nofollow" rel="noreferrer"id="horreur" class="menu1">Horreur</a></li><!--
+        --><li><a rel="nofollow" rel="noreferrer"id="comedie" class="menu1">Comédie</a></li><!--
+        --><li><a rel="nofollow" rel="noreferrer"id="anime" class="menu1">Animé</a></li>
+    </ul>
+    
+    <section>
+↦   <article class="zero">
+        <div class="hover08 column">
+↦   ↦   <div class ="horreur">
+            <figure><a rel="nofollow" rel="noreferrer"href="twd.html"><img src="img/twd.jpg"/></a></figure>
+↦   ↦   ↦   <span>The Walking Dead</span>
+↦   ↦   </div>
+↦   ↦   <div class="horreur">
+↦   ↦   ↦   <figure><img src="img/ahs.jpg"/></figure>
+↦   ↦   ↦   <span>American Horror Story</span>
+↦   ↦   </div>
+↦   ↦   <div class="thriller">
+↦   ↦   ↦   <figure><img src="img/bb.jpg"/></figure>
+↦   ↦   ↦   <span>Breaking Bad</span>
+↦   ↦   </div>
+↦   ↦   <div class="thriller">
+↦   ↦   ↦   <figure><img src="img/pb.jpg"/></figure>
+↦   ↦   ↦   <span>Prison Break</span>
+↦   ↦   </div>
+        </div>
+    </article>
+    ↦   <article class="zero">
+        <div class="hover08 column">
+↦   ↦   <div class="comedie">
+↦   ↦   ↦   <figure><img src="img/jtv.jpg"/></figure>
+↦   ↦   ↦   <span>Jane The Virgin</span>
+↦   ↦   </div>
+↦   ↦   <div class="anime">
+↦   ↦   ↦   <figure><img src="img/aot.jpg"/></figure>
+↦   ↦   ↦   <span>Attack on Titan</span>
+↦   ↦   </div>
+↦   ↦   <div class="anime">
+↦   ↦   ↦   <figure><img src="img/dn.jpg"/></figure>
+↦   ↦   ↦   <span>Death Note</span>
+↦   ↦   </div>
+↦   ↦   <div class="comedie">
+↦   ↦   ↦   <figure><img src="img/oinb.jpg"/></figure>
+↦   ↦   ↦   <span>Orange is the new black</span>
+↦   ↦   </div>
+            </div>
+    </article>
+↦   <article class="zero">
+        <div class="hover08 column">
+↦   ↦   <div class ="thriller horreur">
+↦   ↦   ↦   <figure><img src="img/twd.jpg"/></figure>
+↦   ↦   ↦   <span>Games Of Thrones</span>
+↦   ↦   </div>
+↦   ↦   <div class="thriller horreur">
+↦   ↦   ↦   <figure><img src="img/ahs.jpg"/></figure>
+↦   ↦   ↦   <span>American Horror Story</span>
+↦   ↦   </div>
+        </div>
+    </article>
+    </section>
+    <script type="text/javascript" src="javascript/script.js"></script> 
+</html></xmp></code></pre>
+  <pre><code><xmp>var allseries = document.getElementsByClassName('zero');
+var thrillerseries = document.getElementsByClassName('thriller');
+var horreurseries = document.getElementsByClassName('horreur');
+var comedieseries = document.getElementsByClassName('comedie');
+var animeseries = document.getElementsByClassName('anime');
+
+var double1 = document.getElementsByClassName('thriller horreur');
+var double2 = document.getElementsByClassName('thriller comedie');
+var double3 = document.getElementsByClassName('thriller anime');
+
+var double4 = document.getElementsByClassName('horreur thriller');
+var double5 = document.getElementsByClassName('horreur comedie');
+var double6 = document.getElementsByClassName('horreur anime');
+
+var double7 = document.getElementsByClassName('comedie thriller');
+var double8 = document.getElementsByClassName('comedie horreur');
+var double9 = document.getElementsByClassName('comedie anime');
+
+var double10 = document.getElementsByClassName('anime thriller');
+var double10 = document.getElementsByClassName('anime horreur');
+var double10 = document.getElementsByClassName('anime comedie');
+
+var on = function(object) {
+    for (var i = 0; i < object.length; i++) {
+        object[i].style.display="inline";
+    }
+};
+var off = function(object) {
+    for (var i = 0; i < object.length; i++) {
+        object[i].style.display="none";
+    }
+};
+
+seriesall = document.getElementById('zero');
+seriesthriller = document.getElementById('thriller');
+serieshorreur = document.getElementById('horreur');
+seriescomedie = document.getElementById('comedie');
+seriesanime = document.getElementById('anime');
+
+seriesall.onclick = function() {
+    on(thrillerseries);
+    on(horreurseries);
+    on(comedieseries);
+    on(animeseries);
+};
+seriesthriller.onclick = function() {
+    on(thrillerseries);
+    off(horreurseries);
+    off(comedieseries);
+    off(animeseries);
+    on(double1);
+};
+serieshorreur.onclick = function() {
+    off(thrillerseries);
+    on(horreurseries);
+    off(comedieseries);
+    off(animeseries);
+};
+seriescomedie.onclick = function() {
+    off(thrillerseries);
+    off(horreurseries);
+    on(comedieseries);
+    off(animeseries);
+};
+seriesanime.onclick = function() {
+    off(thrillerseries);
+    off(horreurseries);
+    off(comedieseries);
+    on(animeseries);
+};</xmp></code></pre>
+  <pre><code><xmp>/******* font *******/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/Montserrat-Hairline.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+/******* hover navbar *******/
+
+.menu1 {
+    transition: 1s ease;
+    color: #ffffff;
+    border-top: 4px solid #111;
+    border-bottom: 4px solid #111;
+}
+.menu1:hover {
+    border-bottom: 4px solid #ffffff;
+    color: #B9090B;
+}
+/******* search bar *******/
+
+#recherche {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    float: right;
+    padding: 0;
+    position: relative;
+}
+input[type="text"] {
+    height: 60px;
+    font-size: 30px;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-weight: 20;
+    border: none;
+    outline: none;
+    color: #555;
+    padding: 3px;
+    padding-right: 30px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 13em;
+    background: none;
+    z-index: 3;
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+}
+input[type="text"]:focus:hover {
+    border-bottom: 1px solid #BBB;
+}
+input[type="text"]:focus {
+    width: 400px;
+    z-index: 1;
+    border-bottom: 1px solid #BBB;
+    cursor: text;
+}
+input[type="submit"] {
+    height: 67px;
+    width: 63px;
+    display: inline-block;
+    color: red;
+    float: right;
+    background: url(../img/loupe.png) center center no-repeat;
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 27em;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .4s ease;
+}
+input[type="submit"]:hover {
+    opacity: 0.6;
+}
+/******* banner *******/
+
+header {
+    background: url('../img/zombie.jpg');
+    background-attachment: fixed;
+    background-position:center;
+    margin: 0;
+    padding: 0;
+}
+.title {
+    color: white;
+    font-size: 4em;
+    text-align: center;
+    padding: 8% 0;
+    margin: 0;
+}
+/******* menu2 *******/
+
+#listehead {
+    position: inherit;
+    font-size: 2em;
+    background-color: #111;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 5px 0px;
+    text-align: center;
+}
+#listehead a {
+    text-decoration: none;
+    padding: 5px 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+/******* css *******/
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    font-weight: 300;
+}
+#nav {
+    background-color: #111;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#logo a {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+#nav a {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+#logo img{
+    width: 4em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 23em;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+li {
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: middle;
+}
+#logo, ul, #recherche {
+    display: inline-block;
+}
+h3 {
+    color: #4b5a6d;
+    font-size: 2em;
+     margin: 0;
+}
+section {
+    margin: 0 18em;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+/******* listejs *******/
+h1,
+h1+p {
+↦   margin: 30px 15px 0;
+↦   font-weight: 300;
+}
+h1+p a {
+↦   color: #333;
+}
+h1+p a: hover {
+↦   text-decoration: none;
+}
+h2 {
+↦   margin: 60px 15px 0;
+↦   padding: 0;
+↦   font-weight: 300;
+}
+h2 span {
+↦   margin-left: 1em;
+↦   color: #B9090B;
+↦   font-size: 85%;
+}
+.column {
+↦   margin: 0 0 0;
+↦   padding: 0;
+}
+.column: last-child {
+↦   padding-bottom: 60px;
+}
+.column: after {
+↦   content: '';
+↦   clear: both;
+↦   display: block;
+}
+.column div {
+↦   position: relative;
+↦   float: left;
+↦   width: 300px;
+↦   height: 200px;
+↦   margin: 0 0 0 0;
+↦   padding: 25px 14px;
+}
+.column div:first-child {
+↦   margin-left: 0;
+}
+.column div span {
+↦   position: absolute;
+↦   bottom: -20px;
+↦   left: 0;
+↦   z-index: -1;
+↦   display: block;
+↦   width: 300px;
+↦   margin: 0;
+↦   padding: 0;
+↦   color: #B9090B ;
+↦   font-size: 18px;
+↦   text-decoration: none;
+↦   text-align: center;
+↦   -webkit-transition: .3s ease-in-out;
+↦   transition: .3s ease-in-out;
+↦   opacity: 0;
+}
+figure {
+↦   width: 300px;
+↦   height: 200px;
+↦   margin: 0;
+↦   padding: 0;
+↦   background: #fff;
+↦   overflow: hidden;
+}
+figure:hover+span {
+↦   bottom: 0;
+↦   opacity: 1;
+}
+.hover08 figure img {
+↦   -webkit-filter: grayscale(100%);
+↦   filter: grayscale(100%);
+↦   -webkit-transition: .3s ease-in-out;
+↦   transition: .3s ease-in-out;
+}
+.hover08 figure:hover img {
+↦   -webkit-filter: grayscale(0);
+↦   filter: grayscale(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Madison HAYAT (jsbin:zidawac:3)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+    <body>
+        <h1>Mady's Shop</h1>
+        <ul class="list">
+            <li><a id="all">Tous les produit</a></li>
+            <li><a id="aliment">Alimentaire</a></li>
+            <li><a id="sport">Sport</a></li>
+           <li><a id="musique">Musique</a></li>
+        </ul>
+        <div class="all">
+            <p class="aliment">Bonbons</p>
+            <p class="aliment">Gâteaux</p>
+            <p class="aliment">Pop-Corn </p>
+               <p class="aliment">Chips</p>
+               <p class="sport">Gant de boxe</p>
+               <p class="sport">Ski</p>
+               <p class="sport">Raquette de tennis</p>
+               <p class="musique">Piano</p>
+               <p class="musique">Guitare</p>
+               <p class="musique">Harpe</p>
+    </div>
+    </body>
+    <script src="filtrage.js"></script>
+</html></xmp></code></pre>
+  <pre><code><xmp>var allProduct = document.getElementsByClassName('all');
+var alimentProduct = document.getElementsByClassName('aliment');
+var sportProduct = document.getElementsByClassName('sport');
+var musiqueProduct = document.getElementsByClassName('musique');
+
+var on = function (object) {
+   for (var i = 0; i < object.length; i++) {
+      object[i].style.display = "block";
+   }
+};
+var off = function(object) {
+      for (var i = 0; i < object.length; i++) {
+         object[i].style.display = "none";
+      }
+};
+
+      allProduct1 = document.getElementById('all');
+      alimentProduct1 = document.getElementById('sportGlisse');
+      sportProduct1 = document.getElementById('sportCombat');
+      musiqueProduct1 = document.getElementById('sportExtreme');
+
+      allProduct1.onclick = function() {
+         on(alimentProduct);
+         on(sportProduct);
+         on(musiqueProduct);
+      };
+
+      alimentProduct1.onclick = function() {
+         on(alimentProduct);
+         off(sportProduct);
+         off(musiqueProduct);
+      };
+
+      sportProduct1.onclick = function() {
+         off(alimentProduct);
+         on(sportProduct);
+         off(musiqueProduct);
+      };
+
+      musiqueProduct1.onclick = function() {
+         off(alimentProduct);
+         off(sportProduct);
+         on(musiqueProduct);
+      };
+</xmp></code></pre>
+  <pre><code><xmp></xmp></code></pre>
+</section>
+<section>
+  <p>Student: Victoria ANTALIS (codepen:antalis_victoria:GrbWgy)</p>
+  <pre><code><xmp><ul>
+  <li>
+    <a rel="nofollow" rel="noreferrer"id="all">Voir tous les sports</a>  
+    <a rel="nofollow" rel="noreferrer"id="list1">Sports collectifs</a>  
+    <a rel="nofollow" rel="noreferrer"id="list2">Sports individuels</a>  
+    <a rel="nofollow" rel="noreferrer"id="list3">Sports aquatiques</a>
+  </li>
+</ul>
+<section>
+  <div class="main">
+    <article class="list2 item">
+      <div class="grid">
+        <h3>Basketball</h3>
+      </div>
+    </article>
+    <article class="list2 list3 item">
+      <div class="grid">
+        <h3>Surf</h3>
+      </div>
+    </article>
+    <article class="list2 list3 item">
+      <div class="grid">
+        <h3>Ski nautique</h3>
+      </div>
+    </article>
+    <article class="list2 item">
+      <div class="grid">
+        <h3>Tennis</h3>
+      </div>
+    </article>
+    <article class="list1 item">
+      <div class="grid">
+        <h3>Handball</h3>
+      </div>
+    </article>
+    <article class="list2 item">
+      <div class="grid">
+        <h3>Escalade</h3>
+      </div>
+    </article>
+    <article class="list1 list3 item">
+      <div class="grid">
+        <h3>Waterpolo</h3>
+      </div>
+    </article>
+    <article class="list2 item">
+      <div class="grid">
+        <h3>Golf</h3>
+      </div>
+    </article>
+    <article class="list1 item">
+      <div class="grid">
+        <h3>Football</h3>
+      </div>
+    </article>
+    <article class="list1 list3 item">
+      <div class="grid">
+        <h3>Aqua Volley</h3>
+      </div>
+    </article>
+</section></xmp></code></pre>
+  <pre><code><xmp>(function () {
+  var allButton = document.getElementById('all'); 
+  var list1Button = document.getElementById('list1'); 
+  var list2Button = document.getElementById('list2');
+  var list3Button = document.getElementById('list3');
+          
+  var showItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "inline-block";
+    }
+  };
+  var hideItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "none";
+    }
+  };
+
+  list1Items = document.getElementsByClassName('list1');
+  list2Items = document.getElementsByClassName('list2');
+  list3Items = document.getElementsByClassName('list3');
+            
+  allButton.onclick = function() {
+    showItems(list1Items);
+    showItems(list2Items);
+    showItems(list3Items);
+  };
+  list1Button.onclick = function() {
+    hideItems(list2Items);
+    hideItems(list3Items);
+    showItems(list1Items);
+    };
+  list2Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list3Items);
+    showItems(list2Items);
+    };
+  list3Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list2Items);
+    showItems(list3Items);
+    };
+  })();</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+div{
+    padding-top: 100px;
+}
+
+html,body {
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 0;
+    background-color: #6C7A89;
+    color: #674172;
+}
+
+p {
+    margin: 2% 0;
+    font-size: 1em;
+}
+
+ul {
+↦   position: absolute;
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+↦   width: 80%;
+↦   z-index: 99;
+
+}
+
+h2 {
+  
+    font-size: 3em;
+    padding: 5% 0;
+    margin: 0;
+}
+
+h3 {
+  
+    font-size: 2em;
+     margin: 0;
+}
+
+a {
+
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 5%;
+   
+}
+
+a:hover {
+    font-weight: bold;
+    color: #674172; 
+    cursor: pointer;
+
+}
+
+li {
+    background-color: white;
+    margin: 0;
+    padding: 0.5%;
+    font-size: 10px;
+}
+
+section {
+    margin: 2% 10%;
+    background-color: white;
+}
+
+
+article{
+    display: inline-block;
+
+}
+
+.item {
+
+    margin: 5%;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Charles KIEFER (codepen:clarches:NdZryy)</p>
+  <pre><code><xmp><html lang="fr">
+<head>
+↦   <meta charset="utf-8">
+↦   <title>FiltreJs</title>
+↦   <link rel="stylesheet" type="text/css" href="filtre.css">
+</head>
+<body>
+↦   <ul>
+        <li><a rel="nofollow" rel="noreferrer"href="#" id="tout" class="hover">Voir tout</a></li><!--
+        --><li><a rel="nofollow" rel="noreferrer"href="#" id="hommes" class="hover">HOMMES</a></li><!--
+        --><li><a rel="nofollow" rel="noreferrer"href="#" id="femmes" class="hover">FEMMES</a></li><!--
+        --><li><a rel="nofollow" rel="noreferrer"href="#" id="enfants" class="hover">ENFANTS</a></li>
+    </ul>
+↦   <article class="tout">
+↦   ↦   <div class ="hommes femmes enfants">
+        
+↦   ↦   ↦   <span>Tshirt</span>
+↦   ↦   </div>
+↦   ↦   <div class="femmes">
+↦   ↦   ↦   <span>Robe</span>
+↦   ↦   </div>
+↦   ↦   <div class="hommes femmes enfants">
+↦   ↦   ↦   <span>Pantalon</span>
+↦   ↦   </div>
+↦   ↦   <div class="femmes">
+↦   ↦   ↦   <span>Soutien Gorge</span>
+↦   ↦   </div>
+↦   ↦   <div class="hommes femmes enfants">
+↦   ↦   ↦   <span>Bonnet</span>
+↦   ↦   </div>
+    </article>
+    <article class="tout">
+↦   ↦   <div class="hommes">
+↦   ↦   ↦   <span>Costume</span>
+↦   ↦   </div>
+↦   ↦   <div class="hommes">
+↦   ↦   ↦   <span>Cravate</span>
+↦   ↦   </div>
+↦   ↦   <div class="hommes femmes enfants">
+↦   ↦   ↦   <span>Pull</span>
+↦   ↦   </div>
+↦   ↦   <div class="femmes">
+↦   ↦   ↦   <span>Chassure à talon</span>
+↦   ↦   </div>
+↦   ↦   <div class="hommes femmes enfants">
+↦   ↦   ↦   <span>Echarpe</span>
+↦   ↦   </div>
+    </article>
+    <script type="text/javascript" src="filtre.js"></script> 
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var tout = document.getElementsByClassName('tout');
+var hommes = document.getElementsByClassName('hommes');
+var femmes = document.getElementsByClassName('femmes');
+var enfants = document.getElementsByClassName('enfants');
+var triple = document.getElementsByClassName('hommes femmes enfants');
+
+var on = function(object) {
+    for (var i = 0; i < object.length; i++) {
+        object[i].style.display="inline-block";
+    }
+};
+var off = function(object) {
+    for (var i = 0; i < object.length; i++) {
+        object[i].style.display="none";
+    }
+};
+
+all = document.getElementById('tout');
+vetementshommes = document.getElementById('hommes');
+vetementsfemmes = document.getElementById('femmes');
+vetementsenfants = document.getElementById('enfants');
+
+all.onclick = function() {
+    on(hommes);
+    on(femmes);
+    on(enfants);
+};
+vetementshommes.onclick = function() {
+    on(hommes);
+    off(femmes);
+    off(enfants);
+    on(triple);
+};
+vetementsfemmes.onclick = function() {
+    off(hommes);
+    on(femmes);
+    off(enfants);
+    on(triple);
+};
+vetementsenfants.onclick = function() {
+    off(hommes);
+    off(femmes);
+    on(enfants);
+    on(triple);
+};</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+↦   width: 100%;
+↦   margin: 0;
+↦   padding: 0;
+↦   font-family: 'Roboto';
+}
+
+ul {
+↦   background-color: #111;
+↦   text-align: center;
+↦   margin: 0;
+}
+
+li {
+↦   display: inline-block;
+↦   margin: 20px 60px;
+↦   text-decoration: none;
+}
+
+li a {
+↦   color: white;
+↦   text-decoration: none;
+↦   font-size: 1.7em;
+}
+
+.hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hover:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: white;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hover:hover:before, .hover:focus:before, .hover:active:before {
+  left: 0;
+  right: 0;
+}
+
+.tout {
+↦   margin-top: 20px;
+↦   display: inline-block;
+}
+
+.hommes {
+↦   margin: 20px 40px;
+↦   display: inline-block;
+}
+
+.femmes {
+↦   margin: 20px 40px;
+↦   display: inline-block;
+}
+
+.enfants {
+↦   margin: 20px 40px;
+↦   display: inline-block;
+}
+
+span {
+↦   font-size: 40px;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Lara KOUNOWSKI ()</p>
+  <pre><code><xmp>unsupported url: http://lkounowski.etudiant-eemi.com/JS/filtrage/filtrage.html</xmp></code></pre>
   <pre><code><xmp></xmp></code></pre>
   <pre><code><xmp></xmp></code></pre>
+</section>
+<section>
+  <p>Student: Benjamin KISSOUS (jsfiddle:7hctwodm)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html lang="fr">
+<head>
+↦   ↦   <meta charset="utf-8">
+↦   ↦   <title>Les filtres</title>
+<link href="devoir index.css" type="text/css" rel="stylesheet"> 
+↦   ↦   
+</head>
+<body>
+<ul>
+↦   <li><h2><p id="view"><a href="#"><u>view all</u></a></p></h2></li>
+↦   <li><h2><p id="chaussures"><a href="#"><u>Chaussures</u></a></p></h2></li>
+↦   <li><h2><p id="tshirt"><a href="#"><u>T-shirt</u></a></p></h2></li>
+↦   <li><h2><p id="pull"><a href="#"><u>Pull</u></a></p></h2></li>
+</ul>
+<ul>
+↦   <li><article class="chaussures">Nike</article></li>
+↦   <li><article class="chaussures">Adidas</article></li>
+↦   <li><article class="chaussures">Puma</article></li>
+↦   <li><article class="tshirt">The Kooples</article></li>
+↦   <li><article class="tshirt">Sandro</article></li>
+↦   <li><article class="tshirt">Ralph Lauren</article></li>
+↦   <li><article class="tshirt chaussures">Valentino</article></li>
+↦   <li><article class="pull">Saint-Laurent</article></li>
+↦   <li><article class="pull">Ami</article></li>
+↦   <li><article class="pull">Zara</article></li>
+↦   <li><article class="pull">Stone Island</article></li>
+</ul>
+
+<script src="devoir index.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var view = document.getElementById(&apos;view&apos;);
+var chaussures = document.getElementById(&apos;chaussures&apos;);
+var tshirt = document.getElementById(&apos;tshirt&apos;);
+var pull = document.getElementById(&apos;pull&apos;);
+
+
+var chaussuresProduit = document.getElementsByClassName(&apos;chaussures&apos;);
+var tshirtProduit = document.getElementsByClassName(&apos;tshirt&apos;);
+var pullProduit = document.getElementsByClassName(&apos;pull&apos;);
+var doublon = document.getElementsByClassName(&apos;doublon&apos;);
+
+
+view.onclick = function() {
+  for (var i = 0; i <= 4;="" i++)="" {="" tshirtproduit[i].classlist.remove('hidden');="" pullproduit[i].classlist.remove('hidden');="" chaussuresproduit[i].classlist.remove('hidden');="" };="" tshirt.onclick="function()" for="" (var="" i="0;" <="4;" chaussuresproduit[i].classlist.add('hidden');="" pullproduit[i].classlist.add('hidden');="" pull.onclick="function()" tshirtproduit[i].classlist.add('hidden');="" chaussures.onclick="function()" };<="" textarea="">
+    <a href="#" class="windowLabel" data-panel="js">
+      <span class="label">JavaScript</span><i class="bts bt-gear"></i>
+    </a>
+  </=></xmp></code></pre>
+  <pre><code><xmp>.hidden {
+↦   display: none;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Bastien BIGOT (jsbin:vurohefori)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Filtres</title>
+  <link href="index.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Filtres des éléments</h1>
+  </header>
+
+
+  <p id="affiche">Tout afficher</p>
+  <p id="Formes">Formes</p>
+  <p id="instru">Instruments</p>
+  <p id="langues">Langues</p>
+
+
+  <article class="Formes">Rectangle</article>
+  <article class="Formes">Carré</article>
+  <article class="Formes">Rond</article>
+  <article class="instru">Guitare</article>
+  <article class="instru">Piano</article>
+  <article class="instru">Flûte</article>
+  <article class="langues">Français</article>
+  <article class="langues">Anglais</article>
+  <article class="langues">Espagnol</article>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html></xmp></code></pre>
+  <pre><code><xmp>var affiche = document.getElementById('affiche');
+var Formes = document.getElementById('Formes');
+var instru = document.getElementById('instru');
+var langues = document.getElementById('langues');
+
+
+var formesProduit = document.getElementsByClassName('Formes');
+var instruProduit = document.getElementsByClassName('instru');
+var villesProduit = document.getElementsByClassName('langues');
+var doublon = document.getElementsByClassName('doublon');
+
+
+affiche.onclick = function() {
+  for (var i = 0; i <= 4; i++) {
+    instruProduit[i].classList.remove('hidden');
+    villesProduit[i].classList.remove('hidden');
+    formesProduit[i].classList.remove('hidden');
+  };
+};
+
+
+instru.onclick = function() {
+  for (var i = 0; i <= 4; i++) {
+    formesProduit[i].classList.add('hidden');
+    instruProduit[i].classList.remove('hidden');
+    villesProduit[i].classList.add('hidden');
+  };
+};
+
+
+langues.onclick = function() {
+  for (var i = 0; i <= 4; i++) {
+    villesProduit[i].classList.remove('hidden');
+    formesProduit[i].classList.add('hidden');
+    instruProduit[i].classList.add('hidden');
+  };
+};
+
+
+
+Formes.onclick = function() {
+  for (var i = 0; i <= 3; i++) {
+    formesProduit[i].classList.remove('hidden');
+    instruProduit[i].classList.add('hidden');
+    villesProduit[i].classList.add('hidden');
+  };
+};</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+↦   display: none;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Raphaël PARETS (codepen:Raphael-Parets:PWrmog)</p>
+  <pre><code><xmp><button id="tout">afficher toutes les citations</button>
+<button id="humour">Humour</button>
+<button id="anglais">Citations en anglais</button>
+<button id="francais">Citations en français</button>
+
+<article class="citation anglais">“So many books, so little time.” 
+― Frank Zappa</article>
+<article class="citation anglais">“Some people never go crazy. What truly horrible lives they must lead.” 
+― Charles Bukowski</article>
+<article class="citation humour anglais">“I'm not afraid of death; I just don't want to be there when it happens.” 
+― Woody Allen</article>
+<article class="citation humour francais">Il ne faut pas désespérer des imbéciles, avec un peu d'entrainement on peut en faire des militaires.  - Pierre Desproges</article>
+<article class="citation humour francais">"Mozart était tellement précoce qu'à 35 ans il était déjà  mort."  - Pierre Desproges</article>
+<article class="citation humour francais">"Comme le pou, le coiffeur est un parasite du cheveu."  - Pierre Desproges</article>
+<article class="citation humour anglais">“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.” 
+― Albert Einstein</article>
+<article class="citation anglais">“You would think that a rock star being married to a supermodel would be one of the greatest things in the world. It is.” - David Bowie</article>
+<article class="citation humour francais">"Il va falloir qu'un jour enfin je me décide à lire les livres que, depuis trente ans, je conseille à mes amis de lire."  - Sacha Guitry</article>
+<article class="citation anglais">“Be nice to nerds. You may end up working for them. We all could.” 
+― Charles J. Sykes</article>
+<article class="citation anglais">“I love deadlines. I love the whooshing noise they make as they go by.” 
+― Douglas Adams</article></xmp></code></pre>
+  <pre><code><xmp>var show = function (quotes){
+  for (var i=0; i<quotes.length; i++) {
+    quotes[i].classList.remove('hidden');
+  }
+}
+var hide = function (quotes){
+  for (var i=0; i<quotes.length; i++) {
+    quotes[i].classList.add('hidden');
+  }
+}
+document.getElementById('tout').onclick = function() {
+  show(document.getElementsByClassName('citation'));
+};
+document.getElementById('humour').onclick = function() {
+  hide(document.getElementsByClassName('citation'));
+  show(document.getElementsByClassName('humour'));
+};
+document.getElementById('anglais').onclick = function() {
+  hide(document.getElementsByClassName('citation'));
+  show(document.getElementsByClassName('anglais'));
+};
+document.getElementById('francais').onclick = function() {
+  hide(document.getElementsByClassName('citation'));
+  show(document.getElementsByClassName('francais'));
+};</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+  display: none;
+}
+
+button {
+  border: none;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Ilana BLOCH (jsfiddle:ilanabloch:428wenw3)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+  <title>Filtrage par cat&#xE9;gories</title>
+  <link rel="icon" type="image/png" href="http://fgribreau.com/articles/_voyage-au-coeur-de-javascript/js_logo.png">
+  <link rel="stylesheet" type="text/css" href="filtrage.css">
+  <meta charset="utf-8">
+  <meta content="text/html">
+  <meta http-equiv="Content-Type">
+</head>
+<body>
+  <h1>Filtrage par cat&#xE9;gories</h1>
+  
+  <!--Catégories-->
+    <article class="tout">voir tout les produits</article>
+    <article class="fruits">fruits</article>
+    <article class="legumes">l&#xE9;gumes</article>
+    <article class="autres">autres</article>
+  <br>
+  
+  <!--Produits-->
+  <ul>
+    <li class="x">P&#xEA;ches</li>
+    <li class="x">Pommes</li>
+    <li class="x">Ananas</li>
+    <li class="x">Litchis</li>
+    <li class="x y">Tomates</li>
+    <li class="x y">Avocats</li>
+    <li class="y">Carottes</li>
+    <li class="y">Courgettes</li>
+    <li class="z">Gateaux</li>
+    <li class="z">Bonbons</li>
+    <li class="z">Chocolat</li>
+  </ul>
+  <script src="filtrage.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>// D&#xE9;finition des variables
+
+var tutu = document.getElementsByClassName(&apos;tout&apos;)[0];
+var fufu = document.getElementsByClassName(&apos;fruits&apos;)[0];
+var lulu = document.getElementsByClassName(&apos;legumes&apos;)[0];
+var auau = document.getElementsByClassName(&apos;autres&apos;)[0];
+
+// Fonctions
+
+tutu.onclick = function functionTutu() {
+  var tutuone = document.getElementsByTagName(&apos;li&apos;);
+  for (var i=0; i<tutuone.length; i++)="" {="" tutuone[i].classlist.remove('hide');="" };="" fufu.onclick="function" functionfufu()="" var="" fufuone="document.getElementsByClassName(&apos;z&apos;);" for="" (var="" i="0;" i<fufuone.length;="" fufuone[i].classlist.add('hide');="" fufutwo="document.getElementsByClassName(&apos;y&apos;);" i<fufutwo.length;="" fufutwo[i].classlist.add('hide');="" fufuthree="document.getElementsByClassName(&apos;x&apos;);" i<fufuthree.length;="" fufuthree[i].classlist.remove('hide');="" lulu.onclick="function" functionlulu()="" luluone="document.getElementsByClassName(&apos;x&apos;);" i<luluone.length;="" luluone[i].classlist.add('hide');="" lulutwo="document.getElementsByClassName(&apos;z&apos;);" i<lulutwo.length;="" lulutwo[i].classlist.add('hide');="" luluthree="document.getElementsByClassName(&apos;y&apos;);" i<luluthree.length;="" luluthree[i].classlist.remove('hide');="" auau.onclick="function" functionauau()="" auauone="document.getElementsByClassName(&apos;x&apos;);" i<auauone.length;="" auauone[i].classlist.add('hide');="" auautwo="document.getElementsByClassName(&apos;y&apos;);" i<auautwo.length;="" auautwo[i].classlist.add('hide');="" auauthree="document.getElementsByClassName(&apos;z&apos;);" i<auauthree.length;="" auauthree[i].classlist.remove('hide');="" };<="" textarea="">
+    <a href="#" class="windowLabel" data-panel="js">
+      <span class="label">JavaScript</span><i class="bts bt-gear"></i>
+    </a>
+  </tutuone.length;></xmp></code></pre>
+  <pre><code><xmp>@import url(&apos;https://fonts.googleapis.com/css?family=Pacifico&apos;);
+
+body {
+  margin: 0;
+  background-color: #ecf0f1;
+  font-family: &apos;Pacifico&apos;, cursive;
+}
+
+h1 {
+  text-align: center;
+  color: darkgreen;
+}
+
+article {
+  display: inline-block;
+  width: 24%;
+  vertical-align: middle;
+  text-align: center;
+  color: darkgreen;
+  text-transform: uppercase;
+}
+
+ul {
+  display: auto;
+  vertical-align: middle;
+  margin-left: 45%;
+}
+
+li {
+  margin: 4px;
+  color: darkgreen;
+}
+
+.hide {
+  display: none;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Thibault CHAMBRILLON (jsfiddle:L3zd645h:3)</p>
+  <pre><code><xmp><!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ElectroGender pour comprendre l&apos;&#xE9;lectronique</title>
+    <meta name="description" content="electrogender permet de mieux connaitre les genres pr&#xE9;cis des musiques electro">
+    <meta name="author" content="ElectroGender">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="style.css" type="text/css"> </head>
+    
+
+<body>
+    <nav>
+        <div id="nav">
+            <div id="menu">
+                <div id="logo">
+                    <a href="index.html"><img src="logo-blanc.png" alt="Logo"></a>
+                </div>
+                <ul id="menulist">
+                    <li><a href="#" class="menu1">ACCUEIL</a> </li>
+                    <!--
+                -->
+                    <li><a href="#" class="menu1">EQUIPES</a> </li>
+                    <!--
+                -->
+                    <li><a href="#" class="menu1">PLAYLIST</a> </li>
+                    <!--
+                -->
+                    <li><a href="#" class="menu1">CONTACT</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1 class="title">ElectroGender</h1> </header>
+    <ul id="listehead">
+        <li><a id="zero" class="menu1">Toutes les styles</a></li>
+        <!--
+        -->
+        <li><a id="dub" class="menu1">Dub Techno</a></li>
+        <!--
+        -->
+        <li><a id="deep" class="menu1">Deep House</a></li>
+        <!--
+        -->
+        <li><a id="dnb" class="menu1">Drum&apos;n&apos;Bass</a></li>
+        <!--
+        -->
+        <li><a id="minimal" class="menu1">Minimal</a></li>
+    </ul>
+    <section>
+        <article class="zero">
+            <div class="hover08 column">
+                <div class="dub">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/xqo7mGda4A8" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="dub">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/xqo7mGda4A8" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="deep">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/7WgMCyhl6fQ" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="dnb">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/U9FkLmMEXKQ" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+            </div>
+        </article>
+        <article class="zero">
+            <div class="hover08 column">
+                <div class="minimal">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/t2lHDKH5JcI" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="minimal">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/GvwqK-01dpk" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span>Attack on Titan</span> </div>
+                <div class="dub deep">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/8R9UMPXM7ZE" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="deep">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/UOd-yScmxD4" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+            </div>
+        </article>
+        <article class="zero">
+            <div class="hover08 column">
+                <div class="dub minimal">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/ius9LCkW_J4" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="deep">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/we5skTbZFXk" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="deep">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/IZ_p_9E0nDA" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="minimal">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/6EnUIrdQeGw" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+            </div>
+        </article>
+        <article class="zero">
+            <div class="hover08 column">
+                <div class="dub">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/i-5maiuaInE" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="deep">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/HFOLjmvf1Nw" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="minimal">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/iCrScX5IsE8" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+                <div class="deep">
+                    <figure>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/mpVJpiTbciA" frameborder="0" allowfullscreen></iframe>
+                    </figure> <span></span> </div>
+            </div>
+        </article>
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+
+</body></html></xmp></code></pre>
+  <pre><code><xmp>var all = document.getElementsByClassName(&apos;zero&apos;);
+var dub = document.getElementsByClassName(&apos;dub&apos;);
+var deep = document.getElementsByClassName(&apos;deep&apos;);
+var dnb = document.getElementsByClassName(&apos;dnb&apos;);
+var minimal = document.getElementsByClassName(&apos;minimal&apos;);
+
+
+var on = function(object) {
+    for (var i = 0; i &lt; object.length; i++) {
+        object[i].style.display = &quot;inline&quot;;
+    }
+};
+
+var off = function(object) {
+    for (var i = 0; i &lt; object.length; i++) {
+        object[i].style.display = &quot;none&quot;;
+    }
+};
+
+allmusic = document.getElementById(&apos;zero&apos;);
+dubtech = document.getElementById(&apos;dub&apos;);
+deeph = document.getElementById(&apos;deep&apos;);
+dnbass = document.getElementById(&apos;dnb&apos;);
+minimale = document.getElementById(&apos;minimal&apos;);
+allmusic.onclick = function () {
+    on(dub);
+    on(deep);
+    on(dnb);
+    on(minimal);
+};
+dubtech.onclick = function () {
+    on(dub);
+    off(deep);
+    off(dnb);
+    off(minimal);
+};
+deeph.onclick = function () {
+    off(dub);
+    on(deep);
+    off(dnb);
+    off(minimal);
+};
+dnbass.onclick = function () {
+    off(dub);
+    off(deep);
+    on(dnb);
+    off(minimal);
+};
+minimale.onclick = function () {
+    off(dub);
+    off(deep);
+    off(dnb);
+    on(minimal);
+};</xmp></code></pre>
+  <pre><code><xmp>
+.menu1 {
+    transition: 1s ease;
+    color: #ffffff;
+    border-top: 4px solid #111;
+    border-bottom: 4px solid #111;
+}
+
+.menu1:hover {
+    border-bottom: 4px solid #ffffff;
+    color: forestgreen;
+}
+
+
+
+
+
+input[type=&quot;text&quot;] {
+    height: 60px;
+    font-size: 30px;
+    display: inline-block;
+    font-family: &quot;Montserrat&quot;;
+    font-weight: 20;
+    border: none;
+    outline: none;
+    color: #555;
+    padding: 3px;
+    padding-right: 30px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 13em;
+    background: none;
+    z-index: 3;
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+}
+
+input[type=&quot;text&quot;]:focus:hover {
+    border-bottom: 1px solid #BBB;
+}
+
+input[type=&quot;text&quot;]:focus {
+    width: 400px;
+    z-index: 1;
+    border-bottom: 1px solid #BBB;
+    cursor: text;
+}
+
+input[type=&quot;submit&quot;] {
+    height: 67px;
+    width: 63px;
+    display: inline-block;
+    color: red;
+    float: right;
+    background: url(../img/loupe.png) center center no-repeat;
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 27em;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .4s ease;
+}
+
+input[type=&quot;submit&quot;]:hover {
+    opacity: 0.6;
+}
+
+
+
+
+header {
+    background: url(&apos;../img/zombie.jpg&apos;);
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    color: black;
+    font-size: 4em;
+    text-align: center;
+    padding: 8% 0;
+    margin: 0;
+}
+
+
+
+
+#listehead {
+    position: inherit;
+    font-size: 2em;
+    background-color: #111;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+#listehead a {
+    text-decoration: none;
+    padding: 5px 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+
+body {
+    font-family: &apos;Montserrat&apos;;
+    margin: 0;
+    font-weight: 300;
+}
+
+#nav {
+    background-color: #111;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#logo a {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+#nav a {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+#logo img {
+    width: 8em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 23em;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+#logo,
+ul,
+#recherche {
+    display: inline-block;
+}
+
+h3 {
+    color: #4b5a6d;
+    font-size: 2em;
+    margin: 0;
+}
+
+section {
+    margin: 0 18em;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+h1,
+h1+p {
+    margin: 30px 15px 0;
+    font-weight: 300;
+}
+
+h1+p a {
+    color: #333;
+}
+
+h1+p a: hover {
+    text-decoration: none;
+}
+
+h2 {
+    margin: 60px 15px 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+h2 span {
+    margin-left: 1em;
+    color: #B9090B;
+    font-size: 85%;
+}
+
+.column {
+    margin: 0 0 0;
+    padding: 0;
+}
+
+.column: last-child {
+    padding-bottom: 60px;
+}
+
+.column: after {
+    content: &apos;&apos;;
+    clear: both;
+    display: block;
+}
+
+.column div {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin: 0 0 0 0;
+    padding: 25px 14px;
+}
+
+.column div:first-child {
+    margin-left: 0;
+}
+
+.column div span {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    color: #B9090B;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    opacity: 0;
+}
+
+figure {
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+figure:hover+span {
+    bottom: 0;
+    opacity: 1;
+}
+
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Timothée ONG (jsbin:baximixaxa)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <header>
+            <h1 align="center">Choisissez votre équipement</h1>
+    </header>    
+    <ul>
+        <li>
+          <button id="all">Voir tous les equipement</button>  
+          <button id="equipement1">Les shorts</button>  
+          <button id="equipement2">Les chaussures</button>  
+          <button id="equipement3">Les hauts/lacets </button> 
+          <button id="equipement4">Les accessoires</button> 
+        </li>
+    </ul>
+<section>
+    <h2 class="equipement1 titre1">Les shorts disponibles :</h2>
+    <h2 class="equipement2 titre2">Les chaussures disponibles:</h2>
+    <h2 class="equipement3 titre3">Les hauts et lacets disponibles :</h2>
+    <h2 class="equipement4 titre4">Les accessoires disponibles: </h2>
+    <div>
+            <article class="equipement1 produit">
+              <li>Les shorts rouge</li>
+              <li>Les shorts noirs</li>
+              <li>Les shorts Blancs</li>
+      </article>
+            <article class="equipement2 produit equipement3 produit equipement4 produit">
+              <li>Les chaussures bleues</li>
+              <li>Les lacets noires</li>
+      </article>
+            <article class="equipement2 produit equipement3 produit">
+              <li>Les lacets rouges</li>
+      </article>
+            <article class="equipement3 produit">
+              <li>Les hauts bleues</li>
+              <li>Les hauts verts</li>
+      </article>
+            <article class="equipement4 produit">
+            <li>Protèges tibias</li>
+            <li>Ballons ligue des champions</li>
+      </article>    
+  </div>
+  </section>
+<script lang="javascript" src="san.js"></script>
+  </body>
+      </html></xmp></code></pre>
+  <pre><code><xmp>(function () {
+  var allButton = document.getElementById('all'); 
+  var equipement1Button = document.getElementById('equipement1'); 
+  var equipement2Button = document.getElementById('equipement2');
+  var equipement3Button = document.getElementById('equipement3');
+  var equipement4Button = document.getElementById('equipement4');
+          
+  var montreProduits = function (produits) {
+    for (var i=0; i<produits.length; i++) {
+      produits[i].style.display = "block";
+                }
+            };
+  var cacheProduits = function (produits) {
+    for (var i=0; i<produits.length; i++) {
+      produits[i].style.display = "none";
+                }
+            };
+  equipement1Produits = document.getElementsByClassName('equipement1');
+  equipement2Produits = document.getElementsByClassName('equipement2');
+  equipement3Produits = document.getElementsByClassName('equipement3');
+  equipement4Produits = document.getElementsByClassName('equipement4');          
+  titre1Produits = document.getElementsByClassName('titre1');
+  titre2Produits = document.getElementsByClassName('titre2');
+  titre3Produits = document.getElementsByClassName('titre3');
+  titre4Produits = document.getElementsByClassName('titre4');
+  
+  allButton.onclick = function() {
+    montreProduits(equipement1Produits);
+    montreProduits(equipement2Produits);
+    montreProduits(equipement3Produits);
+    montreProduits(equipement4Produits);
+    cacheProduits(titre1Produits);
+    cacheProduits(titre2Produits);
+    cacheProduits(titre3Produits);
+    cacheProduits(titre4Produits);
+  };
+  equipement1Button.onclick = function() {
+    montreProduits(equipement1Produits);
+    cacheProduits(equipement2Produits);
+    cacheProduits(equipement4Produits);
+    cacheProduits(equipement3Produits);
+  };
+  equipement2Button.onclick = function() {
+    cacheProduits(equipement1Produits);
+    cacheProduits(equipement3Produits);
+    cacheProduits(equipement4Produits);
+    montreProduits(equipement2Produits);
+            };
+  equipement3Button.onclick = function() {
+    cacheProduits(equipement1Produits);
+    cacheProduits(equipement2Produits);
+    cacheProduits(equipement4Produits);
+    montreProduits(equipement3Produits);
+            };
+  equipement4Button.onclick = function() {
+    cacheProduits(equipement1Produits);
+    cacheProduits(equipement2Produits);
+    cacheProduits(equipement3Produits);
+    montreProduits(equipement4Produits);
+            };
+        })();
+</xmp></code></pre>
+  <pre><code><xmp></xmp></code></pre>
+</section>
+<section>
+  <p>Student: Pierre SALESSE (codepen:pierre7592:MJMpqK)</p>
+  <pre><code><xmp><html>
+<head>
+<title>Exercice Filtres JS</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="filtres.css">
+</head>
+<body>
+↦   <div id="titre">
+ ↦   ↦   <h1>Quelle est votre recherche ?</h1>
+ ↦   </div>
+ ↦   <div id="liste">
+ ↦   ↦   <ul>
+ ↦   ↦   ↦   <li id="film">Les Films</li>
+ ↦   ↦   ↦   <li id="livre">Les Livres</li>
+ ↦   ↦   ↦   <li id="art">Les artistes</li>
+ ↦   ↦   </ul>
+ ↦   </div>
+ ↦   <div id="contenu">
+ ↦   ↦   <article class="movie">Batman</article>
+ ↦   ↦   <article class="movie">Seven</article>
+ ↦   ↦   <article class="movie">Millenium</article>
+ ↦   ↦   <article class="movie">Le prestige</article>
+ ↦   ↦   <hr>
+ ↦   ↦   <article class="auteur">R. Price</article>
+ ↦   ↦   <article class="auteur">M. Connelly</article>
+ ↦   ↦   <article class="auteur">D. Lehan</article>
+ ↦   ↦   <article class="auteur">G. Pelecanos</article>
+ ↦   ↦   <hr>
+ ↦   ↦   <article class="artiste">R. Price</article>
+ ↦   ↦   <article class="artiste">D. Lehan</article>
+ ↦   ↦   <article class="artiste">M. Connelly</article>
+ ↦   ↦   <article class="artiste">G. Pelecanos</article>
+
+ ↦   </div>
+
+
+<script type="text/javascript" src="filtres.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var film = document.getElementById('film');
+var livre = document.getElementById('livre');
+var art = document.getElementById('art');
+
+var movie = document.getElementsByClassName('movie');
+var auteur = document.getElementsByClassName('auteur');
+var artiste = document.getElementsByClassName('artiste');
+
+
+film.onclick = function () {
+↦   for (var i = 0; i <= nomdetaclasse.length; i++){
+↦   ↦   movie[i].classList.add('hidden');
+↦   ↦   auteur[i].classList.remove('hidden');
+↦   ↦   artiste[i].classList.remove('hidden');
+↦   };
+};
+
+livre.onclick = function() {
+↦   for (var i = 0; i <= nomdetaclasse.length; i++){
+↦   ↦   auteur[i].classList.add('hidden');
+↦   ↦   movie[i].classList.remove('hidden');
+↦   ↦   artiste[i].classList.remove('hidden');
+
+↦   ↦   
+
+↦   };
+};
+
+art.onclick = function () {
+↦   for ( var i = 0; i <= nomdetaclasse.length; i++){
+↦   ↦   movie[i].classList.remove('hidden');
+↦   ↦   auteur[i].classList.remove('hidden');
+↦   ↦   artiste[i].classList.add('hidden');
+↦   };
+};
+
+//== mon code ne fonctionne pas je ne comprend pas pourquoi, j'ai l'impression d'avoir tout bien appliqué</xmp></code></pre>
+  <pre><code><xmp>#liste li 
+{
+↦   list-style-type: none;
+↦   display: inline-block;
+↦   padding: 50px;
+↦   cursor: pointer;
+}
+hr 
+{
+↦   width: 20%;
+↦   margin-left: 0px;
+}
+#contenu
+{
+↦   margin-left: 30px;
+}
+.hidden
+{
+↦   display: none;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Quentin CHAMPENOIS (codepen:QuentinChampenois:QdXpNY)</p>
+  <pre><code><xmp>
+<html lang="fr">
+<head>
+↦   ↦   <meta charset="utf-8">
+↦   ↦   <title>Les filtres</title>
+<link href="index.css" type="text/css" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+↦   ↦   <!-- <link rel="icon" type="image/png" href="icone.png" /> -->
+↦   ↦   
+</head>
+<body>
+
+<header>
+↦   <h1>Les filtres</h1>
+</header>
+<nav>
+↦   <p id="view">Tout voir</p><!--
+↦   --><p id="smartphone">Smartphones</p><!--
+↦   --><p id="console">Consoles</p><!--
+↦   --><p id="voiture">Voitures</p>
+</nav>
+
+<section>
+<div class="part1">
+<article class="smartphone">Samsung</article>
+<article class="smartphone">Iphone</article>
+<article class="smartphone">Sony</article>
+</div><!--
+--><div class="part2">
+<article class="console">Xbox</article>
+<article class="console">Gamecube</article>
+<article class="console">Sony Console</article>
+<article class="console smartphone">Iphone Console</article>
+</div><!--
+--><div class="part3">
+<article class="voiture">Tesla</article>
+<article class="voiture">BMW</article>
+<article class="voiture">Audi</article>
+<article class="voiture">Mercedes</article>
+</div>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>
+// ==================================== Définition des catégories ====================================
+var view = document.getElementById('view');
+var smartphone = document.getElementById('smartphone');
+var console = document.getElementById('console');
+var voiture = document.getElementById('voiture');
+
+// ==================================== Définition des produits ====================================
+var smartphoneProduit = document.getElementsByClassName('smartphone');
+var consoleProduit = document.getElementsByClassName('console');
+var voitureProduit = document.getElementsByClassName('voiture');
+var doublon = document.getElementsByClassName('doublon');
+
+// ==================================== Function du bouton View ==================================== 
+view.onclick = function (){↦   
+  for (var i=0; i <= 4; i++){
+    consoleProduit[i].classList.remove('hidden');
+    voitureProduit[i].classList.remove('hidden');
+    smartphoneProduit[i].classList.remove('hidden');
+  };
+};
+
+// ==================================== Catégorie Consoles ====================================
+console.onclick = function (){
+  for (var i=0; i <= 4; i++){
+↦   smartphoneProduit[i].classList.add('hidden');
+    consoleProduit[i].classList.remove('hidden');
+↦   voitureProduit[i].classList.add('hidden');
+};
+};
+
+// ==================================== Catégorie Voiture ====================================
+voiture.onclick = function (){
+  for (var i=0; i <= 4; i++){
+↦   voitureProduit[i].classList.remove('hidden');↦     
+    smartphoneProduit[i].classList.add('hidden');
+↦   consoleProduit[i].classList.add('hidden');
+};
+};
+
+// ==================================== Catégorie Smartphones ====================================
+
+smartphone.onclick = function (){
+  for (var i=0; i <= 3; i++){
+↦   smartphoneProduit[i].classList.remove('hidden');↦       
+    consoleProduit[i].classList.add('hidden');
+↦   voitureProduit[i].classList.add('hidden');
+};
+};</xmp></code></pre>
+  <pre><code><xmp>@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html {
+↦   background-image: url('mcdo.jpg');
+}
+
+body {
+↦   width: 70%;
+↦   margin: auto;
+↦   border: 1px solid black;
+↦   background-color: #FFFFFF;
+
+}
+
+.hidden {
+↦   display: none;
+}
+header {
+↦   background-image: url('')
+}
+
+h1 {
+↦   text-align: center;
+↦   color: #F64747;
+↦   font-family: 'Lobster', cursive;
+}
+nav {
+↦   width: 100%;
+}
+
+nav p {
+↦   display: inline-block;
+↦   background-color: #F64747;
+↦   text-align: center;
+↦   width: 25%;
+↦   margin: auto;
+↦   font-size: 1.6em;
+↦   color: #FFFFFF;
+↦   font-family: 'Lobster', cursive;
+}
+
+nav p:hover {
+↦   zoom: 1.2;
+↦   cursor: pointer;
+↦   font-weight: bold;
+}
+
+article {
+↦   font-size: 1.8em;
+↦   text-align: center;
+↦   padding: 20px;
+↦   font-family: 'Lobster', cursive;
+}
+
+section, div {
+↦   display: inline-block;
+↦   text-align: center;
+↦   padding: 100px;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Florian COMPIEGNE (codepen:flofloz:OWeRLv)</p>
+  <pre><code><xmp><ul>
+  <li id="tout">Voir tous nos meubles</li><!--
+  --><li id="un">Meubles 1</li><!--
+  --><li id="deux">Meubles 2</li><!--
+  --><li id="trois">Meubles 3</li><!--
+  --><li id="quatre">Meubles 4</li><!--  
+  --><li id="cinq">Meubles 5</li><!--  
+  --><li id="six">Meubles 6</li>
+</ul>
+<div>
+  <article class="q s">-produit1-</article>
+  <article class="d s">-produit2-</article>
+  <article class="g q s">-produit3-</article>
+  <article class="g f s">-produit4-</article>
+  <article class="h q j s">-produit5-</article>
+  <article class="f h j s">-produit6-</article>
+  <article class="d s">-produit7-</article>
+    <article class="h f s">-produit8-</article>
+  <article class="h f s">-produit9-</article>
+  <article class="q j s">-produit10-</article>  
+</div></xmp></code></pre>
+  <pre><code><xmp>var tout = document.getElementById('tout');
+var premierBouton = document.getElementById('un');
+var qBouton = document.getElementById('deux');
+var hBouton = document.getElementById('trois');
+var cuisineBouton = document.getElementById('quatre');
+var gBouton = document.getElementById('cinq');
+var jBouton = document.getElementById('six');
+var alls = document.getElementsByClassName('s');
+var fs = document.getElementsByClassName('f');
+var qs = document.getElementsByClassName('q');
+var hs = document.getElementsByClassName('h');
+var cuisines = document.getElementsByClassName('cuisine');
+var gs = document.getElementsByClassName('g');
+var d = document.getElementsByClassName('j')
+var voir = function (a) {
+    for (var i = 0; i < a.length; i++) {
+        a[i].style.display = 'inline-block';
+    }
+};
+var cacher = function (a) {
+    for (var i = 0; i < a.length; i++) {
+        a[i].style.display = 'none';
+    }
+};
+tout.onclick = function () {
+    voir(alls);
+}
+premierBouton.onclick = function () {
+    cacher(qs);
+    cacher(hs);
+    cacher(cuisines);
+    cacher(gs);
+    cacher(d);
+    voir(fs);
+}
+qBouton.onclick = function () {
+    cacher(fs);
+    cacher(hs);
+    cacher(cuisines);
+    cacher(gs);
+    cacher(d);
+    voir(qs);
+}
+hBouton.onclick = function () {
+    cacher(fs);
+    cacher(qs);
+    cacher(cuisines);
+    cacher(gs);
+    cacher(d);
+    voir(hs);
+}
+cuisineBouton.onclick = function () {
+    cacher(fs);
+    cacher(qs);
+    cacher(hs);
+    cacher(gs);
+    cacher(d);
+    voir(cuisines);
+}
+gBouton.onclick = function () {
+    cacher(fs);
+    cacher(qs);
+    cacher(hs);
+    cacher(cuisines);
+    cacher(d);
+    voir(gs);
+}
+jBouton.onclick = function () {
+    cacher(fs);
+    cacher(qs);
+    cacher(hs);
+    cacher(cuisines);
+    cacher(gs);
+    voir(d);
+}</xmp></code></pre>
+  <pre><code><xmp>body {
+  margin:0;
+  font-family: arial;
+}
+
+.s {
+  border: 1px #CEDAD9 solid;
+    box-shadow: 5px 3px 4px #BDC3C7;
+    border-radius: 1px;
+    width: 250px;
+    text-align:center;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Guillaume MARTIN (jsbin:fatomuceca)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html lang="fr">
+<head>
+↦   ↦   <meta charset="utf-8">
+↦   ↦   <title>Les filtres</title>
+<link href="index.css" type="text/css" rel="stylesheet"> 
+
+↦   ↦   
+</head>
+<body>
+
+<header>
+↦   <h1>Les filtres</h1>
+</header>
+
+<div class="div1">
+<p id="voir">Tout voir</p>
+<p id="fruits">Fruits</p>
+<p id="couleurs">Couleurs</p>
+<p id="villes">Villes</p>
+</div>
+
+</br>
+
+<article class="fruits">pomme</article>
+<article class="fruits">fraise</article>
+<article class="fruits">poire</article>
+<article class="couleurs">rouge</article>
+<article class="couleurs">vert</article>
+<article class="couleurs">bleu</article>
+<article class="couleurs fruits">orange</article>
+<article class="villes">Paris</article>
+<article class="villes">Rouen</article>
+<article class="villes">Dijon</article>
+<article class="villes">Lyon</article>
+
+
+<script src="index.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>
+
+var voir = document.getElementById('voir');
+var fruits = document.getElementById('fruits');
+var couleurs = document.getElementById('couleurs');
+var villes = document.getElementById('villes');
+
+
+var fruitsProduit = document.getElementsByClassName('fruits');
+var couleursProduit = document.getElementsByClassName('couleurs');
+var villesProduit = document.getElementsByClassName('villes');
+var doublon = document.getElementsByClassName('doublon');
+
+
+voir.onclick = function (){↦   
+  for (var i=0; i <= 4; i++){
+    couleursProduit[i].classList.remove('hidden');
+    villesProduit[i].classList.remove('hidden');
+    fruitsProduit[i].classList.remove('hidden');
+  };
+};
+
+
+couleurs.onclick = function (){
+  for (var i=0; i <= 4; i++){
+↦   fruitsProduit[i].classList.add('hidden');
+    couleursProduit[i].classList.remove('hidden');
+↦   villesProduit[i].classList.add('hidden');
+};
+};
+
+
+villes.onclick = function (){
+  for (var i=0; i <= 4; i++){
+↦   villesProduit[i].classList.remove('hidden');↦     
+    fruitsProduit[i].classList.add('hidden');
+↦   couleursProduit[i].classList.add('hidden');
+};
+};
+
+
+
+fruits.onclick = function (){
+  for (var i=0; i <= 3; i++){
+↦   fruitsProduit[i].classList.remove('hidden');↦       
+    couleursProduit[i].classList.add('hidden');
+↦   villesProduit[i].classList.add('hidden');
+};
+};
+</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+↦   display: none;
+}
+</xmp></code></pre>
 </section>
   </body>
 </html>

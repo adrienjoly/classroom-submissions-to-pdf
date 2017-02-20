@@ -167,5 +167,1483 @@ div{
 }
 </xmp></code></pre>
 </section>
+<section>
+  <p>Student: Elsa HADDAD (codepen:elsahaddad:bgyZRa)</p>
+  <pre><code><xmp><head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="hidden.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>  
+    <ul id="fixed-floater">
+        <li>
+            <a rel="nofollow" rel="noreferrer"id="all">Voir tous les hauts</a>  
+            <a rel="nofollow" rel="noreferrer"id="list1">Débardeurs</a>  
+            <a rel="nofollow" rel="noreferrer"id="list2">T-shirts</a>  
+            <a rel="nofollow" rel="noreferrer"id="list3">Pulls</a>  
+        </li>
+    </ul>
+<section>
+    <div class="main">
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Débardeur rayé</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Pull gris</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Pull rouge à capuche</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>T-shirt brodé</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Débardeur ouvert</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>T-shirt logo</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Pull col roulé</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>T-shirt bleu</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Débardeur moutarde</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Pull long</h3>
+            </div>
+        </article>
+</section>
+</script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>(function () {
+  var allButton = document.getElementById('all'); 
+  var list1Button = document.getElementById('list1'); 
+  var list2Button = document.getElementById('list2');
+  var list3Button = document.getElementById('list3');
+          
+  var showItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "inline-block";
+    }
+  };
+  var hideItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "none";
+    }
+  };
+
+  list1Items = document.getElementsByClassName('list1');
+  list2Items = document.getElementsByClassName('list2');
+  list3Items = document.getElementsByClassName('list3');
+            
+  allButton.onclick = function() {
+    showItems(list1Items);
+    showItems(list2Items);
+    showItems(list3Items);
+  };
+  list1Button.onclick = function() {
+    showItems(list1Items);
+    hideItems(list2Items);
+    hideItems(list3Items);
+    };
+  list2Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list3Items);
+    showItems(list2Items);
+    };
+  list3Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list2Items);
+    showItems(list3Items);
+    };
+  })();</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+div{
+    padding-top: 100px;
+}
+
+html,body {
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 0;
+    background-color: #2c3e50;
+    color: #3E4651;
+}
+
+p {
+    margin: 2% 0;
+    font-size: 1em;
+}
+
+ul {
+↦   position: absolute;
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+↦   width: 80%;
+↦   z-index: 99;
+
+}
+
+h2 {
+  
+    font-size: 3em;
+    padding: 5% 0;
+    margin: 0;
+}
+
+h3 {
+  
+    font-size: 2em;
+     margin: 0;
+}
+
+a {
+
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 5%;
+   
+}
+
+a:hover {
+    font-weight: bold;
+    color: #2c3e50; 
+    cursor: pointer;
+
+}
+
+li {
+    background-color: white;
+    margin: 0;
+    padding: 0.5%;
+}
+
+section {
+    margin: 2% 10%;
+    background-color: white;
+}
+
+
+article{
+    display: inline-block;
+
+}
+
+.item {
+
+    margin: 5%;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Marc-Antoine POISIER (jsfiddle:wjv74yyq:1)</p>
+  <pre><code><xmp><ul>
+  <li>
+    <a id="all">Voir tout</a>
+    <a id="list1">fruits</a>
+    <a id="list2">l&#xE9;gumes</a>
+    <a id="list3">soda</a>
+  </li>
+</ul>
+<section>
+  <div class="main">
+    <article class="list1 item">
+      <div class="grid">
+        <h3>1</h3>
+      </div>
+    </article>
+    <article class="list3 item">
+      <div class="grid">
+        <h3>3</h3>
+      </div>
+    </article>
+    <article class="list3 item">
+      <div class="grid">
+        <h3>3</h3>
+      </div>
+    </article>
+    <article class="list2 item">
+      <div class="grid">
+        <h3>2</h3>
+      </div>
+    </article>
+    <article class="list1 item">
+      <div class="grid">
+        <h3>1</h3>
+      </div>
+    </article>
+    <article class="list2 item">
+      <div class="grid">
+        <h3>2</h3>
+      </div>
+    </article>
+    <article class="list3 item">
+      <div class="grid">
+        <h3>3</h3>
+      </div>
+    </article>
+    <article class="list2 item">
+      <div class="grid">
+        <h3>2</h3>
+      </div>
+    </article>
+    <article class="list1 item">
+      <div class="grid">
+        <h3>1</h3>
+      </div>
+    </article>
+    <article class="list3 item">
+      <div class="grid">
+        <h3>3</h3>
+      </div>
+    </article>
+</div></section></xmp></code></pre>
+  <pre><code><xmp>(function() {
+  var allButton = document.getElementById(&apos;all&apos;);
+  var list1Button = document.getElementById(&apos;list1&apos;);
+  var list2Button = document.getElementById(&apos;list2&apos;);
+  var list3Button = document.getElementById(&apos;list3&apos;);
+
+  var showItems = function(items) {
+    for (var i = 0; i &lt; items.length; i++) {
+      items[i].style.display = &quot;inline-block&quot;;
+    }
+  };
+  var hideItems = function(items) {
+    for (var i = 0; i &lt; items.length; i++) {
+      items[i].style.display = &quot;none&quot;;
+    }
+  };
+
+  list1Items = document.getElementsByClassName(&apos;list1&apos;);
+  list2Items = document.getElementsByClassName(&apos;list2&apos;);
+  list3Items = document.getElementsByClassName(&apos;list3&apos;);
+
+  allButton.onclick = function() {
+    showItems(list1Items);
+    showItems(list2Items);
+    showItems(list3Items);
+  };
+  list1Button.onclick = function() {
+    showItems(list1Items);
+    hideItems(list2Items);
+    hideItems(list3Items);
+  };
+  list2Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list3Items);
+    showItems(list2Items);
+  };
+  list3Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list2Items);
+    showItems(list3Items);
+  };
+})();
+</xmp></code></pre>
+  <pre><code><xmp>hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+div {
+  padding-top: 100px;
+}
+
+html,
+body {
+  font-family: &apos;Arial Black&apos;;
+  text-align: center;
+  margin: 0;
+  color: blue;
+}
+
+p {
+  margin: 2% 0;
+  font-size: 1em;
+}
+
+ul {
+  position: absolute;
+  list-style-type: none;
+  margin: 0 10%;
+  padding: 0;
+  width: 80%;
+  z-index: 99;
+}
+
+h2 {
+  font-size: 3em;
+  padding: 5% 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+a {
+  font-size: 2em;
+  text-decoration: none;
+  padding: 0 5%;
+}
+
+a:hover {
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+li {
+  background-color: white;
+  margin: 0;
+  padding: 0.5%;
+}
+
+section {
+  margin: 2% 10%;
+  background-color: white;
+}
+
+article {
+  display: inline-block;
+}
+
+.item {
+  margin: 5%;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Paul ESMENARD (codepen:Paul_Esmenard:mRZEEE)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+  
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="listeCH.css">
+</head>
+  
+<body>  
+    <ul>
+        <li>
+            <a rel="nofollow" rel="noreferrer"id="all">Tout voir</a>  
+            <a rel="nofollow" rel="noreferrer"id="list1">Chaussures</a>  
+            <a rel="nofollow" rel="noreferrer"id="list2">Téléphone</a>  
+            <a rel="nofollow" rel="noreferrer"id="list3">Enceintes</a>  
+        </li>
+    </ul>
+<section>
+    <div class="main">
+        <article class="list1 item">
+            <div class="grid">
+                <p>Nike air max 90</p>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <p>Bose companion 50</p>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <p>Logitech Z-625</p>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <p>Iphone 6S</p>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <p>Adidas nmd r1 triple white</p>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <p>Samsung Galaxy A5</p>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <p>Yamaha ZX-50</p>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <p>HTC Desire 508</p>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <p>Asics gel lyte III</p>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <p>Hercules XPS</p>
+            </div>
+        </article>
+</section>
+<script type="text/javascript" src="listeCH.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>(function() {
+    var allButton = document.getElementById('all');
+    var list1Button = document.getElementById('list1');
+    var list2Button = document.getElementById('list2');
+    var list3Button = document.getElementById('list3');
+
+    var showItems = function(items) {
+        for (var i = 0; i < items.length; i++) {
+            items[i].style.display = "inline-block";
+        }
+    };
+    var hideItems = function(items) {
+        for (var i = 0; i < items.length; i++) {
+            items[i].style.display = "none";
+        }
+    };
+
+    list1Items = document.getElementsByClassName('list1');
+    list2Items = document.getElementsByClassName('list2');
+    list3Items = document.getElementsByClassName('list3');
+
+    allButton.onclick = function() {
+        showItems(list1Items);
+        showItems(list2Items);
+        showItems(list3Items);
+    };
+    list1Button.onclick = function() {
+        showItems(list1Items);
+        hideItems(list2Items);
+        hideItems(list3Items);
+    };
+    list2Button.onclick = function() {
+        hideItems(list1Items);
+        hideItems(list3Items);
+        showItems(list2Items);
+    };
+    list3Button.onclick = function() {
+        hideItems(list1Items);
+        hideItems(list2Items);
+        showItems(list3Items);
+    };
+})();</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+div{
+  padding-top: 50px;
+}
+
+html,body {
+  text-align: center;
+  margin: 0;
+  background-color: pink;
+  color: black;
+}
+
+p {
+  margin 0;
+  font-size: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 10%;
+  padding: 0;
+↦   width: 80%;
+}
+
+a {
+  font-size: 2em;
+  text-decoration: none;
+  padding: 0 5%;
+}
+
+a:hover {
+  color: pink; 
+  cursor: pointer;
+}
+
+li {
+  background-color: white;
+  margin: 0;
+  padding: 0.5%;
+}
+
+section {
+  margin: 2% 10%;
+  background-color: white;
+}
+
+
+article{
+  display: inline-block;
+}
+
+.item {
+  margin: 5%;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: haroon HASSAN (codepen:haroon7:OWeWrz)</p>
+  <pre><code><xmp>
+<body>
+<button id="bouton-toutafficher">afficher tous les produits</button>
+<button id="bouton-filtre1">afficher produits 1</button>
+<button id="bouton-filtre2">afficher produits 2</button>
+<button id="bouton-filtre3">afficher produits 3</button>
+
+  <article class="produit type1">Pistache</article>
+  <article class="produit type1">Amandes</article>
+  <article class="produit type1">Coriandre</article>
+  <article class="produit type1">Menthe</article>
+  <article class="produit type1">Paprika</article>
+  <article class="produit type1">Safran</article>
+  <article class="produit type2">Poire</article>
+  <article class="produit type2">Fraise</article>
+  <article class="produit type2">Framboise</article>
+  <article class="produit type2">Pomme</article>
+  <article class="produit type2">Pastèque</article>
+  <article class="produit type3">Eau</article>
+  <article class="produit type3">Jus d'orange</article>
+  <article class="produit type3">Jus de Citron</article>
+  <article class="produit type3">Jus de Pomme</article>
+  <article class="produit type3">Un peu d'alcool</article>
+  <script type="text/javascript" src="Exo_filtrage.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var tous = document.getElementsByClassName('produit');
+var type1 = document.getElementsByClassName('produit type1');
+var type2 = document.getElementsByClassName('produit type2');
+var type3 = document.getElementsByClassName('produit type3');
+
+var afficherProduits = function (produits){
+  for (var i=0; i<produits.length; i++) {
+    produits[i].classList.remove('caché');
+  }
+}
+
+var masquerProduits = function (produits){
+  for (var i=0; i<produits.length; i++) {
+    produits[i].classList.add('caché');
+  }
+}
+
+document.getElementById('bouton-toutafficher').onclick = function() {
+  afficherProduits(tous);
+};
+
+document.getElementById('bouton-filtre1').onclick = function() {
+  afficherProduits(type1); //
+  masquerProduits(type2);
+  masquerProduits(type3);
+};
+
+document.getElementById('bouton-filtre2').onclick = function() {
+  masquerProduits(type1);
+  afficherProduits(type2); //
+  masquerProduits(type3);
+};
+
+document.getElementById('bouton-filtre3').onclick = function() {
+  masquerProduits(type1);
+  masquerProduits(type2);
+  afficherProduits(type3); //
+};</xmp></code></pre>
+  <pre><code><xmp>.caché {
+  display: none;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Pauline BITTANTE (codepen:pauline_btn:oBrgWe)</p>
+  <pre><code><xmp><ul>
+<li id='plates'>Chaussures plates</li>
+<li id='talons'>Chaussures à talons</li>
+<li id='sport'>Chaussures de sport</li>
+<li id='ville'>Chaussures de ville</li>
+</ul>
+<article class="plates sport">Baskets</article>
+<article class="talons ville">Escarpins</article>
+<article class="plates ville">Derbies</article>
+<article class="plates ville">Mocassins</article>
+<article class="plates ville">Espadrilles</article>
+<article class="plates sport">Chaussures de marche</article>
+<article class="talons ville">Bottes</article>
+<article class="talons ville">Bottines</article>
+<article class="plates ville">Sandalles</article>
+<article class="plates sport">Running</article></xmp></code></pre>
+  <pre><code><xmp>var ville = document.getElementsByClassName('sport');
+document.getElementById('ville').onclick = function() {
+  for (var i=0; i<ville.length; i++) {
+    ville[i].classList.add('hidden');
+  }
+};
+
+var sport = document.getElementsByClassName('ville');
+document.getElementById('sport').onclick = function() {
+  for (var j=0; j<sport.length; j++) {
+    sport[j].classList.add('hidden');
+  }
+};
+
+var talons = document.getElementsByClassName('plates');
+document.getElementById('talons').onclick = function() {
+  for (var k=0; k<talons.length; k++) {
+    talons[k].classList.add('hidden');
+  }
+};
+
+var plates = document.getElementsByClassName('talons');
+document.getElementById('plates').onclick = function() {
+  for (var l=0; l<plates.length; l++) {
+    plates[l].classList.add('hidden');
+  }
+};</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+  display: none;
+}
+
+li {
+cursor:  pointer;
+}
+
+article {
+margin-left : 50px;
+}
+
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Valentine PIOL (codepen:valentinepiol:XpLNLP)</p>
+  <pre><code><xmp><html>
+<head>
+<meta charset="utf-8">
+<title>Catégorie par filtrage</title>
+</head>
+<body>
+↦   <a rel="nofollow" rel="noreferrer"href="javascript:visibilite('vetement');">Vêtements</a>
+↦   <a rel="nofollow" rel="noreferrer"href="javascript:visibilite('chaussure');">Chaussures</a>
+↦   <a rel="nofollow" rel="noreferrer"href="javascript:visibilite('accessoire');">Accessoires</a>
+↦   
+↦   <div id="categorie">
+↦   ↦   <div id="vetement" class="divs">
+        <li>Jeans</li>
+        <li>Pulls</li>
+        <li>Vestes</li>
+        <li>Tops</li>
+    </div>
+↦   ↦   <div id="chaussure" class="divs">
+        <li>Talons hauts</li>
+        <li>Sandales</li>
+        <li>Boots</li>
+        <li>Baskets</li>
+    </div>
+↦   ↦   <div id="accessoire" class="divs">
+        <li>Bijoux</li>
+        <li>Montres</li>
+    </div>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>function visibilite (id)
+{
+↦   var xx = document.getElementById("categorie").getElementsByTagName("div");
+
+↦   for (var i=0; i<xx.length; i++)
+↦   ↦   xx.item(i).style.display = "none";
+
+↦   document.getElementById(id).style.display = "block";
+}</xmp></code></pre>
+  <pre><code><xmp>.divs↦   { 
+display: none;↦   
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Thomas BONNET (codepen:thomas_marketing:ygdOya)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="hidden.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>  
+    <ul>
+        <li>
+            <a rel="nofollow" rel="noreferrer"id="all">Voir tout</a>  
+            <a rel="nofollow" rel="noreferrer"id="list1">1</a>  
+            <a rel="nofollow" rel="noreferrer"id="list2">2</a>  
+            <a rel="nofollow" rel="noreferrer"id="list3">3</a>  
+        </li>
+    </ul>
+<section>
+    <div class="main">
+        <article class="list1 item">
+            <div class="grid">
+                <h3>1</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>2</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>1</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>2</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>2</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>1</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+</section>
+<script type="text/javascript" src="hidden.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>(function () {
+  var allButton = document.getElementById('all'); 
+  var list1Button = document.getElementById('list1'); 
+  var list2Button = document.getElementById('list2');
+  var list3Button = document.getElementById('list3');
+          
+  var showItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "inline-block";
+    }
+  };
+  var hideItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "none";
+    }
+  };
+
+  list1Items = document.getElementsByClassName('list1');
+  list2Items = document.getElementsByClassName('list2');
+  list3Items = document.getElementsByClassName('list3');
+            
+  allButton.onclick = function() {
+    showItems(list1Items);
+    showItems(list2Items);
+    showItems(list3Items);
+  };
+  list1Button.onclick = function() {
+    showItems(list1Items);
+    hideItems(list2Items);
+    hideItems(list3Items);
+    };
+  list2Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list3Items);
+    showItems(list2Items);
+    };
+  list3Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list2Items);
+    showItems(list3Items);
+    };
+  })();</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+div{
+    padding-top: 100px;
+}
+
+html,body {
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 0;
+    background-color: #08389A;
+    color: #81DB6B;
+}
+
+p {
+    margin: 2% 0;
+    font-size: 1em;
+}
+
+ul {
+↦   position: absolute;
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+↦   width: 80%;
+↦   z-index: 99;
+
+}
+
+h2 {
+  
+    font-size: 3em;
+    padding: 5% 0;
+    margin: 0;
+}
+
+h3 {
+  
+    font-size: 2em;
+     margin: 0;
+}
+
+a {
+
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 5%;
+   
+}
+
+a:hover {
+    font-weight: bold;
+    color: #08389A; 
+    cursor: pointer;
+
+}
+
+li {
+    background-color: white;
+    margin: 0;
+    padding: 0.5%;
+}
+
+section {
+    margin: 2% 10%;
+    background-color: white;
+}
+
+
+article{
+    display: inline-block;
+
+}
+
+.item {
+
+    margin: 5%;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Lucas LACHENY (codepen:llacheny:apgObV)</p>
+  <pre><code><xmp><html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="Nouveau" />
+<title>Nouveau</title>
+<link rel="stylesheet" type="text/css" href="filtrage.css">
+</head>
+
+<body>
+<button id="button">afficher tous les produits</button>
+<button id="filtre1">informatique</button>
+<button id="filtre2">cours</button>
+<button id="filtre3">detente</button>
+
+  <article class="produit informatique">ping</article>
+  <article class="produit informatique">42</article>
+  <article class="produit informatique cours">javascript</article>
+  <article class="produit informatique detente">internet</article>
+  <article class="produit informatique detente">twitch</article>
+  <article class="produit informatique cours">codepen</article>
+  <article class="produit detente">Lit</article>
+  <article class="produit informatique detente cours">Ordinateur</article>
+  <article class="produit cours detente">Plop</article>
+  <article class="produit cours informatique">Css</article>
+
+<script type="text/javascript" src="filtrage.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>var tab = document.getElementsByClassName('produit');
+var type1 = document.getElementsByClassName('informatique');
+var type2 = document.getElementsByClassName('cours');
+var type3 = document.getElementsByClassName('detente');
+var afficherProduits = function (produit){
+  for (var i=0; i<produit.length; i++) {
+    produit[i].classList.remove('hidden');
+  }
+}
+var masquerProduits = function (produit){
+  for (var i=0; i<produit.length; i++) {
+    produit[i].classList.add('hidden');
+  }
+}
+document.getElementById('button').onclick = function() {
+    afficherProduits(tab);
+};
+document.getElementById('filtre1').onclick = function() {
+  masquerProduits(type2);
+  masquerProduits(type3);
+  afficherProduits(type1);
+};
+document.getElementById('filtre2').onclick = function() {
+  masquerProduits(type1);
+  masquerProduits(type3);
+afficherProduits(type2);
+};
+document.getElementById('filtre3').onclick = function() {
+  masquerProduits(type1);
+  masquerProduits(type2);
+  afficherProduits(type3);
+};</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+  display: none;
+}
+
+article {
+  margin-top:15px;
+  margin-left:200px;
+}
+
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Guillaume DE SAINT SERNIN (codepen:Guillaumedesaintsernin:NdZbWW)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="hidden.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>  
+    <ul>
+        <li>
+            <a rel="nofollow" rel="noreferrer"id="all">Tout voir</a>  
+            <a rel="nofollow" rel="noreferrer"id="list1">1</a>  
+            <a rel="nofollow" rel="noreferrer"id="list2">2</a>  
+            <a rel="nofollow" rel="noreferrer"id="list3">3</a>  
+        </li>
+    </ul>
+<section>
+    <div class="main">
+        <article class="list1 item">
+            <div class="grid">
+                <h3>1</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>2</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>1</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>2</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>2</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>1</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>3</h3>
+            </div>
+        </article>
+</section>
+<script type="text/javascript" src="hidden.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>(function () {
+  var allButton = document.getElementById('all'); 
+  var list1Button = document.getElementById('list1'); 
+  var list2Button = document.getElementById('list2');
+  var list3Button = document.getElementById('list3');
+          
+  var showItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "inline-block";
+    }
+  };
+  var hideItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "none";
+    }
+  };
+
+  list1Items = document.getElementsByClassName('list1');
+  list2Items = document.getElementsByClassName('list2');
+  list3Items = document.getElementsByClassName('list3');
+            
+  allButton.onclick = function() {
+    showItems(list1Items);
+    showItems(list2Items);
+    showItems(list3Items);
+  };
+  list1Button.onclick = function() {
+    showItems(list1Items);
+    hideItems(list2Items);
+    hideItems(list3Items);
+    };
+  list2Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list3Items);
+    showItems(list2Items);
+    };
+  list3Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list2Items);
+    showItems(list3Items);
+    };
+  })();</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+div{
+    padding-top: 150px;
+}
+
+html,body {
+    font-family: 'Arial';
+    text-align: center;
+    margin: 0;
+    background-color: #2c3e99;
+    color: #3E4559;
+}
+
+p {
+    margin: 5% 0;
+    font-size: 1em;
+}
+
+ul {
+↦   position: absolute;
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+↦   width: 80%;
+↦   z-index: 99;
+
+}
+
+h2 {
+  
+    font-size: 3em;
+    padding: 5% 0;
+    margin: 0;
+}
+
+h3 {
+  
+    font-size: 2em;
+     margin: 0;
+}
+
+a {
+
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 5%;
+   
+}
+
+a:hover {
+    font-weight: bold;
+    color: #2c3e50; 
+    cursor: pointer;
+
+}
+
+li {
+    background-color: white;
+    margin: 0;
+    padding: 0.5%;
+}
+
+section {
+    margin: 2% 10%;
+    background-color: white;
+}
+
+
+article{
+    display: inline-block;
+
+}
+
+.item {
+
+    margin: 5%;
+}</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Raphaela AGUS-AZOUBEL (codepen:raphaelaagusazoubel:zNVNEX)</p>
+  <pre><code><xmp><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="hidden.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>  
+    <ul>
+        <li>
+            <a rel="nofollow" rel="noreferrer"id="all">Tous nos produits</a>  
+            <a rel="nofollow" rel="noreferrer"id="list1">Sneakers</a>  
+            <a rel="nofollow" rel="noreferrer"id="list2">Sandales</a>  
+            <a rel="nofollow" rel="noreferrer"id="list3">Bottes</a>  
+        </li>
+    </ul>
+<section>
+    <div class="main">
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Baskets à scratch</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Bottines à talon</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Bottes en cuir rouge</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>Sandales à talons</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Baskets à lacets</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>Sandales montante</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Bottes de pluie</h3>
+            </div>
+        </article>
+        <article class="list2 item">
+            <div class="grid">
+                <h3>Sandales à paillettes</h3>
+            </div>
+        </article>
+        <article class="list1 item">
+            <div class="grid">
+                <h3>Baskets montantes</h3>
+            </div>
+        </article>
+        <article class="list3 item">
+            <div class="grid">
+                <h3>Bottes vernies</h3>
+            </div>
+        </article>
+</section>
+<script type="text/javascript" src="hidden.js"></script>
+</body>
+</html></xmp></code></pre>
+  <pre><code><xmp>(function () {
+  var allButton = document.getElementById('all'); 
+  var list1Button = document.getElementById('list1'); 
+  var list2Button = document.getElementById('list2');
+  var list3Button = document.getElementById('list3');
+          
+  var showItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "inline-block";
+    }
+  };
+  var hideItems = function (items) {
+    for (var i=0; i<items.length; i++) {
+      items[i].style.display = "none";
+    }
+  };
+
+  list1Items = document.getElementsByClassName('list1');
+  list2Items = document.getElementsByClassName('list2');
+  list3Items = document.getElementsByClassName('list3');
+            
+  allButton.onclick = function() {
+    showItems(list1Items);
+    showItems(list2Items);
+    showItems(list3Items);
+  };
+  list1Button.onclick = function() {
+    showItems(list1Items);
+    hideItems(list2Items);
+    hideItems(list3Items);
+    };
+  list2Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list3Items);
+    showItems(list2Items);
+    };
+  list3Button.onclick = function() {
+    hideItems(list1Items);
+    hideItems(list2Items);
+    showItems(list3Items);
+    };
+  })();</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+div{
+    padding-top: 100px;
+}
+
+html,body {
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 0;
+    background-color: #2c3e50;
+    color: white;
+}
+
+p {
+    margin: 2% 0;
+    font-size: 1em;
+}
+
+ul {
+↦   position: absolute;
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+↦   width: 80%;
+↦   z-index: 99;
+
+}
+
+a {
+
+    font-size: 2em;
+    text-decoration: none;
+    padding: 0 5%;
+   
+}
+
+h2 {
+  
+    font-size: 3em;
+    padding: 5% 0;
+    margin: 0;
+}
+
+h3 {
+  
+    font-size: 2em;
+     margin: 0;
+}
+
+li {
+    background-color: black;
+    margin: 0;
+    padding: 0.5%;
+}
+
+a:hover {
+    font-weight: bold;
+    color: pink; 
+    cursor: pointer;
+
+}
+
+section {
+    margin: 2% 10%;
+    background-color: pink;
+}
+
+
+article{
+    display: inline-block;
+
+}
+
+.item {
+
+    margin: 5%;
+}
+</xmp></code></pre>
+</section>
+<section>
+  <p>Student: Alexandre Blanc (codepen:anon:VPJPJP)</p>
+  <pre><code><xmp><ul>
+  <li id="jeux">Tout voir</li><!--
+  --><li id="online">Online</li><!--
+  --><li id="rpg">RPG</li><!--
+  --><li id="fps">FPS</li><!--
+--></ul>
+<article class="Jeux Online FPS">Skyrim</article>
+<article class="Jeux Online RPG">Half-life</article>
+<article class="Jeux RPG">Counter Strike</article>
+<article class="Jeux FPS">League of Legends</article>
+<article class="Jeux Online">Fallout 4</article>
+<article class="Jeux FPS">World of Warcraft</article>
+<article class="Jeux FPS">Dota 2</article>
+<article class="Jeux RPG">Overwatch</article>
+<article class="Jeux Online FPS">Final Fantasy</article>
+<article class="Jeux RPG">Call of Duty</article></xmp></code></pre>
+  <pre><code><xmp>var jeux = document.getElementsByClassName('Jeux');
+document.getElementById('jeux').onclick = function() {
+  for (var i=0; i<jeux.length; i++) {
+    online[i].classList.remove('hidden');
+  }
+};
+
+var online = document.getElementsByClassName('Online');
+document.getElementById('online').onclick = function() {
+  for (var i=0; i<online.length; i++) {
+    online[i].classList.add('hidden');
+  }
+};
+
+var rpg = document.getElementsByClassName('RPG');
+document.getElementById('rpg').onclick = function() {
+  for (var i=0; i<rpg.length; i++) {
+    rpg[i].classList.add('hidden');
+  }
+};
+
+var fps = document.getElementsByClassName('FPS');
+document.getElementById('fps').onclick = function() {
+  for (var i=0; i<fps.length; i++) {
+    fps[i].classList.add('hidden');
+  }
+};</xmp></code></pre>
+  <pre><code><xmp>.hidden {
+  display: none;
+}
+
+li {
+  cursor : pointer;
+  display: inline-block;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+}
+ul {
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+}
+
+article {
+  text-align: center;
+}
+</xmp></code></pre>
+</section>
   </body>
 </html>
