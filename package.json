@@ -8,6 +8,7 @@
     "split-pdf": "src/split.sh",
     "render-from-url": "node src/render-from-url.js",
     "start": "source .env; node src/download-students.js; node src/download-submissions.js; node src/convert-submissions.js; node src/render-submissions.js",
+    "list": "source .env; node src/list-assignments.js",
     "test": "source .env; node tests/test.js",
     "tests": "source .env; node tests/test-pdf.js; node tests/test-apis.js; node tests/test-classroom-api.js"
   },
