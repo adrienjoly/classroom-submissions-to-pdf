@@ -24,6 +24,8 @@ $ npm install
 $ npm start
 ```
 
+See npm scripts defined in `package.json`, for more info.
+
 ## Run tests
 
 ```sh
